@@ -1,0 +1,9 @@
+{
+  "X": 2.0,
+  "pivot_weeks": 2,
+  "pivot_days": 2,
+  "stop_lookback_days": 10,
+  "watch_atr": 1.0,
+  "watch_min_conv": 1,
+  "bear_zone_alerts": false
+}

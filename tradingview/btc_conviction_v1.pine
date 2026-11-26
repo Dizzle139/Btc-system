@@ -1,0 +1,140 @@
+//@version=6
+// BTC Conviction System v1 — put on a DAILY chart of BITSTAMP:BTCUSD.
+// Same rules as the Python bot (tested 2011-2026, see research/results.md):
+//   Regime   : weekly EMA50 vs EMA200 + weekly structure (swings 2 weeks each side)
+//   Map      : weekly bullish FVG zones (body >= 2x the 20-week average), until a weekly close below the zone
+//   Trigger  : daily close above the last confirmed daily swing high after a bearish daily structure (CHoCH up)
+//   Grade A  : weekly EMA + structure bullish (+0.94R/trade at 3R in tests)  | Grade B: EMA bullish only (+0.39R)
+// Only CLOSED weekly candles are used (no repainting). Long-only: shorts showed no edge. Not financial advice.
+indicator("BTC Conviction System v1", overlay = true, max_boxes_count = 50)
+
+pivLen   = input.int(2, "Swing size (bars each side)")
+dispX    = input.float(2.0, "Zone: displacement body >= X x 20-bar average")
+stopLook = input.int(10, "Stop: lowest low of last N days")
+watchAtr = input.float(1.0, "Watch: within N weekly ATR of zone")
+showTbl  = input.bool(true, "Show status table")
+
+// ---------------- weekly context (computed on weekly bars, returned for the last CLOSED week) ----------------
+weekly() =>
+    e50  = ta.ema(close, 50)
+    e200 = ta.ema(close, 200)
+    wAtr = ta.atr(14)
+    // structure: state flips on a close beyond the last confirmed swing
+    ph = ta.pivothigh(high, pivLen, pivLen)
+    pl = ta.pivotlow(low, pivLen, pivLen)
+    var float lastH = na
+    var float lastL = na
+    var int   st    = 0
+    var float brokenH = na
+    var float brokenL = na
+    if not na(ph)
+        lastH := ph
+    if not na(pl)
+        lastL := pl
+    if not na(lastH) and close > lastH and lastH != brokenH
+        st := 1
+        brokenH := lastH
+    else if not na(lastL) and close < lastL and lastL != brokenL
+        st := -1
+        brokenL := lastL
+    // bullish FVG zones with lifetime
+    body    = math.abs(close - open)
+    avgBody = ta.sma(body, 20)
+    var array<float> zTop = array.new<float>()
+    var array<float> zBot = array.new<float>()
+    if bar_index > 22 and low > high[2] and close[1] > open[1] and body[1] >= dispX * avgBody[2]
+        array.push(zTop, low)
+        array.push(zBot, high[2])
+    // remove zones closed through
+    if array.size(zTop) > 0
+        for j = array.size(zTop) - 1 to 0
+            if close < array.get(zBot, j)
+                array.remove(zTop, j)
+                array.remove(zBot, j)
+    // nearest active zone at or below price
+    float nTop = na
+    float nBot = na
+    if array.size(zTop) > 0
+        for j = 0 to array.size(zTop) - 1
+            t = array.get(zTop, j)
+            if t <= close * 1.0001 and (na(nTop) or t > nTop)
+                nTop := t
+                nBot := array.get(zBot, j)
+    [e50[1], e200[1], st[1], wAtr[1], nTop[1], nBot[1]]
+
+[wE50, wE200, wSt, wAtr, zT, zB] = request.security(syminfo.tickerid, "W", weekly(), lookahead = barmerge.lookahead_on)
+
+emaBull    = wE50 > wE200
+structBull = wSt == 1
+conv       = (emaBull ? 1 : 0) + (structBull ? 1 : 0)
+
+// ---------------- daily structure + trigger ----------------
+dph = ta.pivothigh(high, pivLen, pivLen)
+dpl = ta.pivotlow(low, pivLen, pivLen)
+var float dH = na
+var float dL = na
+var int   dSt = 0
+var float dBrokenH = na
+var float dBrokenL = na
+chochUp = false
+if not na(dph)
+    dH := dph
+if not na(dpl)
+    dL := dpl
+if not na(dH) and close > dH and dH != dBrokenH
+    chochUp := dSt != 1          // CHoCH = flip from bearish/unset; a break while already bullish is a BOS
+    dSt := 1
+    dBrokenH := dH
+else if not na(dL) and close < dL and dL != dBrokenL
+    dSt := -1
+    dBrokenL := dL
+
+dAtr  = ta.atr(14)
+stopP = ta.lowest(low, stopLook + 1) - 0.25 * dAtr
+risk  = close - stopP
+trig  = chochUp and emaBull and risk > 0 and barstate.isconfirmed
+grade = structBull ? "A" : "B"
+
+// ---------------- zone first test / watch ----------------
+var float testedTop  = na
+var float watchedTop = na
+zoneTest  = not na(zT) and low <= zT and zT != testedTop and barstate.isconfirmed
+zoneWatch = not na(zT) and conv >= 1 and low > zT and low <= zT + watchAtr * wAtr and zT != watchedTop and zT != testedTop and barstate.isconfirmed
+if zoneTest
+    testedTop := zT
+if zoneWatch
+    watchedTop := zT
+
+fmt(x) => str.tostring(x, "#,###")
+
+if trig
+    alert("GRADE " + grade + " long trigger BTC: close " + fmt(close) + " above swing high " + fmt(dH) +
+          " | stop " + fmt(stopP) + " (" + str.tostring(100 * risk / close, "#.#") + "%) | 1R " + fmt(close + risk) +
+          " | 3R " + fmt(close + 3 * risk) + " | weekly conviction " + str.tostring(conv) + "/2", alert.freq_once_per_bar_close)
+if zoneTest
+    alert("FIRST TEST weekly bullish FVG " + fmt(zB) + "-" + fmt(zT) + " | close " + fmt(close) + " | conviction " +
+          str.tostring(conv) + "/2 (2/2 held 70% in tests). Map only: wait for a trigger.", alert.freq_once_per_bar_close)
+if zoneWatch
+    alert("WATCH: BTC " + fmt(close) + " within " + str.tostring(watchAtr) + " weekly ATR of weekly bullish FVG " +
+          fmt(zB) + "-" + fmt(zT) + " | conviction " + str.tostring(conv) + "/2", alert.freq_once_per_bar_close)
+
+// ---------------- drawing ----------------
+plot(zT, "Weekly zone top", color = color.new(color.teal, 0), style = plot.style_linebr)
+plot(zB, "Weekly zone bottom", color = color.new(color.teal, 40), style = plot.style_linebr)
+plotshape(trig and structBull, "Grade A", shape.triangleup, location.belowbar, color.lime, size = size.normal, text = "A")
+plotshape(trig and not structBull, "Grade B", shape.triangleup, location.belowbar, color.yellow, size = size.small, text = "B")
+plotshape(zoneTest, "Zone test", shape.circle, location.belowbar, color.teal, size = size.tiny)
+
+var table tb = table.new(position.top_right, 2, 4, bgcolor = color.new(color.black, 15), border_width = 1)
+if showTbl and barstate.islast
+    table.cell(tb, 0, 0, "Weekly EMA50/200", text_color = color.white)
+    table.cell(tb, 1, 0, emaBull ? "BULL" : "BEAR", text_color = emaBull ? color.lime : color.red)
+    table.cell(tb, 0, 1, "Weekly structure", text_color = color.white)
+    table.cell(tb, 1, 1, wSt == 1 ? "BULL" : wSt == -1 ? "BEAR" : "-", text_color = wSt == 1 ? color.lime : color.red)
+    table.cell(tb, 0, 2, "Long conviction", text_color = color.white)
+    table.cell(tb, 1, 2, str.tostring(conv) + "/2", text_color = conv == 2 ? color.lime : conv == 1 ? color.yellow : color.red)
+    table.cell(tb, 0, 3, "Daily structure", text_color = color.white)
+    table.cell(tb, 1, 3, dSt == 1 ? "BULL" : dSt == -1 ? "BEAR" : "-", text_color = dSt == 1 ? color.lime : color.red)
+
+if timeframe.period != "D" and barstate.islast
+    label.new(bar_index, high, "Use a DAILY chart", style = label.style_label_down, color = color.red, textcolor = color.white)

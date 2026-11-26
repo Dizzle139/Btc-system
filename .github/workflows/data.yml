@@ -1,0 +1,24 @@
+name: Data agent
+on:
+  schedule:
+    - cron: "17 1 * * 1"          # every Monday 01:17 UTC
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pandas requests
+      - run: python data_agent/fetch_all.py
+      - name: Save data to the repository
+        run: |
+          git config user.name "data-agent"
+          git config user.email "data-agent@users.noreply.github.com"
+          git add data/
+          git commit -m "Data update $(date -u +%F)" || echo "no changes"
+          git push
