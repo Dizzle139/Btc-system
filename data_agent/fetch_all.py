@@ -49,7 +49,7 @@ def bitstamp(step, since):
         df = pd.DataFrame(rows).astype(float)
         parts.append(df)
         last = df["timestamp"].iloc[-1]
-        if len(df) < 1000 or last <= start:
+        if last <= start - step or last >= time.time() - 2 * step:   # reached the present (pages can be short in early years)
             break
         start = last + step
         time.sleep(0.25)
@@ -127,6 +127,10 @@ def funding(symbol, start):
 def run(name, fn, path, step=None):
     try:
         d = fn()
+        if (OUT / path).exists():   # never replace a file with a shorter one
+            prev = pd.read_csv(OUT / path)
+            if len(d) < len(prev):
+                raise RuntimeError(f"new download has {len(d)} rows, existing file has {len(prev)}: kept the existing file")
         d.to_csv(OUT / path, index=False)
         note(path, d, step)
     except Exception as e:  # keep going; the report shows what failed

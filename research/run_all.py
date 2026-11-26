@@ -196,37 +196,46 @@ if p.exists():
     say(f"- USDT.D vs BTC weekly change correlation {rb.corr(ru):+.2f}; with BTC one week later {ru.corr(rb.shift(-1)):+.2f} (no lead if ~0)")
 
 p_oi, p_f, p_perp = DATA / "binance_oi_1D.csv", DATA / "binance_funding.csv", DATA / "binance_perp_1D.csv"
-if p_oi.exists() or p_f.exists() or p_perp.exists():
-    X = D[["time", "close"]].copy()
-    if p_oi.exists():
-        oi = load_any(p_oi)[["time", "sum_open_interest_value"]].rename(columns={"sum_open_interest_value": "oi"})
-        X = X.merge(oi, on="time", how="left")
-        X["oi_chg7"] = X.oi / X.oi.shift(7) - 1
-    if p_f.exists():
-        f = load_any(p_f)
-        col = [c for c in f.columns if "rate" in c.lower()][0]
-        f["day"] = f.time.dt.normalize()
-        X = X.merge(f.groupby("day")[col].sum().rename("fund").reset_index().rename(columns={"day": "time"}), on="time", how="left")
-        X["fund7"] = X.fund.rolling(7).sum()
-    if p_perp.exists():
-        k = load_any(p_perp)
-        k["buy_share"] = k.taker_buy_volume / k.volume
-        X = X.merge(k[["time", "buy_share"]], on="time", how="left")
-        X["buy_share7"] = X.buy_share.rolling(7).mean()
-    tr = TD.merge(X, on="time", how="left")
-    say("Daily triggers split by derivatives state at the trigger day (only days where the data exists):")
-    tests = []
-    if "oi_chg7" in tr: tests.append(("open interest fell >=10% in 7 days (leverage flushed)", tr.oi_chg7 <= -0.10))
-    if "fund7" in tr: tests.append(("7-day funding negative (shorts paying)", tr.fund7 < 0))
-    if "buy_share7" in tr: tests.append(("7-day taker-buy share > 50% (buyers aggressive)", tr.buy_share7 > 0.5))
-    for lab, m in tests:
-        have = tr[m.notna() if hasattr(m, "notna") else slice(None)]
-        a_, b_ = tr[m.fillna(False)], tr[(~m.fillna(True)) & tr.time.isin(X.dropna(how="all", subset=[c for c in X.columns if c not in ("time", "close")]).time)]
+if p_oi.exists() and p_f.exists() and p_perp.exists():
+    X = D[["time", "close", "low"]].copy()
+    oi = load_any(p_oi)[["time", "sum_open_interest_value"]].rename(columns={"sum_open_interest_value": "oi"})
+    oi.loc[oi.oi <= 0, "oi"] = np.nan                       # 2 bad zero readings in the archive
+    X = X.merge(oi, on="time", how="left")
+    X["oi_chg7"] = X.oi / X.oi.shift(7) - 1
+    f = load_any(p_f); f["day"] = f.time.dt.normalize()
+    X = X.merge(f.groupby("day").last_funding_rate.sum().rename("fund").reset_index().rename(columns={"day": "time"}), on="time", how="left")
+    X["fund7"] = X.fund.rolling(7).sum()
+    k = load_any(p_perp); k["buy_share"] = k.taker_buy_volume / k.volume
+    X = X.merge(k[["time", "buy_share"]], on="time", how="left")
+    X["buy7"] = X.buy_share.rolling(7).mean()
+    for h_ in (7, 30):
+        X[f"f{h_}"] = X.close.shift(-h_) / X.close - 1
+    X["chg7"] = X.close / X.close.shift(7) - 1
+    mid = ts("2024-05-01")
+    def ev(mask, lab):
+        x = X[mask & X.f30.notna()]
+        base = X[X.oi.notna() & X.f30.notna()]
+        parts = []
+        for pn, sel in (("Dec21-Apr24", x.time < mid), ("May24-Nov26", x.time >= mid)):
+            xx, bb = x[sel], base[(base.time < mid) if pn.startswith("Dec") else (base.time >= mid)]
+            parts.append(f"{pn}: 30d {100 * xx.f30.mean():+.1f}% vs all days {100 * bb.f30.mean():+.1f}% (n={len(xx)})")
+        say(f"- {lab}: " + " | ".join(parts))
+    say("BTC forward return after each derivatives condition (Binance BTCUSDT perpetual; all days with data as baseline):")
+    ev(X.oi_chg7 <= -0.15, "Open interest fell >=15% in 7 days (leverage flush)")
+    ev((X.oi_chg7 <= -0.15) & (X.chg7 <= -0.10), "OI fell >=15% AND price fell >=10% in 7 days (long liquidation flush)")
+    ev(X.oi_chg7 >= 0.15, "Open interest rose >=15% in 7 days (leverage building)")
+    ev(X.fund7 < 0, "7-day funding negative (shorts paying)")
+    ev(X.fund7 > X.fund7.quantile(0.9), "7-day funding in top 10% (longs crowded)")
+    ev(X.buy7 > 0.52, "7-day taker-buy share > 52% (aggressive buyers)")
+    ev(X.buy7 < 0.48, "7-day taker-buy share < 48% (aggressive sellers)")
+    tr = TD.merge(X[["time", "oi_chg7", "fund7", "buy7"]], on="time", how="left")
+    tr = tr[tr.oi_chg7.notna()]
+    say(f"\nDaily triggers with derivatives data: {len(tr)} (Dec 2021 onward)")
+    for lab, m in [("OI fell >=10% in prior 7 days", tr.oi_chg7 <= -0.10), ("7-day funding negative", tr.fund7 < 0),
+                   ("7-day taker-buy share > 50%", tr.buy7 > 0.50)]:
+        a_, b_ = tr[m], tr[~m]
         say(f"- {lab}: with {a_.r3.mean():+.2f}R (n={len(a_)}) vs without {b_.r3.mean():+.2f}R (n={len(b_)})")
-    # zone first tests: did leverage flush at the touch make the weekly zone hold more often?
-    if "oi_chg7" in X:
-        r["oi"] = [X.oi_chg7[X.time.searchsorted(W.time[k])] if X.time.searchsorted(W.time[k]) < len(X) else np.nan for k in r.known_idx]
-        say("  (weekly zone tests with OI are added once 2+ years of OI data exist)")
+    X.to_csv(ROOT / "research" / "derivatives_daily.csv", index=False)
 else:
     say("- Binance open interest / funding / taker volume: not downloaded yet (run the Data agent workflow)")
 
