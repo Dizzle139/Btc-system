@@ -19,6 +19,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install pandas requests
       - run: python data_agent/fetch_all.py ${{ github.event.inputs.only || 'all' }}
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}     # optional; FRED is skipped without it
       - name: Save data to the repository
         run: |
           git config user.name "data-agent"

@@ -23,7 +23,7 @@ Runs on GitHub Actions (its servers can reach these sites; Claude's workspace ca
     data/fear_greed.csv        alternative.me (free, no key): Crypto Fear & Greed Index, daily from 2018
 Every file gets a validation line in data/DATA_REPORT.md (rows, range, gaps).
 """
-import io, time, zipfile, sys
+import io, os, time, zipfile, sys
 from datetime import date, timedelta
 from pathlib import Path
 import pandas as pd
@@ -154,8 +154,9 @@ def get(url, tries=3, **kw):
 
 
 def fred(series):
-    r = get("https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": series})
-    d = pd.read_csv(io.StringIO(r.text))
+    r = get("https://api.stlouisfed.org/fred/series/observations",
+            params={"series_id": series, "api_key": os.environ["FRED_API_KEY"], "file_type": "json"})
+    d = pd.DataFrame(r.json()["observations"])[["date", "value"]]
     d.columns = ["time", "value"]
     d["time"] = pd.to_datetime(d.time)
     d["value"] = pd.to_numeric(d.value, errors="coerce")       # FRED marks holidays with "."
@@ -275,8 +276,9 @@ if __name__ == "__main__":
     run("binance perp", lambda: klines("perp", "BTCUSDT", date(2019, 9, 1)), "binance_perp_1D.csv", pd.Timedelta(days=1))
     run("binance OI", lambda: open_interest("BTCUSDT", date(2021, 12, 1)), "binance_oi_1D.csv", pd.Timedelta(days=1))
     run("binance funding", lambda: funding("BTCUSDT", date(2019, 9, 1)), "binance_funding.csv")
-  for sid in FRED:
-    run(f"FRED {sid}", lambda sid=sid: fred(sid), f"fred_{sid}.csv")
+  if os.environ.get("FRED_API_KEY"):            # FRED refuses GitHub's servers without a key (timed out Nov 27)
+    for sid in FRED:
+      run(f"FRED {sid}", lambda sid=sid: fred(sid), f"fred_{sid}.csv")
   for sym in YAHOO:
     run(f"Yahoo {sym}", lambda sym=sym: yahoo(sym), f"yahoo_{sym.replace('^', '').replace('=', '_').replace('.', '_').replace('-', '_')}.csv")
   run("BTC dominance", dominance, "btc_dominance.csv")
