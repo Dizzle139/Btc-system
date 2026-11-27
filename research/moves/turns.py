@@ -26,8 +26,9 @@ D1, W1 = pd.Timedelta(days=1), pd.Timedelta(days=7)
 ERAS = [("2011-16", "2011-01-01", "2016-07-01"), ("2016-21", "2016-07-01", "2021-07-01"), ("2021-26", "2021-07-01", "2030-01-01")]
 
 # ---------------- data ----------------
-d = pd.read_csv(ROOT / "data/btc_1D.csv").rename(columns={"Volume": "volume"})
-d["time"] = pd.to_datetime(d.time, unit="s", utc=True)
+sys.path.insert(0, str(HERE))
+from btcdata import load  # noqa: E402
+d = load(utc=True)
 n = len(d)
 O, H, L, C, V = (d[k].values for k in ("open", "high", "low", "close", "volume"))
 pc = np.r_[C[0], C[:-1]]

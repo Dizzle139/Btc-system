@@ -1,6 +1,8 @@
 import pandas as pd, numpy as np, json
-d=pd.read_csv('../../data/btc_1D.csv')
-d['t']=pd.to_datetime(d.time,unit='s',utc=True).dt.tz_convert(None)
+import sys; sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent))
+from btcdata import load
+d=load()
+d['t']=d.time
 # drop the still-forming candle if any (last candle open < 1 day ago is fine since file is daily closes)
 H,L,C,O=d.high.values,d.low.values,d.close.values,d.open.values
 pc=np.r_[C[0],C[:-1]]

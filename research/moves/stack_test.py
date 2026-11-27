@@ -22,8 +22,11 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
-px = pd.read_csv(ROOT / "data/btc_1D.csv")
-t = pd.to_datetime(px.time, unit="s")
+import sys
+sys.path.insert(0, str(HERE))
+from btcdata import load  # noqa: E402
+px = load()
+t = px.time
 C = px.close.values
 n = len(C)
 B = pd.read_csv(HERE / "days.csv")            # per-day snapshot from turns.py (every day >= 30, both sides)

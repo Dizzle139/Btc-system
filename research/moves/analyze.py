@@ -17,7 +17,10 @@ for i, s in zip(t10.i, t10.s):
 B = B[[(i, s) not in near for i, s in zip(B.i, B.s)]].copy()
 # harder comparison: "extreme days" = ordinary days that were also a new 10-day closing low (candidate bottom) or high
 # (candidate top). Every turn is such a day, so this removes the built-in advantage of "price just moved a lot".
-Cc = pd.read_csv(HERE.parent.parent / "data/btc_1D.csv").close.values
+import sys
+sys.path.insert(0, str(HERE))
+from btcdata import load  # noqa: E402
+Cc = load().close.values
 lo10 = pd.Series(Cc).rolling(10).min().values; hi10 = pd.Series(Cc).rolling(10).max().values
 B["extreme"] = [(Cc[i] <= lo10[i]) if s > 0 else (Cc[i] >= hi10[i]) for i, s in zip(B.i, B.s)]
 T["extreme"] = [(Cc[i] <= lo10[i]) if s > 0 else (Cc[i] >= hi10[i]) for i, s in zip(T.i, T.s)]

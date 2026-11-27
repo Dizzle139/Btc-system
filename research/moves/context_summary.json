@@ -1,0 +1,4242 @@
+{
+ "all|10|bottoms": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 11.7,
+    "la": 9.3,
+    "lift": 1.25,
+    "n": 120
+   },
+   "2011-18": {
+    "turn": 10.7,
+    "la": 8.6,
+    "lift": 1.24,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 12.5,
+    "la": 9.7,
+    "lift": 1.29,
+    "n": 64
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 38.3,
+    "la": 21.3,
+    "lift": 1.8,
+    "n": 120
+   },
+   "2011-18": {
+    "turn": 48.2,
+    "la": 25.4,
+    "lift": 1.9,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 29.7,
+    "la": 18.7,
+    "lift": 1.59,
+    "n": 64
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 27.5,
+    "la": 41.5,
+    "lift": 0.66,
+    "n": 120
+   },
+   "2011-18": {
+    "turn": 32.1,
+    "la": 54.1,
+    "lift": 0.59,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 23.4,
+    "la": 33.8,
+    "lift": 0.69,
+    "n": 64
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 22.5,
+    "la": 27.9,
+    "lift": 0.81,
+    "n": 120
+   },
+   "2011-18": {
+    "turn": 8.9,
+    "la": 11.9,
+    "lift": 0.75,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 34.4,
+    "la": 37.8,
+    "lift": 0.91,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 53.3,
+    "la": 49.0,
+    "lift": 1.09,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 57.5,
+    "la": 69.2,
+    "lift": 0.83,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 48.4,
+    "la": 35.5,
+    "lift": 1.37,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 22.6,
+    "la": 11.2,
+    "lift": 2.02,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 26.0,
+    "la": 20.4,
+    "lift": 1.28,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 18.8,
+    "la": 5.0,
+    "lift": 3.74,
+    "n": 64
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 0.0,
+    "la": 8.4,
+    "lift": 0.0,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 3.0,
+    "lift": 0.0,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 12.0,
+    "lift": 0.0,
+    "n": 64
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 28.5,
+    "la": 34.8,
+    "lift": 0.82,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 16.4,
+    "la": 25.4,
+    "lift": 0.65,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 42.2,
+    "la": 41.1,
+    "lift": 1.03,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 22.6,
+    "la": 10.6,
+    "lift": 2.13,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 30.1,
+    "la": 7.0,
+    "lift": 4.33,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 14.1,
+    "la": 13.0,
+    "lift": 1.08,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 2.4,
+    "la": 29.9,
+    "lift": 0.08,
+    "n": 125
+   },
+   "2011-18": {
+    "turn": 4.9,
+    "la": 34.2,
+    "lift": 0.14,
+    "n": 61
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 27.1,
+    "lift": 0.0,
+    "n": 64
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 9.8,
+    "la": 21.6,
+    "lift": 0.45,
+    "n": 133
+   },
+   "2011-18": {
+    "turn": 8.7,
+    "la": 24.0,
+    "lift": 0.36,
+    "n": 69
+   },
+   "2019-26": {
+    "turn": 10.9,
+    "la": 20.1,
+    "lift": 0.55,
+    "n": 64
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 59.9,
+    "la": 70.0,
+    "lift": 0.86,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 56.2,
+    "la": 85.6,
+    "lift": 0.66,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 64.1,
+    "la": 59.5,
+    "lift": 1.08,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 49.6,
+    "la": 60.8,
+    "lift": 0.82,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 47.9,
+    "la": 61.7,
+    "lift": 0.78,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 51.6,
+    "la": 60.2,
+    "lift": 0.86,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 56.9,
+    "la": 63.6,
+    "lift": 0.9,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 53.4,
+    "la": 63.7,
+    "lift": 0.84,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 60.9,
+    "la": 63.5,
+    "lift": 0.96,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 48.2,
+    "la": 56.0,
+    "lift": 0.86,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 45.2,
+    "la": 48.8,
+    "lift": 0.93,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 51.6,
+    "la": 60.9,
+    "lift": 0.85,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 14.6,
+    "la": 4.6,
+    "lift": 3.17,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 11.0,
+    "la": 0.5,
+    "lift": 22.03,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 18.8,
+    "la": 7.4,
+    "lift": 2.55,
+    "n": 64
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 8.0,
+    "la": 5.8,
+    "lift": 1.38,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 2.7,
+    "la": 2.5,
+    "lift": 1.1,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 14.1,
+    "la": 8.0,
+    "lift": 1.75,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 79.6,
+    "la": 84.0,
+    "lift": 0.95,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 90.4,
+    "la": 86.6,
+    "lift": 1.04,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 67.2,
+    "la": 82.3,
+    "lift": 0.82,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 62.8,
+    "la": 63.0,
+    "lift": 1.0,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 76.7,
+    "la": 60.2,
+    "lift": 1.27,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 46.9,
+    "la": 64.9,
+    "lift": 0.72,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 54.0,
+    "la": 45.8,
+    "lift": 1.18,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 49.3,
+    "la": 41.3,
+    "lift": 1.19,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 59.4,
+    "la": 48.8,
+    "lift": 1.22,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 75.8,
+    "la": 62.7,
+    "lift": 1.21,
+    "n": 95
+   },
+   "2011-18": {
+    "turn": 71.0,
+    "la": 59.0,
+    "lift": 1.2,
+    "n": 31
+   },
+   "2019-26": {
+    "turn": 78.1,
+    "la": 63.9,
+    "lift": 1.22,
+    "n": 64
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 44.3,
+    "la": 47.6,
+    "lift": 0.93,
+    "n": 115
+   },
+   "2011-18": {
+    "turn": 37.3,
+    "la": 47.2,
+    "lift": 0.79,
+    "n": 51
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 47.8,
+    "lift": 1.05,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 12.5,
+    "la": 12.2,
+    "lift": 1.02,
+    "n": 136
+   },
+   "2011-18": {
+    "turn": 13.9,
+    "la": 12.5,
+    "lift": 1.11,
+    "n": 72
+   },
+   "2019-26": {
+    "turn": 10.9,
+    "la": 12.0,
+    "lift": 0.91,
+    "n": 64
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 12.4,
+    "la": 7.8,
+    "lift": 1.59,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 4.1,
+    "la": 7.5,
+    "lift": 0.55,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 21.9,
+    "la": 8.0,
+    "lift": 2.73,
+    "n": 64
+   },
+   "verdict": "drop"
+  }
+ ],
+ "all|10|tops": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 9.9,
+    "la": 20.8,
+    "lift": 0.48,
+    "n": 121
+   },
+   "2011-18": {
+    "turn": 10.7,
+    "la": 28.0,
+    "lift": 0.38,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 9.2,
+    "la": 14.7,
+    "lift": 0.63,
+    "n": 65
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 39.7,
+    "la": 33.5,
+    "lift": 1.18,
+    "n": 121
+   },
+   "2011-18": {
+    "turn": 48.2,
+    "la": 37.9,
+    "lift": 1.27,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 32.3,
+    "la": 29.8,
+    "lift": 1.09,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 26.4,
+    "la": 14.7,
+    "lift": 1.8,
+    "n": 121
+   },
+   "2011-18": {
+    "turn": 30.4,
+    "la": 12.6,
+    "lift": 2.4,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 23.1,
+    "la": 16.5,
+    "lift": 1.4,
+    "n": 65
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 24.0,
+    "la": 30.9,
+    "lift": 0.78,
+    "n": 121
+   },
+   "2011-18": {
+    "turn": 10.7,
+    "la": 21.5,
+    "lift": 0.5,
+    "n": 56
+   },
+   "2019-26": {
+    "turn": 35.4,
+    "la": 39.1,
+    "lift": 0.91,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 31.9,
+    "la": 32.7,
+    "lift": 0.97,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 34.2,
+    "la": 35.7,
+    "lift": 0.96,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 29.2,
+    "la": 29.5,
+    "lift": 0.99,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 10.1,
+    "la": 11.2,
+    "lift": 0.91,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 13.7,
+    "la": 12.1,
+    "lift": 1.14,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 6.2,
+    "la": 10.2,
+    "lift": 0.6,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 25.4,
+    "la": 30.8,
+    "lift": 0.82,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 24.7,
+    "la": 35.1,
+    "lift": 0.7,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 26.2,
+    "la": 26.3,
+    "lift": 1.0,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 26.8,
+    "la": 39.5,
+    "lift": 0.68,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 15.1,
+    "la": 32.0,
+    "lift": 0.47,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 40.0,
+    "la": 47.4,
+    "lift": 0.84,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 26.8,
+    "la": 24.9,
+    "lift": 1.07,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 32.9,
+    "la": 31.1,
+    "lift": 1.06,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 20.0,
+    "la": 18.4,
+    "lift": 1.09,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 18.4,
+    "la": 35.0,
+    "lift": 0.53,
+    "n": 125
+   },
+   "2011-18": {
+    "turn": 13.3,
+    "la": 34.0,
+    "lift": 0.39,
+    "n": 60
+   },
+   "2019-26": {
+    "turn": 23.1,
+    "la": 36.0,
+    "lift": 0.64,
+    "n": 65
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 10.4,
+    "la": 14.3,
+    "lift": 0.73,
+    "n": 134
+   },
+   "2011-18": {
+    "turn": 10.1,
+    "la": 12.5,
+    "lift": 0.81,
+    "n": 69
+   },
+   "2019-26": {
+    "turn": 10.8,
+    "la": 16.3,
+    "lift": 0.66,
+    "n": 65
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 72.5,
+    "la": 86.2,
+    "lift": 0.84,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 78.1,
+    "la": 93.4,
+    "lift": 0.84,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 66.2,
+    "la": 78.6,
+    "lift": 0.84,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 52.2,
+    "la": 52.6,
+    "lift": 0.99,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 57.5,
+    "la": 58.1,
+    "lift": 0.99,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 46.2,
+    "la": 46.7,
+    "lift": 0.99,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 58.7,
+    "la": 50.6,
+    "lift": 1.16,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 57.5,
+    "la": 54.4,
+    "lift": 1.06,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 60.0,
+    "la": 46.5,
+    "lift": 1.29,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 48.6,
+    "la": 49.9,
+    "lift": 0.97,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 50.7,
+    "la": 48.0,
+    "lift": 1.06,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 46.2,
+    "la": 51.9,
+    "lift": 0.89,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 8.0,
+    "la": 2.5,
+    "lift": 3.21,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 6.8,
+    "la": 0.0,
+    "lift": null,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 9.2,
+    "la": 5.1,
+    "lift": 1.8,
+    "n": 65
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 2.2,
+    "la": 2.0,
+    "lift": 1.07,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 2.7,
+    "la": 2.2,
+    "lift": 1.25,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 1.5,
+    "la": 1.9,
+    "lift": 0.83,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 82.6,
+    "la": 86.7,
+    "lift": 0.95,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 89.0,
+    "la": 88.2,
+    "lift": 1.01,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 75.4,
+    "la": 85.1,
+    "lift": 0.89,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 76.1,
+    "la": 76.4,
+    "lift": 1.0,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 76.7,
+    "la": 74.1,
+    "lift": 1.03,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 75.4,
+    "la": 78.8,
+    "lift": 0.96,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 58.7,
+    "la": 54.7,
+    "lift": 1.07,
+    "n": 138
+   },
+   "2011-18": {
+    "turn": 49.3,
+    "la": 46.3,
+    "lift": 1.07,
+    "n": 73
+   },
+   "2019-26": {
+    "turn": 69.2,
+    "la": 63.7,
+    "lift": 1.09,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 46.3,
+    "la": 37.8,
+    "lift": 1.23,
+    "n": 95
+   },
+   "2011-18": {
+    "turn": 56.7,
+    "la": 36.7,
+    "lift": 1.55,
+    "n": 30
+   },
+   "2019-26": {
+    "turn": 41.5,
+    "la": 38.4,
+    "lift": 1.08,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 53.4,
+    "la": 60.6,
+    "lift": 0.88,
+    "n": 116
+   },
+   "2011-18": {
+    "turn": 47.1,
+    "la": 58.9,
+    "lift": 0.8,
+    "n": 51
+   },
+   "2019-26": {
+    "turn": 58.5,
+    "la": 61.9,
+    "lift": 0.95,
+    "n": 65
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 20.6,
+    "la": 16.6,
+    "lift": 1.24,
+    "n": 136
+   },
+   "2011-18": {
+    "turn": 18.3,
+    "la": 14.0,
+    "lift": 1.3,
+    "n": 71
+   },
+   "2019-26": {
+    "turn": 23.1,
+    "la": 19.3,
+    "lift": 1.2,
+    "n": 65
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 20.4,
+    "la": 19.9,
+    "lift": 1.03,
+    "n": 137
+   },
+   "2011-18": {
+    "turn": 15.3,
+    "la": 21.7,
+    "lift": 0.7,
+    "n": 72
+   },
+   "2019-26": {
+    "turn": 26.2,
+    "la": 17.9,
+    "lift": 1.46,
+    "n": 65
+   },
+   "verdict": "drop"
+  }
+ ],
+ "all|20|bottoms": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 14.9,
+    "la": 9.3,
+    "lift": 1.6,
+    "n": 47
+   },
+   "2011-18": {
+    "turn": 14.8,
+    "la": 8.6,
+    "lift": 1.71,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 15.0,
+    "la": 9.7,
+    "lift": 1.55,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 40.4,
+    "la": 21.3,
+    "lift": 1.9,
+    "n": 47
+   },
+   "2011-18": {
+    "turn": 44.4,
+    "la": 25.4,
+    "lift": 1.75,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 35.0,
+    "la": 18.7,
+    "lift": 1.87,
+    "n": 20
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 25.5,
+    "la": 41.5,
+    "lift": 0.61,
+    "n": 47
+   },
+   "2011-18": {
+    "turn": 29.6,
+    "la": 54.1,
+    "lift": 0.55,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 20.0,
+    "la": 33.8,
+    "lift": 0.59,
+    "n": 20
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 19.1,
+    "la": 27.9,
+    "lift": 0.69,
+    "n": 47
+   },
+   "2011-18": {
+    "turn": 11.1,
+    "la": 11.9,
+    "lift": 0.93,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 30.0,
+    "la": 37.8,
+    "lift": 0.79,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 63.0,
+    "la": 49.0,
+    "lift": 1.28,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 73.5,
+    "la": 69.2,
+    "lift": 1.06,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 45.0,
+    "la": 35.5,
+    "lift": 1.27,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 27.8,
+    "la": 11.2,
+    "lift": 2.48,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 35.3,
+    "la": 20.4,
+    "lift": 1.73,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 15.0,
+    "la": 5.0,
+    "lift": 2.99,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 0.0,
+    "la": 8.4,
+    "lift": 0.0,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 3.0,
+    "lift": 0.0,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 12.0,
+    "lift": 0.0,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 25.9,
+    "la": 34.8,
+    "lift": 0.74,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 23.5,
+    "la": 25.4,
+    "lift": 0.93,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 30.0,
+    "la": 41.1,
+    "lift": 0.73,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 24.1,
+    "la": 10.6,
+    "lift": 2.27,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 29.4,
+    "la": 7.0,
+    "lift": 4.22,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 15.0,
+    "la": 13.0,
+    "lift": 1.15,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 0.0,
+    "la": 29.9,
+    "lift": 0.0,
+    "n": 50
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 34.2,
+    "lift": 0.0,
+    "n": 30
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 27.1,
+    "lift": 0.0,
+    "n": 20
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 9.6,
+    "la": 21.6,
+    "lift": 0.44,
+    "n": 52
+   },
+   "2011-18": {
+    "turn": 9.4,
+    "la": 24.0,
+    "lift": 0.39,
+    "n": 32
+   },
+   "2019-26": {
+    "turn": 10.0,
+    "la": 20.1,
+    "lift": 0.5,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 64.8,
+    "la": 70.0,
+    "lift": 0.93,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 61.8,
+    "la": 85.6,
+    "lift": 0.72,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 70.0,
+    "la": 59.5,
+    "lift": 1.18,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 38.9,
+    "la": 60.8,
+    "lift": 0.64,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 41.2,
+    "la": 61.7,
+    "lift": 0.67,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 35.0,
+    "la": 60.2,
+    "lift": 0.58,
+    "n": 20
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 53.7,
+    "la": 63.6,
+    "lift": 0.84,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 55.9,
+    "la": 63.7,
+    "lift": 0.88,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 63.5,
+    "lift": 0.79,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 46.3,
+    "la": 56.0,
+    "lift": 0.83,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 41.2,
+    "la": 48.8,
+    "lift": 0.84,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 55.0,
+    "la": 60.9,
+    "lift": 0.9,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 16.7,
+    "la": 4.6,
+    "lift": 3.62,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 14.7,
+    "la": 0.5,
+    "lift": 29.56,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 20.0,
+    "la": 7.4,
+    "lift": 2.72,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 14.8,
+    "la": 5.8,
+    "lift": 2.55,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 5.9,
+    "la": 2.5,
+    "lift": 2.36,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 30.0,
+    "la": 8.0,
+    "lift": 3.74,
+    "n": 20
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 83.3,
+    "la": 84.0,
+    "lift": 0.99,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 88.2,
+    "la": 86.6,
+    "lift": 1.02,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 75.0,
+    "la": 82.3,
+    "lift": 0.91,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 64.8,
+    "la": 63.0,
+    "lift": 1.03,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 70.6,
+    "la": 60.2,
+    "lift": 1.17,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 55.0,
+    "la": 64.9,
+    "lift": 0.85,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 61.1,
+    "la": 45.8,
+    "lift": 1.33,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 55.9,
+    "la": 41.3,
+    "lift": 1.35,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 70.0,
+    "la": 48.8,
+    "lift": 1.43,
+    "n": 20
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 85.7,
+    "la": 62.7,
+    "lift": 1.37,
+    "n": 35
+   },
+   "2011-18": {
+    "turn": 80.0,
+    "la": 59.0,
+    "lift": 1.36,
+    "n": 15
+   },
+   "2019-26": {
+    "turn": 90.0,
+    "la": 63.9,
+    "lift": 1.41,
+    "n": 20
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 36.4,
+    "la": 47.6,
+    "lift": 0.76,
+    "n": 44
+   },
+   "2011-18": {
+    "turn": 29.2,
+    "la": 47.2,
+    "lift": 0.62,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 45.0,
+    "la": 47.8,
+    "lift": 0.94,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 9.3,
+    "la": 12.2,
+    "lift": 0.76,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 5.9,
+    "la": 12.5,
+    "lift": 0.47,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 15.0,
+    "la": 12.0,
+    "lift": 1.25,
+    "n": 20
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 20.4,
+    "la": 7.8,
+    "lift": 2.61,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 8.8,
+    "la": 7.5,
+    "lift": 1.18,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 40.0,
+    "la": 8.0,
+    "lift": 4.98,
+    "n": 20
+   },
+   "verdict": "drop"
+  }
+ ],
+ "all|20|tops": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 12.5,
+    "la": 20.8,
+    "lift": 0.6,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 14.8,
+    "la": 28.0,
+    "lift": 0.53,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 9.5,
+    "la": 14.7,
+    "lift": 0.65,
+    "n": 21
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 43.8,
+    "la": 33.5,
+    "lift": 1.3,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 44.4,
+    "la": 37.9,
+    "lift": 1.17,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 42.9,
+    "la": 29.8,
+    "lift": 1.44,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 22.9,
+    "la": 14.7,
+    "lift": 1.56,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 25.9,
+    "la": 12.6,
+    "lift": 2.05,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 19.0,
+    "la": 16.5,
+    "lift": 1.15,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 20.8,
+    "la": 30.9,
+    "lift": 0.67,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 14.8,
+    "la": 21.5,
+    "lift": 0.69,
+    "n": 27
+   },
+   "2019-26": {
+    "turn": 28.6,
+    "la": 39.1,
+    "lift": 0.73,
+    "n": 21
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 23.6,
+    "la": 32.7,
+    "lift": 0.72,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 29.4,
+    "la": 35.7,
+    "lift": 0.82,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 14.3,
+    "la": 29.5,
+    "lift": 0.48,
+    "n": 21
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 7.3,
+    "la": 11.2,
+    "lift": 0.65,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 11.8,
+    "la": 12.1,
+    "lift": 0.98,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 10.2,
+    "lift": 0.0,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 36.4,
+    "la": 30.8,
+    "lift": 1.18,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 29.4,
+    "la": 35.1,
+    "lift": 0.84,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 47.6,
+    "la": 26.3,
+    "lift": 1.81,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 21.8,
+    "la": 39.5,
+    "lift": 0.55,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 20.6,
+    "la": 32.0,
+    "lift": 0.64,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 23.8,
+    "la": 47.4,
+    "lift": 0.5,
+    "n": 21
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 36.4,
+    "la": 24.9,
+    "lift": 1.46,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 35.3,
+    "la": 31.1,
+    "lift": 1.13,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 38.1,
+    "la": 18.4,
+    "lift": 2.07,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 28.0,
+    "la": 35.0,
+    "lift": 0.8,
+    "n": 50
+   },
+   "2011-18": {
+    "turn": 17.2,
+    "la": 34.0,
+    "lift": 0.51,
+    "n": 29
+   },
+   "2019-26": {
+    "turn": 42.9,
+    "la": 36.0,
+    "lift": 1.19,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 13.2,
+    "la": 14.3,
+    "lift": 0.92,
+    "n": 53
+   },
+   "2011-18": {
+    "turn": 9.4,
+    "la": 12.5,
+    "lift": 0.75,
+    "n": 32
+   },
+   "2019-26": {
+    "turn": 19.0,
+    "la": 16.3,
+    "lift": 1.17,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 80.0,
+    "la": 86.2,
+    "lift": 0.93,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 79.4,
+    "la": 93.4,
+    "lift": 0.85,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 81.0,
+    "la": 78.6,
+    "lift": 1.03,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 54.5,
+    "la": 52.6,
+    "lift": 1.04,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 61.8,
+    "la": 58.1,
+    "lift": 1.06,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 42.9,
+    "la": 46.7,
+    "lift": 0.92,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 56.4,
+    "la": 50.6,
+    "lift": 1.11,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 61.8,
+    "la": 54.4,
+    "lift": 1.14,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 47.6,
+    "la": 46.5,
+    "lift": 1.02,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 50.9,
+    "la": 49.9,
+    "lift": 1.02,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 55.9,
+    "la": 48.0,
+    "lift": 1.16,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 42.9,
+    "la": 51.9,
+    "lift": 0.83,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 3.6,
+    "la": 2.5,
+    "lift": 1.46,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 5.9,
+    "la": 0.0,
+    "lift": null,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 5.1,
+    "lift": 0.0,
+    "n": 21
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 0.0,
+    "la": 2.0,
+    "lift": 0.0,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 2.2,
+    "lift": 0.0,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 1.9,
+    "lift": 0.0,
+    "n": 21
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 96.4,
+    "la": 86.7,
+    "lift": 1.11,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 94.1,
+    "la": 88.2,
+    "lift": 1.07,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 100.0,
+    "la": 85.1,
+    "lift": 1.17,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 83.6,
+    "la": 76.4,
+    "lift": 1.09,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 79.4,
+    "la": 74.1,
+    "lift": 1.07,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 90.5,
+    "la": 78.8,
+    "lift": 1.15,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 60.0,
+    "la": 54.7,
+    "lift": 1.1,
+    "n": 55
+   },
+   "2011-18": {
+    "turn": 47.1,
+    "la": 46.3,
+    "lift": 1.02,
+    "n": 34
+   },
+   "2019-26": {
+    "turn": 81.0,
+    "la": 63.7,
+    "lift": 1.27,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 20.0,
+    "la": 37.8,
+    "lift": 0.53,
+    "n": 35
+   },
+   "2011-18": {
+    "turn": 28.6,
+    "la": 36.7,
+    "lift": 0.78,
+    "n": 14
+   },
+   "2019-26": {
+    "turn": 14.3,
+    "la": 38.4,
+    "lift": 0.37,
+    "n": 21
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 48.9,
+    "la": 60.6,
+    "lift": 0.81,
+    "n": 45
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 58.9,
+    "lift": 0.85,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 47.6,
+    "la": 61.9,
+    "lift": 0.77,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 20.4,
+    "la": 16.6,
+    "lift": 1.23,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 12.1,
+    "la": 14.0,
+    "lift": 0.86,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 19.3,
+    "lift": 1.73,
+    "n": 21
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 24.1,
+    "la": 19.9,
+    "lift": 1.21,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 21.2,
+    "la": 21.7,
+    "lift": 0.98,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 28.6,
+    "la": 17.9,
+    "lift": 1.6,
+    "n": 21
+   },
+   "verdict": "drop"
+  }
+ ],
+ "slow|10|bottoms": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 12.5,
+    "la": 11.6,
+    "lift": 1.07,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 12.5,
+    "la": 12.8,
+    "lift": 0.98,
+    "n": 16
+   },
+   "2019-26": {
+    "turn": 12.5,
+    "la": 11.1,
+    "lift": 1.13,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 37.5,
+    "la": 23.0,
+    "lift": 1.63,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 56.2,
+    "la": 25.6,
+    "lift": 2.19,
+    "n": 16
+   },
+   "2019-26": {
+    "turn": 28.1,
+    "la": 21.7,
+    "lift": 1.3,
+    "n": 32
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 18.8,
+    "la": 35.2,
+    "lift": 0.53,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 25.0,
+    "la": 46.2,
+    "lift": 0.54,
+    "n": 16
+   },
+   "2019-26": {
+    "turn": 15.6,
+    "la": 29.8,
+    "lift": 0.52,
+    "n": 32
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 31.2,
+    "la": 30.1,
+    "lift": 1.04,
+    "n": 48
+   },
+   "2011-18": {
+    "turn": 6.2,
+    "la": 15.4,
+    "lift": 0.41,
+    "n": 16
+   },
+   "2019-26": {
+    "turn": 43.8,
+    "la": 37.4,
+    "lift": 1.17,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 55.4,
+    "la": 43.1,
+    "lift": 1.29,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 45.8,
+    "la": 61.4,
+    "lift": 0.75,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 62.5,
+    "la": 32.8,
+    "lift": 1.91,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 16.1,
+    "la": 10.4,
+    "lift": 1.55,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 16.7,
+    "la": 17.4,
+    "lift": 0.96,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 15.6,
+    "la": 6.4,
+    "lift": 2.45,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 0.0,
+    "la": 11.2,
+    "lift": 0.0,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 4.5,
+    "lift": 0.0,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 14.9,
+    "lift": 0.0,
+    "n": 32
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 37.5,
+    "la": 38.1,
+    "lift": 0.98,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 8.3,
+    "la": 31.1,
+    "lift": 0.27,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 59.4,
+    "la": 42.1,
+    "lift": 1.41,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 21.4,
+    "la": 12.0,
+    "lift": 1.79,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 29.2,
+    "la": 9.1,
+    "lift": 3.21,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 15.6,
+    "la": 13.6,
+    "lift": 1.15,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 5.9,
+    "la": 36.7,
+    "lift": 0.16,
+    "n": 51
+   },
+   "2011-18": {
+    "turn": 15.8,
+    "la": 43.8,
+    "lift": 0.36,
+    "n": 19
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 32.8,
+    "lift": 0.0,
+    "n": 32
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 16.1,
+    "la": 21.0,
+    "lift": 0.76,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 8.3,
+    "la": 22.1,
+    "lift": 0.38,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 21.9,
+    "la": 20.4,
+    "lift": 1.07,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 53.6,
+    "la": 65.1,
+    "lift": 0.82,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 81.8,
+    "lift": 0.61,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 56.2,
+    "la": 55.7,
+    "lift": 1.01,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 55.4,
+    "la": 58.0,
+    "lift": 0.95,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 62.1,
+    "lift": 0.8,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 59.4,
+    "la": 55.7,
+    "lift": 1.07,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 53.6,
+    "la": 60.8,
+    "lift": 0.88,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 45.8,
+    "la": 62.1,
+    "lift": 0.74,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 59.4,
+    "la": 60.0,
+    "lift": 0.99,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 50.0,
+    "la": 56.9,
+    "lift": 0.88,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 51.5,
+    "lift": 0.97,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 60.0,
+    "lift": 0.83,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 12.5,
+    "la": 3.8,
+    "lift": 3.28,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 4.2,
+    "la": 0.8,
+    "lift": 5.5,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 18.8,
+    "la": 5.5,
+    "lift": 3.39,
+    "n": 32
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 0.0,
+    "la": 4.4,
+    "lift": 0.0,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 1.5,
+    "lift": 0.0,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 6.0,
+    "lift": 0.0,
+    "n": 32
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 78.6,
+    "la": 85.3,
+    "lift": 0.92,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 91.7,
+    "la": 90.9,
+    "lift": 1.01,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 68.8,
+    "la": 82.1,
+    "lift": 0.84,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 66.1,
+    "la": 67.6,
+    "lift": 0.98,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 75.0,
+    "la": 65.2,
+    "lift": 1.15,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 59.4,
+    "la": 68.9,
+    "lift": 0.86,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 53.6,
+    "la": 48.2,
+    "lift": 1.11,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 41.7,
+    "lift": 1.2,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 56.2,
+    "la": 51.9,
+    "lift": 1.08,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 71.8,
+    "la": 55.3,
+    "lift": 1.3,
+    "n": 39
+   },
+   "2011-18": {
+    "turn": 57.1,
+    "la": 50.0,
+    "lift": 1.14,
+    "n": 7
+   },
+   "2019-26": {
+    "turn": 75.0,
+    "la": 56.6,
+    "lift": 1.33,
+    "n": 32
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 52.2,
+    "la": 47.3,
+    "lift": 1.1,
+    "n": 46
+   },
+   "2011-18": {
+    "turn": 64.3,
+    "la": 43.8,
+    "lift": 1.47,
+    "n": 14
+   },
+   "2019-26": {
+    "turn": 46.9,
+    "la": 48.9,
+    "lift": 0.96,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 19.6,
+    "la": 13.9,
+    "lift": 1.41,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 29.2,
+    "la": 13.7,
+    "lift": 2.12,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 12.5,
+    "la": 14.0,
+    "lift": 0.89,
+    "n": 32
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 12.5,
+    "la": 6.8,
+    "lift": 1.83,
+    "n": 56
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 5.3,
+    "lift": 0.0,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 21.9,
+    "la": 7.7,
+    "lift": 2.86,
+    "n": 32
+   },
+   "verdict": "drop"
+  }
+ ],
+ "slow|10|tops": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 4.7,
+    "la": 20.4,
+    "lift": 0.23,
+    "n": 64
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 25.7,
+    "lift": 0.0,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 7.5,
+    "la": 16.1,
+    "lift": 0.47,
+    "n": 40
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 40.6,
+    "la": 28.2,
+    "lift": 1.44,
+    "n": 64
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 30.2,
+    "lift": 1.66,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 35.0,
+    "la": 26.6,
+    "lift": 1.31,
+    "n": 40
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 32.8,
+    "la": 19.8,
+    "lift": 1.66,
+    "n": 64
+   },
+   "2011-18": {
+    "turn": 41.7,
+    "la": 17.1,
+    "lift": 2.43,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 27.5,
+    "la": 21.9,
+    "lift": 1.26,
+    "n": 40
+   },
+   "verdict": "KEEP (more at turns)"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 21.9,
+    "la": 31.7,
+    "lift": 0.69,
+    "n": 64
+   },
+   "2011-18": {
+    "turn": 8.3,
+    "la": 27.0,
+    "lift": 0.31,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 30.0,
+    "la": 35.4,
+    "lift": 0.85,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 35.6,
+    "la": 36.7,
+    "lift": 0.97,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 42.4,
+    "la": 45.1,
+    "lift": 0.94,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 30.0,
+    "la": 28.1,
+    "lift": 1.07,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 13.7,
+    "la": 14.3,
+    "lift": 0.96,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 18.2,
+    "la": 16.5,
+    "lift": 1.1,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 10.0,
+    "la": 12.0,
+    "lift": 0.83,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 17.8,
+    "la": 22.4,
+    "lift": 0.79,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 9.1,
+    "la": 20.1,
+    "lift": 0.45,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 25.0,
+    "la": 24.8,
+    "lift": 1.01,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 24.7,
+    "la": 41.8,
+    "lift": 0.59,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 12.1,
+    "la": 40.5,
+    "lift": 0.3,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 35.0,
+    "la": 43.1,
+    "lift": 0.81,
+    "n": 40
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 20.5,
+    "la": 16.1,
+    "lift": 1.27,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 24.2,
+    "la": 15.8,
+    "lift": 1.53,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 17.5,
+    "la": 16.4,
+    "lift": 1.07,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 21.5,
+    "la": 41.4,
+    "lift": 0.52,
+    "n": 65
+   },
+   "2011-18": {
+    "turn": 20.0,
+    "la": 44.1,
+    "lift": 0.45,
+    "n": 25
+   },
+   "2019-26": {
+    "turn": 22.5,
+    "la": 38.7,
+    "lift": 0.58,
+    "n": 40
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 14.3,
+    "la": 17.4,
+    "lift": 0.82,
+    "n": 70
+   },
+   "2011-18": {
+    "turn": 16.7,
+    "la": 15.1,
+    "lift": 1.1,
+    "n": 30
+   },
+   "2019-26": {
+    "turn": 12.5,
+    "la": 19.7,
+    "lift": 0.63,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 63.0,
+    "la": 83.0,
+    "lift": 0.76,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 69.7,
+    "la": 91.9,
+    "lift": 0.76,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 57.5,
+    "la": 73.7,
+    "lift": 0.78,
+    "n": 40
+   },
+   "verdict": "KEEP (less at turns)"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 52.1,
+    "la": 50.5,
+    "lift": 1.03,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 63.6,
+    "la": 53.9,
+    "lift": 1.18,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 42.5,
+    "la": 47.1,
+    "lift": 0.9,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 63.0,
+    "la": 53.2,
+    "lift": 1.18,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 63.6,
+    "la": 59.5,
+    "lift": 1.07,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 62.5,
+    "la": 46.7,
+    "lift": 1.34,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 43.8,
+    "la": 49.6,
+    "lift": 0.88,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 48.5,
+    "la": 48.6,
+    "lift": 1.0,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 40.0,
+    "la": 50.7,
+    "lift": 0.79,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 11.0,
+    "la": 2.5,
+    "lift": 4.37,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 15.2,
+    "la": 0.0,
+    "lift": null,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 7.5,
+    "la": 5.1,
+    "lift": 1.47,
+    "n": 40
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 2.7,
+    "la": 2.0,
+    "lift": 1.39,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 3.0,
+    "la": 1.8,
+    "lift": 1.72,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 2.5,
+    "la": 2.2,
+    "lift": 1.14,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 75.3,
+    "la": 83.7,
+    "lift": 0.9,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 81.8,
+    "la": 82.7,
+    "lift": 0.99,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 70.0,
+    "la": 84.7,
+    "lift": 0.83,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 67.1,
+    "la": 70.1,
+    "lift": 0.96,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 69.7,
+    "la": 63.7,
+    "lift": 1.09,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 65.0,
+    "la": 76.6,
+    "lift": 0.85,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 63.0,
+    "la": 53.8,
+    "lift": 1.17,
+    "n": 73
+   },
+   "2011-18": {
+    "turn": 54.5,
+    "la": 47.2,
+    "lift": 1.16,
+    "n": 33
+   },
+   "2019-26": {
+    "turn": 70.0,
+    "la": 60.6,
+    "lift": 1.16,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 61.1,
+    "la": 47.5,
+    "lift": 1.29,
+    "n": 54
+   },
+   "2011-18": {
+    "turn": 78.6,
+    "la": 44.4,
+    "lift": 1.77,
+    "n": 14
+   },
+   "2019-26": {
+    "turn": 55.0,
+    "la": 49.3,
+    "lift": 1.12,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 46.9,
+    "la": 58.5,
+    "lift": 0.8,
+    "n": 64
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 60.2,
+    "lift": 0.55,
+    "n": 24
+   },
+   "2019-26": {
+    "turn": 55.0,
+    "la": 57.3,
+    "lift": 0.96,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 22.5,
+    "la": 21.0,
+    "lift": 1.07,
+    "n": 71
+   },
+   "2011-18": {
+    "turn": 25.8,
+    "la": 19.0,
+    "lift": 1.36,
+    "n": 31
+   },
+   "2019-26": {
+    "turn": 20.0,
+    "la": 23.0,
+    "lift": 0.87,
+    "n": 40
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 13.9,
+    "la": 15.8,
+    "lift": 0.88,
+    "n": 72
+   },
+   "2011-18": {
+    "turn": 6.2,
+    "la": 16.9,
+    "lift": 0.37,
+    "n": 32
+   },
+   "2019-26": {
+    "turn": 20.0,
+    "la": 14.6,
+    "lift": 1.37,
+    "n": 40
+   },
+   "verdict": "drop"
+  }
+ ],
+ "slow|20|bottoms": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 0.0,
+    "la": 11.6,
+    "lift": 0.0,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 12.8,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 11.1,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 33.3,
+    "la": 23.0,
+    "lift": 1.45,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 25.6,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 21.7,
+    "lift": 1.54,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 0.0,
+    "la": 35.2,
+    "lift": 0.0,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 46.2,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 29.8,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 66.7,
+    "la": 30.1,
+    "lift": 2.21,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 15.4,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 66.7,
+    "la": 37.4,
+    "lift": 1.78,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 77.8,
+    "la": 43.1,
+    "lift": 1.81,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 61.4,
+    "lift": 1.09,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 83.3,
+    "la": 32.8,
+    "lift": 2.54,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 22.2,
+    "la": 10.4,
+    "lift": 2.15,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 17.4,
+    "lift": 1.91,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 16.7,
+    "la": 6.4,
+    "lift": 2.61,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 0.0,
+    "la": 11.2,
+    "lift": 0.0,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 4.5,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 14.9,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 44.4,
+    "la": 38.1,
+    "lift": 1.17,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 31.1,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 66.7,
+    "la": 42.1,
+    "lift": 1.58,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 11.1,
+    "la": 12.0,
+    "lift": 0.93,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 9.1,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 16.7,
+    "la": 13.6,
+    "lift": 1.22,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 0.0,
+    "la": 36.7,
+    "lift": 0.0,
+    "n": 7
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 43.8,
+    "lift": 0.0,
+    "n": 1
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 32.8,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 22.2,
+    "la": 21.0,
+    "lift": 1.06,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 22.1,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 20.4,
+    "lift": 1.63,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 77.8,
+    "la": 65.1,
+    "lift": 1.19,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 81.8,
+    "lift": 0.81,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 83.3,
+    "la": 55.7,
+    "lift": 1.49,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 44.4,
+    "la": 58.0,
+    "lift": 0.77,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 62.1,
+    "lift": 1.07,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 55.7,
+    "lift": 0.6,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 55.6,
+    "la": 60.8,
+    "lift": 0.91,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 62.1,
+    "lift": 1.07,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 60.0,
+    "lift": 0.83,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 55.6,
+    "la": 56.9,
+    "lift": 0.98,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 51.5,
+    "lift": 1.29,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 60.0,
+    "lift": 0.83,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 11.1,
+    "la": 3.8,
+    "lift": 2.91,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 0.8,
+    "lift": 44.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 5.5,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 0.0,
+    "la": 4.4,
+    "lift": 0.0,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 1.5,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 6.0,
+    "lift": 0.0,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 88.9,
+    "la": 85.3,
+    "lift": 1.04,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 100.0,
+    "la": 90.9,
+    "lift": 1.1,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 83.3,
+    "la": 82.1,
+    "lift": 1.01,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 77.8,
+    "la": 67.6,
+    "lift": 1.15,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 65.2,
+    "lift": 0.51,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 100.0,
+    "la": 68.9,
+    "lift": 1.45,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 77.8,
+    "la": 48.2,
+    "lift": 1.61,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 41.7,
+    "lift": 1.6,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 83.3,
+    "la": 51.9,
+    "lift": 1.61,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 100.0,
+    "la": 55.3,
+    "lift": 1.81,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 50.0,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 100.0,
+    "la": 56.6,
+    "lift": 1.77,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 33.3,
+    "la": 47.3,
+    "lift": 0.71,
+    "n": 6
+   },
+   "2011-18": {
+    "turn": null,
+    "la": 43.8,
+    "lift": null,
+    "n": 0
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 48.9,
+    "lift": 0.68,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 22.2,
+    "la": 13.9,
+    "lift": 1.59,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 13.7,
+    "lift": 2.43,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 16.7,
+    "la": 14.0,
+    "lift": 1.19,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 33.3,
+    "la": 6.8,
+    "lift": 4.88,
+    "n": 9
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 5.3,
+    "lift": 0.0,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 50.0,
+    "la": 7.7,
+    "lift": 6.53,
+    "n": 6
+   },
+   "verdict": "not enough data"
+  }
+ ],
+ "slow|20|tops": [
+  {
+   "item": "Cycle: 0-6 months after halving",
+   "all": {
+    "turn": 6.7,
+    "la": 20.4,
+    "lift": 0.33,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 25.7,
+    "lift": 0.0,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 11.1,
+    "la": 16.1,
+    "lift": 0.69,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 6-18 months after halving",
+   "all": {
+    "turn": 53.3,
+    "la": 28.2,
+    "lift": 1.89,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 66.7,
+    "la": 30.2,
+    "lift": 2.21,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 44.4,
+    "la": 26.6,
+    "lift": 1.67,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 18-30 months after halving",
+   "all": {
+    "turn": 26.7,
+    "la": 19.8,
+    "lift": 1.35,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 17.1,
+    "lift": 1.95,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 21.9,
+    "lift": 1.01,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 30+ months after halving",
+   "all": {
+    "turn": 13.3,
+    "la": 31.7,
+    "lift": 0.42,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 27.0,
+    "lift": 0.0,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 35.4,
+    "lift": 0.63,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Cycle: 50%+ below all-time high",
+   "all": {
+    "turn": 15.8,
+    "la": 36.7,
+    "lift": 0.43,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 20.0,
+    "la": 45.1,
+    "lift": 0.44,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 11.1,
+    "la": 28.1,
+    "lift": 0.4,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: 70%+ below all-time high",
+   "all": {
+    "turn": 10.5,
+    "la": 14.3,
+    "lift": 0.73,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 20.0,
+    "la": 16.5,
+    "lift": 1.21,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 12.0,
+    "lift": 0.0,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: within 10% of all-time high",
+   "all": {
+    "turn": 31.6,
+    "la": 22.4,
+    "lift": 1.41,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 10.0,
+    "la": 20.1,
+    "lift": 0.5,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 55.6,
+    "la": 24.8,
+    "lift": 2.24,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Cycle: last all-time high over a year ago",
+   "all": {
+    "turn": 15.8,
+    "la": 41.8,
+    "lift": 0.38,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 10.0,
+    "la": 40.5,
+    "lift": 0.25,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 43.1,
+    "lift": 0.52,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Cycle: new all-time high in the last 30 days",
+   "all": {
+    "turn": 36.8,
+    "la": 16.1,
+    "lift": 2.28,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 30.0,
+    "la": 15.8,
+    "lift": 1.89,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 44.4,
+    "la": 16.4,
+    "lift": 2.71,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Slow: daily range squeezed (bottom 20% of last 180 days)",
+   "all": {
+    "turn": 46.7,
+    "la": 41.4,
+    "lift": 1.13,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 44.1,
+    "lift": 0.76,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 55.6,
+    "la": 38.7,
+    "lift": 1.44,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: volume drying up (20-day avg < 0.7x 90-day avg)",
+   "all": {
+    "turn": 27.8,
+    "la": 17.4,
+    "lift": 1.6,
+    "n": 18
+   },
+   "2011-18": {
+    "turn": 22.2,
+    "la": 15.1,
+    "lift": 1.47,
+    "n": 9
+   },
+   "2019-26": {
+    "turn": 33.3,
+    "la": 19.7,
+    "lift": 1.69,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "Slow: move into the turn lasted 30+ days",
+   "all": {
+    "turn": 78.9,
+    "la": 83.0,
+    "lift": 0.95,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 70.0,
+    "la": 91.9,
+    "lift": 0.76,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 88.9,
+    "la": 73.7,
+    "lift": 1.21,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) up over 30 days",
+   "all": {
+    "turn": 63.2,
+    "la": 50.5,
+    "lift": 1.25,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 70.0,
+    "la": 53.9,
+    "lift": 1.3,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 55.6,
+    "la": 47.1,
+    "lift": 1.18,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US dollar (DXY) above its 200-day EMA",
+   "all": {
+    "turn": 63.2,
+    "la": 53.2,
+    "lift": 1.19,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 80.0,
+    "la": 59.5,
+    "lift": 1.34,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 44.4,
+    "la": 46.7,
+    "lift": 0.95,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "US 10-year yield up over 30 days",
+   "all": {
+    "turn": 42.1,
+    "la": 49.6,
+    "lift": 0.85,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 60.0,
+    "la": 48.6,
+    "lift": 1.23,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 50.7,
+    "lift": 0.44,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "VIX 30+ (fear)",
+   "all": {
+    "turn": 10.5,
+    "la": 2.5,
+    "lift": 4.2,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 20.0,
+    "la": 0.0,
+    "lift": null,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 5.1,
+    "lift": 0.0,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "VIX up 30%+ in 5 days (spike)",
+   "all": {
+    "turn": 0.0,
+    "la": 2.0,
+    "lift": 0.0,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 0.0,
+    "la": 1.8,
+    "lift": 0.0,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 0.0,
+    "la": 2.2,
+    "lift": 0.0,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  },
+  {
+   "item": "S&P 500 above its 200-day EMA",
+   "all": {
+    "turn": 94.7,
+    "la": 83.7,
+    "lift": 1.13,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 90.0,
+    "la": 82.7,
+    "lift": 1.09,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 100.0,
+    "la": 84.7,
+    "lift": 1.18,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "S&P 500 up over 30 days",
+   "all": {
+    "turn": 78.9,
+    "la": 70.1,
+    "lift": 1.13,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 80.0,
+    "la": 63.7,
+    "lift": 1.26,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 77.8,
+    "la": 76.6,
+    "lift": 1.01,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Gold up over 30 days",
+   "all": {
+    "turn": 68.4,
+    "la": 53.8,
+    "lift": 1.27,
+    "n": 19
+   },
+   "2011-18": {
+    "turn": 50.0,
+    "la": 47.2,
+    "lift": 1.06,
+    "n": 10
+   },
+   "2019-26": {
+    "turn": 88.9,
+    "la": 60.6,
+    "lift": 1.47,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "USDT dominance up over 30 days",
+   "all": {
+    "turn": 25.0,
+    "la": 47.5,
+    "lift": 0.53,
+    "n": 12
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 44.4,
+    "lift": 0.75,
+    "n": 3
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 49.3,
+    "lift": 0.45,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "BTC dominance up over 30 days",
+   "all": {
+    "turn": 40.0,
+    "la": 58.5,
+    "lift": 0.68,
+    "n": 15
+   },
+   "2011-18": {
+    "turn": 33.3,
+    "la": 60.2,
+    "lift": 0.55,
+    "n": 6
+   },
+   "2019-26": {
+    "turn": 44.4,
+    "la": 57.3,
+    "lift": 0.78,
+    "n": 9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "item": "Slow: last 30 days moved less than the 30 before (same direction)",
+   "all": {
+    "turn": 33.3,
+    "la": 21.0,
+    "lift": 1.59,
+    "n": 18
+   },
+   "2011-18": {
+    "turn": 22.2,
+    "la": 19.0,
+    "lift": 1.17,
+    "n": 9
+   },
+   "2019-26": {
+    "turn": 44.4,
+    "la": 23.0,
+    "lift": 1.93,
+    "n": 9
+   },
+   "verdict": "drop"
+  },
+  {
+   "item": "Slow: RSI divergence",
+   "all": {
+    "turn": 22.2,
+    "la": 15.8,
+    "lift": 1.41,
+    "n": 18
+   },
+   "2011-18": {
+    "turn": 22.2,
+    "la": 16.9,
+    "lift": 1.31,
+    "n": 9
+   },
+   "2019-26": {
+    "turn": 22.2,
+    "la": 14.6,
+    "lift": 1.52,
+    "n": 9
+   },
+   "verdict": "too rare to judge"
+  }
+ ]
+}

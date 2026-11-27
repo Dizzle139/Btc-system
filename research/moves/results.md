@@ -2,109 +2,109 @@
 
 Daily closes, Bitstamp. A turning point = the start of a confirmed move. Lift = how often the item was present at turning points divided by how often on ordinary days (same side: bottoms compared with all days as candidate bottoms, tops with candidate tops). Lift above 1 = shows up more at turns than on ordinary days. Ordinary days exclude the 3 days either side of any 10% turn. The era columns are lift vs extreme days.
 
-## 10% moves: 265 turning points (2011-16: 86, 2016-21: 113, 2021-26: 66)
+## 10% moves: 275 turning points (2011-16: 96, 2016-21: 113, 2021-26: 66)
 
 | Item | At turns | Ordinary days | Lift | New 10-day extreme days | Lift vs extremes | 2011-16 | 2016-21 | 2021-26 |
 |---|---|---|---|---|---|---|---|---|
-| Weekly EMA agrees | 49.8% (n=265) | 50.0% | 1.0 | 37.1% | 1.34 | 1.58 | 1.64 | 1.06 |
-| Weekly structure agrees | 41.5% (n=265) | 49.2% | 0.84 | 39.1% | 1.06 | 1.33 | 1.44 | 0.7 |
-| Daily structure agrees | 23.0% (n=265) | 54.0% | 0.43 | 14.9% | 1.55 | 2.1 | 1.98 | 0.53 |
-| Weekly zone, 2x filter | 27.5% (n=265) | 15.9% | 1.73 | 22.5% | 1.23 | 1.39 | 1.24 | 1.25 |
-| Weekly zone, 2x, first touch | 7.2% (n=265) | 0.6% | 12.41 | 2.9% | 2.48 | 5.7 | 2.55 | 1.13 |
-| Weekly zone, no filter | 38.5% (n=265) | 24.7% | 1.56 | 37.0% | 1.04 | 1.0 | 1.08 | 1.19 |
-| Weekly zone, no filter, first touch | 10.2% (n=265) | 1.3% | 8.12 | 6.1% | 1.66 | 2.27 | 1.77 | 1.07 |
-| Daily zone, 2x filter | 49.4% (n=265) | 27.4% | 1.81 | 42.1% | 1.17 | 1.35 | 1.14 | 1.13 |
-| Daily zone, 2x, first touch | 5.3% (n=265) | 1.2% | 4.4 | 3.1% | 1.7 | 4.28 | 1.79 | 0.38 |
-| Daily zone, no filter | 61.5% (n=265) | 43.6% | 1.41 | 59.2% | 1.04 | 1.16 | 1.12 | 0.9 |
-| Daily zone, no filter, first touch | 7.9% (n=265) | 2.4% | 3.32 | 5.3% | 1.48 | 1.84 | 2.08 | 0.26 |
-| Sharp move into the turn: 10%+ in 7 days | 52.8% (n=265) | 8.8% | 6.03 | 34.1% | 1.55 | 1.68 | 1.21 | 1.69 |
-| Sharp move into the turn: 3+ daily ranges in 7 days | 20.0% (n=265) | 4.9% | 4.08 | 23.3% | 0.86 | 0.96 | 0.65 | 0.99 |
-| Extended into the turn: 20%+ in 30 days | 40.4% (n=265) | 13.1% | 3.09 | 29.6% | 1.36 | 1.51 | 1.08 | 1.25 |
-| Stretched: 20%+ past weekly EMA50 | 46.4% (n=265) | 29.3% | 1.58 | 47.7% | 0.97 | 0.86 | 0.86 | 1.22 |
-| Past weekly EMA200 | 55.5% (n=265) | 49.4% | 1.12 | 62.1% | 0.89 | 0.82 | 0.79 | 1.12 |
-| Wick 40%+ of range (rejection) | 23.0% (n=265) | 27.4% | 0.84 | 22.3% | 1.03 | 0.97 | 1.09 | 0.99 |
-| Volume 1.5x+ (Bitstamp) | 40.0% (n=265) | 15.6% | 2.56 | 27.7% | 1.45 | 1.76 | 1.29 | 1.34 |
+| Weekly EMA agrees | 49.8% (n=275) | 50.1% | 0.99 | 42.0% | 1.19 | 1.05 | 1.64 | 1.06 |
+| Weekly structure agrees | 45.1% (n=275) | 50.7% | 0.89 | 41.4% | 1.09 | 1.36 | 1.44 | 0.7 |
+| Daily structure agrees | 22.9% (n=275) | 54.0% | 0.42 | 15.1% | 1.52 | 1.95 | 1.98 | 0.53 |
+| Weekly zone, 2x filter | 27.3% (n=275) | 16.0% | 1.71 | 22.5% | 1.21 | 1.35 | 1.24 | 1.25 |
+| Weekly zone, 2x, first touch | 6.9% (n=275) | 0.6% | 12.06 | 2.8% | 2.46 | 5.99 | 2.55 | 1.13 |
+| Weekly zone, no filter | 37.8% (n=275) | 24.6% | 1.54 | 37.1% | 1.02 | 0.96 | 1.08 | 1.19 |
+| Weekly zone, no filter, first touch | 9.8% (n=275) | 1.3% | 7.83 | 6.1% | 1.62 | 2.14 | 1.77 | 1.07 |
+| Daily zone, 2x filter | 48.7% (n=275) | 27.6% | 1.77 | 43.2% | 1.13 | 1.18 | 1.14 | 1.13 |
+| Daily zone, 2x, first touch | 5.1% (n=275) | 1.2% | 4.24 | 3.1% | 1.64 | 3.85 | 1.79 | 0.38 |
+| Daily zone, no filter | 60.4% (n=275) | 43.4% | 1.39 | 60.0% | 1.01 | 1.05 | 1.12 | 0.9 |
+| Daily zone, no filter, first touch | 7.6% (n=275) | 2.4% | 3.23 | 5.3% | 1.43 | 1.65 | 2.08 | 0.26 |
+| Sharp move into the turn: 10%+ in 7 days | 53.5% (n=275) | 8.9% | 6.02 | 34.1% | 1.57 | 1.72 | 1.21 | 1.69 |
+| Sharp move into the turn: 3+ daily ranges in 7 days | 20.4% (n=275) | 5.0% | 4.09 | 23.8% | 0.86 | 0.93 | 0.65 | 0.99 |
+| Extended into the turn: 20%+ in 30 days | 40.0% (n=275) | 13.4% | 3.0 | 29.7% | 1.35 | 1.44 | 1.08 | 1.25 |
+| Stretched: 20%+ past weekly EMA50 | 45.5% (n=275) | 30.2% | 1.5 | 46.9% | 0.97 | 0.84 | 0.86 | 1.22 |
+| Past weekly EMA200 | 55.6% (n=275) | 49.3% | 1.13 | 59.4% | 0.94 | 0.95 | 0.79 | 1.12 |
+| Wick 40%+ of range (rejection) | 22.5% (n=275) | 27.2% | 0.83 | 22.4% | 1.0 | 0.91 | 1.09 | 0.99 |
+| Volume 1.5x+ (Bitstamp) | 40.4% (n=275) | 15.8% | 2.56 | 27.6% | 1.46 | 1.76 | 1.29 | 1.34 |
 | Volume 1.5x+ (Binance, 2017+) | 29.2% (n=161) | 12.2% | 2.4 | 22.2% | 1.32 | – | 1.22 | 1.54 |
 | Buy/sell share already favours the new move (Binance) | 25.5% (n=161) | 49.6% | 0.51 | 24.3% | 1.05 | – | 1.02 | 1.0 |
 | Open interest down 10%+ in 7 days (2021+) | 3.4% (n=59) | 6.7% | 0.51 | 5.2% | 0.66 | – | – | 0.66 |
 | Funding against the new move over 7 days (2020+) | 50.5% (n=105) | 49.7% | 1.02 | 55.6% | 0.91 | – | 0.72 | 0.97 |
 
-## 20% moves: 103 turning points (2011-16: 41, 2016-21: 38, 2021-26: 24)
+## 20% moves: 109 turning points (2011-16: 47, 2016-21: 38, 2021-26: 24)
 
 | Item | At turns | Ordinary days | Lift | New 10-day extreme days | Lift vs extremes | 2011-16 | 2016-21 | 2021-26 |
 |---|---|---|---|---|---|---|---|---|
-| Weekly EMA agrees | 49.5% (n=103) | 50.0% | 0.99 | 37.1% | 1.34 | 1.54 | 1.65 | 1.06 |
-| Weekly structure agrees | 37.9% (n=103) | 49.2% | 0.77 | 39.1% | 0.97 | 1.44 | 1.35 | 0.46 |
-| Daily structure agrees | 7.8% (n=103) | 54.0% | 0.14 | 14.9% | 0.52 | 0.92 | 0.57 | 0.0 |
-| Weekly zone, 2x filter | 35.9% (n=103) | 15.9% | 2.26 | 22.5% | 1.6 | 2.18 | 1.47 | 1.49 |
-| Weekly zone, 2x, first touch | 11.7% (n=103) | 0.6% | 20.16 | 2.9% | 4.03 | 11.96 | 3.8 | 0.0 |
-| Weekly zone, no filter | 46.6% (n=103) | 24.7% | 1.89 | 37.0% | 1.26 | 1.57 | 1.17 | 1.33 |
-| Weekly zone, no filter, first touch | 16.5% (n=103) | 1.3% | 13.16 | 6.1% | 2.69 | 4.76 | 2.63 | 0.59 |
-| Daily zone, 2x filter | 49.5% (n=103) | 27.4% | 1.81 | 42.1% | 1.18 | 1.49 | 1.13 | 1.04 |
-| Daily zone, 2x, first touch | 8.7% (n=103) | 1.2% | 7.28 | 3.1% | 2.81 | 5.98 | 3.04 | 1.04 |
-| Daily zone, no filter | 61.2% (n=103) | 43.6% | 1.4 | 59.2% | 1.03 | 1.27 | 1.08 | 0.85 |
-| Daily zone, no filter, first touch | 10.7% (n=103) | 2.4% | 4.47 | 5.3% | 2.0 | 2.75 | 2.37 | 0.7 |
-| Sharp move into the turn: 10%+ in 7 days | 70.9% (n=103) | 8.8% | 8.09 | 34.1% | 2.08 | 2.24 | 1.63 | 2.14 |
-| Sharp move into the turn: 3+ daily ranges in 7 days | 29.1% (n=103) | 4.9% | 5.95 | 23.3% | 1.25 | 1.34 | 0.97 | 1.36 |
-| Extended into the turn: 20%+ in 30 days | 56.3% (n=103) | 13.1% | 4.3 | 29.6% | 1.9 | 2.0 | 1.47 | 1.83 |
-| Stretched: 20%+ past weekly EMA50 | 53.4% (n=103) | 29.3% | 1.82 | 47.7% | 1.12 | 0.9 | 1.02 | 1.54 |
-| Past weekly EMA200 | 60.2% (n=103) | 49.4% | 1.22 | 62.1% | 0.97 | 0.91 | 0.81 | 1.27 |
-| Wick 40%+ of range (rejection) | 25.2% (n=103) | 27.4% | 0.92 | 22.3% | 1.13 | 1.2 | 1.12 | 1.09 |
-| Volume 1.5x+ (Bitstamp) | 50.5% (n=103) | 15.6% | 3.23 | 27.7% | 1.82 | 2.18 | 1.66 | 1.47 |
+| Weekly EMA agrees | 49.5% (n=109) | 50.1% | 0.99 | 42.0% | 1.18 | 1.03 | 1.65 | 1.06 |
+| Weekly structure agrees | 39.4% (n=109) | 50.7% | 0.78 | 41.4% | 0.95 | 1.23 | 1.35 | 0.46 |
+| Daily structure agrees | 8.3% (n=109) | 54.0% | 0.15 | 15.1% | 0.55 | 0.92 | 0.57 | 0.0 |
+| Weekly zone, 2x filter | 33.9% (n=109) | 16.0% | 2.12 | 22.5% | 1.51 | 1.88 | 1.47 | 1.49 |
+| Weekly zone, 2x, first touch | 11.0% (n=109) | 0.6% | 19.21 | 2.8% | 3.91 | 12.23 | 3.8 | 0.0 |
+| Weekly zone, no filter | 44.0% (n=109) | 24.6% | 1.79 | 37.1% | 1.19 | 1.35 | 1.17 | 1.33 |
+| Weekly zone, no filter, first touch | 15.6% (n=109) | 1.3% | 12.44 | 6.1% | 2.57 | 4.37 | 2.63 | 0.59 |
+| Daily zone, 2x filter | 48.6% (n=109) | 27.6% | 1.76 | 43.2% | 1.13 | 1.29 | 1.13 | 1.04 |
+| Daily zone, 2x, first touch | 8.3% (n=109) | 1.2% | 6.88 | 3.1% | 2.66 | 5.24 | 3.04 | 1.04 |
+| Daily zone, no filter | 58.7% (n=109) | 43.4% | 1.35 | 60.0% | 0.98 | 1.09 | 1.08 | 0.85 |
+| Daily zone, no filter, first touch | 10.1% (n=109) | 2.4% | 4.26 | 5.3% | 1.89 | 2.41 | 2.37 | 0.7 |
+| Sharp move into the turn: 10%+ in 7 days | 70.6% (n=109) | 8.9% | 7.96 | 34.1% | 2.07 | 2.2 | 1.63 | 2.14 |
+| Sharp move into the turn: 3+ daily ranges in 7 days | 29.4% (n=109) | 5.0% | 5.9 | 23.8% | 1.23 | 1.26 | 0.97 | 1.36 |
+| Extended into the turn: 20%+ in 30 days | 55.0% (n=109) | 13.4% | 4.12 | 29.7% | 1.86 | 1.86 | 1.47 | 1.83 |
+| Stretched: 20%+ past weekly EMA50 | 53.2% (n=109) | 30.2% | 1.76 | 46.9% | 1.13 | 0.93 | 1.02 | 1.54 |
+| Past weekly EMA200 | 60.6% (n=109) | 49.3% | 1.23 | 59.4% | 1.02 | 1.06 | 0.81 | 1.27 |
+| Wick 40%+ of range (rejection) | 24.8% (n=109) | 27.2% | 0.91 | 22.4% | 1.1 | 1.13 | 1.12 | 1.09 |
+| Volume 1.5x+ (Bitstamp) | 50.5% (n=109) | 15.8% | 3.2 | 27.6% | 1.83 | 2.13 | 1.66 | 1.47 |
 | Volume 1.5x+ (Binance, 2017+) | 32.7% (n=55) | 12.2% | 2.69 | 22.2% | 1.48 | – | 1.3 | 1.76 |
 | Buy/sell share already favours the new move (Binance) | 29.1% (n=55) | 49.6% | 0.59 | 24.3% | 1.2 | – | 1.32 | 0.92 |
 | Open interest down 10%+ in 7 days (2021+) | 5.0% (n=20) | 6.7% | 0.75 | 5.2% | 0.97 | – | – | 0.97 |
 | Funding against the new move over 7 days (2020+) | 57.1% (n=35) | 49.7% | 1.15 | 55.6% | 1.03 | – | 0.77 | 1.13 |
 
-## 30% moves: 53 turning points (2011-16: 24, 2016-21: 21, 2021-26: 8)
+## 30% moves: 56 turning points (2011-16: 27, 2016-21: 21, 2021-26: 8)
 
 | Item | At turns | Ordinary days | Lift | New 10-day extreme days | Lift vs extremes | 2011-16 | 2016-21 | 2021-26 |
 |---|---|---|---|---|---|---|---|---|
-| Weekly EMA agrees | 49.1% (n=53) | 50.0% | 0.98 | 37.1% | 1.32 | 1.58 | 1.57 | 1.06 |
-| Weekly structure agrees | 34.0% (n=53) | 49.2% | 0.69 | 39.1% | 0.87 | 1.39 | 1.15 | 0.23 |
-| Daily structure agrees | 7.5% (n=53) | 54.0% | 0.14 | 14.9% | 0.51 | 0.94 | 0.34 | 0.0 |
-| Weekly zone, 2x filter | 28.3% (n=53) | 15.9% | 1.78 | 22.5% | 1.26 | 2.23 | 1.33 | 0.0 |
-| Weekly zone, 2x, first touch | 13.2% (n=53) | 0.6% | 22.85 | 2.9% | 4.57 | 12.77 | 3.44 | 0.0 |
-| Weekly zone, no filter | 39.6% (n=53) | 24.7% | 1.6 | 37.0% | 1.07 | 1.49 | 1.13 | 0.8 |
-| Weekly zone, no filter, first touch | 18.9% (n=53) | 1.3% | 15.05 | 6.1% | 3.07 | 4.06 | 3.17 | 1.76 |
-| Daily zone, 2x filter | 47.2% (n=53) | 27.4% | 1.72 | 42.1% | 1.12 | 1.53 | 0.97 | 1.04 |
-| Daily zone, 2x, first touch | 5.7% (n=53) | 1.2% | 4.72 | 3.1% | 1.82 | 2.55 | 2.75 | 0.0 |
-| Daily zone, no filter | 58.5% (n=53) | 43.6% | 1.34 | 59.2% | 0.99 | 1.13 | 1.06 | 0.91 |
-| Daily zone, no filter, first touch | 7.5% (n=53) | 2.4% | 3.16 | 5.3% | 1.41 | 0.94 | 2.58 | 0.0 |
-| Sharp move into the turn: 10%+ in 7 days | 75.5% (n=53) | 8.8% | 8.62 | 34.1% | 2.21 | 2.32 | 1.58 | 2.67 |
-| Sharp move into the turn: 3+ daily ranges in 7 days | 35.8% (n=53) | 4.9% | 7.32 | 23.3% | 1.54 | 1.31 | 1.22 | 2.72 |
-| Extended into the turn: 20%+ in 30 days | 71.7% (n=53) | 13.1% | 5.48 | 29.6% | 2.42 | 2.12 | 2.02 | 2.75 |
-| Stretched: 20%+ past weekly EMA50 | 58.5% (n=53) | 29.3% | 1.99 | 47.7% | 1.23 | 0.91 | 1.14 | 1.93 |
-| Past weekly EMA200 | 62.3% (n=53) | 49.4% | 1.26 | 62.1% | 1.0 | 0.87 | 0.9 | 1.42 |
-| Wick 40%+ of range (rejection) | 24.5% (n=53) | 27.4% | 0.89 | 22.3% | 1.1 | 1.44 | 0.81 | 1.09 |
-| Volume 1.5x+ (Bitstamp) | 54.7% (n=53) | 15.6% | 3.5 | 27.7% | 1.98 | 2.29 | 1.69 | 1.76 |
+| Weekly EMA agrees | 48.2% (n=56) | 50.1% | 0.96 | 42.0% | 1.15 | 1.01 | 1.57 | 1.06 |
+| Weekly structure agrees | 35.7% (n=56) | 50.7% | 0.7 | 41.4% | 0.86 | 1.18 | 1.15 | 0.23 |
+| Daily structure agrees | 7.1% (n=56) | 54.0% | 0.13 | 15.1% | 0.47 | 0.8 | 0.34 | 0.0 |
+| Weekly zone, 2x filter | 26.8% (n=56) | 16.0% | 1.68 | 22.5% | 1.19 | 1.97 | 1.33 | 0.0 |
+| Weekly zone, 2x, first touch | 12.5% (n=56) | 0.6% | 21.81 | 2.8% | 4.44 | 13.3 | 3.44 | 0.0 |
+| Weekly zone, no filter | 37.5% (n=56) | 24.6% | 1.52 | 37.1% | 1.01 | 1.31 | 1.13 | 0.8 |
+| Weekly zone, no filter, first touch | 17.9% (n=56) | 1.3% | 14.24 | 6.1% | 2.95 | 3.8 | 3.17 | 1.76 |
+| Daily zone, 2x filter | 46.4% (n=56) | 27.6% | 1.68 | 43.2% | 1.07 | 1.33 | 0.97 | 1.04 |
+| Daily zone, 2x, first touch | 5.4% (n=56) | 1.2% | 4.46 | 3.1% | 1.73 | 2.28 | 2.75 | 0.0 |
+| Daily zone, no filter | 55.4% (n=56) | 43.4% | 1.28 | 60.0% | 0.92 | 0.95 | 1.06 | 0.91 |
+| Daily zone, no filter, first touch | 7.1% (n=56) | 2.4% | 3.02 | 5.3% | 1.34 | 0.84 | 2.58 | 0.0 |
+| Sharp move into the turn: 10%+ in 7 days | 75.0% (n=56) | 8.9% | 8.45 | 34.1% | 2.2 | 2.28 | 1.58 | 2.67 |
+| Sharp move into the turn: 3+ daily ranges in 7 days | 35.7% (n=56) | 5.0% | 7.18 | 23.8% | 1.5 | 1.24 | 1.22 | 2.72 |
+| Extended into the turn: 20%+ in 30 days | 69.6% (n=56) | 13.4% | 5.22 | 29.7% | 2.35 | 1.98 | 2.02 | 2.75 |
+| Stretched: 20%+ past weekly EMA50 | 58.9% (n=56) | 30.2% | 1.95 | 46.9% | 1.26 | 0.97 | 1.14 | 1.93 |
+| Past weekly EMA200 | 64.3% (n=56) | 49.3% | 1.3 | 59.4% | 1.08 | 1.08 | 0.9 | 1.42 |
+| Wick 40%+ of range (rejection) | 23.2% (n=56) | 27.2% | 0.85 | 22.4% | 1.03 | 1.26 | 0.81 | 1.09 |
+| Volume 1.5x+ (Bitstamp) | 55.4% (n=56) | 15.8% | 3.51 | 27.6% | 2.0 | 2.3 | 1.69 | 1.76 |
 | Volume 1.5x+ (Binance, 2017+) | 32.0% (n=25) | 12.2% | 2.63 | 22.2% | 1.44 | – | 1.48 | 1.58 |
 | Buy/sell share already favours the new move (Binance) | 32.0% (n=25) | 49.6% | 0.64 | 24.3% | 1.31 | – | 1.53 | 0.55 |
-| Open interest down 10%+ in 7 days (2021+) | 16.7% (n=6) | 6.7% | 2.49 | 5.2% | 3.23 | – | – | 3.23 |
+| Open interest down 10%+ in 7 days (2021+) | 16.7% (n=6) | 6.7% | 2.5 | 5.2% | 3.23 | – | – | 3.23 |
 | Funding against the new move over 7 days (2020+) | 72.7% (n=11) | 49.7% | 1.46 | 55.6% | 1.31 | – | 0.94 | 1.45 |
 
-## 50% moves: 21 turning points (2011-16: 10, 2016-21: 7, 2021-26: 4)
+## 50% moves: 22 turning points (2011-16: 11, 2016-21: 7, 2021-26: 4)
 
 | Item | At turns | Ordinary days | Lift | New 10-day extreme days | Lift vs extremes | 2011-16 | 2016-21 | 2021-26 |
 |---|---|---|---|---|---|---|---|---|
-| Weekly EMA agrees | 47.6% (n=21) | 50.0% | 0.95 | 37.1% | 1.28 | 1.58 | 1.42 | 1.06 |
-| Weekly structure agrees | 23.8% (n=21) | 49.2% | 0.48 | 39.1% | 0.61 | 1.11 | 0.43 | 0.46 |
-| Daily structure agrees | 4.8% (n=21) | 54.0% | 0.09 | 14.9% | 0.32 | 0.75 | 0.0 | 0.0 |
-| Weekly zone, 2x filter | 33.3% (n=21) | 15.9% | 2.09 | 22.5% | 1.48 | 2.38 | 2.0 | 0.0 |
-| Weekly zone, 2x, first touch | 14.3% (n=21) | 0.6% | 24.72 | 2.9% | 4.94 | 6.13 | 10.31 | 0.0 |
-| Weekly zone, no filter | 38.1% (n=21) | 24.7% | 1.54 | 37.0% | 1.03 | 1.43 | 1.69 | 0.0 |
-| Weekly zone, no filter, first touch | 19.0% (n=21) | 1.3% | 15.19 | 6.1% | 3.1 | 1.95 | 7.14 | 0.0 |
-| Daily zone, 2x filter | 52.4% (n=21) | 27.4% | 1.91 | 42.1% | 1.24 | 1.53 | 1.61 | 0.52 |
-| Daily zone, 2x, first touch | 4.8% (n=21) | 1.2% | 3.97 | 3.1% | 1.53 | 0.0 | 4.12 | 0.0 |
-| Daily zone, no filter | 52.4% (n=21) | 43.6% | 1.2 | 59.2% | 0.89 | 1.04 | 1.22 | 0.36 |
-| Daily zone, no filter, first touch | 4.8% (n=21) | 2.4% | 1.99 | 5.3% | 0.89 | 0.0 | 2.58 | 0.0 |
-| Sharp move into the turn: 10%+ in 7 days | 76.2% (n=21) | 8.8% | 8.7 | 34.1% | 2.23 | 2.79 | 1.58 | 1.07 |
-| Sharp move into the turn: 3+ daily ranges in 7 days | 38.1% (n=21) | 4.9% | 7.78 | 23.3% | 1.63 | 1.57 | 1.57 | 1.36 |
-| Extended into the turn: 20%+ in 30 days | 76.2% (n=21) | 13.1% | 5.82 | 29.6% | 2.57 | 2.54 | 2.28 | 1.37 |
-| Stretched: 20%+ past weekly EMA50 | 71.4% (n=21) | 29.3% | 2.43 | 47.7% | 1.5 | 1.01 | 1.58 | 2.32 |
-| Past weekly EMA200 | 71.4% (n=21) | 49.4% | 1.45 | 62.1% | 1.15 | 0.9 | 1.25 | 1.42 |
-| Wick 40%+ of range (rejection) | 33.3% (n=21) | 27.4% | 1.22 | 22.3% | 1.49 | 1.97 | 1.21 | 1.09 |
-| Volume 1.5x+ (Bitstamp) | 52.4% (n=21) | 15.6% | 3.35 | 27.7% | 1.89 | 2.06 | 2.25 | 0.88 |
+| Weekly EMA agrees | 45.5% (n=22) | 50.1% | 0.91 | 42.0% | 1.08 | 0.96 | 1.42 | 1.06 |
+| Weekly structure agrees | 22.7% (n=22) | 50.7% | 0.45 | 41.4% | 0.55 | 0.79 | 0.43 | 0.46 |
+| Daily structure agrees | 4.5% (n=22) | 54.0% | 0.08 | 15.1% | 0.3 | 0.65 | 0.0 | 0.0 |
+| Weekly zone, 2x filter | 31.8% (n=22) | 16.0% | 1.99 | 22.5% | 1.41 | 2.15 | 2.0 | 0.0 |
+| Weekly zone, 2x, first touch | 13.6% (n=22) | 0.6% | 23.8 | 2.8% | 4.85 | 6.53 | 10.31 | 0.0 |
+| Weekly zone, no filter | 36.4% (n=22) | 24.6% | 1.48 | 37.1% | 0.98 | 1.28 | 1.69 | 0.0 |
+| Weekly zone, no filter, first touch | 18.2% (n=22) | 1.3% | 14.5 | 6.1% | 3.0 | 1.87 | 7.14 | 0.0 |
+| Daily zone, 2x filter | 50.0% (n=22) | 27.6% | 1.81 | 43.2% | 1.16 | 1.26 | 1.61 | 0.52 |
+| Daily zone, 2x, first touch | 4.5% (n=22) | 1.2% | 3.79 | 3.1% | 1.47 | 0.0 | 4.12 | 0.0 |
+| Daily zone, no filter | 50.0% (n=22) | 43.4% | 1.15 | 60.0% | 0.83 | 0.9 | 1.22 | 0.36 |
+| Daily zone, no filter, first touch | 4.5% (n=22) | 2.4% | 1.92 | 5.3% | 0.85 | 0.0 | 2.58 | 0.0 |
+| Sharp move into the turn: 10%+ in 7 days | 77.3% (n=22) | 8.9% | 8.71 | 34.1% | 2.27 | 2.8 | 1.58 | 1.07 |
+| Sharp move into the turn: 3+ daily ranges in 7 days | 36.4% (n=22) | 5.0% | 7.31 | 23.8% | 1.53 | 1.35 | 1.57 | 1.36 |
+| Extended into the turn: 20%+ in 30 days | 77.3% (n=22) | 13.4% | 5.79 | 29.7% | 2.61 | 2.56 | 2.28 | 1.37 |
+| Stretched: 20%+ past weekly EMA50 | 72.7% (n=22) | 30.2% | 2.41 | 46.9% | 1.55 | 1.11 | 1.58 | 2.32 |
+| Past weekly EMA200 | 72.7% (n=22) | 49.3% | 1.47 | 59.4% | 1.22 | 1.09 | 1.25 | 1.42 |
+| Wick 40%+ of range (rejection) | 31.8% (n=22) | 27.2% | 1.17 | 22.4% | 1.42 | 1.76 | 1.21 | 1.09 |
+| Volume 1.5x+ (Bitstamp) | 50.0% (n=22) | 15.8% | 3.17 | 27.6% | 1.81 | 1.88 | 2.25 | 0.88 |
 | Volume 1.5x+ (Binance, 2017+) | 27.3% (n=11) | 12.2% | 2.24 | 22.2% | 1.23 | – | 2.16 | 0.0 |
 | Buy/sell share already favours the new move (Binance) | 27.3% (n=11) | 49.6% | 0.55 | 24.3% | 1.12 | – | 1.59 | 0.0 |
 | Open interest down 10%+ in 7 days (2021+) | 0.0% (n=2) | 6.7% | 0.0 | 5.2% | 0.0 | – | – | 0.0 |
@@ -114,103 +114,103 @@ Daily closes, Bitstamp. A turning point = the start of a confirmed move. Lift = 
 
 | Setup at the turn | Turns | Share | Non-turn extreme days with it | Turns per 100 such days | 2011-16 / 2016-21 / 2021-26 |
 |---|---|---|---|---|---|
-| Sharp move | 18 | 6.8% | 112 | 13.8 | 9 / 6 / 3 |
-| (none) | 15 | 5.7% | 131 | 10.3 | 7 / 8 / 0 |
-| Volume | 10 | 3.8% | 38 | 20.8 | 6 / 2 / 2 |
-| Daily zone | 9 | 3.4% | 80 | 10.1 | 2 / 5 / 2 |
-| Sharp move + Volume | 9 | 3.4% | 48 | 15.8 | 6 / 3 / 0 |
-| EMA + Sharp move | 7 | 2.6% | 14 | 33.3 | 3 / 4 / 0 |
-| Daily zone + Volume | 6 | 2.3% | 23 | 20.7 | 2 / 0 / 4 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 6 | 2.3% | 6 | 50.0 | 3 / 2 / 1 |
-| Daily zone + Sharp move + Volume | 6 | 2.3% | 13 | 31.6 | 1 / 3 / 2 |
-| EMA + Structure + Sharp move + Volume | 6 | 2.3% | 8 | 42.9 | 1 / 2 / 3 |
-| EMA + Structure + Weekly zone | 6 | 2.3% | 10 | 37.5 | 1 / 2 / 3 |
-| EMA | 5 | 1.9% | 29 | 14.7 | 1 / 2 / 2 |
+| Sharp move | 20 | 7.3% | 103 | 16.3 | 11 / 6 / 3 |
+| (none) | 12 | 4.4% | 102 | 10.5 | 4 / 8 / 0 |
+| Sharp move + Volume | 10 | 3.6% | 44 | 18.5 | 7 / 3 / 0 |
+| Daily zone | 10 | 3.6% | 70 | 12.5 | 3 / 5 / 2 |
+| EMA + Structure | 9 | 3.3% | 55 | 14.1 | 8 / 0 / 1 |
+| Volume | 9 | 3.3% | 23 | 28.1 | 5 / 2 / 2 |
+| EMA + Structure + Sharp move + Volume | 8 | 2.9% | 9 | 47.1 | 3 / 2 / 3 |
+| Daily zone + Sharp move + Volume | 7 | 2.5% | 14 | 33.3 | 2 / 3 / 2 |
+| EMA + Sharp move | 6 | 2.2% | 15 | 28.6 | 2 / 4 / 0 |
+| EMA + Structure + Daily zone + Sharp move + Volume | 6 | 2.2% | 7 | 46.2 | 2 / 4 / 0 |
+| Daily zone + Sharp move | 6 | 2.2% | 29 | 17.1 | 2 / 4 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 6 | 2.2% | 5 | 54.5 | 4 / 2 / 0 |
 
 ## Matching setups, 20% moves
 
 | Setup at the turn | Turns | Share | Non-turn extreme days with it | Turns per 100 such days | 2011-16 / 2016-21 / 2021-26 |
 |---|---|---|---|---|---|
-| Sharp move | 12 | 11.7% | 112 | 9.7 | 5 / 5 / 2 |
-| (none) | 4 | 3.9% | 131 | 3.0 | 3 / 1 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 4 | 3.9% | 6 | 40.0 | 3 / 1 / 0 |
-| Sharp move + Volume | 4 | 3.9% | 48 | 7.7 | 3 / 1 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 4 | 3.9% | 5 | 44.4 | 3 / 1 / 0 |
-| EMA + Structure + Daily zone + Sharp move + Volume | 4 | 3.9% | 5 | 44.4 | 1 / 3 / 0 |
-| Daily zone + Sharp move + Volume | 4 | 3.9% | 13 | 23.5 | 1 / 1 / 2 |
-| EMA + Structure + Sharp move + Volume | 4 | 3.9% | 8 | 33.3 | 1 / 2 / 1 |
-| Volume | 3 | 2.9% | 38 | 7.3 | 2 / 1 / 0 |
-| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 2.9% | 3 | 50.0 | 2 / 1 / 0 |
-| Daily zone + Volume | 2 | 1.9% | 23 | 8.0 | 1 / 0 / 1 |
-| EMA + Daily zone + Sharp move + Volume | 2 | 1.9% | 8 | 20.0 | 1 / 0 / 1 |
+| Sharp move | 12 | 11.0% | 103 | 10.4 | 5 / 5 / 2 |
+| EMA + Structure + Daily zone + Sharp move + Volume | 5 | 4.6% | 7 | 41.7 | 2 / 3 / 0 |
+| Sharp move + Volume | 5 | 4.6% | 44 | 10.2 | 4 / 1 / 0 |
+| Daily zone + Sharp move + Volume | 5 | 4.6% | 14 | 26.3 | 2 / 1 / 2 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 5 | 4.6% | 5 | 50.0 | 4 / 1 / 0 |
+| EMA + Structure + Sharp move + Volume | 4 | 3.7% | 9 | 30.8 | 1 / 2 / 1 |
+| EMA + Sharp move | 3 | 2.8% | 15 | 16.7 | 2 / 1 / 0 |
+| Volume | 3 | 2.8% | 23 | 11.5 | 2 / 1 / 0 |
+| Daily zone + Sharp move | 3 | 2.8% | 29 | 9.4 | 1 / 2 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 3 | 2.8% | 6 | 33.3 | 2 / 1 / 0 |
+| (none) | 3 | 2.8% | 102 | 2.9 | 2 / 1 / 0 |
+| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 2.8% | 3 | 50.0 | 2 / 1 / 0 |
 
 ## Matching setups, 30% moves
 
 | Setup at the turn | Turns | Share | Non-turn extreme days with it | Turns per 100 such days | 2011-16 / 2016-21 / 2021-26 |
 |---|---|---|---|---|---|
-| Sharp move | 8 | 15.1% | 112 | 6.7 | 3 / 4 / 1 |
-| (none) | 3 | 5.7% | 131 | 2.2 | 3 / 0 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 3 | 5.7% | 6 | 33.3 | 2 / 1 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 3 | 5.7% | 5 | 37.5 | 3 / 0 / 0 |
-| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 5.7% | 3 | 50.0 | 2 / 1 / 0 |
-| Daily zone + Sharp move + Volume | 3 | 5.7% | 13 | 18.8 | 1 / 1 / 1 |
-| EMA + Structure + Sharp move + Volume | 3 | 5.7% | 8 | 27.3 | 1 / 2 / 0 |
-| EMA + Daily zone + Sharp move + Volume | 2 | 3.8% | 8 | 20.0 | 1 / 0 / 1 |
-| Volume | 2 | 3.8% | 38 | 5.0 | 1 / 1 / 0 |
-| Sharp move + Wick | 2 | 3.8% | 22 | 8.3 | 2 / 0 / 0 |
-| Sharp move + Volume | 1 | 1.9% | 48 | 2.0 | 1 / 0 / 0 |
-| EMA + Structure + Weekly zone + Sharp move + Wick + Volume | 1 | 1.9% | 2 | 33.3 | 1 / 0 / 0 |
+| Sharp move | 8 | 14.3% | 103 | 7.2 | 3 / 4 / 1 |
+| Daily zone + Sharp move + Volume | 4 | 7.1% | 14 | 22.2 | 2 / 1 / 1 |
+| Volume | 3 | 5.4% | 23 | 11.5 | 2 / 1 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 3 | 5.4% | 5 | 37.5 | 3 / 0 / 0 |
+| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 5.4% | 3 | 50.0 | 2 / 1 / 0 |
+| EMA + Structure + Sharp move + Volume | 3 | 5.4% | 9 | 25.0 | 1 / 2 / 0 |
+| EMA + Structure + Daily zone + Sharp move + Volume | 2 | 3.6% | 7 | 22.2 | 2 / 0 / 0 |
+| EMA + Sharp move | 2 | 3.6% | 15 | 11.8 | 1 / 1 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 2 | 3.6% | 6 | 25.0 | 1 / 1 / 0 |
+| Sharp move + Wick | 2 | 3.6% | 20 | 9.1 | 2 / 0 / 0 |
+| (none) | 2 | 3.6% | 102 | 1.9 | 2 / 0 / 0 |
+| EMA + Structure | 1 | 1.8% | 55 | 1.8 | 1 / 0 / 0 |
 
 ## Matching setups, 50% moves
 
 | Setup at the turn | Turns | Share | Non-turn extreme days with it | Turns per 100 such days | 2011-16 / 2016-21 / 2021-26 |
 |---|---|---|---|---|---|
-| Sharp move | 4 | 19.0% | 112 | 3.4 | 2 / 1 / 1 |
-| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 14.3% | 3 | 50.0 | 2 / 1 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 2 | 9.5% | 5 | 28.6 | 2 / 0 / 0 |
-| Sharp move + Wick | 2 | 9.5% | 22 | 8.3 | 2 / 0 / 0 |
-| Sharp move + Volume | 1 | 4.8% | 48 | 2.0 | 1 / 0 / 0 |
-| EMA + Structure + Daily zone + Sharp move + Volume | 1 | 4.8% | 5 | 16.7 | 1 / 0 / 0 |
-| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 1 | 4.8% | 6 | 14.3 | 0 / 1 / 0 |
-| Daily zone + Sharp move | 1 | 4.8% | 29 | 3.3 | 0 / 1 / 0 |
-| EMA + Weekly zone + Daily zone + Wick | 1 | 4.8% | 8 | 11.1 | 0 / 1 / 0 |
-| Daily zone + Sharp move + Wick + Volume | 1 | 4.8% | 2 | 33.3 | 0 / 1 / 0 |
-| Volume | 1 | 4.8% | 38 | 2.6 | 0 / 1 / 0 |
-| EMA + Daily zone + Volume | 1 | 4.8% | 8 | 11.1 | 0 / 0 / 1 |
+| Sharp move | 5 | 22.7% | 103 | 4.6 | 3 / 1 / 1 |
+| EMA + Weekly zone + Daily zone + Sharp move + Volume | 3 | 13.6% | 3 | 50.0 | 2 / 1 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume | 2 | 9.1% | 5 | 28.6 | 2 / 0 / 0 |
+| Sharp move + Wick | 2 | 9.1% | 20 | 9.1 | 2 / 0 / 0 |
+| Sharp move + Volume | 1 | 4.5% | 44 | 2.2 | 1 / 0 / 0 |
+| EMA + Structure + Daily zone + Sharp move + Volume | 1 | 4.5% | 7 | 12.5 | 1 / 0 / 0 |
+| EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume | 1 | 4.5% | 6 | 14.3 | 0 / 1 / 0 |
+| Daily zone + Sharp move | 1 | 4.5% | 29 | 3.3 | 0 / 1 / 0 |
+| EMA + Weekly zone + Daily zone + Wick | 1 | 4.5% | 8 | 11.1 | 0 / 1 / 0 |
+| Daily zone + Sharp move + Wick + Volume | 1 | 4.5% | 2 | 33.3 | 0 / 1 / 0 |
+| Volume | 1 | 4.5% | 23 | 4.2 | 0 / 1 / 0 |
+| EMA + Daily zone + Volume | 1 | 4.5% | 9 | 10.0 | 0 / 0 / 1 |
 
 ## Stacking the four items that held up (sharp move 7d, extended 30d, volume 1.5x, weekly zone 2x)
 
 | Size | Items present | Turns | Share of turns | Non-turn extreme days | Turns per 100 such days | 2021-26 turns / extreme days |
 |---|---|---|---|---|---|---|
-| 10% | 0 | 50 | 19% | 453 | 9.9 | 15 / 204 |
-| 10% | 1 | 76 | 29% | 470 | 13.9 | 19 / 176 |
-| 10% | 2 | 84 | 32% | 297 | 22.0 | 26 / 96 |
-| 10% | 3 | 38 | 14% | 144 | 20.9 | 6 / 41 |
+| 10% | 0 | 52 | 19% | 454 | 10.3 | 15 / 204 |
+| 10% | 1 | 77 | 28% | 471 | 14.1 | 19 / 176 |
+| 10% | 2 | 89 | 32% | 296 | 23.1 | 26 / 96 |
+| 10% | 3 | 40 | 15% | 145 | 21.6 | 6 / 41 |
 | 10% | 4 | 17 | 6% | 20 | 45.9 | 0 / 5 |
-| 20% | 0 | 6 | 6% | 453 | 1.3 | 3 / 204 |
-| 20% | 1 | 19 | 18% | 470 | 3.9 | 5 / 176 |
-| 20% | 2 | 44 | 43% | 297 | 12.9 | 13 / 96 |
-| 20% | 3 | 23 | 22% | 144 | 13.8 | 3 / 41 |
-| 20% | 4 | 11 | 11% | 20 | 35.5 | 0 / 5 |
-| 30% | 0 | 3 | 6% | 453 | 0.7 | 2 / 204 |
-| 30% | 1 | 8 | 15% | 470 | 1.7 | 1 / 176 |
-| 30% | 2 | 19 | 36% | 297 | 6.0 | 3 / 96 |
-| 30% | 3 | 16 | 30% | 144 | 10.0 | 2 / 41 |
-| 30% | 4 | 7 | 13% | 20 | 25.9 | 0 / 5 |
-| 50% | 0 | 2 | 10% | 453 | 0.4 | 2 / 204 |
-| 50% | 1 | 2 | 10% | 470 | 0.4 | 1 / 176 |
-| 50% | 2 | 8 | 38% | 297 | 2.6 | 1 / 96 |
-| 50% | 3 | 4 | 19% | 144 | 2.7 | 0 / 41 |
-| 50% | 4 | 5 | 24% | 20 | 20.0 | 0 / 5 |
+| 20% | 0 | 7 | 6% | 454 | 1.5 | 3 / 204 |
+| 20% | 1 | 21 | 19% | 471 | 4.3 | 5 / 176 |
+| 20% | 2 | 46 | 42% | 296 | 13.5 | 13 / 96 |
+| 20% | 3 | 24 | 22% | 145 | 14.2 | 3 / 41 |
+| 20% | 4 | 11 | 10% | 20 | 35.5 | 0 / 5 |
+| 30% | 0 | 3 | 5% | 454 | 0.7 | 2 / 204 |
+| 30% | 1 | 9 | 16% | 471 | 1.9 | 1 / 176 |
+| 30% | 2 | 21 | 38% | 296 | 6.6 | 3 / 96 |
+| 30% | 3 | 16 | 29% | 145 | 9.9 | 2 / 41 |
+| 30% | 4 | 7 | 12% | 20 | 25.9 | 0 / 5 |
+| 50% | 0 | 2 | 9% | 454 | 0.4 | 2 / 204 |
+| 50% | 1 | 2 | 9% | 471 | 0.4 | 1 / 176 |
+| 50% | 2 | 9 | 41% | 296 | 3.0 | 1 / 96 |
+| 50% | 3 | 4 | 18% | 145 | 2.7 | 0 / 41 |
+| 50% | 4 | 5 | 23% | 20 | 20.0 | 0 / 5 |
 
 ## Daily CHoCH after the turn (comes after the turn, so it is a confirmation, not a warning)
 
 | Size | Turns | CHoCH within 10 days, inside the move | Median days to CHoCH | Median % already moved at CHoCH | Median % left in the move after CHoCH |
 |---|---|---|---|---|---|
-| 10% | 265 | 40% | 14 | 12.2% | 12.8% |
-| 20% | 103 | 51% | 10 | 15.8% | 24.6% |
-| 30% | 53 | 58% | 9 | 19.5% | 38.0% |
-| 50% | 21 | 62% | 9 | 21.6% | 52.5% |
+| 10% | 275 | 40% | 15 | 12.6% | 11.9% |
+| 20% | 109 | 50% | 10 | 16.1% | 24.6% |
+| 30% | 56 | 59% | 9 | 20.3% | 36.6% |
+| 50% | 22 | 64% | 9 | 29.9% | 59.0% |
 
 ## Your examples
 

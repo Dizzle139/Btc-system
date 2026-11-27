@@ -5,19 +5,19 @@
     "item": "Weekly EMA agrees",
     "all": {
      "turn": 49.8,
-     "base": 50.0,
-     "lift": 1.0,
-     "n": 265,
-     "ext": 37.1,
-     "lift_ext": 1.34
+     "base": 50.1,
+     "lift": 0.99,
+     "n": 275,
+     "ext": 42.0,
+     "lift_ext": 1.19
     },
     "2011-16": {
      "turn": 50.0,
-     "base": 49.9,
+     "base": 50.1,
      "lift": 1.0,
-     "n": 86,
-     "ext": 31.7,
-     "lift_ext": 1.58
+     "n": 96,
+     "ext": 47.6,
+     "lift_ext": 1.05
     },
     "2016-21": {
      "turn": 49.6,
@@ -39,20 +39,20 @@
    {
     "item": "Weekly structure agrees",
     "all": {
-     "turn": 41.5,
-     "base": 49.2,
-     "lift": 0.84,
-     "n": 265,
-     "ext": 39.1,
-     "lift_ext": 1.06
+     "turn": 45.1,
+     "base": 50.7,
+     "lift": 0.89,
+     "n": 275,
+     "ext": 41.4,
+     "lift_ext": 1.09
     },
     "2011-16": {
-     "turn": 36.0,
-     "base": 45.2,
-     "lift": 0.8,
-     "n": 86,
-     "ext": 27.0,
-     "lift_ext": 1.33
+     "turn": 46.9,
+     "base": 50.1,
+     "lift": 0.94,
+     "n": 96,
+     "ext": 34.6,
+     "lift_ext": 1.36
     },
     "2016-21": {
      "turn": 47.8,
@@ -74,20 +74,20 @@
    {
     "item": "Daily structure agrees",
     "all": {
-     "turn": 23.0,
+     "turn": 22.9,
      "base": 54.0,
-     "lift": 0.43,
-     "n": 265,
-     "ext": 14.9,
-     "lift_ext": 1.55
+     "lift": 0.42,
+     "n": 275,
+     "ext": 15.1,
+     "lift_ext": 1.52
     },
     "2011-16": {
-     "turn": 27.9,
-     "base": 53.5,
-     "lift": 0.52,
-     "n": 86,
-     "ext": 13.3,
-     "lift_ext": 2.1
+     "turn": 27.1,
+     "base": 53.6,
+     "lift": 0.51,
+     "n": 96,
+     "ext": 13.9,
+     "lift_ext": 1.95
     },
     "2016-21": {
      "turn": 27.4,
@@ -109,20 +109,20 @@
    {
     "item": "Weekly zone, 2x filter",
     "all": {
-     "turn": 27.5,
-     "base": 15.9,
-     "lift": 1.73,
-     "n": 265,
+     "turn": 27.3,
+     "base": 16.0,
+     "lift": 1.71,
+     "n": 275,
      "ext": 22.5,
-     "lift_ext": 1.23
+     "lift_ext": 1.21
     },
     "2011-16": {
-     "turn": 23.3,
-     "base": 15.1,
-     "lift": 1.54,
-     "n": 86,
-     "ext": 16.8,
-     "lift_ext": 1.39
+     "turn": 22.9,
+     "base": 15.3,
+     "lift": 1.5,
+     "n": 96,
+     "ext": 16.9,
+     "lift_ext": 1.35
     },
     "2016-21": {
      "turn": 26.5,
@@ -144,20 +144,20 @@
    {
     "item": "Weekly zone, 2x, first touch",
     "all": {
-     "turn": 7.2,
+     "turn": 6.9,
      "base": 0.6,
-     "lift": 12.41,
-     "n": 265,
-     "ext": 2.9,
-     "lift_ext": 2.48
+     "lift": 12.06,
+     "n": 275,
+     "ext": 2.8,
+     "lift_ext": 2.46
     },
     "2011-16": {
-     "turn": 9.3,
+     "turn": 8.3,
      "base": 0.3,
-     "lift": 28.9,
-     "n": 86,
-     "ext": 1.6,
-     "lift_ext": 5.7
+     "lift": 26.62,
+     "n": 96,
+     "ext": 1.4,
+     "lift_ext": 5.99
     },
     "2016-21": {
      "turn": 7.1,
@@ -179,25 +179,25 @@
    {
     "item": "Weekly zone, no filter",
     "all": {
-     "turn": 38.5,
-     "base": 24.7,
-     "lift": 1.56,
-     "n": 265,
-     "ext": 37.0,
-     "lift_ext": 1.04
+     "turn": 37.8,
+     "base": 24.6,
+     "lift": 1.54,
+     "n": 275,
+     "ext": 37.1,
+     "lift_ext": 1.02
     },
     "2011-16": {
-     "turn": 27.9,
-     "base": 22.1,
-     "lift": 1.26,
-     "n": 86,
-     "ext": 28.0,
-     "lift_ext": 1.0
+     "turn": 27.1,
+     "base": 21.9,
+     "lift": 1.23,
+     "n": 96,
+     "ext": 28.3,
+     "lift_ext": 0.96
     },
     "2016-21": {
      "turn": 36.3,
-     "base": 22.1,
-     "lift": 1.64,
+     "base": 22.0,
+     "lift": 1.65,
      "n": 113,
      "ext": 33.7,
      "lift_ext": 1.08
@@ -214,25 +214,25 @@
    {
     "item": "Weekly zone, no filter, first touch",
     "all": {
-     "turn": 10.2,
+     "turn": 9.8,
      "base": 1.3,
-     "lift": 8.12,
-     "n": 265,
+     "lift": 7.83,
+     "n": 275,
      "ext": 6.1,
-     "lift_ext": 1.66
+     "lift_ext": 1.62
     },
     "2011-16": {
-     "turn": 11.6,
-     "base": 1.0,
-     "lift": 12.04,
-     "n": 86,
-     "ext": 5.1,
-     "lift_ext": 2.27
+     "turn": 10.4,
+     "base": 0.9,
+     "lift": 11.09,
+     "n": 96,
+     "ext": 4.9,
+     "lift_ext": 2.14
     },
     "2016-21": {
      "turn": 10.6,
      "base": 1.2,
-     "lift": 9.01,
+     "lift": 8.76,
      "n": 113,
      "ext": 6.0,
      "lift_ext": 1.77
@@ -249,25 +249,25 @@
    {
     "item": "Daily zone, 2x filter",
     "all": {
-     "turn": 49.4,
-     "base": 27.4,
-     "lift": 1.81,
-     "n": 265,
-     "ext": 42.1,
-     "lift_ext": 1.17
+     "turn": 48.7,
+     "base": 27.6,
+     "lift": 1.77,
+     "n": 275,
+     "ext": 43.2,
+     "lift_ext": 1.13
     },
     "2011-16": {
-     "turn": 44.2,
-     "base": 23.7,
-     "lift": 1.86,
-     "n": 86,
-     "ext": 32.6,
-     "lift_ext": 1.35
+     "turn": 42.7,
+     "base": 24.4,
+     "lift": 1.75,
+     "n": 96,
+     "ext": 36.2,
+     "lift_ext": 1.18
     },
     "2016-21": {
      "turn": 50.4,
      "base": 27.2,
-     "lift": 1.86,
+     "lift": 1.85,
      "n": 113,
      "ext": 44.3,
      "lift_ext": 1.14
@@ -284,20 +284,20 @@
    {
     "item": "Daily zone, 2x, first touch",
     "all": {
-     "turn": 5.3,
+     "turn": 5.1,
      "base": 1.2,
-     "lift": 4.4,
-     "n": 265,
+     "lift": 4.24,
+     "n": 275,
      "ext": 3.1,
-     "lift_ext": 1.7
+     "lift_ext": 1.64
     },
     "2011-16": {
-     "turn": 7.0,
+     "turn": 6.2,
      "base": 0.7,
-     "lift": 9.75,
-     "n": 86,
+     "lift": 8.56,
+     "n": 96,
      "ext": 1.6,
-     "lift_ext": 4.28
+     "lift_ext": 3.85
     },
     "2016-21": {
      "turn": 6.2,
@@ -319,20 +319,20 @@
    {
     "item": "Daily zone, no filter",
     "all": {
-     "turn": 61.5,
-     "base": 43.6,
-     "lift": 1.41,
-     "n": 265,
-     "ext": 59.2,
-     "lift_ext": 1.04
+     "turn": 60.4,
+     "base": 43.4,
+     "lift": 1.39,
+     "n": 275,
+     "ext": 60.0,
+     "lift_ext": 1.01
     },
     "2011-16": {
-     "turn": 55.8,
-     "base": 39.2,
-     "lift": 1.42,
-     "n": 86,
-     "ext": 48.0,
-     "lift_ext": 1.16
+     "turn": 53.1,
+     "base": 38.6,
+     "lift": 1.38,
+     "n": 96,
+     "ext": 50.6,
+     "lift_ext": 1.05
     },
     "2016-21": {
      "turn": 65.5,
@@ -354,25 +354,25 @@
    {
     "item": "Daily zone, no filter, first touch",
     "all": {
-     "turn": 7.9,
+     "turn": 7.6,
      "base": 2.4,
-     "lift": 3.32,
-     "n": 265,
+     "lift": 3.23,
+     "n": 275,
      "ext": 5.3,
-     "lift_ext": 1.48
+     "lift_ext": 1.43
     },
     "2011-16": {
-     "turn": 8.1,
-     "base": 2.0,
-     "lift": 4.14,
-     "n": 86,
+     "turn": 7.3,
+     "base": 1.9,
+     "lift": 3.88,
+     "n": 96,
      "ext": 4.4,
-     "lift_ext": 1.84
+     "lift_ext": 1.65
     },
     "2016-21": {
      "turn": 11.5,
      "base": 2.6,
-     "lift": 4.49,
+     "lift": 4.43,
      "n": 113,
      "ext": 5.5,
      "lift_ext": 2.08
@@ -389,20 +389,20 @@
    {
     "item": "Sharp move into the turn: 10%+ in 7 days",
     "all": {
-     "turn": 52.8,
-     "base": 8.8,
-     "lift": 6.03,
-     "n": 265,
+     "turn": 53.5,
+     "base": 8.9,
+     "lift": 6.02,
+     "n": 275,
      "ext": 34.1,
-     "lift_ext": 1.55
+     "lift_ext": 1.57
     },
     "2011-16": {
-     "turn": 60.5,
-     "base": 9.5,
-     "lift": 6.36,
-     "n": 86,
-     "ext": 35.9,
-     "lift_ext": 1.68
+     "turn": 61.5,
+     "base": 9.9,
+     "lift": 6.22,
+     "n": 96,
+     "ext": 35.7,
+     "lift_ext": 1.72
     },
     "2016-21": {
      "turn": 54.9,
@@ -424,20 +424,20 @@
    {
     "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
     "all": {
-     "turn": 20.0,
-     "base": 4.9,
-     "lift": 4.08,
-     "n": 265,
-     "ext": 23.3,
+     "turn": 20.4,
+     "base": 5.0,
+     "lift": 4.09,
+     "n": 275,
+     "ext": 23.8,
      "lift_ext": 0.86
     },
     "2011-16": {
-     "turn": 24.4,
-     "base": 5.2,
-     "lift": 4.74,
-     "n": 86,
-     "ext": 25.4,
-     "lift_ext": 0.96
+     "turn": 25.0,
+     "base": 5.4,
+     "lift": 4.64,
+     "n": 96,
+     "ext": 26.9,
+     "lift_ext": 0.93
     },
     "2016-21": {
      "turn": 17.7,
@@ -459,20 +459,20 @@
    {
     "item": "Extended into the turn: 20%+ in 30 days",
     "all": {
-     "turn": 40.4,
-     "base": 13.1,
-     "lift": 3.09,
-     "n": 265,
-     "ext": 29.6,
-     "lift_ext": 1.36
+     "turn": 40.0,
+     "base": 13.4,
+     "lift": 3.0,
+     "n": 275,
+     "ext": 29.7,
+     "lift_ext": 1.35
     },
     "2011-16": {
-     "turn": 53.5,
-     "base": 14.2,
-     "lift": 3.76,
-     "n": 86,
-     "ext": 35.4,
-     "lift_ext": 1.51
+     "turn": 51.0,
+     "base": 15.1,
+     "lift": 3.39,
+     "n": 96,
+     "ext": 35.5,
+     "lift_ext": 1.44
     },
     "2016-21": {
      "turn": 40.7,
@@ -494,20 +494,20 @@
    {
     "item": "Stretched: 20%+ past weekly EMA50",
     "all": {
-     "turn": 46.4,
-     "base": 29.3,
-     "lift": 1.58,
-     "n": 265,
-     "ext": 47.7,
+     "turn": 45.5,
+     "base": 30.2,
+     "lift": 1.5,
+     "n": 275,
+     "ext": 46.9,
      "lift_ext": 0.97
     },
     "2011-16": {
-     "turn": 51.2,
-     "base": 33.8,
-     "lift": 1.51,
-     "n": 86,
-     "ext": 59.7,
-     "lift_ext": 0.86
+     "turn": 47.9,
+     "base": 36.5,
+     "lift": 1.31,
+     "n": 96,
+     "ext": 57.1,
+     "lift_ext": 0.84
     },
     "2016-21": {
      "turn": 46.9,
@@ -529,20 +529,20 @@
    {
     "item": "Past weekly EMA200",
     "all": {
-     "turn": 55.5,
-     "base": 49.4,
-     "lift": 1.12,
-     "n": 265,
-     "ext": 62.1,
-     "lift_ext": 0.89
+     "turn": 55.6,
+     "base": 49.3,
+     "lift": 1.13,
+     "n": 275,
+     "ext": 59.4,
+     "lift_ext": 0.94
     },
     "2011-16": {
-     "turn": 54.7,
-     "base": 49.3,
-     "lift": 1.11,
-     "n": 86,
-     "ext": 66.9,
-     "lift_ext": 0.82
+     "turn": 55.2,
+     "base": 49.2,
+     "lift": 1.12,
+     "n": 96,
+     "ext": 58.2,
+     "lift_ext": 0.95
     },
     "2016-21": {
      "turn": 54.0,
@@ -564,20 +564,20 @@
    {
     "item": "Wick 40%+ of range (rejection)",
     "all": {
-     "turn": 23.0,
-     "base": 27.4,
-     "lift": 0.84,
-     "n": 265,
-     "ext": 22.3,
-     "lift_ext": 1.03
+     "turn": 22.5,
+     "base": 27.2,
+     "lift": 0.83,
+     "n": 275,
+     "ext": 22.4,
+     "lift_ext": 1.0
     },
     "2011-16": {
-     "turn": 19.8,
-     "base": 28.6,
-     "lift": 0.69,
-     "n": 86,
-     "ext": 20.3,
-     "lift_ext": 0.97
+     "turn": 18.8,
+     "base": 28.0,
+     "lift": 0.67,
+     "n": 96,
+     "ext": 20.6,
+     "lift_ext": 0.91
     },
     "2016-21": {
      "turn": 25.7,
@@ -599,19 +599,19 @@
    {
     "item": "Volume 1.5x+ (Bitstamp)",
     "all": {
-     "turn": 40.0,
-     "base": 15.6,
+     "turn": 40.4,
+     "base": 15.8,
      "lift": 2.56,
-     "n": 265,
-     "ext": 27.7,
-     "lift_ext": 1.45
+     "n": 275,
+     "ext": 27.6,
+     "lift_ext": 1.46
     },
     "2011-16": {
-     "turn": 51.2,
-     "base": 17.2,
-     "lift": 2.97,
-     "n": 86,
-     "ext": 29.1,
+     "turn": 51.0,
+     "base": 17.6,
+     "lift": 2.89,
+     "n": 96,
+     "ext": 29.0,
      "lift_ext": 1.76
     },
     "2016-21": {
@@ -777,19 +777,19 @@
     "item": "Weekly EMA agrees",
     "all": {
      "turn": 49.5,
-     "base": 50.0,
+     "base": 50.1,
      "lift": 0.99,
-     "n": 103,
-     "ext": 37.1,
-     "lift_ext": 1.34
+     "n": 109,
+     "ext": 42.0,
+     "lift_ext": 1.18
     },
     "2011-16": {
-     "turn": 48.8,
-     "base": 49.9,
+     "turn": 48.9,
+     "base": 50.1,
      "lift": 0.98,
-     "n": 41,
-     "ext": 31.7,
-     "lift_ext": 1.54
+     "n": 47,
+     "ext": 47.6,
+     "lift_ext": 1.03
     },
     "2016-21": {
      "turn": 50.0,
@@ -811,20 +811,20 @@
    {
     "item": "Weekly structure agrees",
     "all": {
-     "turn": 37.9,
-     "base": 49.2,
-     "lift": 0.77,
-     "n": 103,
-     "ext": 39.1,
-     "lift_ext": 0.97
+     "turn": 39.4,
+     "base": 50.7,
+     "lift": 0.78,
+     "n": 109,
+     "ext": 41.4,
+     "lift_ext": 0.95
     },
     "2011-16": {
-     "turn": 39.0,
-     "base": 45.2,
-     "lift": 0.86,
-     "n": 41,
-     "ext": 27.0,
-     "lift_ext": 1.44
+     "turn": 42.6,
+     "base": 50.1,
+     "lift": 0.85,
+     "n": 47,
+     "ext": 34.6,
+     "lift_ext": 1.23
     },
     "2016-21": {
      "turn": 44.7,
@@ -846,19 +846,19 @@
    {
     "item": "Daily structure agrees",
     "all": {
-     "turn": 7.8,
+     "turn": 8.3,
      "base": 54.0,
-     "lift": 0.14,
-     "n": 103,
-     "ext": 14.9,
-     "lift_ext": 0.52
+     "lift": 0.15,
+     "n": 109,
+     "ext": 15.1,
+     "lift_ext": 0.55
     },
     "2011-16": {
-     "turn": 12.2,
-     "base": 53.5,
-     "lift": 0.23,
-     "n": 41,
-     "ext": 13.3,
+     "turn": 12.8,
+     "base": 53.6,
+     "lift": 0.24,
+     "n": 47,
+     "ext": 13.9,
      "lift_ext": 0.92
     },
     "2016-21": {
@@ -881,20 +881,20 @@
    {
     "item": "Weekly zone, 2x filter",
     "all": {
-     "turn": 35.9,
-     "base": 15.9,
-     "lift": 2.26,
-     "n": 103,
+     "turn": 33.9,
+     "base": 16.0,
+     "lift": 2.12,
+     "n": 109,
      "ext": 22.5,
-     "lift_ext": 1.6
+     "lift_ext": 1.51
     },
     "2011-16": {
-     "turn": 36.6,
-     "base": 15.1,
-     "lift": 2.43,
-     "n": 41,
-     "ext": 16.8,
-     "lift_ext": 2.18
+     "turn": 31.9,
+     "base": 15.3,
+     "lift": 2.09,
+     "n": 47,
+     "ext": 16.9,
+     "lift_ext": 1.88
     },
     "2016-21": {
      "turn": 31.6,
@@ -916,20 +916,20 @@
    {
     "item": "Weekly zone, 2x, first touch",
     "all": {
-     "turn": 11.7,
+     "turn": 11.0,
      "base": 0.6,
-     "lift": 20.16,
-     "n": 103,
-     "ext": 2.9,
-     "lift_ext": 4.03
+     "lift": 19.21,
+     "n": 109,
+     "ext": 2.8,
+     "lift_ext": 3.91
     },
     "2011-16": {
-     "turn": 19.5,
+     "turn": 17.0,
      "base": 0.3,
-     "lift": 60.62,
-     "n": 41,
-     "ext": 1.6,
-     "lift_ext": 11.96
+     "lift": 54.37,
+     "n": 47,
+     "ext": 1.4,
+     "lift_ext": 12.23
     },
     "2016-21": {
      "turn": 10.5,
@@ -951,24 +951,24 @@
    {
     "item": "Weekly zone, no filter",
     "all": {
-     "turn": 46.6,
-     "base": 24.7,
-     "lift": 1.89,
-     "n": 103,
-     "ext": 37.0,
-     "lift_ext": 1.26
+     "turn": 44.0,
+     "base": 24.6,
+     "lift": 1.79,
+     "n": 109,
+     "ext": 37.1,
+     "lift_ext": 1.19
     },
     "2011-16": {
-     "turn": 43.9,
-     "base": 22.1,
-     "lift": 1.99,
-     "n": 41,
-     "ext": 28.0,
-     "lift_ext": 1.57
+     "turn": 38.3,
+     "base": 21.9,
+     "lift": 1.74,
+     "n": 47,
+     "ext": 28.3,
+     "lift_ext": 1.35
     },
     "2016-21": {
      "turn": 39.5,
-     "base": 22.1,
+     "base": 22.0,
      "lift": 1.79,
      "n": 38,
      "ext": 33.7,
@@ -986,25 +986,25 @@
    {
     "item": "Weekly zone, no filter, first touch",
     "all": {
-     "turn": 16.5,
+     "turn": 15.6,
      "base": 1.3,
-     "lift": 13.16,
-     "n": 103,
+     "lift": 12.44,
+     "n": 109,
      "ext": 6.1,
-     "lift_ext": 2.69
+     "lift_ext": 2.57
     },
     "2011-16": {
-     "turn": 24.4,
-     "base": 1.0,
-     "lift": 25.26,
-     "n": 41,
-     "ext": 5.1,
-     "lift_ext": 4.76
+     "turn": 21.3,
+     "base": 0.9,
+     "lift": 22.66,
+     "n": 47,
+     "ext": 4.9,
+     "lift_ext": 4.37
     },
     "2016-21": {
      "turn": 15.8,
      "base": 1.2,
-     "lift": 13.4,
+     "lift": 13.02,
      "n": 38,
      "ext": 6.0,
      "lift_ext": 2.63
@@ -1021,20 +1021,20 @@
    {
     "item": "Daily zone, 2x filter",
     "all": {
-     "turn": 49.5,
-     "base": 27.4,
-     "lift": 1.81,
-     "n": 103,
-     "ext": 42.1,
-     "lift_ext": 1.18
+     "turn": 48.6,
+     "base": 27.6,
+     "lift": 1.76,
+     "n": 109,
+     "ext": 43.2,
+     "lift_ext": 1.13
     },
     "2011-16": {
-     "turn": 48.8,
-     "base": 23.7,
-     "lift": 2.06,
-     "n": 41,
-     "ext": 32.6,
-     "lift_ext": 1.49
+     "turn": 46.8,
+     "base": 24.4,
+     "lift": 1.92,
+     "n": 47,
+     "ext": 36.2,
+     "lift_ext": 1.29
     },
     "2016-21": {
      "turn": 50.0,
@@ -1056,20 +1056,20 @@
    {
     "item": "Daily zone, 2x, first touch",
     "all": {
-     "turn": 8.7,
+     "turn": 8.3,
      "base": 1.2,
-     "lift": 7.28,
-     "n": 103,
+     "lift": 6.88,
+     "n": 109,
      "ext": 3.1,
-     "lift_ext": 2.81
+     "lift_ext": 2.66
     },
     "2011-16": {
-     "turn": 9.8,
+     "turn": 8.5,
      "base": 0.7,
-     "lift": 13.64,
-     "n": 41,
+     "lift": 11.65,
+     "n": 47,
      "ext": 1.6,
-     "lift_ext": 5.98
+     "lift_ext": 5.24
     },
     "2016-21": {
      "turn": 10.5,
@@ -1091,20 +1091,20 @@
    {
     "item": "Daily zone, no filter",
     "all": {
-     "turn": 61.2,
-     "base": 43.6,
-     "lift": 1.4,
-     "n": 103,
-     "ext": 59.2,
-     "lift_ext": 1.03
+     "turn": 58.7,
+     "base": 43.4,
+     "lift": 1.35,
+     "n": 109,
+     "ext": 60.0,
+     "lift_ext": 0.98
     },
     "2011-16": {
-     "turn": 61.0,
-     "base": 39.2,
-     "lift": 1.56,
-     "n": 41,
-     "ext": 48.0,
-     "lift_ext": 1.27
+     "turn": 55.3,
+     "base": 38.6,
+     "lift": 1.43,
+     "n": 47,
+     "ext": 50.6,
+     "lift_ext": 1.09
     },
     "2016-21": {
      "turn": 63.2,
@@ -1126,25 +1126,25 @@
    {
     "item": "Daily zone, no filter, first touch",
     "all": {
-     "turn": 10.7,
+     "turn": 10.1,
      "base": 2.4,
-     "lift": 4.47,
-     "n": 103,
+     "lift": 4.26,
+     "n": 109,
      "ext": 5.3,
-     "lift_ext": 2.0
+     "lift_ext": 1.89
     },
     "2011-16": {
-     "turn": 12.2,
-     "base": 2.0,
-     "lift": 6.2,
-     "n": 41,
+     "turn": 10.6,
+     "base": 1.9,
+     "lift": 5.66,
+     "n": 47,
      "ext": 4.4,
-     "lift_ext": 2.75
+     "lift_ext": 2.41
     },
     "2016-21": {
      "turn": 13.2,
      "base": 2.6,
-     "lift": 5.13,
+     "lift": 5.06,
      "n": 38,
      "ext": 5.5,
      "lift_ext": 2.37
@@ -1161,20 +1161,20 @@
    {
     "item": "Sharp move into the turn: 10%+ in 7 days",
     "all": {
-     "turn": 70.9,
-     "base": 8.8,
-     "lift": 8.09,
-     "n": 103,
+     "turn": 70.6,
+     "base": 8.9,
+     "lift": 7.96,
+     "n": 109,
      "ext": 34.1,
-     "lift_ext": 2.08
+     "lift_ext": 2.07
     },
     "2011-16": {
-     "turn": 80.5,
-     "base": 9.5,
-     "lift": 8.46,
-     "n": 41,
-     "ext": 35.9,
-     "lift_ext": 2.24
+     "turn": 78.7,
+     "base": 9.9,
+     "lift": 7.97,
+     "n": 47,
+     "ext": 35.7,
+     "lift_ext": 2.2
     },
     "2016-21": {
      "turn": 73.7,
@@ -1196,20 +1196,20 @@
    {
     "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
     "all": {
-     "turn": 29.1,
-     "base": 4.9,
-     "lift": 5.95,
-     "n": 103,
-     "ext": 23.3,
-     "lift_ext": 1.25
+     "turn": 29.4,
+     "base": 5.0,
+     "lift": 5.9,
+     "n": 109,
+     "ext": 23.8,
+     "lift_ext": 1.23
     },
     "2011-16": {
-     "turn": 34.1,
-     "base": 5.2,
-     "lift": 6.63,
-     "n": 41,
-     "ext": 25.4,
-     "lift_ext": 1.34
+     "turn": 34.0,
+     "base": 5.4,
+     "lift": 6.31,
+     "n": 47,
+     "ext": 26.9,
+     "lift_ext": 1.26
     },
     "2016-21": {
      "turn": 26.3,
@@ -1231,20 +1231,20 @@
    {
     "item": "Extended into the turn: 20%+ in 30 days",
     "all": {
-     "turn": 56.3,
-     "base": 13.1,
-     "lift": 4.3,
-     "n": 103,
-     "ext": 29.6,
-     "lift_ext": 1.9
+     "turn": 55.0,
+     "base": 13.4,
+     "lift": 4.12,
+     "n": 109,
+     "ext": 29.7,
+     "lift_ext": 1.86
     },
     "2011-16": {
-     "turn": 70.7,
-     "base": 14.2,
-     "lift": 4.97,
-     "n": 41,
-     "ext": 35.4,
-     "lift_ext": 2.0
+     "turn": 66.0,
+     "base": 15.1,
+     "lift": 4.38,
+     "n": 47,
+     "ext": 35.5,
+     "lift_ext": 1.86
     },
     "2016-21": {
      "turn": 55.3,
@@ -1266,20 +1266,20 @@
    {
     "item": "Stretched: 20%+ past weekly EMA50",
     "all": {
-     "turn": 53.4,
-     "base": 29.3,
-     "lift": 1.82,
-     "n": 103,
-     "ext": 47.7,
-     "lift_ext": 1.12
+     "turn": 53.2,
+     "base": 30.2,
+     "lift": 1.76,
+     "n": 109,
+     "ext": 46.9,
+     "lift_ext": 1.13
     },
     "2011-16": {
-     "turn": 53.7,
-     "base": 33.8,
-     "lift": 1.59,
-     "n": 41,
-     "ext": 59.7,
-     "lift_ext": 0.9
+     "turn": 53.2,
+     "base": 36.5,
+     "lift": 1.46,
+     "n": 47,
+     "ext": 57.1,
+     "lift_ext": 0.93
     },
     "2016-21": {
      "turn": 55.3,
@@ -1301,20 +1301,20 @@
    {
     "item": "Past weekly EMA200",
     "all": {
-     "turn": 60.2,
-     "base": 49.4,
-     "lift": 1.22,
-     "n": 103,
-     "ext": 62.1,
-     "lift_ext": 0.97
+     "turn": 60.6,
+     "base": 49.3,
+     "lift": 1.23,
+     "n": 109,
+     "ext": 59.4,
+     "lift_ext": 1.02
     },
     "2011-16": {
-     "turn": 61.0,
-     "base": 49.3,
-     "lift": 1.24,
-     "n": 41,
-     "ext": 66.9,
-     "lift_ext": 0.91
+     "turn": 61.7,
+     "base": 49.2,
+     "lift": 1.25,
+     "n": 47,
+     "ext": 58.2,
+     "lift_ext": 1.06
     },
     "2016-21": {
      "turn": 55.3,
@@ -1336,20 +1336,20 @@
    {
     "item": "Wick 40%+ of range (rejection)",
     "all": {
-     "turn": 25.2,
-     "base": 27.4,
-     "lift": 0.92,
-     "n": 103,
-     "ext": 22.3,
-     "lift_ext": 1.13
+     "turn": 24.8,
+     "base": 27.2,
+     "lift": 0.91,
+     "n": 109,
+     "ext": 22.4,
+     "lift_ext": 1.1
     },
     "2011-16": {
-     "turn": 24.4,
-     "base": 28.6,
-     "lift": 0.85,
-     "n": 41,
-     "ext": 20.3,
-     "lift_ext": 1.2
+     "turn": 23.4,
+     "base": 28.0,
+     "lift": 0.84,
+     "n": 47,
+     "ext": 20.6,
+     "lift_ext": 1.13
     },
     "2016-21": {
      "turn": 26.3,
@@ -1372,19 +1372,19 @@
     "item": "Volume 1.5x+ (Bitstamp)",
     "all": {
      "turn": 50.5,
-     "base": 15.6,
-     "lift": 3.23,
-     "n": 103,
-     "ext": 27.7,
-     "lift_ext": 1.82
+     "base": 15.8,
+     "lift": 3.2,
+     "n": 109,
+     "ext": 27.6,
+     "lift_ext": 1.83
     },
     "2011-16": {
-     "turn": 63.4,
-     "base": 17.2,
-     "lift": 3.69,
-     "n": 41,
-     "ext": 29.1,
-     "lift_ext": 2.18
+     "turn": 61.7,
+     "base": 17.6,
+     "lift": 3.5,
+     "n": 47,
+     "ext": 29.0,
+     "lift_ext": 2.13
     },
     "2016-21": {
      "turn": 42.1,
@@ -1548,20 +1548,20 @@
    {
     "item": "Weekly EMA agrees",
     "all": {
-     "turn": 49.1,
-     "base": 50.0,
-     "lift": 0.98,
-     "n": 53,
-     "ext": 37.1,
-     "lift_ext": 1.32
+     "turn": 48.2,
+     "base": 50.1,
+     "lift": 0.96,
+     "n": 56,
+     "ext": 42.0,
+     "lift_ext": 1.15
     },
     "2011-16": {
-     "turn": 50.0,
-     "base": 49.9,
-     "lift": 1.0,
-     "n": 24,
-     "ext": 31.7,
-     "lift_ext": 1.58
+     "turn": 48.1,
+     "base": 50.1,
+     "lift": 0.96,
+     "n": 27,
+     "ext": 47.6,
+     "lift_ext": 1.01
     },
     "2016-21": {
      "turn": 47.6,
@@ -1583,20 +1583,20 @@
    {
     "item": "Weekly structure agrees",
     "all": {
-     "turn": 34.0,
-     "base": 49.2,
-     "lift": 0.69,
-     "n": 53,
-     "ext": 39.1,
-     "lift_ext": 0.87
+     "turn": 35.7,
+     "base": 50.7,
+     "lift": 0.7,
+     "n": 56,
+     "ext": 41.4,
+     "lift_ext": 0.86
     },
     "2011-16": {
-     "turn": 37.5,
-     "base": 45.2,
-     "lift": 0.83,
-     "n": 24,
-     "ext": 27.0,
-     "lift_ext": 1.39
+     "turn": 40.7,
+     "base": 50.1,
+     "lift": 0.81,
+     "n": 27,
+     "ext": 34.6,
+     "lift_ext": 1.18
     },
     "2016-21": {
      "turn": 38.1,
@@ -1618,20 +1618,20 @@
    {
     "item": "Daily structure agrees",
     "all": {
-     "turn": 7.5,
+     "turn": 7.1,
      "base": 54.0,
-     "lift": 0.14,
-     "n": 53,
-     "ext": 14.9,
-     "lift_ext": 0.51
+     "lift": 0.13,
+     "n": 56,
+     "ext": 15.1,
+     "lift_ext": 0.47
     },
     "2011-16": {
-     "turn": 12.5,
-     "base": 53.5,
-     "lift": 0.23,
-     "n": 24,
-     "ext": 13.3,
-     "lift_ext": 0.94
+     "turn": 11.1,
+     "base": 53.6,
+     "lift": 0.21,
+     "n": 27,
+     "ext": 13.9,
+     "lift_ext": 0.8
     },
     "2016-21": {
      "turn": 4.8,
@@ -1653,20 +1653,20 @@
    {
     "item": "Weekly zone, 2x filter",
     "all": {
-     "turn": 28.3,
-     "base": 15.9,
-     "lift": 1.78,
-     "n": 53,
+     "turn": 26.8,
+     "base": 16.0,
+     "lift": 1.68,
+     "n": 56,
      "ext": 22.5,
-     "lift_ext": 1.26
+     "lift_ext": 1.19
     },
     "2011-16": {
-     "turn": 37.5,
-     "base": 15.1,
-     "lift": 2.49,
-     "n": 24,
-     "ext": 16.8,
-     "lift_ext": 2.23
+     "turn": 33.3,
+     "base": 15.3,
+     "lift": 2.18,
+     "n": 27,
+     "ext": 16.9,
+     "lift_ext": 1.97
     },
     "2016-21": {
      "turn": 28.6,
@@ -1688,20 +1688,20 @@
    {
     "item": "Weekly zone, 2x, first touch",
     "all": {
-     "turn": 13.2,
+     "turn": 12.5,
      "base": 0.6,
-     "lift": 22.85,
-     "n": 53,
-     "ext": 2.9,
-     "lift_ext": 4.57
+     "lift": 21.81,
+     "n": 56,
+     "ext": 2.8,
+     "lift_ext": 4.44
     },
     "2011-16": {
-     "turn": 20.8,
+     "turn": 18.5,
      "base": 0.3,
-     "lift": 64.72,
-     "n": 24,
-     "ext": 1.6,
-     "lift_ext": 12.77
+     "lift": 59.16,
+     "n": 27,
+     "ext": 1.4,
+     "lift_ext": 13.3
     },
     "2016-21": {
      "turn": 9.5,
@@ -1723,25 +1723,25 @@
    {
     "item": "Weekly zone, no filter",
     "all": {
-     "turn": 39.6,
-     "base": 24.7,
-     "lift": 1.6,
-     "n": 53,
-     "ext": 37.0,
-     "lift_ext": 1.07
+     "turn": 37.5,
+     "base": 24.6,
+     "lift": 1.52,
+     "n": 56,
+     "ext": 37.1,
+     "lift_ext": 1.01
     },
     "2011-16": {
-     "turn": 41.7,
-     "base": 22.1,
-     "lift": 1.89,
-     "n": 24,
-     "ext": 28.0,
-     "lift_ext": 1.49
+     "turn": 37.0,
+     "base": 21.9,
+     "lift": 1.69,
+     "n": 27,
+     "ext": 28.3,
+     "lift_ext": 1.31
     },
     "2016-21": {
      "turn": 38.1,
-     "base": 22.1,
-     "lift": 1.72,
+     "base": 22.0,
+     "lift": 1.73,
      "n": 21,
      "ext": 33.7,
      "lift_ext": 1.13
@@ -1758,25 +1758,25 @@
    {
     "item": "Weekly zone, no filter, first touch",
     "all": {
-     "turn": 18.9,
+     "turn": 17.9,
      "base": 1.3,
-     "lift": 15.05,
-     "n": 53,
+     "lift": 14.24,
+     "n": 56,
      "ext": 6.1,
-     "lift_ext": 3.07
+     "lift_ext": 2.95
     },
     "2011-16": {
-     "turn": 20.8,
-     "base": 1.0,
-     "lift": 21.57,
-     "n": 24,
-     "ext": 5.1,
-     "lift_ext": 4.06
+     "turn": 18.5,
+     "base": 0.9,
+     "lift": 19.72,
+     "n": 27,
+     "ext": 4.9,
+     "lift_ext": 3.8
     },
     "2016-21": {
      "turn": 19.0,
      "base": 1.2,
-     "lift": 16.17,
+     "lift": 15.71,
      "n": 21,
      "ext": 6.0,
      "lift_ext": 3.17
@@ -1793,20 +1793,20 @@
    {
     "item": "Daily zone, 2x filter",
     "all": {
-     "turn": 47.2,
-     "base": 27.4,
-     "lift": 1.72,
-     "n": 53,
-     "ext": 42.1,
-     "lift_ext": 1.12
+     "turn": 46.4,
+     "base": 27.6,
+     "lift": 1.68,
+     "n": 56,
+     "ext": 43.2,
+     "lift_ext": 1.07
     },
     "2011-16": {
-     "turn": 50.0,
-     "base": 23.7,
-     "lift": 2.11,
-     "n": 24,
-     "ext": 32.6,
-     "lift_ext": 1.53
+     "turn": 48.1,
+     "base": 24.4,
+     "lift": 1.97,
+     "n": 27,
+     "ext": 36.2,
+     "lift_ext": 1.33
     },
     "2016-21": {
      "turn": 42.9,
@@ -1828,20 +1828,20 @@
    {
     "item": "Daily zone, 2x, first touch",
     "all": {
-     "turn": 5.7,
+     "turn": 5.4,
      "base": 1.2,
-     "lift": 4.72,
-     "n": 53,
+     "lift": 4.46,
+     "n": 56,
      "ext": 3.1,
-     "lift_ext": 1.82
+     "lift_ext": 1.73
     },
     "2011-16": {
-     "turn": 4.2,
+     "turn": 3.7,
      "base": 0.7,
-     "lift": 5.82,
-     "n": 24,
+     "lift": 5.07,
+     "n": 27,
      "ext": 1.6,
-     "lift_ext": 2.55
+     "lift_ext": 2.28
     },
     "2016-21": {
      "turn": 9.5,
@@ -1863,20 +1863,20 @@
    {
     "item": "Daily zone, no filter",
     "all": {
-     "turn": 58.5,
-     "base": 43.6,
-     "lift": 1.34,
-     "n": 53,
-     "ext": 59.2,
-     "lift_ext": 0.99
+     "turn": 55.4,
+     "base": 43.4,
+     "lift": 1.28,
+     "n": 56,
+     "ext": 60.0,
+     "lift_ext": 0.92
     },
     "2011-16": {
-     "turn": 54.2,
-     "base": 39.2,
-     "lift": 1.38,
-     "n": 24,
-     "ext": 48.0,
-     "lift_ext": 1.13
+     "turn": 48.1,
+     "base": 38.6,
+     "lift": 1.25,
+     "n": 27,
+     "ext": 50.6,
+     "lift_ext": 0.95
     },
     "2016-21": {
      "turn": 61.9,
@@ -1898,25 +1898,25 @@
    {
     "item": "Daily zone, no filter, first touch",
     "all": {
-     "turn": 7.5,
+     "turn": 7.1,
      "base": 2.4,
-     "lift": 3.16,
-     "n": 53,
+     "lift": 3.02,
+     "n": 56,
      "ext": 5.3,
-     "lift_ext": 1.41
+     "lift_ext": 1.34
     },
     "2011-16": {
-     "turn": 4.2,
-     "base": 2.0,
-     "lift": 2.12,
-     "n": 24,
+     "turn": 3.7,
+     "base": 1.9,
+     "lift": 1.97,
+     "n": 27,
      "ext": 4.4,
-     "lift_ext": 0.94
+     "lift_ext": 0.84
     },
     "2016-21": {
      "turn": 14.3,
      "base": 2.6,
-     "lift": 5.57,
+     "lift": 5.5,
      "n": 21,
      "ext": 5.5,
      "lift_ext": 2.58
@@ -1933,20 +1933,20 @@
    {
     "item": "Sharp move into the turn: 10%+ in 7 days",
     "all": {
-     "turn": 75.5,
-     "base": 8.8,
-     "lift": 8.62,
-     "n": 53,
+     "turn": 75.0,
+     "base": 8.9,
+     "lift": 8.45,
+     "n": 56,
      "ext": 34.1,
-     "lift_ext": 2.21
+     "lift_ext": 2.2
     },
     "2011-16": {
-     "turn": 83.3,
-     "base": 9.5,
-     "lift": 8.76,
-     "n": 24,
-     "ext": 35.9,
-     "lift_ext": 2.32
+     "turn": 81.5,
+     "base": 9.9,
+     "lift": 8.25,
+     "n": 27,
+     "ext": 35.7,
+     "lift_ext": 2.28
     },
     "2016-21": {
      "turn": 71.4,
@@ -1968,20 +1968,20 @@
    {
     "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
     "all": {
-     "turn": 35.8,
-     "base": 4.9,
-     "lift": 7.32,
-     "n": 53,
-     "ext": 23.3,
-     "lift_ext": 1.54
+     "turn": 35.7,
+     "base": 5.0,
+     "lift": 7.18,
+     "n": 56,
+     "ext": 23.8,
+     "lift_ext": 1.5
     },
     "2011-16": {
      "turn": 33.3,
-     "base": 5.2,
-     "lift": 6.47,
-     "n": 24,
-     "ext": 25.4,
-     "lift_ext": 1.31
+     "base": 5.4,
+     "lift": 6.18,
+     "n": 27,
+     "ext": 26.9,
+     "lift_ext": 1.24
     },
     "2016-21": {
      "turn": 33.3,
@@ -2003,20 +2003,20 @@
    {
     "item": "Extended into the turn: 20%+ in 30 days",
     "all": {
-     "turn": 71.7,
-     "base": 13.1,
-     "lift": 5.48,
-     "n": 53,
-     "ext": 29.6,
-     "lift_ext": 2.42
+     "turn": 69.6,
+     "base": 13.4,
+     "lift": 5.22,
+     "n": 56,
+     "ext": 29.7,
+     "lift_ext": 2.35
     },
     "2011-16": {
-     "turn": 75.0,
-     "base": 14.2,
-     "lift": 5.27,
-     "n": 24,
-     "ext": 35.4,
-     "lift_ext": 2.12
+     "turn": 70.4,
+     "base": 15.1,
+     "lift": 4.67,
+     "n": 27,
+     "ext": 35.5,
+     "lift_ext": 1.98
     },
     "2016-21": {
      "turn": 76.2,
@@ -2038,20 +2038,20 @@
    {
     "item": "Stretched: 20%+ past weekly EMA50",
     "all": {
-     "turn": 58.5,
-     "base": 29.3,
-     "lift": 1.99,
-     "n": 53,
-     "ext": 47.7,
-     "lift_ext": 1.23
+     "turn": 58.9,
+     "base": 30.2,
+     "lift": 1.95,
+     "n": 56,
+     "ext": 46.9,
+     "lift_ext": 1.26
     },
     "2011-16": {
-     "turn": 54.2,
-     "base": 33.8,
-     "lift": 1.6,
-     "n": 24,
-     "ext": 59.7,
-     "lift_ext": 0.91
+     "turn": 55.6,
+     "base": 36.5,
+     "lift": 1.52,
+     "n": 27,
+     "ext": 57.1,
+     "lift_ext": 0.97
     },
     "2016-21": {
      "turn": 61.9,
@@ -2073,20 +2073,20 @@
    {
     "item": "Past weekly EMA200",
     "all": {
-     "turn": 62.3,
-     "base": 49.4,
-     "lift": 1.26,
-     "n": 53,
-     "ext": 62.1,
-     "lift_ext": 1.0
+     "turn": 64.3,
+     "base": 49.3,
+     "lift": 1.3,
+     "n": 56,
+     "ext": 59.4,
+     "lift_ext": 1.08
     },
     "2011-16": {
-     "turn": 58.3,
-     "base": 49.3,
-     "lift": 1.18,
-     "n": 24,
-     "ext": 66.9,
-     "lift_ext": 0.87
+     "turn": 63.0,
+     "base": 49.2,
+     "lift": 1.28,
+     "n": 27,
+     "ext": 58.2,
+     "lift_ext": 1.08
     },
     "2016-21": {
      "turn": 61.9,
@@ -2108,20 +2108,20 @@
    {
     "item": "Wick 40%+ of range (rejection)",
     "all": {
-     "turn": 24.5,
-     "base": 27.4,
-     "lift": 0.89,
-     "n": 53,
-     "ext": 22.3,
-     "lift_ext": 1.1
+     "turn": 23.2,
+     "base": 27.2,
+     "lift": 0.85,
+     "n": 56,
+     "ext": 22.4,
+     "lift_ext": 1.03
     },
     "2011-16": {
-     "turn": 29.2,
-     "base": 28.6,
-     "lift": 1.02,
-     "n": 24,
-     "ext": 20.3,
-     "lift_ext": 1.44
+     "turn": 25.9,
+     "base": 28.0,
+     "lift": 0.93,
+     "n": 27,
+     "ext": 20.6,
+     "lift_ext": 1.26
     },
     "2016-21": {
      "turn": 19.0,
@@ -2143,20 +2143,20 @@
    {
     "item": "Volume 1.5x+ (Bitstamp)",
     "all": {
-     "turn": 54.7,
-     "base": 15.6,
-     "lift": 3.5,
-     "n": 53,
-     "ext": 27.7,
-     "lift_ext": 1.98
+     "turn": 55.4,
+     "base": 15.8,
+     "lift": 3.51,
+     "n": 56,
+     "ext": 27.6,
+     "lift_ext": 2.0
     },
     "2011-16": {
      "turn": 66.7,
-     "base": 17.2,
-     "lift": 3.88,
-     "n": 24,
-     "ext": 29.1,
-     "lift_ext": 2.29
+     "base": 17.6,
+     "lift": 3.78,
+     "n": 27,
+     "ext": 29.0,
+     "lift_ext": 2.3
     },
     "2016-21": {
      "turn": 42.9,
@@ -2250,7 +2250,7 @@
     "all": {
      "turn": 16.7,
      "base": 6.7,
-     "lift": 2.49,
+     "lift": 2.5,
      "n": 6,
      "ext": 5.2,
      "lift_ext": 3.23
@@ -2274,7 +2274,7 @@
     "2021-26": {
      "turn": 16.7,
      "base": 6.7,
-     "lift": 2.49,
+     "lift": 2.5,
      "n": 6,
      "ext": 5.2,
      "lift_ext": 3.23
@@ -2320,20 +2320,20 @@
    {
     "item": "Weekly EMA agrees",
     "all": {
-     "turn": 47.6,
-     "base": 50.0,
-     "lift": 0.95,
-     "n": 21,
-     "ext": 37.1,
-     "lift_ext": 1.28
+     "turn": 45.5,
+     "base": 50.1,
+     "lift": 0.91,
+     "n": 22,
+     "ext": 42.0,
+     "lift_ext": 1.08
     },
     "2011-16": {
-     "turn": 50.0,
-     "base": 49.9,
-     "lift": 1.0,
-     "n": 10,
-     "ext": 31.7,
-     "lift_ext": 1.58
+     "turn": 45.5,
+     "base": 50.1,
+     "lift": 0.91,
+     "n": 11,
+     "ext": 47.6,
+     "lift_ext": 0.96
     },
     "2016-21": {
      "turn": 42.9,
@@ -2355,20 +2355,20 @@
    {
     "item": "Weekly structure agrees",
     "all": {
-     "turn": 23.8,
-     "base": 49.2,
-     "lift": 0.48,
-     "n": 21,
-     "ext": 39.1,
-     "lift_ext": 0.61
+     "turn": 22.7,
+     "base": 50.7,
+     "lift": 0.45,
+     "n": 22,
+     "ext": 41.4,
+     "lift_ext": 0.55
     },
     "2011-16": {
-     "turn": 30.0,
-     "base": 45.2,
-     "lift": 0.66,
-     "n": 10,
-     "ext": 27.0,
-     "lift_ext": 1.11
+     "turn": 27.3,
+     "base": 50.1,
+     "lift": 0.54,
+     "n": 11,
+     "ext": 34.6,
+     "lift_ext": 0.79
     },
     "2016-21": {
      "turn": 14.3,
@@ -2390,20 +2390,20 @@
    {
     "item": "Daily structure agrees",
     "all": {
-     "turn": 4.8,
+     "turn": 4.5,
      "base": 54.0,
-     "lift": 0.09,
-     "n": 21,
-     "ext": 14.9,
-     "lift_ext": 0.32
+     "lift": 0.08,
+     "n": 22,
+     "ext": 15.1,
+     "lift_ext": 0.3
     },
     "2011-16": {
-     "turn": 10.0,
-     "base": 53.5,
-     "lift": 0.19,
-     "n": 10,
-     "ext": 13.3,
-     "lift_ext": 0.75
+     "turn": 9.1,
+     "base": 53.6,
+     "lift": 0.17,
+     "n": 11,
+     "ext": 13.9,
+     "lift_ext": 0.65
     },
     "2016-21": {
      "turn": 0.0,
@@ -2425,20 +2425,20 @@
    {
     "item": "Weekly zone, 2x filter",
     "all": {
-     "turn": 33.3,
-     "base": 15.9,
-     "lift": 2.09,
-     "n": 21,
+     "turn": 31.8,
+     "base": 16.0,
+     "lift": 1.99,
+     "n": 22,
      "ext": 22.5,
-     "lift_ext": 1.48
+     "lift_ext": 1.41
     },
     "2011-16": {
-     "turn": 40.0,
-     "base": 15.1,
-     "lift": 2.66,
-     "n": 10,
-     "ext": 16.8,
-     "lift_ext": 2.38
+     "turn": 36.4,
+     "base": 15.3,
+     "lift": 2.38,
+     "n": 11,
+     "ext": 16.9,
+     "lift_ext": 2.15
     },
     "2016-21": {
      "turn": 42.9,
@@ -2460,20 +2460,20 @@
    {
     "item": "Weekly zone, 2x, first touch",
     "all": {
-     "turn": 14.3,
+     "turn": 13.6,
      "base": 0.6,
-     "lift": 24.72,
-     "n": 21,
-     "ext": 2.9,
-     "lift_ext": 4.94
+     "lift": 23.8,
+     "n": 22,
+     "ext": 2.8,
+     "lift_ext": 4.85
     },
     "2011-16": {
-     "turn": 10.0,
+     "turn": 9.1,
      "base": 0.3,
-     "lift": 31.07,
-     "n": 10,
-     "ext": 1.6,
-     "lift_ext": 6.13
+     "lift": 29.04,
+     "n": 11,
+     "ext": 1.4,
+     "lift_ext": 6.53
     },
     "2016-21": {
      "turn": 28.6,
@@ -2495,25 +2495,25 @@
    {
     "item": "Weekly zone, no filter",
     "all": {
-     "turn": 38.1,
-     "base": 24.7,
-     "lift": 1.54,
-     "n": 21,
-     "ext": 37.0,
-     "lift_ext": 1.03
+     "turn": 36.4,
+     "base": 24.6,
+     "lift": 1.48,
+     "n": 22,
+     "ext": 37.1,
+     "lift_ext": 0.98
     },
     "2011-16": {
-     "turn": 40.0,
-     "base": 22.1,
-     "lift": 1.81,
-     "n": 10,
-     "ext": 28.0,
-     "lift_ext": 1.43
+     "turn": 36.4,
+     "base": 21.9,
+     "lift": 1.66,
+     "n": 11,
+     "ext": 28.3,
+     "lift_ext": 1.28
     },
     "2016-21": {
      "turn": 57.1,
-     "base": 22.1,
-     "lift": 2.58,
+     "base": 22.0,
+     "lift": 2.59,
      "n": 7,
      "ext": 33.7,
      "lift_ext": 1.69
@@ -2530,25 +2530,25 @@
    {
     "item": "Weekly zone, no filter, first touch",
     "all": {
-     "turn": 19.0,
+     "turn": 18.2,
      "base": 1.3,
-     "lift": 15.19,
-     "n": 21,
+     "lift": 14.5,
+     "n": 22,
      "ext": 6.1,
-     "lift_ext": 3.1
+     "lift_ext": 3.0
     },
     "2011-16": {
-     "turn": 10.0,
-     "base": 1.0,
-     "lift": 10.36,
-     "n": 10,
-     "ext": 5.1,
-     "lift_ext": 1.95
+     "turn": 9.1,
+     "base": 0.9,
+     "lift": 9.68,
+     "n": 11,
+     "ext": 4.9,
+     "lift_ext": 1.87
     },
     "2016-21": {
      "turn": 42.9,
      "base": 1.2,
-     "lift": 36.38,
+     "lift": 35.34,
      "n": 7,
      "ext": 6.0,
      "lift_ext": 7.14
@@ -2565,20 +2565,20 @@
    {
     "item": "Daily zone, 2x filter",
     "all": {
-     "turn": 52.4,
-     "base": 27.4,
-     "lift": 1.91,
-     "n": 21,
-     "ext": 42.1,
-     "lift_ext": 1.24
+     "turn": 50.0,
+     "base": 27.6,
+     "lift": 1.81,
+     "n": 22,
+     "ext": 43.2,
+     "lift_ext": 1.16
     },
     "2011-16": {
-     "turn": 50.0,
-     "base": 23.7,
-     "lift": 2.11,
-     "n": 10,
-     "ext": 32.6,
-     "lift_ext": 1.53
+     "turn": 45.5,
+     "base": 24.4,
+     "lift": 1.86,
+     "n": 11,
+     "ext": 36.2,
+     "lift_ext": 1.26
     },
     "2016-21": {
      "turn": 71.4,
@@ -2600,18 +2600,18 @@
    {
     "item": "Daily zone, 2x, first touch",
     "all": {
-     "turn": 4.8,
+     "turn": 4.5,
      "base": 1.2,
-     "lift": 3.97,
-     "n": 21,
+     "lift": 3.79,
+     "n": 22,
      "ext": 3.1,
-     "lift_ext": 1.53
+     "lift_ext": 1.47
     },
     "2011-16": {
      "turn": 0.0,
      "base": 0.7,
      "lift": 0.0,
-     "n": 10,
+     "n": 11,
      "ext": 1.6,
      "lift_ext": 0.0
     },
@@ -2635,20 +2635,20 @@
    {
     "item": "Daily zone, no filter",
     "all": {
-     "turn": 52.4,
-     "base": 43.6,
-     "lift": 1.2,
-     "n": 21,
-     "ext": 59.2,
-     "lift_ext": 0.89
+     "turn": 50.0,
+     "base": 43.4,
+     "lift": 1.15,
+     "n": 22,
+     "ext": 60.0,
+     "lift_ext": 0.83
     },
     "2011-16": {
-     "turn": 50.0,
-     "base": 39.2,
-     "lift": 1.28,
-     "n": 10,
-     "ext": 48.0,
-     "lift_ext": 1.04
+     "turn": 45.5,
+     "base": 38.6,
+     "lift": 1.18,
+     "n": 11,
+     "ext": 50.6,
+     "lift_ext": 0.9
     },
     "2016-21": {
      "turn": 71.4,
@@ -2670,25 +2670,25 @@
    {
     "item": "Daily zone, no filter, first touch",
     "all": {
-     "turn": 4.8,
+     "turn": 4.5,
      "base": 2.4,
-     "lift": 1.99,
-     "n": 21,
+     "lift": 1.92,
+     "n": 22,
      "ext": 5.3,
-     "lift_ext": 0.89
+     "lift_ext": 0.85
     },
     "2011-16": {
      "turn": 0.0,
-     "base": 2.0,
+     "base": 1.9,
      "lift": 0.0,
-     "n": 10,
+     "n": 11,
      "ext": 4.4,
      "lift_ext": 0.0
     },
     "2016-21": {
      "turn": 14.3,
      "base": 2.6,
-     "lift": 5.57,
+     "lift": 5.5,
      "n": 7,
      "ext": 5.5,
      "lift_ext": 2.58
@@ -2705,20 +2705,20 @@
    {
     "item": "Sharp move into the turn: 10%+ in 7 days",
     "all": {
-     "turn": 76.2,
-     "base": 8.8,
-     "lift": 8.7,
-     "n": 21,
+     "turn": 77.3,
+     "base": 8.9,
+     "lift": 8.71,
+     "n": 22,
      "ext": 34.1,
-     "lift_ext": 2.23
+     "lift_ext": 2.27
     },
     "2011-16": {
      "turn": 100.0,
-     "base": 9.5,
-     "lift": 10.51,
-     "n": 10,
-     "ext": 35.9,
-     "lift_ext": 2.79
+     "base": 9.9,
+     "lift": 10.12,
+     "n": 11,
+     "ext": 35.7,
+     "lift_ext": 2.8
     },
     "2016-21": {
      "turn": 71.4,
@@ -2740,20 +2740,20 @@
    {
     "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
     "all": {
-     "turn": 38.1,
-     "base": 4.9,
-     "lift": 7.78,
-     "n": 21,
-     "ext": 23.3,
-     "lift_ext": 1.63
+     "turn": 36.4,
+     "base": 5.0,
+     "lift": 7.31,
+     "n": 22,
+     "ext": 23.8,
+     "lift_ext": 1.53
     },
     "2011-16": {
-     "turn": 40.0,
-     "base": 5.2,
-     "lift": 7.77,
-     "n": 10,
-     "ext": 25.4,
-     "lift_ext": 1.57
+     "turn": 36.4,
+     "base": 5.4,
+     "lift": 6.74,
+     "n": 11,
+     "ext": 26.9,
+     "lift_ext": 1.35
     },
     "2016-21": {
      "turn": 42.9,
@@ -2775,20 +2775,20 @@
    {
     "item": "Extended into the turn: 20%+ in 30 days",
     "all": {
-     "turn": 76.2,
-     "base": 13.1,
-     "lift": 5.82,
-     "n": 21,
-     "ext": 29.6,
-     "lift_ext": 2.57
+     "turn": 77.3,
+     "base": 13.4,
+     "lift": 5.79,
+     "n": 22,
+     "ext": 29.7,
+     "lift_ext": 2.61
     },
     "2011-16": {
-     "turn": 90.0,
-     "base": 14.2,
-     "lift": 6.32,
-     "n": 10,
-     "ext": 35.4,
-     "lift_ext": 2.54
+     "turn": 90.9,
+     "base": 15.1,
+     "lift": 6.04,
+     "n": 11,
+     "ext": 35.5,
+     "lift_ext": 2.56
     },
     "2016-21": {
      "turn": 85.7,
@@ -2810,25 +2810,25 @@
    {
     "item": "Stretched: 20%+ past weekly EMA50",
     "all": {
-     "turn": 71.4,
-     "base": 29.3,
-     "lift": 2.43,
-     "n": 21,
-     "ext": 47.7,
-     "lift_ext": 1.5
+     "turn": 72.7,
+     "base": 30.2,
+     "lift": 2.41,
+     "n": 22,
+     "ext": 46.9,
+     "lift_ext": 1.55
     },
     "2011-16": {
-     "turn": 60.0,
-     "base": 33.8,
-     "lift": 1.77,
-     "n": 10,
-     "ext": 59.7,
-     "lift_ext": 1.01
+     "turn": 63.6,
+     "base": 36.5,
+     "lift": 1.74,
+     "n": 11,
+     "ext": 57.1,
+     "lift_ext": 1.11
     },
     "2016-21": {
      "turn": 85.7,
      "base": 31.1,
-     "lift": 2.76,
+     "lift": 2.75,
      "n": 7,
      "ext": 54.3,
      "lift_ext": 1.58
@@ -2845,20 +2845,20 @@
    {
     "item": "Past weekly EMA200",
     "all": {
-     "turn": 71.4,
-     "base": 49.4,
-     "lift": 1.45,
-     "n": 21,
-     "ext": 62.1,
-     "lift_ext": 1.15
+     "turn": 72.7,
+     "base": 49.3,
+     "lift": 1.47,
+     "n": 22,
+     "ext": 59.4,
+     "lift_ext": 1.22
     },
     "2011-16": {
-     "turn": 60.0,
-     "base": 49.3,
-     "lift": 1.22,
-     "n": 10,
-     "ext": 66.9,
-     "lift_ext": 0.9
+     "turn": 63.6,
+     "base": 49.2,
+     "lift": 1.29,
+     "n": 11,
+     "ext": 58.2,
+     "lift_ext": 1.09
     },
     "2016-21": {
      "turn": 85.7,
@@ -2880,20 +2880,20 @@
    {
     "item": "Wick 40%+ of range (rejection)",
     "all": {
-     "turn": 33.3,
-     "base": 27.4,
-     "lift": 1.22,
-     "n": 21,
-     "ext": 22.3,
-     "lift_ext": 1.49
+     "turn": 31.8,
+     "base": 27.2,
+     "lift": 1.17,
+     "n": 22,
+     "ext": 22.4,
+     "lift_ext": 1.42
     },
     "2011-16": {
-     "turn": 40.0,
-     "base": 28.6,
-     "lift": 1.4,
-     "n": 10,
-     "ext": 20.3,
-     "lift_ext": 1.97
+     "turn": 36.4,
+     "base": 28.0,
+     "lift": 1.3,
+     "n": 11,
+     "ext": 20.6,
+     "lift_ext": 1.76
     },
     "2016-21": {
      "turn": 28.6,
@@ -2915,20 +2915,20 @@
    {
     "item": "Volume 1.5x+ (Bitstamp)",
     "all": {
-     "turn": 52.4,
-     "base": 15.6,
-     "lift": 3.35,
-     "n": 21,
-     "ext": 27.7,
-     "lift_ext": 1.89
+     "turn": 50.0,
+     "base": 15.8,
+     "lift": 3.17,
+     "n": 22,
+     "ext": 27.6,
+     "lift_ext": 1.81
     },
     "2011-16": {
-     "turn": 60.0,
-     "base": 17.2,
-     "lift": 3.49,
-     "n": 10,
-     "ext": 29.1,
-     "lift_ext": 2.06
+     "turn": 54.5,
+     "base": 17.6,
+     "lift": 3.09,
+     "n": 11,
+     "ext": 29.0,
+     "lift_ext": 1.88
     },
     "2016-21": {
      "turn": 57.1,
@@ -3093,128 +3093,152 @@
   "10": [
    {
     "setup": "Sharp move",
-    "turns": 18,
-    "share": 6.8,
-    "ordinary_days": 112,
-    "turns_per_100_days": 13.8,
+    "turns": 20,
+    "share": 7.3,
+    "ordinary_days": 103,
+    "turns_per_100_days": 16.3,
     "eras": {
-     "2011-16": 9,
+     "2011-16": 11,
      "2016-21": 6,
      "2021-26": 3
     }
    },
    {
     "setup": "(none)",
-    "turns": 15,
-    "share": 5.7,
-    "ordinary_days": 131,
-    "turns_per_100_days": 10.3,
+    "turns": 12,
+    "share": 4.4,
+    "ordinary_days": 102,
+    "turns_per_100_days": 10.5,
     "eras": {
-     "2011-16": 7,
+     "2011-16": 4,
      "2016-21": 8,
      "2021-26": 0
     }
    },
    {
-    "setup": "Volume",
+    "setup": "Sharp move + Volume",
     "turns": 10,
-    "share": 3.8,
-    "ordinary_days": 38,
-    "turns_per_100_days": 20.8,
+    "share": 3.6,
+    "ordinary_days": 44,
+    "turns_per_100_days": 18.5,
     "eras": {
-     "2011-16": 6,
-     "2016-21": 2,
-     "2021-26": 2
+     "2011-16": 7,
+     "2016-21": 3,
+     "2021-26": 0
     }
    },
    {
     "setup": "Daily zone",
-    "turns": 9,
-    "share": 3.4,
-    "ordinary_days": 80,
-    "turns_per_100_days": 10.1,
+    "turns": 10,
+    "share": 3.6,
+    "ordinary_days": 70,
+    "turns_per_100_days": 12.5,
     "eras": {
-     "2011-16": 2,
+     "2011-16": 3,
      "2016-21": 5,
      "2021-26": 2
     }
    },
    {
-    "setup": "Sharp move + Volume",
+    "setup": "EMA + Structure",
     "turns": 9,
-    "share": 3.4,
-    "ordinary_days": 48,
-    "turns_per_100_days": 15.8,
+    "share": 3.3,
+    "ordinary_days": 55,
+    "turns_per_100_days": 14.1,
     "eras": {
-     "2011-16": 6,
-     "2016-21": 3,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Sharp move",
-    "turns": 7,
-    "share": 2.6,
-    "ordinary_days": 14,
-    "turns_per_100_days": 33.3,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 4,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "Daily zone + Volume",
-    "turns": 6,
-    "share": 2.3,
-    "ordinary_days": 23,
-    "turns_per_100_days": 20.7,
-    "eras": {
-     "2011-16": 2,
+     "2011-16": 8,
      "2016-21": 0,
-     "2021-26": 4
-    }
-   },
-   {
-    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
-    "turns": 6,
-    "share": 2.3,
-    "ordinary_days": 6,
-    "turns_per_100_days": 50.0,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 2,
      "2021-26": 1
     }
    },
    {
-    "setup": "Daily zone + Sharp move + Volume",
-    "turns": 6,
-    "share": 2.3,
-    "ordinary_days": 13,
-    "turns_per_100_days": 31.6,
+    "setup": "Volume",
+    "turns": 9,
+    "share": 3.3,
+    "ordinary_days": 23,
+    "turns_per_100_days": 28.1,
     "eras": {
-     "2011-16": 1,
-     "2016-21": 3,
+     "2011-16": 5,
+     "2016-21": 2,
      "2021-26": 2
     }
    },
    {
     "setup": "EMA + Structure + Sharp move + Volume",
-    "turns": 6,
-    "share": 2.3,
-    "ordinary_days": 8,
-    "turns_per_100_days": 42.9,
+    "turns": 8,
+    "share": 2.9,
+    "ordinary_days": 9,
+    "turns_per_100_days": 47.1,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 3,
      "2016-21": 2,
      "2021-26": 3
     }
    },
    {
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 7,
+    "share": 2.5,
+    "ordinary_days": 14,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 3,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Sharp move",
+    "turns": 6,
+    "share": 2.2,
+    "ordinary_days": 15,
+    "turns_per_100_days": 28.6,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
+    "turns": 6,
+    "share": 2.2,
+    "ordinary_days": 7,
+    "turns_per_100_days": 46.2,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 6,
+    "share": 2.2,
+    "ordinary_days": 29,
+    "turns_per_100_days": 17.1,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 6,
+    "share": 2.2,
+    "ordinary_days": 5,
+    "turns_per_100_days": 54.5,
+    "eras": {
+     "2011-16": 4,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
     "setup": "EMA + Structure + Weekly zone",
     "turns": 6,
-    "share": 2.3,
+    "share": 2.2,
     "ordinary_days": 10,
     "turns_per_100_days": 37.5,
     "eras": {
@@ -3224,81 +3248,33 @@
     }
    },
    {
-    "setup": "EMA",
+    "setup": "EMA + Structure + Sharp move",
     "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 29,
-    "turns_per_100_days": 14.7,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 2,
-     "2021-26": 2
-    }
-   },
-   {
-    "setup": "EMA + Daily zone + Sharp move + Volume",
-    "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 8,
-    "turns_per_100_days": 38.5,
+    "share": 1.8,
+    "ordinary_days": 7,
+    "turns_per_100_days": 41.7,
     "eras": {
      "2011-16": 3,
-     "2016-21": 0,
-     "2021-26": 2
+     "2016-21": 2,
+     "2021-26": 0
     }
    },
    {
-    "setup": "EMA + Daily zone",
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 19,
-    "turns_per_100_days": 20.8,
+    "share": 1.8,
+    "ordinary_days": 6,
+    "turns_per_100_days": 45.5,
     "eras": {
-     "2011-16": 1,
-     "2016-21": 3,
+     "2011-16": 2,
+     "2016-21": 2,
      "2021-26": 1
-    }
-   },
-   {
-    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
-    "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 5,
-    "turns_per_100_days": 50.0,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 2,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
-    "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 5,
-    "turns_per_100_days": 50.0,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 4,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "Daily zone + Sharp move",
-    "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 29,
-    "turns_per_100_days": 14.7,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 4,
-     "2021-26": 0
     }
    },
    {
     "setup": "Structure + Daily zone",
     "turns": 5,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 39,
     "turns_per_100_days": 11.4,
     "eras": {
@@ -3308,11 +3284,23 @@
     }
    },
    {
+    "setup": "Daily zone + Volume",
+    "turns": 5,
+    "share": 1.8,
+    "ordinary_days": 19,
+    "turns_per_100_days": 20.8,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 4
+    }
+   },
+   {
     "setup": "Structure",
     "turns": 5,
-    "share": 1.9,
-    "ordinary_days": 53,
-    "turns_per_100_days": 8.6,
+    "share": 1.8,
+    "ordinary_days": 57,
+    "turns_per_100_days": 8.1,
     "eras": {
      "2011-16": 0,
      "2016-21": 3,
@@ -3320,26 +3308,26 @@
     }
    },
    {
-    "setup": "EMA + Daily zone + Volume",
+    "setup": "EMA + Structure + Daily zone + Volume",
     "turns": 4,
     "share": 1.5,
-    "ordinary_days": 8,
-    "turns_per_100_days": 33.3,
+    "ordinary_days": 17,
+    "turns_per_100_days": 19.0,
     "eras": {
-     "2011-16": 1,
-     "2016-21": 1,
-     "2021-26": 2
+     "2011-16": 2,
+     "2016-21": 2,
+     "2021-26": 0
     }
    },
    {
-    "setup": "EMA + Structure",
+    "setup": "Structure + Sharp move",
     "turns": 4,
     "share": 1.5,
-    "ordinary_days": 56,
-    "turns_per_100_days": 6.7,
+    "ordinary_days": 7,
+    "turns_per_100_days": 36.4,
     "eras": {
-     "2011-16": 3,
-     "2016-21": 0,
+     "2011-16": 1,
+     "2016-21": 2,
      "2021-26": 1
     }
    },
@@ -3359,8 +3347,8 @@
     "setup": "EMA + Structure + Daily zone + Wick",
     "turns": 4,
     "share": 1.5,
-    "ordinary_days": 11,
-    "turns_per_100_days": 26.7,
+    "ordinary_days": 13,
+    "turns_per_100_days": 23.5,
     "eras": {
      "2011-16": 1,
      "2016-21": 3,
@@ -3392,35 +3380,35 @@
     }
    },
    {
-    "setup": "EMA + Daily zone + Sharp move",
-    "turns": 3,
-    "share": 1.1,
-    "ordinary_days": 4,
-    "turns_per_100_days": 42.9,
+    "setup": "EMA + Daily zone",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 25,
+    "turns_per_100_days": 13.8,
     "eras": {
-     "2011-16": 1,
-     "2016-21": 1,
+     "2011-16": 0,
+     "2016-21": 3,
      "2021-26": 1
     }
    },
    {
-    "setup": "EMA + Structure + Sharp move",
-    "turns": 3,
-    "share": 1.1,
-    "ordinary_days": 7,
-    "turns_per_100_days": 30.0,
+    "setup": "EMA",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 53,
+    "turns_per_100_days": 7.0,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 0,
      "2016-21": 2,
-     "2021-26": 0
+     "2021-26": 2
     }
    },
    {
     "setup": "EMA + Structure + Daily zone + Wick + Volume",
     "turns": 3,
     "share": 1.1,
-    "ordinary_days": 8,
-    "turns_per_100_days": 27.3,
+    "ordinary_days": 7,
+    "turns_per_100_days": 30.0,
     "eras": {
      "2011-16": 3,
      "2016-21": 0,
@@ -3431,8 +3419,8 @@
     "setup": "EMA + Structure + Daily zone",
     "turns": 3,
     "share": 1.1,
-    "ordinary_days": 26,
-    "turns_per_100_days": 10.3,
+    "ordinary_days": 31,
+    "turns_per_100_days": 8.8,
     "eras": {
      "2011-16": 1,
      "2016-21": 2,
@@ -3452,6 +3440,18 @@
     }
    },
    {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 8,
+    "turns_per_100_days": 27.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 2
+    }
+   },
+   {
     "setup": "EMA + Weekly zone + Sharp move + Volume",
     "turns": 3,
     "share": 1.1,
@@ -3467,8 +3467,8 @@
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
     "turns": 3,
     "share": 1.1,
-    "ordinary_days": 4,
-    "turns_per_100_days": 42.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 37.5,
     "eras": {
      "2011-16": 1,
      "2016-21": 2,
@@ -3476,23 +3476,11 @@
     }
    },
    {
-    "setup": "Structure + Sharp move",
-    "turns": 3,
-    "share": 1.1,
-    "ordinary_days": 7,
-    "turns_per_100_days": 30.0,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 2,
-     "2021-26": 1
-    }
-   },
-   {
     "setup": "Daily zone + Wick",
     "turns": 3,
     "share": 1.1,
-    "ordinary_days": 18,
-    "turns_per_100_days": 14.3,
+    "ordinary_days": 19,
+    "turns_per_100_days": 13.6,
     "eras": {
      "2011-16": 0,
      "2016-21": 2,
@@ -3524,11 +3512,11 @@
     }
    },
    {
-    "setup": "Structure + Wick",
+    "setup": "EMA + Daily zone + Volume",
     "turns": 3,
     "share": 1.1,
-    "ordinary_days": 11,
-    "turns_per_100_days": 21.4,
+    "ordinary_days": 9,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3536,11 +3524,35 @@
     }
    },
    {
-    "setup": "EMA + Sharp move + Volume",
+    "setup": "Structure + Wick",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 13,
+    "turns_per_100_days": 18.8,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 2,
-    "turns_per_100_days": 50.0,
+    "share": 0.7,
+    "ordinary_days": 7,
+    "turns_per_100_days": 22.2,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Volume",
+    "turns": 2,
+    "share": 0.7,
+    "ordinary_days": 15,
+    "turns_per_100_days": 11.8,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -3550,9 +3562,9 @@
    {
     "setup": "Sharp move + Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 0.7,
+    "ordinary_days": 20,
+    "turns_per_100_days": 9.1,
     "eras": {
      "2011-16": 2,
      "2016-21": 0,
@@ -3562,7 +3574,7 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 2,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -3574,7 +3586,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Sharp move + Wick",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 2,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -3584,23 +3596,11 @@
     }
    },
    {
-    "setup": "EMA + Structure + Weekly zone + Sharp move + Volume",
-    "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 6,
-    "turns_per_100_days": 25.0,
-    "eras": {
-     "2011-16": 2,
-     "2016-21": 0,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "EMA + Daily zone + Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 8,
-    "turns_per_100_days": 20.0,
+    "share": 0.7,
+    "ordinary_days": 7,
+    "turns_per_100_days": 22.2,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -3608,23 +3608,11 @@
     }
    },
    {
-    "setup": "EMA + Structure + Daily zone + Volume",
-    "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 14,
-    "turns_per_100_days": 12.5,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 2,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 0.7,
+    "ordinary_days": 19,
+    "turns_per_100_days": 9.5,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3634,7 +3622,7 @@
    {
     "setup": "Structure + Sharp move + Volume",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 7,
     "turns_per_100_days": 22.2,
     "eras": {
@@ -3646,9 +3634,9 @@
    {
     "setup": "Structure + Daily zone + Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 11,
-    "turns_per_100_days": 15.4,
+    "share": 0.7,
+    "ordinary_days": 12,
+    "turns_per_100_days": 14.3,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3658,7 +3646,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Wick",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 8,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -3670,7 +3658,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Wick + Volume",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 4,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -3682,9 +3670,9 @@
    {
     "setup": "EMA + Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 8,
-    "turns_per_100_days": 20.0,
+    "share": 0.7,
+    "ordinary_days": 10,
+    "turns_per_100_days": 16.7,
     "eras": {
      "2011-16": 0,
      "2016-21": 2,
@@ -3694,9 +3682,9 @@
    {
     "setup": "Structure + Volume",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 14,
-    "turns_per_100_days": 12.5,
+    "share": 0.7,
+    "ordinary_days": 15,
+    "turns_per_100_days": 11.8,
     "eras": {
      "2011-16": 0,
      "2016-21": 2,
@@ -3706,7 +3694,7 @@
    {
     "setup": "Structure + Daily zone + Sharp move",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 13,
     "turns_per_100_days": 13.3,
     "eras": {
@@ -3718,9 +3706,9 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Wick",
     "turns": 2,
-    "share": 0.8,
-    "ordinary_days": 2,
-    "turns_per_100_days": 50.0,
+    "share": 0.7,
+    "ordinary_days": 3,
+    "turns_per_100_days": 40.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 2,
@@ -3728,15 +3716,63 @@
     }
    },
    {
+    "setup": "EMA + Daily zone + Sharp move",
+    "turns": 2,
+    "share": 0.7,
+    "ordinary_days": 6,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move",
     "turns": 2,
-    "share": 0.8,
+    "share": 0.7,
     "ordinary_days": 6,
     "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
      "2021-26": 2
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 18,
+    "turns_per_100_days": 5.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
     }
    },
    {
@@ -3812,6 +3848,18 @@
     }
    },
    {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
     "setup": "EMA + Structure + Sharp move + Wick + Volume",
     "turns": 1,
     "share": 0.4,
@@ -3851,8 +3899,8 @@
     "setup": "EMA + Structure + Wick",
     "turns": 1,
     "share": 0.4,
-    "ordinary_days": 26,
-    "turns_per_100_days": 3.7,
+    "ordinary_days": 25,
+    "turns_per_100_days": 3.8,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3863,8 +3911,8 @@
     "setup": "EMA + Structure + Daily zone + Sharp move",
     "turns": 1,
     "share": 0.4,
-    "ordinary_days": 10,
-    "turns_per_100_days": 9.1,
+    "ordinary_days": 15,
+    "turns_per_100_days": 6.2,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3896,18 +3944,6 @@
     }
    },
    {
-    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
-    "turns": 1,
-    "share": 0.4,
-    "ordinary_days": 7,
-    "turns_per_100_days": 12.5,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "Structure + Weekly zone + Sharp move + Volume",
     "turns": 1,
     "share": 0.4,
@@ -3923,8 +3959,8 @@
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick",
     "turns": 1,
     "share": 0.4,
-    "ordinary_days": 4,
-    "turns_per_100_days": 20.0,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -3980,6 +4016,18 @@
     }
    },
    {
+    "setup": "EMA + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
     "setup": "Daily zone + Sharp move + Wick",
     "turns": 1,
     "share": 0.4,
@@ -4028,18 +4076,6 @@
     }
    },
    {
-    "setup": "EMA + Volume",
-    "turns": 1,
-    "share": 0.4,
-    "ordinary_days": 8,
-    "turns_per_100_days": 11.1,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 0,
-     "2021-26": 1
-    }
-   },
-   {
     "setup": "Structure + Weekly zone + Daily zone + Wick + Volume",
     "turns": 1,
     "share": 0.4,
@@ -4055,8 +4091,8 @@
     "setup": "Wick + Volume",
     "turns": 1,
     "share": 0.4,
-    "ordinary_days": 7,
-    "turns_per_100_days": 12.5,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4127,8 +4163,8 @@
     "setup": "Weekly zone",
     "turns": 1,
     "share": 0.4,
-    "ordinary_days": 6,
-    "turns_per_100_days": 14.3,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4140,9 +4176,9 @@
    {
     "setup": "Sharp move",
     "turns": 12,
-    "share": 11.7,
-    "ordinary_days": 112,
-    "turns_per_100_days": 9.7,
+    "share": 11.0,
+    "ordinary_days": 103,
+    "turns_per_100_days": 10.4,
     "eras": {
      "2011-16": 5,
      "2016-21": 5,
@@ -4150,83 +4186,59 @@
     }
    },
    {
-    "setup": "(none)",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 131,
-    "turns_per_100_days": 3.0,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 6,
-    "turns_per_100_days": 40.0,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "Sharp move + Volume",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 48,
-    "turns_per_100_days": 7.7,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 5,
-    "turns_per_100_days": 44.4,
-    "eras": {
-     "2011-16": 3,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 5,
-    "turns_per_100_days": 44.4,
+    "turns": 5,
+    "share": 4.6,
+    "ordinary_days": 7,
+    "turns_per_100_days": 41.7,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 2,
      "2016-21": 3,
      "2021-26": 0
     }
    },
    {
-    "setup": "Daily zone + Sharp move + Volume",
-    "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 13,
-    "turns_per_100_days": 23.5,
+    "setup": "Sharp move + Volume",
+    "turns": 5,
+    "share": 4.6,
+    "ordinary_days": 44,
+    "turns_per_100_days": 10.2,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 4,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 5,
+    "share": 4.6,
+    "ordinary_days": 14,
+    "turns_per_100_days": 26.3,
+    "eras": {
+     "2011-16": 2,
      "2016-21": 1,
      "2021-26": 2
     }
    },
    {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 5,
+    "share": 4.6,
+    "ordinary_days": 5,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 4,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
     "setup": "EMA + Structure + Sharp move + Volume",
     "turns": 4,
-    "share": 3.9,
-    "ordinary_days": 8,
-    "turns_per_100_days": 33.3,
+    "share": 3.7,
+    "ordinary_days": 9,
+    "turns_per_100_days": 30.8,
     "eras": {
      "2011-16": 1,
      "2016-21": 2,
@@ -4234,11 +4246,59 @@
     }
    },
    {
+    "setup": "EMA + Sharp move",
+    "turns": 3,
+    "share": 2.8,
+    "ordinary_days": 15,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
     "setup": "Volume",
     "turns": 3,
-    "share": 2.9,
-    "ordinary_days": 38,
-    "turns_per_100_days": 7.3,
+    "share": 2.8,
+    "ordinary_days": 23,
+    "turns_per_100_days": 11.5,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 3,
+    "share": 2.8,
+    "ordinary_days": 29,
+    "turns_per_100_days": 9.4,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 2.8,
+    "ordinary_days": 6,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "(none)",
+    "turns": 3,
+    "share": 2.8,
+    "ordinary_days": 102,
+    "turns_per_100_days": 2.9,
     "eras": {
      "2011-16": 2,
      "2016-21": 1,
@@ -4248,7 +4308,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 3,
-    "share": 2.9,
+    "share": 2.8,
     "ordinary_days": 3,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -4258,35 +4318,35 @@
     }
    },
    {
-    "setup": "Daily zone + Volume",
+    "setup": "EMA + Structure",
     "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 23,
-    "turns_per_100_days": 8.0,
+    "share": 1.8,
+    "ordinary_days": 55,
+    "turns_per_100_days": 3.5,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 2,
      "2016-21": 0,
-     "2021-26": 1
+     "2021-26": 0
     }
    },
    {
-    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 8,
-    "turns_per_100_days": 20.0,
+    "share": 1.8,
+    "ordinary_days": 7,
+    "turns_per_100_days": 22.2,
     "eras": {
      "2011-16": 1,
-     "2016-21": 0,
-     "2021-26": 1
+     "2016-21": 1,
+     "2021-26": 0
     }
    },
    {
     "setup": "Sharp move + Wick",
     "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 1.8,
+    "ordinary_days": 20,
+    "turns_per_100_days": 9.1,
     "eras": {
      "2011-16": 2,
      "2016-21": 0,
@@ -4296,7 +4356,7 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
     "turns": 2,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 2,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -4308,7 +4368,7 @@
    {
     "setup": "EMA + Weekly zone",
     "turns": 2,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 17,
     "turns_per_100_days": 10.5,
     "eras": {
@@ -4320,9 +4380,9 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
     "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 4,
-    "turns_per_100_days": 33.3,
+    "share": 1.8,
+    "ordinary_days": 5,
+    "turns_per_100_days": 28.6,
     "eras": {
      "2011-16": 1,
      "2016-21": 1,
@@ -4330,21 +4390,9 @@
     }
    },
    {
-    "setup": "Daily zone + Sharp move",
-    "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 29,
-    "turns_per_100_days": 6.5,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 2,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "EMA + Structure + Weekly zone",
     "turns": 2,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 10,
     "turns_per_100_days": 16.7,
     "eras": {
@@ -4356,9 +4404,9 @@
    {
     "setup": "Wick",
     "turns": 2,
-    "share": 1.9,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 1.8,
+    "ordinary_days": 19,
+    "turns_per_100_days": 9.5,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4368,7 +4416,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Wick",
     "turns": 2,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 8,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4380,7 +4428,7 @@
    {
     "setup": "Structure + Weekly zone",
     "turns": 2,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 12,
     "turns_per_100_days": 14.3,
     "eras": {
@@ -4390,11 +4438,11 @@
     }
    },
    {
-    "setup": "EMA + Daily zone + Sharp move",
+    "setup": "EMA + Structure + Daily zone + Volume",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 4,
-    "turns_per_100_days": 20.0,
+    "share": 0.9,
+    "ordinary_days": 17,
+    "turns_per_100_days": 5.6,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -4402,9 +4450,21 @@
     }
    },
    {
-    "setup": "EMA + Structure + Sharp move",
+    "setup": "EMA + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
+    "ordinary_days": 15,
+    "turns_per_100_days": 6.2,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Sharp move",
+    "turns": 1,
+    "share": 0.9,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -4416,7 +4476,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -4426,21 +4486,9 @@
     }
    },
    {
-    "setup": "EMA + Structure + Weekly zone + Sharp move + Volume",
-    "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 6,
-    "turns_per_100_days": 14.3,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 0,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4452,7 +4500,7 @@
    {
     "setup": "Structure + Daily zone + Sharp move + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 10,
     "turns_per_100_days": 9.1,
     "eras": {
@@ -4464,7 +4512,7 @@
    {
     "setup": "Structure + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4476,7 +4524,7 @@
    {
     "setup": "Structure + Daily zone",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 39,
     "turns_per_100_days": 2.5,
     "eras": {
@@ -4488,7 +4536,7 @@
    {
     "setup": "EMA + Weekly zone + Sharp move + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 6,
     "turns_per_100_days": 14.3,
     "eras": {
@@ -4500,7 +4548,7 @@
    {
     "setup": "Weekly zone + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 0,
     "turns_per_100_days": 100.0,
     "eras": {
@@ -4512,19 +4560,7 @@
    {
     "setup": "Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 14,
-    "turns_per_100_days": 6.7,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Sharp move",
-    "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 14,
     "turns_per_100_days": 6.7,
     "eras": {
@@ -4536,7 +4572,7 @@
    {
     "setup": "Structure + Sharp move + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -4548,7 +4584,7 @@
    {
     "setup": "Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -4560,7 +4596,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Sharp move",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4572,21 +4608,9 @@
    {
     "setup": "EMA + Wick",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 8,
-    "turns_per_100_days": 11.1,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
-    "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 7,
-    "turns_per_100_days": 12.5,
+    "share": 0.9,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4596,9 +4620,9 @@
    {
     "setup": "EMA + Daily zone",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 19,
-    "turns_per_100_days": 5.0,
+    "share": 0.9,
+    "ordinary_days": 25,
+    "turns_per_100_days": 3.8,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4608,9 +4632,9 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 4,
-    "turns_per_100_days": 20.0,
+    "share": 0.9,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4620,9 +4644,9 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Wick",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 2,
-    "turns_per_100_days": 33.3,
+    "share": 0.9,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4632,9 +4656,9 @@
    {
     "setup": "Daily zone",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 80,
-    "turns_per_100_days": 1.2,
+    "share": 0.9,
+    "ordinary_days": 70,
+    "turns_per_100_days": 1.4,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -4644,7 +4668,7 @@
    {
     "setup": "Structure + Weekly zone + Sharp move",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4656,9 +4680,9 @@
    {
     "setup": "EMA + Daily zone + Volume",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 8,
-    "turns_per_100_days": 11.1,
+    "share": 0.9,
+    "ordinary_days": 9,
+    "turns_per_100_days": 10.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4668,7 +4692,7 @@
    {
     "setup": "Weekly zone + Daily zone + Sharp move",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -4680,9 +4704,9 @@
    {
     "setup": "EMA + Sharp move + Volume",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 2,
-    "turns_per_100_days": 33.3,
+    "share": 0.9,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4692,7 +4716,7 @@
    {
     "setup": "Daily zone + Sharp move + Wick",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -4704,7 +4728,7 @@
    {
     "setup": "EMA + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 1,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -4716,7 +4740,7 @@
    {
     "setup": "Structure + Weekly zone + Daily zone + Wick",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 5,
     "turns_per_100_days": 16.7,
     "eras": {
@@ -4728,9 +4752,21 @@
    {
     "setup": "EMA",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 29,
-    "turns_per_100_days": 3.3,
+    "share": 0.9,
+    "ordinary_days": 53,
+    "turns_per_100_days": 1.9,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Volume",
+    "turns": 1,
+    "share": 0.9,
+    "ordinary_days": 19,
+    "turns_per_100_days": 5.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4740,7 +4776,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Wick + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4752,7 +4788,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 6,
     "turns_per_100_days": 14.3,
     "eras": {
@@ -4764,7 +4800,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Volume",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 3,
     "turns_per_100_days": 25.0,
     "eras": {
@@ -4776,7 +4812,7 @@
    {
     "setup": "EMA + Weekly zone + Sharp move",
     "turns": 1,
-    "share": 1.0,
+    "share": 0.9,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -4788,9 +4824,21 @@
    {
     "setup": "Structure + Wick",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 11,
-    "turns_per_100_days": 8.3,
+    "share": 0.9,
+    "ordinary_days": 13,
+    "turns_per_100_days": 7.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4800,9 +4848,9 @@
    {
     "setup": "Weekly zone",
     "turns": 1,
-    "share": 1.0,
-    "ordinary_days": 6,
-    "turns_per_100_days": 14.3,
+    "share": 0.9,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -4814,9 +4862,9 @@
    {
     "setup": "Sharp move",
     "turns": 8,
-    "share": 15.1,
-    "ordinary_days": 112,
-    "turns_per_100_days": 6.7,
+    "share": 14.3,
+    "ordinary_days": 103,
+    "turns_per_100_days": 7.2,
     "eras": {
      "2011-16": 3,
      "2016-21": 4,
@@ -4824,23 +4872,23 @@
     }
    },
    {
-    "setup": "(none)",
-    "turns": 3,
-    "share": 5.7,
-    "ordinary_days": 131,
-    "turns_per_100_days": 2.2,
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 4,
+    "share": 7.1,
+    "ordinary_days": 14,
+    "turns_per_100_days": 22.2,
     "eras": {
-     "2011-16": 3,
-     "2016-21": 0,
-     "2021-26": 0
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 1
     }
    },
    {
-    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "setup": "Volume",
     "turns": 3,
-    "share": 5.7,
-    "ordinary_days": 6,
-    "turns_per_100_days": 33.3,
+    "share": 5.4,
+    "ordinary_days": 23,
+    "turns_per_100_days": 11.5,
     "eras": {
      "2011-16": 2,
      "2016-21": 1,
@@ -4850,7 +4898,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
     "turns": 3,
-    "share": 5.7,
+    "share": 5.4,
     "ordinary_days": 5,
     "turns_per_100_days": 37.5,
     "eras": {
@@ -4862,7 +4910,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 3,
-    "share": 5.7,
+    "share": 5.4,
     "ordinary_days": 3,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -4872,23 +4920,11 @@
     }
    },
    {
-    "setup": "Daily zone + Sharp move + Volume",
-    "turns": 3,
-    "share": 5.7,
-    "ordinary_days": 13,
-    "turns_per_100_days": 18.8,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 1,
-     "2021-26": 1
-    }
-   },
-   {
     "setup": "EMA + Structure + Sharp move + Volume",
     "turns": 3,
-    "share": 5.7,
-    "ordinary_days": 8,
-    "turns_per_100_days": 27.3,
+    "share": 5.4,
+    "ordinary_days": 9,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 1,
      "2016-21": 2,
@@ -4896,23 +4932,35 @@
     }
    },
    {
-    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
     "turns": 2,
-    "share": 3.8,
-    "ordinary_days": 8,
-    "turns_per_100_days": 20.0,
+    "share": 3.6,
+    "ordinary_days": 7,
+    "turns_per_100_days": 22.2,
     "eras": {
-     "2011-16": 1,
+     "2011-16": 2,
      "2016-21": 0,
-     "2021-26": 1
+     "2021-26": 0
     }
    },
    {
-    "setup": "Volume",
+    "setup": "EMA + Sharp move",
     "turns": 2,
-    "share": 3.8,
-    "ordinary_days": 38,
-    "turns_per_100_days": 5.0,
+    "share": 3.6,
+    "ordinary_days": 15,
+    "turns_per_100_days": 11.8,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 2,
+    "share": 3.6,
+    "ordinary_days": 6,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 1,
      "2016-21": 1,
@@ -4922,9 +4970,9 @@
    {
     "setup": "Sharp move + Wick",
     "turns": 2,
-    "share": 3.8,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 3.6,
+    "ordinary_days": 20,
+    "turns_per_100_days": 9.1,
     "eras": {
      "2011-16": 2,
      "2016-21": 0,
@@ -4932,11 +4980,47 @@
     }
    },
    {
+    "setup": "(none)",
+    "turns": 2,
+    "share": 3.6,
+    "ordinary_days": 102,
+    "turns_per_100_days": 1.9,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure",
+    "turns": 1,
+    "share": 1.8,
+    "ordinary_days": 55,
+    "turns_per_100_days": 1.8,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.8,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
     "setup": "Sharp move + Volume",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 48,
-    "turns_per_100_days": 2.0,
+    "share": 1.8,
+    "ordinary_days": 44,
+    "turns_per_100_days": 2.2,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -4946,7 +5030,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -4956,21 +5040,9 @@
     }
    },
    {
-    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
-    "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 5,
-    "turns_per_100_days": 16.7,
-    "eras": {
-     "2011-16": 1,
-     "2016-21": 0,
-     "2021-26": 0
-    }
-   },
-   {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 4,
     "turns_per_100_days": 20.0,
     "eras": {
@@ -4982,7 +5054,7 @@
    {
     "setup": "Structure + Daily zone + Sharp move + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 10,
     "turns_per_100_days": 9.1,
     "eras": {
@@ -4994,7 +5066,7 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -5006,9 +5078,9 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 4,
-    "turns_per_100_days": 20.0,
+    "share": 1.8,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -5018,7 +5090,7 @@
    {
     "setup": "Daily zone + Sharp move",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 29,
     "turns_per_100_days": 3.3,
     "eras": {
@@ -5030,7 +5102,7 @@
    {
     "setup": "EMA + Structure + Weekly zone",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 10,
     "turns_per_100_days": 9.1,
     "eras": {
@@ -5042,21 +5114,9 @@
    {
     "setup": "Wick",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 22,
-    "turns_per_100_days": 4.3,
-    "eras": {
-     "2011-16": 0,
-     "2016-21": 1,
-     "2021-26": 0
-    }
-   },
-   {
-    "setup": "EMA + Sharp move",
-    "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 14,
-    "turns_per_100_days": 6.7,
+    "share": 1.8,
+    "ordinary_days": 19,
+    "turns_per_100_days": 5.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -5066,7 +5126,7 @@
    {
     "setup": "Structure + Sharp move + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -5078,7 +5138,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Wick",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 8,
     "turns_per_100_days": 11.1,
     "eras": {
@@ -5090,7 +5150,7 @@
    {
     "setup": "Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -5102,9 +5162,9 @@
    {
     "setup": "EMA + Daily zone",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 19,
-    "turns_per_100_days": 5.0,
+    "share": 1.8,
+    "ordinary_days": 25,
+    "turns_per_100_days": 3.8,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -5114,7 +5174,7 @@
    {
     "setup": "Structure + Weekly zone",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 12,
     "turns_per_100_days": 7.7,
     "eras": {
@@ -5126,9 +5186,9 @@
    {
     "setup": "EMA + Daily zone + Volume",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 8,
-    "turns_per_100_days": 11.1,
+    "share": 1.8,
+    "ordinary_days": 9,
+    "turns_per_100_days": 10.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5138,9 +5198,9 @@
    {
     "setup": "EMA + Sharp move + Volume",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 2,
-    "turns_per_100_days": 33.3,
+    "share": 1.8,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5150,7 +5210,7 @@
    {
     "setup": "Daily zone + Sharp move + Wick",
     "turns": 1,
-    "share": 1.9,
+    "share": 1.8,
     "ordinary_days": 7,
     "turns_per_100_days": 12.5,
     "eras": {
@@ -5162,9 +5222,9 @@
    {
     "setup": "EMA",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 29,
-    "turns_per_100_days": 3.3,
+    "share": 1.8,
+    "ordinary_days": 53,
+    "turns_per_100_days": 1.9,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5174,9 +5234,21 @@
    {
     "setup": "Structure + Wick",
     "turns": 1,
-    "share": 1.9,
-    "ordinary_days": 11,
-    "turns_per_100_days": 8.3,
+    "share": 1.8,
+    "ordinary_days": 13,
+    "turns_per_100_days": 7.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5187,12 +5259,12 @@
   "50": [
    {
     "setup": "Sharp move",
-    "turns": 4,
-    "share": 19.0,
-    "ordinary_days": 112,
-    "turns_per_100_days": 3.4,
+    "turns": 5,
+    "share": 22.7,
+    "ordinary_days": 103,
+    "turns_per_100_days": 4.6,
     "eras": {
-     "2011-16": 2,
+     "2011-16": 3,
      "2016-21": 1,
      "2021-26": 1
     }
@@ -5200,7 +5272,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 3,
-    "share": 14.3,
+    "share": 13.6,
     "ordinary_days": 3,
     "turns_per_100_days": 50.0,
     "eras": {
@@ -5212,7 +5284,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
     "turns": 2,
-    "share": 9.5,
+    "share": 9.1,
     "ordinary_days": 5,
     "turns_per_100_days": 28.6,
     "eras": {
@@ -5224,9 +5296,9 @@
    {
     "setup": "Sharp move + Wick",
     "turns": 2,
-    "share": 9.5,
-    "ordinary_days": 22,
-    "turns_per_100_days": 8.3,
+    "share": 9.1,
+    "ordinary_days": 20,
+    "turns_per_100_days": 9.1,
     "eras": {
      "2011-16": 2,
      "2016-21": 0,
@@ -5236,9 +5308,9 @@
    {
     "setup": "Sharp move + Volume",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 48,
-    "turns_per_100_days": 2.0,
+    "share": 4.5,
+    "ordinary_days": 44,
+    "turns_per_100_days": 2.2,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -5248,9 +5320,9 @@
    {
     "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 5,
-    "turns_per_100_days": 16.7,
+    "share": 4.5,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
     "eras": {
      "2011-16": 1,
      "2016-21": 0,
@@ -5260,7 +5332,7 @@
    {
     "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
     "turns": 1,
-    "share": 4.8,
+    "share": 4.5,
     "ordinary_days": 6,
     "turns_per_100_days": 14.3,
     "eras": {
@@ -5272,7 +5344,7 @@
    {
     "setup": "Daily zone + Sharp move",
     "turns": 1,
-    "share": 4.8,
+    "share": 4.5,
     "ordinary_days": 29,
     "turns_per_100_days": 3.3,
     "eras": {
@@ -5284,7 +5356,7 @@
    {
     "setup": "EMA + Weekly zone + Daily zone + Wick",
     "turns": 1,
-    "share": 4.8,
+    "share": 4.5,
     "ordinary_days": 8,
     "turns_per_100_days": 11.1,
     "eras": {
@@ -5296,7 +5368,7 @@
    {
     "setup": "Daily zone + Sharp move + Wick + Volume",
     "turns": 1,
-    "share": 4.8,
+    "share": 4.5,
     "ordinary_days": 2,
     "turns_per_100_days": 33.3,
     "eras": {
@@ -5308,9 +5380,9 @@
    {
     "setup": "Volume",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 38,
-    "turns_per_100_days": 2.6,
+    "share": 4.5,
+    "ordinary_days": 23,
+    "turns_per_100_days": 4.2,
     "eras": {
      "2011-16": 0,
      "2016-21": 1,
@@ -5320,9 +5392,9 @@
    {
     "setup": "EMA + Daily zone + Volume",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 8,
-    "turns_per_100_days": 11.1,
+    "share": 4.5,
+    "ordinary_days": 9,
+    "turns_per_100_days": 10.0,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5332,9 +5404,9 @@
    {
     "setup": "EMA",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 29,
-    "turns_per_100_days": 3.3,
+    "share": 4.5,
+    "ordinary_days": 53,
+    "turns_per_100_days": 1.9,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5344,9 +5416,9 @@
    {
     "setup": "Structure + Wick",
     "turns": 1,
-    "share": 4.8,
-    "ordinary_days": 11,
-    "turns_per_100_days": 8.3,
+    "share": 4.5,
+    "ordinary_days": 13,
+    "turns_per_100_days": 7.1,
     "eras": {
      "2011-16": 0,
      "2016-21": 0,
@@ -5470,22 +5542,22 @@
  ],
  "counts": {
   "10": {
-   "2011-16": 86,
+   "2011-16": 96,
    "2016-21": 113,
    "2021-26": 66
   },
   "20": {
-   "2011-16": 41,
+   "2011-16": 47,
    "2016-21": 38,
    "2021-26": 24
   },
   "30": {
-   "2011-16": 24,
+   "2011-16": 27,
    "2016-21": 21,
    "2021-26": 8
   },
   "50": {
-   "2011-16": 10,
+   "2011-16": 11,
    "2016-21": 7,
    "2021-26": 4
   }
@@ -5494,44 +5566,44 @@
   "10": [
    {
     "k": 0,
-    "turns": 50,
+    "turns": 52,
     "share": 18.9,
-    "days": 453,
-    "per100": 9.9,
+    "days": 454,
+    "per100": 10.3,
     "t3": 15,
     "d3": 204
    },
    {
     "k": 1,
-    "turns": 76,
-    "share": 28.7,
-    "days": 470,
-    "per100": 13.9,
+    "turns": 77,
+    "share": 28.0,
+    "days": 471,
+    "per100": 14.1,
     "t3": 19,
     "d3": 176
    },
    {
     "k": 2,
-    "turns": 84,
-    "share": 31.7,
-    "days": 297,
-    "per100": 22.0,
+    "turns": 89,
+    "share": 32.4,
+    "days": 296,
+    "per100": 23.1,
     "t3": 26,
     "d3": 96
    },
    {
     "k": 3,
-    "turns": 38,
-    "share": 14.3,
-    "days": 144,
-    "per100": 20.9,
+    "turns": 40,
+    "share": 14.5,
+    "days": 145,
+    "per100": 21.6,
     "t3": 6,
     "d3": 41
    },
    {
     "k": 4,
     "turns": 17,
-    "share": 6.4,
+    "share": 6.2,
     "days": 20,
     "per100": 45.9,
     "t3": 0,
@@ -5541,44 +5613,44 @@
   "20": [
    {
     "k": 0,
-    "turns": 6,
-    "share": 5.8,
-    "days": 453,
-    "per100": 1.3,
+    "turns": 7,
+    "share": 6.4,
+    "days": 454,
+    "per100": 1.5,
     "t3": 3,
     "d3": 204
    },
    {
     "k": 1,
-    "turns": 19,
-    "share": 18.4,
-    "days": 470,
-    "per100": 3.9,
+    "turns": 21,
+    "share": 19.3,
+    "days": 471,
+    "per100": 4.3,
     "t3": 5,
     "d3": 176
    },
    {
     "k": 2,
-    "turns": 44,
-    "share": 42.7,
-    "days": 297,
-    "per100": 12.9,
+    "turns": 46,
+    "share": 42.2,
+    "days": 296,
+    "per100": 13.5,
     "t3": 13,
     "d3": 96
    },
    {
     "k": 3,
-    "turns": 23,
-    "share": 22.3,
-    "days": 144,
-    "per100": 13.8,
+    "turns": 24,
+    "share": 22.0,
+    "days": 145,
+    "per100": 14.2,
     "t3": 3,
     "d3": 41
    },
    {
     "k": 4,
     "turns": 11,
-    "share": 10.7,
+    "share": 10.1,
     "days": 20,
     "per100": 35.5,
     "t3": 0,
@@ -5589,43 +5661,43 @@
    {
     "k": 0,
     "turns": 3,
-    "share": 5.7,
-    "days": 453,
+    "share": 5.4,
+    "days": 454,
     "per100": 0.7,
     "t3": 2,
     "d3": 204
    },
    {
     "k": 1,
-    "turns": 8,
-    "share": 15.1,
-    "days": 470,
-    "per100": 1.7,
+    "turns": 9,
+    "share": 16.1,
+    "days": 471,
+    "per100": 1.9,
     "t3": 1,
     "d3": 176
    },
    {
     "k": 2,
-    "turns": 19,
-    "share": 35.8,
-    "days": 297,
-    "per100": 6.0,
+    "turns": 21,
+    "share": 37.5,
+    "days": 296,
+    "per100": 6.6,
     "t3": 3,
     "d3": 96
    },
    {
     "k": 3,
     "turns": 16,
-    "share": 30.2,
-    "days": 144,
-    "per100": 10.0,
+    "share": 28.6,
+    "days": 145,
+    "per100": 9.9,
     "t3": 2,
     "d3": 41
    },
    {
     "k": 4,
     "turns": 7,
-    "share": 13.2,
+    "share": 12.5,
     "days": 20,
     "per100": 25.9,
     "t3": 0,
@@ -5636,8 +5708,8 @@
    {
     "k": 0,
     "turns": 2,
-    "share": 9.5,
-    "days": 453,
+    "share": 9.1,
+    "days": 454,
     "per100": 0.4,
     "t3": 2,
     "d3": 204
@@ -5645,26 +5717,26 @@
    {
     "k": 1,
     "turns": 2,
-    "share": 9.5,
-    "days": 470,
+    "share": 9.1,
+    "days": 471,
     "per100": 0.4,
     "t3": 1,
     "d3": 176
    },
    {
     "k": 2,
-    "turns": 8,
-    "share": 38.1,
-    "days": 297,
-    "per100": 2.6,
+    "turns": 9,
+    "share": 40.9,
+    "days": 296,
+    "per100": 3.0,
     "t3": 1,
     "d3": 96
    },
    {
     "k": 3,
     "turns": 4,
-    "share": 19.0,
-    "days": 144,
+    "share": 18.2,
+    "days": 145,
     "per100": 2.7,
     "t3": 0,
     "d3": 41
@@ -5672,7 +5744,7 @@
    {
     "k": 4,
     "turns": 5,
-    "share": 23.8,
+    "share": 22.7,
     "days": 20,
     "per100": 20.0,
     "t3": 0,

@@ -18,9 +18,12 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 DATA = ROOT / "data"
-px = pd.read_csv(DATA / "btc_1D.csv")
-day = pd.to_datetime(px.time, unit="s").dt.normalize()      # candle date (UTC)
-C, H, L, V = px.close.values, px.high.values, px.low.values, px.Volume.values
+import sys
+sys.path.insert(0, str(HERE))
+from btcdata import load  # noqa: E402
+px = load()
+day = px.time.dt.normalize()      # candle date (UTC)
+C, H, L, V = px.close.values, px.high.values, px.low.values, px.volume.values
 n = len(C)
 T = pd.read_csv(HERE / "turns.csv")
 B = pd.read_csv(HERE / "days.csv")
@@ -51,16 +54,18 @@ def series(name, col="value", shift_days=0, file=None):
     if not f.exists():
         return None
     x = pd.read_csv(f)
-    t = pd.to_datetime(x.time).dt.tz_localize(None) + pd.Timedelta(days=shift_days)
+    t = pd.to_datetime(x.time).dt.tz_localize(None).dt.normalize() + pd.Timedelta(days=shift_days)
     s = pd.Series(pd.to_numeric(x[col], errors="coerce").values, index=t).dropna().sort_index()
     s = s[~s.index.duplicated(keep="last")]
     return s.reindex(pd.date_range(s.index[0], day.iloc[-1])).ffill().reindex(day.values).values   # last known value
 
 
-MAC = {
-    "dollar": series("fred_DTWEXBGS"), "us10y": series("fred_DGS10"), "fed": series("fred_DFF", shift_days=1),
-    "m2": series("fred_WM2NS", shift_days=14), "vix": series("fred_VIXCLS"),
-    "spx": series("stooq_spx", col="close"), "gold": series("stooq_xauusd", col="close"), "dxy": series("stooq_dx_f", col="close"),
+MAC = {   # Yahoo Finance daily closes (US session ends before the BTC daily close at 00:00 UTC)
+    "dollar": series("yahoo_DX_Y_NYB", col="close"), "us10y": series("yahoo_TNX", col="close"),
+    "vix": series("yahoo_VIX", col="close"), "spx": series("yahoo_GSPC", col="close"), "gold": series("yahoo_GC_F", col="close"),
+    # FRED refused GitHub's servers: Fed funds and M2 need a free FRED API key (not available yet)
+    "fed": series("fred_DFF", shift_days=1), "m2": series("fred_WM2NS", shift_days=14),
+    "btc_d": series("btc_dominance", col="bitcoinDominance"),
 }
 uf = DATA / "usdtd_1D.csv"   # TradingView export from the user (CRYPTOCAP:USDT.D, daily)
 if uf.exists():
@@ -68,9 +73,6 @@ if uf.exists():
     t = pd.to_datetime(x.time, unit="s") + pd.Timedelta(days=1)     # a daily bar is known at its close
     s = pd.Series(x["close"].values, index=t).sort_index()
     MAC["usdt_d"] = s.reindex(pd.date_range(s.index[0], day.iloc[-1])).ffill().reindex(day.values).values
-domf = DATA / "btc_dominance_full.csv"     # TradingView export, if the user adds it
-if domf.exists():
-    MAC["btc_d"] = series("btc_dominance_full", col="close")
 
 
 def chg(a, i, k):
@@ -79,14 +81,18 @@ def chg(a, i, k):
     return a[i] / a[i - k] - 1
 
 
+_E = {}
+
+
 def ema_above(a, i, span=200):
     if a is None:
         return np.nan
-    e = pd.Series(a).ffill().ewm(span=span, adjust=False).mean().values
-    return float(a[i] > e[i]) if not np.isnan(a[i]) else np.nan
+    k = id(a)
+    if k not in _E:
+        _E[k] = pd.Series(a).ffill().ewm(span=span, adjust=False).mean().values
+    return float(a[i] > _E[k][i]) if not np.isnan(a[i]) else np.nan
 
 
-EMA = {k: (pd.Series(v).ffill().ewm(span=200, adjust=False).mean().values if v is not None else None) for k, v in MAC.items()}
 
 
 def items(i, s):
@@ -120,9 +126,8 @@ def items(i, s):
     ext_i = k90 + (int(np.argmax(C[k90:i + 1])) if s > 0 else int(np.argmin(C[k90:i + 1])))
     r["Slow: move into the turn lasted 30+ days"] = (i - ext_i) >= 30
     # C. other markets (neutral wording: direction is not assumed)
-    r["Dollar index (broad) up over 30 days"] = (chg(MAC["dollar"], i, 30) > 0) if not np.isnan(chg(MAC["dollar"], i, 30)) else np.nan
-    r["Dollar index (broad) above its 200-day EMA"] = ema_above(MAC["dollar"], i)
-    r["DXY up over 30 days"] = (chg(MAC["dxy"], i, 30) > 0) if not np.isnan(chg(MAC["dxy"], i, 30)) else np.nan
+    r["US dollar (DXY) up over 30 days"] = (chg(MAC["dollar"], i, 30) > 0) if not np.isnan(chg(MAC["dollar"], i, 30)) else np.nan
+    r["US dollar (DXY) above its 200-day EMA"] = ema_above(MAC["dollar"], i)
     if MAC["us10y"] is not None and i >= 30 and not np.isnan(MAC["us10y"][i - 30]):
         r["US 10-year yield up over 30 days"] = MAC["us10y"][i] - MAC["us10y"][i - 30] > 0
     if MAC["fed"] is not None and i >= 90 and not np.isnan(MAC["fed"][i - 90]):
@@ -143,7 +148,7 @@ def items(i, s):
     if "usdt_d" in MAC:
         c = chg(MAC["usdt_d"], i, 30)
         r["USDT dominance up over 30 days"] = (c > 0) if not np.isnan(c) else np.nan
-    if "btc_d" in MAC:
+    if MAC["btc_d"] is not None:
         c = chg(MAC["btc_d"], i, 30)
         r["BTC dominance up over 30 days"] = (c > 0) if not np.isnan(c) else np.nan
     return r
@@ -169,7 +174,7 @@ for F in (FT, FL):
     F["Slow: RSI divergence"] = F[a].where(F[a].notna(), F.get(b))
     F.drop(columns=[c for c in (a, b) if c in F.columns], inplace=True)
 cols = [c for c in FT.columns]
-half = lambda idx: np.where(pd.to_datetime(px.time.values[idx], unit="s") < pd.Timestamp("2019-01-01"), "2011-18", "2019-26")
+half = lambda idx: np.where(px.time.values[idx] < pd.Timestamp("2019-01-01"), "2011-18", "2019-26")
 T["half"], LA["half"] = half(T.i.astype(int).values), half(LA.i.astype(int).values)
 
 
@@ -181,7 +186,8 @@ def rate(F, mask, c):
 out = {}
 lines = ["# Step 5: market context and slow turns", "",
          "Lift = how often the item was present at real turns / at look-alike days (new 10-day closing extremes that did "
-         "not turn). Keep rule: >= 1.2 in both halves or <= 0.83 in both halves, 8+ turns per half.", ""]
+         "not turn). Keep rule: >= 1.2 in both halves or <= 0.83 in both halves, 8+ turns per half, and the item common enough "
+         "to judge (present at 5+ turns per half, or expected at 5+ turns per half for 'less at turns').", ""]
 for subset in ("all", "slow"):
     for lvl in (10, 20):
         for side, sv in (("bottoms", 1), ("tops", -1)):
@@ -197,10 +203,15 @@ for subset in ("all", "slow"):
                     rr[h] = dict(turn=None if np.isnan(a) else round(100 * a, 1), la=None if np.isnan(b) else round(100 * b, 1),
                                  lift=None if (np.isnan(a) or np.isnan(b) or b == 0) else round(a / b, 2), n=na)
                 l1, l2 = rr["2011-18"]["lift"], rr["2019-26"]["lift"]
+                # enough data: 8+ turns per half, and the item must be common enough to judge: present at 5+ turns
+                # per half (for "more at turns") or expected at 5+ turns per half from the look-alike rate ("less")
+                cnt = lambda h, k: (rr[h][k] or 0) / 100 * rr[h]["n"]
                 enough = rr["2011-18"]["n"] >= 8 and rr["2019-26"]["n"] >= 8
+                more_ok = cnt("2011-18", "turn") >= 5 and cnt("2019-26", "turn") >= 5
+                less_ok = cnt("2011-18", "la") >= 5 and cnt("2019-26", "la") >= 5
                 rr["verdict"] = ("not enough data" if not enough or l1 is None or l2 is None else
-                                 "KEEP (more at turns)" if (l1 >= 1.2 and l2 >= 1.2) else
-                                 "KEEP (less at turns)" if (l1 <= 0.83 and l2 <= 0.83) else "drop")
+                                 ("KEEP (more at turns)" if more_ok else "too rare to judge") if (l1 >= 1.2 and l2 >= 1.2) else
+                                 ("KEEP (less at turns)" if less_ok else "too rare to judge") if (l1 <= 0.83 and l2 <= 0.83) else "drop")
                 rows.append(rr)
             out[key] = rows
             nt = int(tm.sum())
