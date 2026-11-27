@@ -44,7 +44,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px soli
 .fig.marking .prompt{display:block}
 .key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mute);margin-top:8px}
 .key i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
-.panel{margin-top:12px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--sig);border-radius:10px;padding:14px 16px}
+.panel{margin:0 0 14px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--sig);border-radius:10px;padding:14px 16px}
 .panel[hidden]{display:none}
 .picked{display:grid;grid-template-columns:repeat(auto-fit,minmax(14em,1fr));gap:8px 16px;margin:8px 0}
 .picked div{background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:8px 10px}
@@ -65,6 +65,15 @@ textarea{width:100%;min-height:92px;font:16px/1.45 Inter,sans-serif;padding:10px
 .card .row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
 .up{color:var(--bull);font-weight:600}.dn{color:var(--bear);font-weight:600}
 .note{font-size:13px;color:var(--mute)}
+.work{display:grid;gap:16px;margin-top:4px}
+.mine h2{margin-top:0}
+.card{cursor:pointer}
+.card[aria-current=true]{border-color:var(--sig);box-shadow:0 0 0 1px var(--sig) inset}
+@media(min-width:1000px){.work{grid-template-columns:minmax(0,1fr) 390px;align-items:start}
+ .chartcol{position:sticky;top:8px}.side{position:sticky;top:8px;max-height:calc(100vh - 16px);overflow:auto;padding-right:2px}
+ .fig{height:calc(100vh - 16px);max-height:760px}}
+@media(max-width:999px){.chartcol{position:sticky;top:0;z-index:5;background:var(--bg);padding:6px 0}
+ .fig{height:46vh;min-height:300px}}
 </style>
 </head>
 <body>
@@ -85,16 +94,11 @@ textarea{width:100%;min-height:92px;font:16px/1.45 Inter,sans-serif;padding:10px
 <div class="grp"><span>Context</span><button id="tcyc" aria-pressed="true">Bull / bear cycles</button><button id="thalv" aria-pressed="true">Halving phases</button><button id="tema" aria-pressed="false">Weekly EMA 50/200</button></div>
 <div class="grp"><span>Reference</span><div class="tabs" id="ref"><button data-v="0" aria-pressed="true">Off</button><button data-v="10" aria-pressed="false">10% moves</button><button data-v="20" aria-pressed="false">20%</button><button data-v="50" aria-pressed="false">50%</button></div></div>
 </div>
+<div class="work">
+<div class="chartcol">
 <div class="fig" id="fig"><canvas id="cv"></canvas><div class="prompt" id="prompt"></div></div>
-<div class="key">
-<span><i style="background:var(--sig)"></i>Your marks (dot = your entry)</span>
-<span><i style="background:var(--bull);opacity:.5"></i><i style="background:var(--bear);opacity:.5"></i>Reference: the marked 10%+ moves on daily closes</span>
-<span><i style="background:var(--bull);opacity:.35;height:10px"></i>Bull market <i style="background:var(--bear);opacity:.35;height:10px;margin-left:8px"></i>Bear market (50%+ fall from an all-time high)</span>
-<span>Bottom strip: months since the last halving (dashed line)</span>
-<span><i style="background:#5b8def"></i>Weekly EMA50 <i style="background:#b07cf0;margin-left:8px"></i>Weekly EMA200 (needs years of history to settle, so treat it as rough before 2015)</span>
-<span>Price scale is logarithmic. Tap a candle when marking; use ◀ ▶ to move one candle.</span>
 </div>
-
+<aside class="side">
 <section class="panel" id="panel" hidden aria-live="polite">
 <h2 id="ptitle">New mark</h2>
 <dl class="picked" id="picked"></dl>
@@ -112,15 +116,27 @@ textarea{width:100%;min-height:92px;font:16px/1.45 Inter,sans-serif;padding:10px
 <p class="msg" id="pmsg"></p>
 </section>
 
+<section class="mine">
+<h2>Your marks <span class="note" id="cnt"></span></h2>
+<p class="msg" id="dbmsg">Loading your saved marks…</p>
+<div class="list" id="list"></div>
+</section>
+</aside>
+</div>
+<div class="key">
+<span><i style="background:var(--sig)"></i>Your marks (dot = your entry)</span>
+<span><i style="background:var(--bull);opacity:.5"></i><i style="background:var(--bear);opacity:.5"></i>Reference: the marked 10%+ moves on daily closes</span>
+<span><i style="background:var(--bull);opacity:.35;height:10px"></i>Bull market <i style="background:var(--bear);opacity:.35;height:10px;margin-left:8px"></i>Bear market (50%+ fall from an all-time high)</span>
+<span>Bottom strip: months since the last halving (dashed line)</span>
+<span><i style="background:#5b8def"></i>Weekly EMA50 <i style="background:#b07cf0;margin-left:8px"></i>Weekly EMA200 (needs years of history to settle, so treat it as rough before 2015)</span>
+<span>Price scale is logarithmic. Tap a candle when marking; use ◀ ▶ to move one candle.</span>
+</div>
+
+
 <section style="margin-top:28px">
 <h2>Bull and bear cycles on this chart</h2>
 <p class="note">A bear market here = a fall of 50% or more from an all-time high close; it ends at the lowest close before the next all-time high. "Major" = a fall of 70% or more. Measured on daily closes, so wick highs and lows differ. The data starts Aug 18, 2011, so the first row misses the real 2011 high (June 2011).</p>
 <div style="overflow-x:auto"><table id="cyc" style="border-collapse:collapse;width:100%;font-size:15px"><thead><tr><th style="text-align:left;padding:8px;border-bottom:1px solid var(--rule)">Top (all-time high)</th><th style="text-align:left;padding:8px;border-bottom:1px solid var(--rule)">Bottom</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--rule)">Fall</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--rule)">Days</th><th style="text-align:left;padding:8px;border-bottom:1px solid var(--rule)">Kind</th></tr></thead><tbody></tbody></table></div>
-</section>
-<section style="margin-top:28px">
-<h2>Your marks <span class="note" id="cnt"></span></h2>
-<p class="msg" id="dbmsg">Loading your saved marks…</p>
-<div class="list" id="list"></div>
 </section>
 </div></main>
 
@@ -130,12 +146,12 @@ textarea{width:100%;min-height:92px;font:16px/1.45 Inter,sans-serif;padding:10px
 {
 const cv=document.getElementById('cv'),fig=document.getElementById('fig'),ctx=cv.getContext('2d');
 const $=id=>document.getElementById(id);
-let D=null,view=[0,0],ref=0,marks=[],db=null,canWrite=true,showCyc=true,showHalv=true,showEma=false;
+let selId=null;let D=null,view=[0,0],ref=0,marks=[],db=null,canWrite=true,showCyc=true,showHalv=true,showEma=false;
 let mode=null,pick={start:null,end:null,entry:null},ptype=null,editing=null;
 const PAD={l:8,r:64,t:10,b:30};
 const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
 const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
-const fmt=x=>x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
+const fmt=x=>(x==null||isNaN(x))?'–':x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
 const nice=d=>new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'});
 const idxOf=date=>{let lo=0,hi=D.c.length-1;while(lo<hi){const m=(lo+hi)>>1;if(D.c[m][0]<date)lo=m+1;else hi=m}return lo};
 const TYPES={breakout:'Breakout',pullback:'Pullback in a trend',reversal:'Reversal',other:'Other'};
@@ -179,10 +195,10 @@ function draw(){
  // saved marks
  ctx.lineCap='round';
  for(const m of marks){const s=idxOf(m.start),e=idxOf(m.end);if(e<a||s>b)continue;
-  ctx.strokeStyle=sig;ctx.lineWidth=editing===m.id?4:3;ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke();
+  ctx.strokeStyle=sig;ctx.lineWidth=(editing===m.id||selId===m.id)?5:(selId?2:3);ctx.globalAlpha=(selId&&selId!==m.id&&editing!==m.id)?.45:1;ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke();
   if(m.entry){const k=idxOf(m.entry);ctx.fillStyle=sig;ctx.beginPath();ctx.arc(X(k),Y(c[k][4]),5,0,7);ctx.fill()}
   ctx.fillStyle=sig;ctx.font='600 12px Inter,sans-serif';ctx.textAlign='center';const up=c[e][4]>c[s][4];ctx.textBaseline=up?'bottom':'top';
-  ctx.fillText(TYPES[m.type]||'',X(e),up?Y(c[e][4])-7:Y(c[e][4])+7);ctx.textAlign='left'}
+  ctx.fillText(TYPES[m.type]||'',X(e),up?Y(c[e][4])-7:Y(c[e][4])+7);ctx.textAlign='left';ctx.globalAlpha=1}
  // the mark being made
  const pts=[['start','Start'],['end','End'],['entry','Entry']];
  for(const[k,lab]of pts){const i=pick[k];if(i===null)continue;const x=X(i),y=Y(c[i][4]);
@@ -219,7 +235,7 @@ const STEP={start:'Tap the candle where the move STARTED',end:'Now tap the candl
 function setMode(m){mode=m;fig.classList.toggle('marking',!!m);$('prompt').textContent=m?STEP[m]:'';renderPanel();draw()}
 function tap(x){if(!mode||!D)return;const i=Math.max(0,Math.min(D.c.length-1,Math.round(idxAt(x))));pick[mode]=i;
  if(mode==='start')setMode('end');else if(mode==='end'){if(pick.end<pick.start)[pick.start,pick.end]=[pick.end,pick.start];setMode('entry')}else setMode(null)}
-$('mark').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=false;$('ptitle').textContent='New mark';setMode('start');fig.scrollIntoView({behavior:'smooth',block:'center'})};
+$('mark').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=false;$('ptitle').textContent='New mark';setMode('start');if(window.innerWidth<1000)window.scrollTo({top:fig.getBoundingClientRect().top+window.scrollY-60,behavior:'smooth'})};
 $('redo').onclick=()=>{pick={start:null,end:null,entry:null};setMode('start')};
 $('cancel').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};$('panel').hidden=true;setMode(null)};
 for(const bt of $('types').querySelectorAll('button'))bt.onclick=()=>{ptype=bt.dataset.v;renderPanel()};
@@ -259,11 +275,11 @@ function renderList(){
   const meta=document.createElement('p');meta.className='note';meta.textContent=`${fmt(m.start_close)} → ${fmt(m.end_close)} · ${m.days} days`+(m.entry?` · your entry ${nice(m.entry)} at ${fmt(m.entry_close)}`:'');
   const why=document.createElement('p');why.textContent=m.why||'(no notes)';
   const r=document.createElement('div');r.className='row';
-  const go=document.createElement('button');go.textContent='Show on chart';go.onclick=()=>{const s=idxOf(m.start),e=idxOf(m.end),pad=Math.max(20,(e-s)*.6);setView(s-pad,e+pad);fig.scrollIntoView({behavior:'smooth',block:'center'})};
-  const ed=document.createElement('button');ed.textContent='Edit';ed.onclick=()=>{editing=m.id;pick={start:idxOf(m.start),end:idxOf(m.end),entry:m.entry?idxOf(m.entry):null};ptype=m.type;$('why').value=m.why||'';$('ptitle').textContent='Edit mark';$('panel').hidden=false;setMode(null);go.onclick()};
-  const del=document.createElement('button');del.textContent='Delete';del.onclick=async()=>{if(del.dataset.armed!=='1'){del.dataset.armed='1';del.textContent='Tap again to delete';setTimeout(()=>{del.dataset.armed='';del.textContent='Delete'},4000);return}
+  const go=document.createElement('button');go.textContent='Show on chart';go.onclick=(ev)=>{if(ev)ev.stopPropagation();selId=m.id;const s=idxOf(m.start),e=idxOf(m.end),pad=Math.max(20,(e-s)*.6);setView(s-pad,e+pad);for(const k of document.querySelectorAll('#list .card'))k.setAttribute('aria-current',k.__id===m.id)};
+  const ed=document.createElement('button');ed.textContent='Edit notes / points';ed.onclick=(ev)=>{ev.stopPropagation();editing=m.id;pick={start:idxOf(m.start),end:idxOf(m.end),entry:m.entry?idxOf(m.entry):null};ptype=m.type;$('why').value=m.why||'';$('ptitle').textContent='Edit mark';$('panel').hidden=false;setMode(null);go.onclick();$('panel').scrollIntoView({behavior:'smooth',block:'nearest'})};
+  const del=document.createElement('button');del.textContent='Delete';del.onclick=async(ev)=>{ev.stopPropagation();if(del.dataset.armed!=='1'){del.dataset.armed='1';del.textContent='Tap again to delete';setTimeout(()=>{del.dataset.armed='';del.textContent='Delete'},4000);return}
    try{if(db&&!String(m.id).startsWith('local-'))await db.collection('marks').doc(m.id).delete();else{marks=marks.filter(x=>x.id!==m.id);renderList()}}catch(_){del.textContent='Could not delete'}};
-  r.append(go,ed,del);card.append(h,meta,why,r);L.append(card)}
+  r.append(go,ed,del);card.__id=m.id;card.setAttribute('aria-current',selId===m.id);card.onclick=(ev)=>{if(ev.target.closest('button'))return;go.onclick()};card.append(h,meta,why,r);L.append(card)}
  draw();
 }
 new ResizeObserver(()=>draw()).observe(fig);
