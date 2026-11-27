@@ -17,6 +17,10 @@ Runs on GitHub Actions (its servers can reach these sites; Claude's workspace ca
     data/yahoo_<symbol>.csv    Yahoo Finance daily (Stooq refused automated downloads): S&P 500, gold futures,
                                US dollar index (DXY), VIX, 10-year yield
     data/btc_dominance.csv     BGeometrics free API: BTC dominance, daily from Apr 2013
+    data/usdt_supply.csv       DefiLlama stablecoins API (free, no key): USDT circulating supply in USD, daily
+    data/btc_marketcap.csv     Coin Metrics community API (free, no key): BTC market cap (supply x price), daily
+    data/fed_funds.csv         New York Fed markets API (free, no key): effective federal funds rate, daily
+    data/fear_greed.csv        alternative.me (free, no key): Crypto Fear & Greed Index, daily from 2018
 Every file gets a validation line in data/DATA_REPORT.md (rows, range, gaps).
 """
 import io, time, zipfile, sys
@@ -187,6 +191,67 @@ def dominance():
     return d
 
 
+def usdt_supply():
+    r = get("https://stablecoins.llama.fi/stablecoincharts/all", params={"stablecoin": 1})   # id 1 = Tether (USDT)
+    rows = r.json()
+    d = pd.DataFrame({"time": pd.to_datetime([int(x["date"]) for x in rows], unit="s"),
+                      "usdt_usd": [(x.get("totalCirculatingUSD") or {}).get("peggedUSD") for x in rows]}).dropna()
+    if len(d) < 100:
+        raise RuntimeError(f"only {len(d)} rows")
+    return d
+
+
+def btc_marketcap():
+    url = "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics"
+    params = {"assets": "btc", "metrics": "CapMrktCurUSD,SplyCur,PriceUSD", "frequency": "1d", "page_size": 10000,
+              "start_time": "2010-07-18"}
+    rows, nxt = [], None
+    while True:
+        r = get(nxt) if nxt else get(url, params=params)
+        j = r.json()
+        rows += j.get("data", [])
+        nxt = j.get("next_page_url")
+        if not nxt:
+            break
+        time.sleep(1)
+    d = pd.DataFrame(rows)
+    d = d.rename(columns={"CapMrktCurUSD": "btc_mcap_usd", "SplyCur": "btc_supply", "PriceUSD": "price_usd"})
+    d["time"] = pd.to_datetime(d.time).dt.tz_localize(None)
+    for c in ("btc_mcap_usd", "btc_supply", "price_usd"):
+        d[c] = pd.to_numeric(d[c], errors="coerce")
+    d = d[["time", "btc_mcap_usd", "btc_supply", "price_usd"]].dropna()
+    if len(d) < 100:
+        raise RuntimeError(f"only {len(d)} rows")
+    return d
+
+
+def fed_funds():
+    parts = []
+    for y in range(2010, pd.Timestamp.now().year + 1):           # one request per year keeps replies small
+        r = get("https://markets.newyorkfed.org/api/rates/unsecured/effr/search.json",
+                params={"startDate": f"{y}-01-01", "endDate": f"{y}-12-31"})
+        for x in r.json().get("refRates", []):
+            parts.append((x["effectiveDate"], x.get("percentRate")))
+        time.sleep(0.5)
+    d = pd.DataFrame(parts, columns=["time", "rate"]).dropna()
+    d["time"] = pd.to_datetime(d.time)
+    d = d.drop_duplicates("time").sort_values("time")
+    if len(d) < 100:
+        raise RuntimeError(f"only {len(d)} rows")
+    return d
+
+
+def fear_greed():
+    r = get("https://api.alternative.me/fng/", params={"limit": 0, "format": "json"})
+    rows = r.json()["data"]
+    d = pd.DataFrame({"time": pd.to_datetime([int(x["timestamp"]) for x in rows], unit="s"),
+                      "value": [int(x["value"]) for x in rows], "label": [x["value_classification"] for x in rows]})
+    d = d.sort_values("time")
+    if len(d) < 100:
+        raise RuntimeError(f"only {len(d)} rows")
+    return d
+
+
 def run(name, fn, path, step=None):
     try:
         d = fn()
@@ -215,6 +280,10 @@ if __name__ == "__main__":
   for sym in YAHOO:
     run(f"Yahoo {sym}", lambda sym=sym: yahoo(sym), f"yahoo_{sym.replace('^', '').replace('=', '_').replace('.', '_').replace('-', '_')}.csv")
   run("BTC dominance", dominance, "btc_dominance.csv")
+  run("USDT supply", usdt_supply, "usdt_supply.csv")
+  run("BTC market cap", btc_marketcap, "btc_marketcap.csv")
+  run("Fed funds", fed_funds, "fed_funds.csv")
+  run("Fear & Greed", fear_greed, "fear_greed.csv")
   (OUT / "DATA_REPORT.md").write_text(
       f"# Data report ({pd.Timestamp.now(tz='UTC'):%Y-%m-%d %H:%M} UTC)\n\n| file | rows | from | to | gaps |\n|---|---|---|---|---|\n"
       + "\n".join(report) + "\n")
