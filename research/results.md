@@ -1,4 +1,4 @@
-# Research results (2026-11-27 16:02 UTC)
+# Research results (2026-11-27 18:27 UTC)
 
 ## 0. Data
 - BTC daily: 5505 candles, 2011-11-01 to 2026-11-26, gaps 0, impossible candles 0
@@ -40,4 +40,4 @@ Daily triggers with derivatives data: 39 (Dec 2021 onward)
 - 7-day funding negative: with +0.47R (n=3) vs without +0.09R (n=36)
 - 7-day taker-buy share > 50%: with -0.04R (n=26) vs without +0.42R (n=13)
 
-_Runtime 45s. Weekly rules were built on 2016-2026; 2012-2016 is unseen data for them._
+_Runtime 84s. Weekly rules were built on 2016-2026; 2012-2016 is unseen data for them._
