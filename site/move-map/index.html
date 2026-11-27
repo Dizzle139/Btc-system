@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTC Move Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a trader's research sheet, dense and exact
+   IDEA the answer key: every 10%+ BTC move drawn on the chart, nothing explained yet
+   PICTURE full-width log chart, each move a line from its start to its end, tap for its record
+   COLOUR chart-black ground, TradingView teal/red for up/down, one amber for selection
+   TYPE Space Grotesk 700 titles + Inter text
+   LAYOUT title + counts, filters, chart, record panel, era table, move list */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0f1114);--panel:light-dark(#f4f5f7,#171a1f);--ink:light-dark(#121417,#e8eaed);--mute:light-dark(#5d636b,#9aa1ab);--rule:light-dark(#e1e4e8,#2a2f36);--bull:#1f9e8f;--bear:#e2463f;--sig:#e0a100;--grid:light-dark(#eef0f2,#1c2026);--candle:light-dark(#9aa1ab,#59606b)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(20px,3vw,40px) max(4vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
+h1{font-size:clamp(28px,4vw,42px);text-wrap:balance}
+h2{font-size:clamp(22px,2.6vw,28px);margin-bottom:12px}
+p{margin:.4em 0;max-width:72ch}
+.lede{color:var(--mute);margin-top:8px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(11em,1fr));gap:10px;margin-top:18px}
+.fg{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:10px 14px}
+.fg b{display:block;font:700 clamp(22px,3vw,30px)/1.1 "Space Grotesk",sans-serif;white-space:nowrap}
+.fg span{font-size:13px;color:var(--mute)}
+.bar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:14px 0 10px}
+.grp{display:flex;align-items:center;gap:6px}
+.grp>span{font-size:13px;color:var(--mute)}
+.tabs{display:flex;border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.tabs button{border:0;border-right:1px solid var(--rule);border-radius:0}
+.tabs button:last-child{border-right:0}
+button{font:500 15px Inter,sans-serif;min-height:44px;padding:0 13px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:10px;cursor:pointer}
+button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button:focus-visible{outline:2px solid var(--sig);outline-offset:2px}
+.fig{position:relative;height:clamp(400px,60vh,640px);border:1px solid var(--rule);border-radius:12px;overflow:hidden;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;background:var(--bg)}
+.fig canvas{position:absolute;inset:0;width:100%;height:100%}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mute);margin-top:8px}
+.key i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+.info{margin-top:12px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--sig);border-radius:10px;padding:14px 16px;min-height:96px}
+.info h3{margin:0 0 6px;font:600 17px Inter,sans-serif}
+.info p{margin:0}
+.info dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));gap:6px 16px;margin:8px 0 0}
+.info dt{font-size:12px;color:var(--mute)}.info dd{margin:0;font-variant-numeric:tabular-nums;font-weight:500}
+.scroll{overflow-x:auto}
+.list{max-height:560px;overflow:auto;border:1px solid var(--rule);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--mute);font-size:13px;background:var(--bg);position:sticky;top:0}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tbody tr{cursor:pointer}
+tbody tr[aria-selected=true]{background:color-mix(in srgb,var(--sig) 16%,transparent)}
+.up{color:var(--bull);font-weight:600}.dn{color:var(--bear);font-weight:600}
+.note{font-size:13px;color:var(--mute)}
+ol,ul{padding-left:1.2em;margin:.4em 0}
+li{margin:.35em 0;max-width:74ch}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:24px}
+@media(max-width:600px){table{font-size:13px}th,td{padding:6px 5px}.fig{height:440px}}
+</style>
+</head>
+<body>
+<header class="band"><div class="wrap">
+<h1>Every 10%+ BTC move since 2011, marked</h1>
+<p class="lede">The answer key for the system. BITSTAMP:BTCUSD daily, Oct 2011 to <span id="asof"></span>. Each line runs from where a move started to where it ended. No reasons or rules yet: this is only what price did.</p>
+<div class="figs" id="figs"></div>
+</div></header>
+
+<main class="band" style="padding-top:0"><div class="wrap">
+<div class="bar">
+<div class="grp"><span>Measured on</span><div class="tabs" id="fb"><button data-v="c" aria-pressed="true">Closes</button><button data-v="w" aria-pressed="false">Wicks</button></div></div>
+<div class="grp"><span>Move size</span><div class="tabs" id="fl"><button data-v="10" aria-pressed="true">10%+</button><button data-v="20" aria-pressed="false">20%+</button><button data-v="30" aria-pressed="false">30%+</button><button data-v="50" aria-pressed="false">50%+</button></div></div>
+<div class="grp"><span>Direction</span><div class="tabs" id="fd"><button data-v="all" aria-pressed="true">Both</button><button data-v="u" aria-pressed="false">Up</button><button data-v="d" aria-pressed="false">Down</button></div></div>
+</div>
+<div class="bar">
+<div class="grp"><span>Era</span><div class="tabs" id="fe"><button data-v="all" aria-pressed="true">All</button><button data-v="2011-16" aria-pressed="false">2011–16</button><button data-v="2016-21" aria-pressed="false">2016–21</button><button data-v="2021-26" aria-pressed="false">2021–26</button></div></div>
+<div class="grp"><span>Size vs normal daily range</span><div class="tabs" id="fv"><button data-v="0" aria-pressed="true">Any</button><button data-v="2" aria-pressed="false">2×+</button><button data-v="3" aria-pressed="false">3×+</button><button data-v="5" aria-pressed="false">5×+</button></div></div>
+<div class="grp"><button id="par" aria-pressed="true">Bigger moves behind</button><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="all">Full history</button></div>
+</div>
+<div class="fig" id="fig"><canvas id="cv"></canvas></div>
+<div class="key">
+<span><i style="background:var(--bull)"></i>Up move</span>
+<span><i style="background:var(--bear)"></i>Down move</span>
+<span><i style="background:var(--mute);opacity:.5;height:6px"></i>Bigger move it sits inside (next size up)</span>
+<span><i style="background:var(--sig)"></i>Selected</span>
+<span>Dashed: the move still in progress (not confirmed). Price scale is logarithmic.</span>
+</div>
+<div class="info" id="info" aria-live="polite"><h3>How to read it</h3><p>Drag sideways to move through time, pinch (or + and −) to zoom where your fingers are. Swipe up or down to scroll the page. Tap a line on the chart or a row in the list for that move's full record.</p></div>
+</div></main>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<h2>Counts by era</h2>
+<p class="note">Confirmed moves only. "Normal daily range" = the 14-day average true range (ATR) at the move's start, in % of price. "Confirmed after" = days from the move's end until price had reversed by the move size, which is when the move is known for certain.</p>
+<div class="scroll"><table id="era"><thead><tr><th>Era</th><th class="n">Moves</th><th class="n">Per year</th><th class="n">Median size</th><th class="n">Median days</th><th class="n">Normal daily range</th><th class="n">Median size ÷ range</th><th class="n">Confirmed after</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<h2>The moves <span class="note" id="cnt"></span></h2>
+<div class="list"><table id="tbl"><thead><tr><th>Start</th><th>End</th><th class="n">Move</th><th class="n">Days</th><th class="n">÷ range</th><th>Also</th><th>Inside</th><th>Flags</th></tr></thead><tbody></tbody></table></div>
+<p class="note">Newest first. Follows the filters above. <b>Also</b> = the same move also counts at a bigger size. <b>Inside</b> = the bigger move it is a leg of. Flags: <b>same-day</b> = the move's start or end candle also printed the other extreme, so the order within that day is unknown (wicks only). <b>dipped</b> = price went slightly past the start without reversing by the full move size.</p>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<h2>Step 3: what was on the chart at the turns</h2>
+<p>Every turning point on daily closes was checked against the same list, using only what was known at that day's close. Each item is then compared with the days that looked the same on the surface: other days where price closed at a new 10-day low (for bottoms) or high (for tops) and did <b>not</b> turn. That is the question a trader faces live: price is making a new low, is this the low?</p>
+<p class="note">Number = how much more often the item showed up at real turns than on those look-alike days. 1.00 = no difference. Teal = 1.3 or more, red = below 1. "Eras" = how many of the four move sizes had it above 1 in all three eras (2011–16, 2016–21, 2021–26). Compared with all ordinary days the numbers look far bigger (up to 8×), but most of that only reflects that turns come after big moves, so it isn't shown.</p>
+<div class="scroll"><table><thead><tr><th>Item at the turn</th><th class="n">10% moves</th><th class="n">20%</th><th class="n">30%</th><th class="n">50%</th><th class="n">Held every era</th></tr></thead><tbody><tr><td>Sharp move into the turn (10%+ in 7 days)</td><td class="n up">1.55</td><td class="n up">2.08</td><td class="n up">2.21</td><td class="n up">2.23</td><td class="n">4 of 4</td></tr><tr><td>Extended into the turn (20%+ in 30 days)</td><td class="n up">1.36</td><td class="n up">1.90</td><td class="n up">2.42</td><td class="n up">2.57</td><td class="n">4 of 4</td></tr><tr><td>Volume 1.5×+ the 20-day average (Bitstamp)</td><td class="n up">1.45</td><td class="n up">1.82</td><td class="n up">1.98</td><td class="n up">1.89</td><td class="n">3 of 4</td></tr><tr><td>Volume 1.5×+ (Binance, 2017 on)</td><td class="n up">1.32</td><td class="n up">1.48</td><td class="n up">1.44</td><td class="n">1.23</td><td class="n">3 of 4 (2 eras of data)</td></tr><tr><td>Weekly FVG/OB, 2× filter</td><td class="n">1.23</td><td class="n up">1.60</td><td class="n">1.26</td><td class="n up">1.48</td><td class="n">2 of 4</td></tr><tr><td>Weekly FVG/OB, no filter</td><td class="n">1.04</td><td class="n">1.26</td><td class="n">1.07</td><td class="n">1.03</td><td class="n">1 of 4</td></tr><tr><td>Weekly zone 2×, first touch</td><td class="n up">2.48</td><td class="n up">4.03</td><td class="n up">4.57</td><td class="n up">4.94</td><td class="n">1 of 4</td></tr><tr><td>Daily FVG/OB, 2× filter</td><td class="n">1.17</td><td class="n">1.18</td><td class="n">1.12</td><td class="n">1.24</td><td class="n">2 of 4</td></tr><tr><td>Daily FVG/OB, no filter</td><td class="n">1.04</td><td class="n">1.03</td><td class="n dn">0.99</td><td class="n dn">0.89</td><td class="n">0 of 4</td></tr><tr><td>Weekly EMA50/200 agrees</td><td class="n up">1.34</td><td class="n up">1.34</td><td class="n up">1.32</td><td class="n">1.28</td><td class="n">4 of 4</td></tr><tr><td>Weekly structure agrees</td><td class="n">1.06</td><td class="n dn">0.97</td><td class="n dn">0.87</td><td class="n dn">0.61</td><td class="n">0 of 4</td></tr><tr><td>Rejection wick 40%+</td><td class="n">1.03</td><td class="n">1.13</td><td class="n">1.10</td><td class="n up">1.49</td><td class="n">2 of 4</td></tr><tr><td>20%+ past weekly EMA50</td><td class="n dn">0.97</td><td class="n">1.12</td><td class="n">1.23</td><td class="n up">1.50</td><td class="n">1 of 4</td></tr><tr><td>Buy/sell share already favours the new move</td><td class="n">1.05</td><td class="n">1.20</td><td class="n up">1.31</td><td class="n">1.12</td><td class="n">0 of 4 (2 eras of data)</td></tr><tr><td>Funding against the new move (2020 on)</td><td class="n dn">0.91</td><td class="n">1.03</td><td class="n up">1.31</td><td class="n up">1.50</td><td class="n">0 of 4 (2 eras of data)</td></tr><tr><td>Open interest down 10%+ in 7 days (2021 on)</td><td class="n dn">0.66</td><td class="n dn">0.97</td><td class="n up">3.23</td><td class="n dn">0.00</td><td class="n">1 of 4 (1 era of data)</td></tr></tbody></table></div>
+<h2 style="margin-top:28px">Do the items stack?</h2>
+<p>Count how many of the four steadiest items were present: sharp move in 7 days, extended over 30 days, volume spike, weekly zone (2× filter). Number = real turns per 100 look-alike days with that count.</p>
+<div class="scroll"><table><thead><tr><th>Items present</th><th class="n">10% moves</th><th class="n">20%</th><th class="n">30%</th><th class="n">50%</th><th class="n">Share of 10% turns</th><th class="n">2021–26: turns / look-alike days</th></tr></thead><tbody><tr><td>0</td><td class="n">10</td><td class="n">1</td><td class="n">1</td><td class="n">0</td><td class="n">19%</td><td class="n">15 / 204</td></tr><tr><td>1</td><td class="n">14</td><td class="n">4</td><td class="n">2</td><td class="n">0</td><td class="n">29%</td><td class="n">19 / 176</td></tr><tr><td>2</td><td class="n">22</td><td class="n">13</td><td class="n">6</td><td class="n">3</td><td class="n">32%</td><td class="n">26 / 96</td></tr><tr><td>3</td><td class="n">21</td><td class="n">14</td><td class="n">10</td><td class="n">3</td><td class="n">14%</td><td class="n">6 / 41</td></tr><tr><td>4</td><td class="n">46</td><td class="n">36</td><td class="n">26</td><td class="n">20</td><td class="n">6%</td><td class="n">0 / 5</td></tr></tbody></table></div>
+<p class="note">I chose these four after seeing the table above, on the same data. That makes this a lead, not a result: it has to be tested on data it wasn't picked from (step 4).</p>
+<h2 style="margin-top:28px">Your examples</h2>
+<div class="scroll"><table><thead><tr><th>Move</th><th class="n">Size</th><th>Present at the turn</th><th class="n">Daily CHoCH, days after</th></tr></thead><tbody><tr><td>Mar 2026 bottom</td><td class="n">+25%</td><td>weekly EMA, daily zone, wick, funding against</td><td class="n">9</td></tr><tr><td>Jun 2026 bottom</td><td class="n">+48%</td><td>weekly EMA, weekly zone, extended 30d</td><td class="n">14</td></tr><tr><td>Mar 2020 bottom</td><td class="n">+740%</td><td>weekly EMA, weekly zone, daily zone, sharp move, extended 30d, volume</td><td class="n">25</td></tr><tr><td>Sep 2023 bottom</td><td class="n">+191%</td><td>weekly EMA, weekly structure, weekly zone</td><td class="n">3</td></tr><tr><td>Dec 2024 top</td><td class="n">-28%</td><td>wick, funding against</td><td class="n">47</td></tr><tr><td>Nov 2022 bottom</td><td class="n">+691%</td><td>weekly EMA, funding against</td><td class="n">9</td></tr><tr><td>Nov 2021 top</td><td class="n">-77%</td><td>sharp move, extended 30d, funding against</td><td class="n">8</td></tr></tbody></table></div>
+<p class="note">Tap any move on the chart (Closes) to see its full checklist.</p>
+</div></section>
+<section class="band"><div class="wrap grid2">
+<div>
+<h2>How a move is marked</h2>
+<ol>
+<li>Track the highest high (up move) or lowest low (down move) since the last turn.</li>
+<li>When price reverses by the move size from that extreme, the extreme becomes a turning point and a new move starts there.</li>
+<li>A candle that sets a new extreme can't also confirm a reversal on the same day.</li>
+<li>Closes version: the same, using daily closes instead of highs and lows.</li>
+<li>Run at 10%, 20%, 30% and 50%. Each smaller move is tagged with the bigger move whose span contains its midpoint.</li>
+</ol>
+<p class="note">Checked against the raw candles: every confirmed move meets its size, moves alternate up and down with no gaps, and every turning point is the true extreme of its move, except the flagged cases.</p>
+</div>
+<div>
+<h2>What you're checking</h2>
+<ul>
+<li>Do the marked turning points match the tops and bottoms you'd mark yourself?</li>
+<li>Wicks or closes: which one marks the moves you'd call real?</li>
+<li>Which moves look like noise to you? Note them by date and I'll measure what they have in common.</li>
+<li>Does the "size ÷ normal daily range" filter separate signal from noise the way you see it?</li>
+</ul>
+<p class="note">Research output, not financial advice.</p>
+</div>
+</div></section>
+
+<script>
+{
+const cv=document.getElementById('cv'),fig=document.getElementById('fig'),info=document.getElementById('info');
+const ctx=cv.getContext('2d');
+let D=null,F={b:'c',l:10,d:'all',e:'all',v:0,par:true},view=[0,0],sel=null,hits=[];
+const PAD={l:8,r:64,t:10,b:30};
+const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
+const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
+const fmt=x=>x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
+const day=i=>new Date(D.c[Math.min(i,D.c.length-1)][0]*1000);
+const ds=i=>day(i).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'});
+const NEXT={10:20,20:30,30:50,50:null};
+function pass(m){return m.b===F.b&&m.l===F.l&&(F.d==='all'||m.d===F.d)&&(F.e==='all'||m.er===F.e)&&(F.v===0||(m.v!==null&&m.v>=F.v))}
+function list(){return D.m.filter(pass)}
+function fitView(){const ms=list();if(!ms.length){view=[0,D.c.length+5];return}view=[Math.max(0,ms[0].s-10),Math.min(D.c.length+10,ms[ms.length-1].e+15)]}
+function draw(){
+ if(!D)return;
+ const dpr=window.devicePixelRatio||1,W=fig.clientWidth,H=fig.clientHeight;
+ if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr)}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+ const c=D.c,[a,b]=view,i0=Math.max(0,Math.floor(a)),i1=Math.min(c.length-1,Math.ceil(b));
+ const pw=W-PAD.l-PAD.r,ph=H-PAD.t-PAD.b,bw=pw/(b-a+1);
+ let lo=Infinity,hi=-Infinity;for(let i=i0;i<=i1;i++){lo=Math.min(lo,c[i][3]);hi=Math.max(hi,c[i][2])}
+ lo=Math.log(lo),hi=Math.log(hi);const mg=(hi-lo)*.05||.05;lo-=mg;hi+=mg;
+ const X=i=>PAD.l+(i-a+.5)*bw,Y=p=>PAD.t+(hi-Math.log(p))/(hi-lo)*ph;
+ const mute=css('--mute'),grid=css('--grid'),bull=css('--bull'),bear=css('--bear'),sigc=css('--sig'),cnd=css('--candle');
+ hits=[];
+ ctx.font='13px Inter,sans-serif';ctx.textBaseline='middle';
+ for(const p of ticks(Math.exp(lo),Math.exp(hi))){const y=Y(p);ctx.strokeStyle=grid;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(PAD.l,y);ctx.lineTo(W-PAD.r,y);ctx.stroke();ctx.fillStyle=mute;ctx.fillText(fmtK(p),W-PAD.r+6,y)}
+ ctx.textBaseline='top';ctx.textAlign='center';
+ const span=b-a,yearly=span>500;let lastx=-1e9;
+ for(let i=i0;i<=i1;i++){const d=day(i);const first=yearly?(d.getUTCMonth()===0&&d.getUTCDate()===1):(d.getUTCDate()===1&&(span<200||d.getUTCMonth()%3===0));if(!first)continue;const x=X(i);if(x-lastx<60)continue;lastx=x;ctx.fillStyle=mute;ctx.fillText(yearly?d.getUTCFullYear():d.toLocaleDateString('en-US',{month:'short',year:'2-digit',timeZone:'UTC'}),x,H-PAD.b+8)}
+ ctx.textAlign='left';
+ ctx.save();ctx.beginPath();ctx.rect(PAD.l,PAD.t,pw,ph);ctx.clip();
+ // price
+ if(bw>=2.5){for(let i=i0;i<=i1;i++){const[t,o,h,l,cl]=c[i],x=X(i);ctx.strokeStyle=cnd;ctx.fillStyle=cnd;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,Y(h));ctx.lineTo(x,Y(l));ctx.stroke();const w=Math.max(1,bw*.6),y=Y(Math.max(o,cl)),hh=Math.max(1,Math.abs(Y(o)-Y(cl)));if(cl>=o){ctx.strokeRect(x-w/2,y,w,hh)}else ctx.fillRect(x-w/2,y,w,hh)}}
+ else{ctx.strokeStyle=cnd;ctx.lineWidth=1;ctx.beginPath();for(let i=i0;i<=i1;i++){const x=X(i);i===i0?ctx.moveTo(x,Y(c[i][4])):ctx.lineTo(x,Y(c[i][4]))}ctx.stroke()}
+ // bigger moves behind
+ const nx=NEXT[F.l];
+ if(F.par&&nx){ctx.lineCap='round';for(const m of D.m){if(m.b!==F.b||m.l!==nx||m.e<a||m.s>b)continue;ctx.strokeStyle=m.d==='u'?bull:bear;ctx.globalAlpha=.22;ctx.lineWidth=9;ctx.beginPath();ctx.moveTo(X(m.s),Y(m.ps));ctx.lineTo(X(m.e),Y(m.pe));ctx.stroke()}ctx.globalAlpha=1}
+ // moves
+ ctx.lineCap='round';
+ for(const m of list()){if(m.e<a||m.s>b)continue;const x1=X(m.s),y1=Y(m.ps),x2=X(m.e),y2=Y(m.pe);
+  ctx.strokeStyle=sel===m?sigc:(m.d==='u'?bull:bear);ctx.lineWidth=sel===m?3.5:2;if(m.o)ctx.setLineDash([6,5]);
+  ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle=ctx.strokeStyle;ctx.beginPath();ctx.arc(x2,y2,sel===m?4.5:2.5,0,7);ctx.fill();
+  if(x2-x1>34||sel===m){ctx.font='600 12px Inter,sans-serif';ctx.textAlign='center';ctx.textBaseline=m.d==='u'?'bottom':'top';ctx.fillText((m.p>0?'+':'')+Math.round(m.p)+'%',x2,m.d==='u'?y2-6:y2+6);ctx.textAlign='left'}
+  hits.push({m,x1,y1,x2,y2})}
+ if(hoverAt&&hoverAt.x>PAD.l&&hoverAt.x<W-PAD.r){const i=Math.round(a+(hoverAt.x-PAD.l)/bw-.5);if(i>=0&&i<c.length){const x=X(i);ctx.strokeStyle=mute;ctx.globalAlpha=.5;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,PAD.t);ctx.lineTo(x,PAD.t+ph);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;
+  const[t,o,h,l,cl]=c[i];const txt=`${ds(i)}  O ${fmt(o)}  H ${fmt(h)}  L ${fmt(l)}  C ${fmt(cl)}`;ctx.font='12px Inter,sans-serif';ctx.textBaseline='top';const tw=ctx.measureText(txt).width;ctx.fillStyle=css('--bg');ctx.globalAlpha=.85;ctx.fillRect(PAD.l+4,PAD.t+4,tw+12,20);ctx.globalAlpha=1;ctx.fillStyle=css('--ink');ctx.fillText(txt,PAD.l+10,PAD.t+8)}}
+ ctx.restore();
+ ctx.strokeStyle=css('--rule');ctx.strokeRect(PAD.l,PAD.t,pw,ph);
+ ctx.__bw=bw;
+}
+function ticks(lo,hi){const out=[];for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++)for(const f of[1,2,5]){const v=f*10**e;if(v>=lo&&v<=hi)out.push(v)}if(out.length<4){out.length=0;const st=nice((hi-lo)/5);for(let v=Math.ceil(lo/st)*st;v<=hi;v+=st)out.push(v)}return out}
+function nice(r){const p=10**Math.floor(Math.log10(r)),f=r/p;return(f<1.5?1:f<3?2:f<7?5:10)*p}
+function fmtK(p){return p>=10000?(p/1000).toFixed(p%1000?1:0)+'k':p>=1?Math.round(p).toLocaleString('en-US'):p.toFixed(2)}
+function segDist(px,py,h){const dx=h.x2-h.x1,dy=h.y2-h.y1,L=dx*dx+dy*dy||1;let t=((px-h.x1)*dx+(py-h.y1)*dy)/L;t=Math.max(0,Math.min(1,t));return Math.hypot(px-(h.x1+t*dx),py-(h.y1+t*dy))}
+function pick(px,py){let best=null,bd=14;for(const h of hits){const d=segDist(px,py,h);if(d<bd){bd=d;best=h.m}}if(best)select(best,false)}
+function select(m,zoomTo){sel=m;
+ if(zoomTo){const len=m.e-m.s,pad=Math.max(15,len*.6);view=[m.s-pad,m.e+pad]}
+ info.innerHTML='';const h=document.createElement('h3');
+ h.textContent=`${m.d==='u'?'Up':'Down'} ${Math.abs(m.p).toFixed(1)}% · ${ds(m.s)} → ${ds(m.e)}${m.o?' (still in progress)':''}`;
+ const dl=document.createElement('dl');
+ const wrap=(k,v)=>{const d=document.createElement('div');const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');dd.textContent=v;d.append(dt,dd);dl.append(d)};
+ wrap('From → to',`${fmt(m.ps)} → ${fmt(m.pe)}`);
+ wrap('Took',`${m.dy} days`);
+ wrap('Normal daily range at start',`${m.a.toFixed(1)}%`);
+ wrap('Size ÷ normal range',m.v===null?'n/a':`${m.v.toFixed(1)}×`);
+ wrap('Confirmed',m.o?'not yet':`${ds(m.cf)} (${m.lag} day${m.lag===1?'':'s'} after the end)`);
+ wrap('Era',m.er);
+ if(m.same)wrap('Also counts as',`a ${m.same} move (same start and end)`);
+ wrap('Inside',m.par||(m.l===50?'largest size':'none'));
+ wrap('Measured on',`${m.b==='w'?'wicks':'closes'}, ${m.l}% reversal`);
+ const fl=[];if(m.sd)fl.push('same-day: start or end candle also printed the other extreme');if(m.u)fl.push(`dipped ${Math.abs(m.u).toFixed(1)}% past the start without a full reversal`);
+ if(fl.length)wrap('Flags',fl.join('; '));
+ info.append(h,dl);
+ if(m.sn){const h4=document.createElement('h3');h4.style.marginTop='12px';h4.textContent='On the chart at the turn (known at that day\'s close)';const ul=document.createElement('ul');for(const x of m.sn){const li=document.createElement('li');li.textContent=x;ul.append(li)}info.append(h4,ul)}
+ else if(m.b==='w'){const p=document.createElement('p');p.className='note';p.style.marginTop='10px';p.textContent='Turning-point snapshots are measured on closes. Switch to Closes to see them.';info.append(p)}
+ for(const tr of document.querySelectorAll('#tbl tbody tr'))tr.setAttribute('aria-selected',tr.__m===m);
+ draw();
+}
+function table(){
+ const ms=list(),tb=document.querySelector('#tbl tbody');tb.innerHTML='';
+ document.getElementById('cnt').textContent=`· ${ms.length} shown`;
+ for(const m of [...ms].reverse()){const tr=document.createElement('tr');tr.__m=m;tr.setAttribute('aria-selected',sel===m);
+  const cells=[ds(m.s),ds(m.e)+(m.o?' (open)':''),(m.p>0?'+':'')+m.p.toFixed(1)+'%',m.dy,m.v===null?'–':m.v.toFixed(1)+'×',m.same||'–',m.par||'–',[m.sd?'same-day':'',m.u?'dipped':''].filter(Boolean).join(', ')||'–'];
+  cells.forEach((v,k)=>{const td=document.createElement('td');td.textContent=v;if(k>=2&&k<=4)td.className='n';if(k===2)td.className+=' '+(m.d==='u'?'up':'dn');if(k===6)td.className='note';tr.append(td)});
+  tr.onclick=()=>{select(m,true);fig.scrollIntoView({behavior:'smooth',block:'center'})};tb.append(tr)}
+}
+function eraTable(){
+ const tb=document.querySelector('#era tbody');tb.innerHTML='';
+ const yrs={'2011-16':4.7,'2016-21':5.0,'2021-26':5.4};
+ const med=a=>{const s=[...a].sort((x,y)=>x-y);return s.length?s[Math.floor((s.length-1)/2)]:null};
+ for(const er of ['2011-16','2016-21','2021-26']){const ms=D.m.filter(m=>m.b===F.b&&m.l===F.l&&m.er===er&&!m.o&&(F.d==='all'||m.d===F.d)&&(F.v===0||(m.v!==null&&m.v>=F.v)));
+  const v=[er,ms.length,(ms.length/yrs[er]).toFixed(1),med(ms.map(m=>Math.abs(m.p)))?.toFixed(0)+'%',med(ms.map(m=>m.dy)),med(ms.map(m=>m.a))?.toFixed(1)+'%',(med(ms.filter(m=>m.v!==null).map(m=>m.v))||0).toFixed(1)+'×',med(ms.map(m=>m.lag))+' days'];
+  const tr=document.createElement('tr');v.forEach((x,k)=>{const td=document.createElement('td');td.textContent=ms.length||k<2?x:'–';if(k)td.className='n';tr.append(td)});tb.append(tr)}
+}
+function figs(){
+ const box=document.getElementById('figs');box.innerHTML='';
+ const n=(b,l)=>D.m.filter(m=>m.b===b&&m.l===l&&!m.o).length;
+ const recent=(b)=>D.m.filter(m=>m.b===b&&m.l===10&&!m.o&&m.er==='2021-26').length;
+ const items=[[n('w',10),'10%+ moves measured on wicks, 2011–2026'],[n('c',10),'10%+ moves measured on daily closes'],[(recent('w')/5.4).toFixed(0)+' / yr','wick moves per year since mid-2021 (closes: '+(recent('c')/5.4).toFixed(0)+')'],['4.9% → 3.7%','median normal daily range, 2011–16 vs 2021–26: the same 10% is a bigger move now']];
+ for(const[b,s]of items){const d=document.createElement('div');d.className='fg';const bb=document.createElement('b');bb.textContent=b;const sp=document.createElement('span');sp.textContent=s;d.append(bb,sp);box.append(d)}
+}
+function refresh(fit){if(sel&&!pass(sel))sel=null;if(fit)fitView();table();eraTable();draw()}
+// interaction: one finger drags sideways (vertical swipes scroll the page), two fingers pinch around their midpoint
+const ptr=new Map();let g=null,raf=0;
+const pos=e=>{const r=fig.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
+const idxAt=x=>view[0]+(x-PAD.l)/(ctx.__bw||1)-.5;
+function base(){const p=[...ptr.values()];
+ if(p.length===1)g={mode:'pan',x0:p[0].x,y0:p[0].y,v0:[...view],t0:g&&g.mode==='pan'?g.t0:performance.now(),moved:g?g.moved:false};
+ else if(p.length>=2){const[q,r]=p;g={mode:'pinch',d0:Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),c0:idxAt((q.x+r.x)/2),v0:[...view],bw0:ctx.__bw||1,moved:true}}
+ else g=null}
+function later(){if(!raf)raf=requestAnimationFrame(()=>{raf=0;draw()})}
+fig.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;try{fig.setPointerCapture(e.pointerId)}catch(_){}ptr.set(e.pointerId,pos(e));base();if(ptr.size===1){g.moved=false;g.t0=performance.now()}});
+fig.addEventListener('pointermove',e=>{const p=pos(e);
+ if(!ptr.has(e.pointerId)){hover(p);return}
+ ptr.set(e.pointerId,p);if(!g)return;
+ if(g.mode==='pan'){const dx=p.x-g.x0,dy=p.y-g.y0;if(Math.hypot(dx,dy)>6)g.moved=true;const sh=dx/(ctx.__bw||1);setView(g.v0[0]-sh,g.v0[1]-sh,true)}
+ else{const[q,r]=[...ptr.values()],d=Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),cx=(q.x+r.x)/2,sp0=g.v0[1]-g.v0[0];
+  const sp=sp0*g.d0/d,f=(cx-PAD.l)/(fig.clientWidth-PAD.l-PAD.r);const a=g.c0+.5-f*sp;setView(a,a+sp,true)}
+});
+function end(e,cancel){if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.delete(e.pointerId);
+ if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<600)pick(p.x,p.y);
+ if(ptr.size)base();else g=null}
+fig.addEventListener('pointerup',e=>end(e,false));
+fig.addEventListener('pointercancel',e=>end(e,true));
+fig.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!ptr.size){hoverAt=null;later()}});
+fig.addEventListener('wheel',e=>{e.preventDefault();const p=pos(e);
+ if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){const sh=e.deltaX/(ctx.__bw||1);setView(view[0]+sh,view[1]+sh,true);return}
+ zoomAt(p.x,Math.exp(e.deltaY*.0025))},{passive:false});
+let hoverAt=null;function hover(p){hoverAt=p;later()}
+function setView(a,b,lazy){const n=D.c.length,sp=Math.max(20,Math.min(n+20,b-a));if(a<-10)a=-10;if(a+sp>n+15)a=n+15-sp;view=[a,a+sp];lazy?later():draw()}
+function zoomAt(x,f){const i=idxAt(x),[a,b]=view,sp=(b-a)*f,fr=(x-PAD.l)/(fig.clientWidth-PAD.l-PAD.r);const na=i+.5-fr*sp;setView(na,na+sp,true)}
+function zoom(f){const[a,b]=view,mid=(a+b)/2,sp=(b-a)*f;setView(mid-sp/2,mid+sp/2)}
+document.getElementById('zin').onclick=()=>zoom(1/1.5);document.getElementById('zout').onclick=()=>zoom(1.5);
+document.getElementById('all').onclick=()=>{view=[-5,D.c.length+10];draw()};
+const par=document.getElementById('par');par.onclick=()=>{F.par=!F.par;par.setAttribute('aria-pressed',F.par);draw()};
+for(const[id,k,num]of[['fb','b'],['fl','l',1],['fd','d'],['fe','e'],['fv','v',1]]){const g=document.getElementById(id);for(const bt of g.querySelectorAll('button'))bt.onclick=()=>{F[k]=num?+bt.dataset.v:bt.dataset.v;for(const x of g.querySelectorAll('button'))x.setAttribute('aria-pressed',x===bt);refresh(k==='e')}}
+new ResizeObserver(()=>draw()).observe(fig);
+fetch('data.json').then(r=>r.json()).then(d=>{D=d;document.getElementById('asof').textContent=d.asof;figs();view=[d.c.length-400,d.c.length+10];refresh(false)}).catch(()=>{info.textContent='Chart data did not load. Reload the page to try again.'});
+}
+</script>
+</body>
+</html>

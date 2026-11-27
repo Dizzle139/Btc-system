@@ -1,0 +1,5683 @@
+{
+ "lift": {
+  "10": [
+   {
+    "item": "Weekly EMA agrees",
+    "all": {
+     "turn": 49.8,
+     "base": 50.0,
+     "lift": 1.0,
+     "n": 265,
+     "ext": 37.1,
+     "lift_ext": 1.34
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 49.9,
+     "lift": 1.0,
+     "n": 86,
+     "ext": 31.7,
+     "lift_ext": 1.58
+    },
+    "2016-21": {
+     "turn": 49.6,
+     "base": 50.1,
+     "lift": 0.99,
+     "n": 113,
+     "ext": 30.3,
+     "lift_ext": 1.64
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 50.0,
+     "lift": 1.0,
+     "n": 66,
+     "ext": 47.1,
+     "lift_ext": 1.06
+    }
+   },
+   {
+    "item": "Weekly structure agrees",
+    "all": {
+     "turn": 41.5,
+     "base": 49.2,
+     "lift": 0.84,
+     "n": 265,
+     "ext": 39.1,
+     "lift_ext": 1.06
+    },
+    "2011-16": {
+     "turn": 36.0,
+     "base": 45.2,
+     "lift": 0.8,
+     "n": 86,
+     "ext": 27.0,
+     "lift_ext": 1.33
+    },
+    "2016-21": {
+     "turn": 47.8,
+     "base": 50.5,
+     "lift": 0.95,
+     "n": 113,
+     "ext": 33.3,
+     "lift_ext": 1.44
+    },
+    "2021-26": {
+     "turn": 37.9,
+     "base": 51.3,
+     "lift": 0.74,
+     "n": 66,
+     "ext": 53.8,
+     "lift_ext": 0.7
+    }
+   },
+   {
+    "item": "Daily structure agrees",
+    "all": {
+     "turn": 23.0,
+     "base": 54.0,
+     "lift": 0.43,
+     "n": 265,
+     "ext": 14.9,
+     "lift_ext": 1.55
+    },
+    "2011-16": {
+     "turn": 27.9,
+     "base": 53.5,
+     "lift": 0.52,
+     "n": 86,
+     "ext": 13.3,
+     "lift_ext": 2.1
+    },
+    "2016-21": {
+     "turn": 27.4,
+     "base": 53.8,
+     "lift": 0.51,
+     "n": 113,
+     "ext": 13.9,
+     "lift_ext": 1.98
+    },
+    "2021-26": {
+     "turn": 9.1,
+     "base": 54.6,
+     "lift": 0.17,
+     "n": 66,
+     "ext": 17.0,
+     "lift_ext": 0.53
+    }
+   },
+   {
+    "item": "Weekly zone, 2x filter",
+    "all": {
+     "turn": 27.5,
+     "base": 15.9,
+     "lift": 1.73,
+     "n": 265,
+     "ext": 22.5,
+     "lift_ext": 1.23
+    },
+    "2011-16": {
+     "turn": 23.3,
+     "base": 15.1,
+     "lift": 1.54,
+     "n": 86,
+     "ext": 16.8,
+     "lift_ext": 1.39
+    },
+    "2016-21": {
+     "turn": 26.5,
+     "base": 16.2,
+     "lift": 1.64,
+     "n": 113,
+     "ext": 21.5,
+     "lift_ext": 1.24
+    },
+    "2021-26": {
+     "turn": 34.8,
+     "base": 16.4,
+     "lift": 2.13,
+     "n": 66,
+     "ext": 28.0,
+     "lift_ext": 1.25
+    }
+   },
+   {
+    "item": "Weekly zone, 2x, first touch",
+    "all": {
+     "turn": 7.2,
+     "base": 0.6,
+     "lift": 12.41,
+     "n": 265,
+     "ext": 2.9,
+     "lift_ext": 2.48
+    },
+    "2011-16": {
+     "turn": 9.3,
+     "base": 0.3,
+     "lift": 28.9,
+     "n": 86,
+     "ext": 1.6,
+     "lift_ext": 5.7
+    },
+    "2016-21": {
+     "turn": 7.1,
+     "base": 0.6,
+     "lift": 12.02,
+     "n": 113,
+     "ext": 2.8,
+     "lift_ext": 2.55
+    },
+    "2021-26": {
+     "turn": 4.5,
+     "base": 0.8,
+     "lift": 5.87,
+     "n": 66,
+     "ext": 4.0,
+     "lift_ext": 1.13
+    }
+   },
+   {
+    "item": "Weekly zone, no filter",
+    "all": {
+     "turn": 38.5,
+     "base": 24.7,
+     "lift": 1.56,
+     "n": 265,
+     "ext": 37.0,
+     "lift_ext": 1.04
+    },
+    "2011-16": {
+     "turn": 27.9,
+     "base": 22.1,
+     "lift": 1.26,
+     "n": 86,
+     "ext": 28.0,
+     "lift_ext": 1.0
+    },
+    "2016-21": {
+     "turn": 36.3,
+     "base": 22.1,
+     "lift": 1.64,
+     "n": 113,
+     "ext": 33.7,
+     "lift_ext": 1.08
+    },
+    "2021-26": {
+     "turn": 56.1,
+     "base": 29.0,
+     "lift": 1.93,
+     "n": 66,
+     "ext": 47.1,
+     "lift_ext": 1.19
+    }
+   },
+   {
+    "item": "Weekly zone, no filter, first touch",
+    "all": {
+     "turn": 10.2,
+     "base": 1.3,
+     "lift": 8.12,
+     "n": 265,
+     "ext": 6.1,
+     "lift_ext": 1.66
+    },
+    "2011-16": {
+     "turn": 11.6,
+     "base": 1.0,
+     "lift": 12.04,
+     "n": 86,
+     "ext": 5.1,
+     "lift_ext": 2.27
+    },
+    "2016-21": {
+     "turn": 10.6,
+     "base": 1.2,
+     "lift": 9.01,
+     "n": 113,
+     "ext": 6.0,
+     "lift_ext": 1.77
+    },
+    "2021-26": {
+     "turn": 7.6,
+     "base": 1.5,
+     "lift": 4.89,
+     "n": 66,
+     "ext": 7.1,
+     "lift_ext": 1.07
+    }
+   },
+   {
+    "item": "Daily zone, 2x filter",
+    "all": {
+     "turn": 49.4,
+     "base": 27.4,
+     "lift": 1.81,
+     "n": 265,
+     "ext": 42.1,
+     "lift_ext": 1.17
+    },
+    "2011-16": {
+     "turn": 44.2,
+     "base": 23.7,
+     "lift": 1.86,
+     "n": 86,
+     "ext": 32.6,
+     "lift_ext": 1.35
+    },
+    "2016-21": {
+     "turn": 50.4,
+     "base": 27.2,
+     "lift": 1.86,
+     "n": 113,
+     "ext": 44.3,
+     "lift_ext": 1.14
+    },
+    "2021-26": {
+     "turn": 54.5,
+     "base": 30.5,
+     "lift": 1.79,
+     "n": 66,
+     "ext": 48.1,
+     "lift_ext": 1.13
+    }
+   },
+   {
+    "item": "Daily zone, 2x, first touch",
+    "all": {
+     "turn": 5.3,
+     "base": 1.2,
+     "lift": 4.4,
+     "n": 265,
+     "ext": 3.1,
+     "lift_ext": 1.7
+    },
+    "2011-16": {
+     "turn": 7.0,
+     "base": 0.7,
+     "lift": 9.75,
+     "n": 86,
+     "ext": 1.6,
+     "lift_ext": 4.28
+    },
+    "2016-21": {
+     "turn": 6.2,
+     "base": 1.6,
+     "lift": 3.97,
+     "n": 113,
+     "ext": 3.5,
+     "lift_ext": 1.79
+    },
+    "2021-26": {
+     "turn": 1.5,
+     "base": 1.3,
+     "lift": 1.17,
+     "n": 66,
+     "ext": 4.0,
+     "lift_ext": 0.38
+    }
+   },
+   {
+    "item": "Daily zone, no filter",
+    "all": {
+     "turn": 61.5,
+     "base": 43.6,
+     "lift": 1.41,
+     "n": 265,
+     "ext": 59.2,
+     "lift_ext": 1.04
+    },
+    "2011-16": {
+     "turn": 55.8,
+     "base": 39.2,
+     "lift": 1.42,
+     "n": 86,
+     "ext": 48.0,
+     "lift_ext": 1.16
+    },
+    "2016-21": {
+     "turn": 65.5,
+     "base": 42.4,
+     "lift": 1.54,
+     "n": 113,
+     "ext": 58.7,
+     "lift_ext": 1.12
+    },
+    "2021-26": {
+     "turn": 62.1,
+     "base": 48.1,
+     "lift": 1.29,
+     "n": 66,
+     "ext": 68.8,
+     "lift_ext": 0.9
+    }
+   },
+   {
+    "item": "Daily zone, no filter, first touch",
+    "all": {
+     "turn": 7.9,
+     "base": 2.4,
+     "lift": 3.32,
+     "n": 265,
+     "ext": 5.3,
+     "lift_ext": 1.48
+    },
+    "2011-16": {
+     "turn": 8.1,
+     "base": 2.0,
+     "lift": 4.14,
+     "n": 86,
+     "ext": 4.4,
+     "lift_ext": 1.84
+    },
+    "2016-21": {
+     "turn": 11.5,
+     "base": 2.6,
+     "lift": 4.49,
+     "n": 113,
+     "ext": 5.5,
+     "lift_ext": 2.08
+    },
+    "2021-26": {
+     "turn": 1.5,
+     "base": 2.6,
+     "lift": 0.59,
+     "n": 66,
+     "ext": 5.9,
+     "lift_ext": 0.26
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 10%+ in 7 days",
+    "all": {
+     "turn": 52.8,
+     "base": 8.8,
+     "lift": 6.03,
+     "n": 265,
+     "ext": 34.1,
+     "lift_ext": 1.55
+    },
+    "2011-16": {
+     "turn": 60.5,
+     "base": 9.5,
+     "lift": 6.36,
+     "n": 86,
+     "ext": 35.9,
+     "lift_ext": 1.68
+    },
+    "2016-21": {
+     "turn": 54.9,
+     "base": 11.5,
+     "lift": 4.76,
+     "n": 113,
+     "ext": 45.3,
+     "lift_ext": 1.21
+    },
+    "2021-26": {
+     "turn": 39.4,
+     "base": 5.8,
+     "lift": 6.74,
+     "n": 66,
+     "ext": 23.4,
+     "lift_ext": 1.69
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
+    "all": {
+     "turn": 20.0,
+     "base": 4.9,
+     "lift": 4.08,
+     "n": 265,
+     "ext": 23.3,
+     "lift_ext": 0.86
+    },
+    "2011-16": {
+     "turn": 24.4,
+     "base": 5.2,
+     "lift": 4.74,
+     "n": 86,
+     "ext": 25.4,
+     "lift_ext": 0.96
+    },
+    "2016-21": {
+     "turn": 17.7,
+     "base": 5.5,
+     "lift": 3.21,
+     "n": 113,
+     "ext": 27.3,
+     "lift_ext": 0.65
+    },
+    "2021-26": {
+     "turn": 18.2,
+     "base": 4.2,
+     "lift": 4.34,
+     "n": 66,
+     "ext": 18.4,
+     "lift_ext": 0.99
+    }
+   },
+   {
+    "item": "Extended into the turn: 20%+ in 30 days",
+    "all": {
+     "turn": 40.4,
+     "base": 13.1,
+     "lift": 3.09,
+     "n": 265,
+     "ext": 29.6,
+     "lift_ext": 1.36
+    },
+    "2011-16": {
+     "turn": 53.5,
+     "base": 14.2,
+     "lift": 3.76,
+     "n": 86,
+     "ext": 35.4,
+     "lift_ext": 1.51
+    },
+    "2016-21": {
+     "turn": 40.7,
+     "base": 16.5,
+     "lift": 2.46,
+     "n": 113,
+     "ext": 37.6,
+     "lift_ext": 1.08
+    },
+    "2021-26": {
+     "turn": 22.7,
+     "base": 9.3,
+     "lift": 2.44,
+     "n": 66,
+     "ext": 18.2,
+     "lift_ext": 1.25
+    }
+   },
+   {
+    "item": "Stretched: 20%+ past weekly EMA50",
+    "all": {
+     "turn": 46.4,
+     "base": 29.3,
+     "lift": 1.58,
+     "n": 265,
+     "ext": 47.7,
+     "lift_ext": 0.97
+    },
+    "2011-16": {
+     "turn": 51.2,
+     "base": 33.8,
+     "lift": 1.51,
+     "n": 86,
+     "ext": 59.7,
+     "lift_ext": 0.86
+    },
+    "2016-21": {
+     "turn": 46.9,
+     "base": 31.1,
+     "lift": 1.51,
+     "n": 113,
+     "ext": 54.3,
+     "lift_ext": 0.86
+    },
+    "2021-26": {
+     "turn": 39.4,
+     "base": 24.3,
+     "lift": 1.62,
+     "n": 66,
+     "ext": 32.4,
+     "lift_ext": 1.22
+    }
+   },
+   {
+    "item": "Past weekly EMA200",
+    "all": {
+     "turn": 55.5,
+     "base": 49.4,
+     "lift": 1.12,
+     "n": 265,
+     "ext": 62.1,
+     "lift_ext": 0.89
+    },
+    "2011-16": {
+     "turn": 54.7,
+     "base": 49.3,
+     "lift": 1.11,
+     "n": 86,
+     "ext": 66.9,
+     "lift_ext": 0.82
+    },
+    "2016-21": {
+     "turn": 54.0,
+     "base": 49.6,
+     "lift": 1.09,
+     "n": 113,
+     "ext": 68.6,
+     "lift_ext": 0.79
+    },
+    "2021-26": {
+     "turn": 59.1,
+     "base": 49.3,
+     "lift": 1.2,
+     "n": 66,
+     "ext": 52.7,
+     "lift_ext": 1.12
+    }
+   },
+   {
+    "item": "Wick 40%+ of range (rejection)",
+    "all": {
+     "turn": 23.0,
+     "base": 27.4,
+     "lift": 0.84,
+     "n": 265,
+     "ext": 22.3,
+     "lift_ext": 1.03
+    },
+    "2011-16": {
+     "turn": 19.8,
+     "base": 28.6,
+     "lift": 0.69,
+     "n": 86,
+     "ext": 20.3,
+     "lift_ext": 0.97
+    },
+    "2016-21": {
+     "turn": 25.7,
+     "base": 27.7,
+     "lift": 0.93,
+     "n": 113,
+     "ext": 23.6,
+     "lift_ext": 1.09
+    },
+    "2021-26": {
+     "turn": 22.7,
+     "base": 26.2,
+     "lift": 0.87,
+     "n": 66,
+     "ext": 23.0,
+     "lift_ext": 0.99
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Bitstamp)",
+    "all": {
+     "turn": 40.0,
+     "base": 15.6,
+     "lift": 2.56,
+     "n": 265,
+     "ext": 27.7,
+     "lift_ext": 1.45
+    },
+    "2011-16": {
+     "turn": 51.2,
+     "base": 17.2,
+     "lift": 2.97,
+     "n": 86,
+     "ext": 29.1,
+     "lift_ext": 1.76
+    },
+    "2016-21": {
+     "turn": 32.7,
+     "base": 14.2,
+     "lift": 2.3,
+     "n": 113,
+     "ext": 25.4,
+     "lift_ext": 1.29
+    },
+    "2021-26": {
+     "turn": 37.9,
+     "base": 15.5,
+     "lift": 2.44,
+     "n": 66,
+     "ext": 28.4,
+     "lift_ext": 1.34
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Binance, 2017+)",
+    "all": {
+     "turn": 29.2,
+     "base": 12.2,
+     "lift": 2.4,
+     "n": 161,
+     "ext": 22.2,
+     "lift_ext": 1.32
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 24.2,
+     "base": 11.6,
+     "lift": 2.08,
+     "n": 95,
+     "ext": 19.8,
+     "lift_ext": 1.22
+    },
+    "2021-26": {
+     "turn": 36.4,
+     "base": 12.5,
+     "lift": 2.91,
+     "n": 66,
+     "ext": 23.7,
+     "lift_ext": 1.54
+    }
+   },
+   {
+    "item": "Buy/sell share already favours the new move (Binance)",
+    "all": {
+     "turn": 25.5,
+     "base": 49.6,
+     "lift": 0.51,
+     "n": 161,
+     "ext": 24.3,
+     "lift_ext": 1.05
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 27.4,
+     "base": 49.4,
+     "lift": 0.55,
+     "n": 95,
+     "ext": 26.9,
+     "lift_ext": 1.02
+    },
+    "2021-26": {
+     "turn": 22.7,
+     "base": 49.8,
+     "lift": 0.46,
+     "n": 66,
+     "ext": 22.7,
+     "lift_ext": 1.0
+    }
+   },
+   {
+    "item": "Open interest down 10%+ in 7 days (2021+)",
+    "all": {
+     "turn": 3.4,
+     "base": 6.7,
+     "lift": 0.51,
+     "n": 59,
+     "ext": 5.2,
+     "lift_ext": 0.66
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2021-26": {
+     "turn": 3.4,
+     "base": 6.7,
+     "lift": 0.51,
+     "n": 59,
+     "ext": 5.2,
+     "lift_ext": 0.66
+    }
+   },
+   {
+    "item": "Funding against the new move over 7 days (2020+)",
+    "all": {
+     "turn": 50.5,
+     "base": 49.7,
+     "lift": 1.02,
+     "n": 105,
+     "ext": 55.6,
+     "lift_ext": 0.91
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 51.3,
+     "base": 48.9,
+     "lift": 1.05,
+     "n": 39,
+     "ext": 71.0,
+     "lift_ext": 0.72
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 49.9,
+     "lift": 1.0,
+     "n": 66,
+     "ext": 51.7,
+     "lift_ext": 0.97
+    }
+   }
+  ],
+  "20": [
+   {
+    "item": "Weekly EMA agrees",
+    "all": {
+     "turn": 49.5,
+     "base": 50.0,
+     "lift": 0.99,
+     "n": 103,
+     "ext": 37.1,
+     "lift_ext": 1.34
+    },
+    "2011-16": {
+     "turn": 48.8,
+     "base": 49.9,
+     "lift": 0.98,
+     "n": 41,
+     "ext": 31.7,
+     "lift_ext": 1.54
+    },
+    "2016-21": {
+     "turn": 50.0,
+     "base": 50.1,
+     "lift": 1.0,
+     "n": 38,
+     "ext": 30.3,
+     "lift_ext": 1.65
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 50.0,
+     "lift": 1.0,
+     "n": 24,
+     "ext": 47.1,
+     "lift_ext": 1.06
+    }
+   },
+   {
+    "item": "Weekly structure agrees",
+    "all": {
+     "turn": 37.9,
+     "base": 49.2,
+     "lift": 0.77,
+     "n": 103,
+     "ext": 39.1,
+     "lift_ext": 0.97
+    },
+    "2011-16": {
+     "turn": 39.0,
+     "base": 45.2,
+     "lift": 0.86,
+     "n": 41,
+     "ext": 27.0,
+     "lift_ext": 1.44
+    },
+    "2016-21": {
+     "turn": 44.7,
+     "base": 50.5,
+     "lift": 0.89,
+     "n": 38,
+     "ext": 33.3,
+     "lift_ext": 1.35
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 51.3,
+     "lift": 0.49,
+     "n": 24,
+     "ext": 53.8,
+     "lift_ext": 0.46
+    }
+   },
+   {
+    "item": "Daily structure agrees",
+    "all": {
+     "turn": 7.8,
+     "base": 54.0,
+     "lift": 0.14,
+     "n": 103,
+     "ext": 14.9,
+     "lift_ext": 0.52
+    },
+    "2011-16": {
+     "turn": 12.2,
+     "base": 53.5,
+     "lift": 0.23,
+     "n": 41,
+     "ext": 13.3,
+     "lift_ext": 0.92
+    },
+    "2016-21": {
+     "turn": 7.9,
+     "base": 53.8,
+     "lift": 0.15,
+     "n": 38,
+     "ext": 13.9,
+     "lift_ext": 0.57
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 54.6,
+     "lift": 0.0,
+     "n": 24,
+     "ext": 17.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, 2x filter",
+    "all": {
+     "turn": 35.9,
+     "base": 15.9,
+     "lift": 2.26,
+     "n": 103,
+     "ext": 22.5,
+     "lift_ext": 1.6
+    },
+    "2011-16": {
+     "turn": 36.6,
+     "base": 15.1,
+     "lift": 2.43,
+     "n": 41,
+     "ext": 16.8,
+     "lift_ext": 2.18
+    },
+    "2016-21": {
+     "turn": 31.6,
+     "base": 16.2,
+     "lift": 1.95,
+     "n": 38,
+     "ext": 21.5,
+     "lift_ext": 1.47
+    },
+    "2021-26": {
+     "turn": 41.7,
+     "base": 16.4,
+     "lift": 2.54,
+     "n": 24,
+     "ext": 28.0,
+     "lift_ext": 1.49
+    }
+   },
+   {
+    "item": "Weekly zone, 2x, first touch",
+    "all": {
+     "turn": 11.7,
+     "base": 0.6,
+     "lift": 20.16,
+     "n": 103,
+     "ext": 2.9,
+     "lift_ext": 4.03
+    },
+    "2011-16": {
+     "turn": 19.5,
+     "base": 0.3,
+     "lift": 60.62,
+     "n": 41,
+     "ext": 1.6,
+     "lift_ext": 11.96
+    },
+    "2016-21": {
+     "turn": 10.5,
+     "base": 0.6,
+     "lift": 17.87,
+     "n": 38,
+     "ext": 2.8,
+     "lift_ext": 3.8
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 0.8,
+     "lift": 0.0,
+     "n": 24,
+     "ext": 4.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, no filter",
+    "all": {
+     "turn": 46.6,
+     "base": 24.7,
+     "lift": 1.89,
+     "n": 103,
+     "ext": 37.0,
+     "lift_ext": 1.26
+    },
+    "2011-16": {
+     "turn": 43.9,
+     "base": 22.1,
+     "lift": 1.99,
+     "n": 41,
+     "ext": 28.0,
+     "lift_ext": 1.57
+    },
+    "2016-21": {
+     "turn": 39.5,
+     "base": 22.1,
+     "lift": 1.79,
+     "n": 38,
+     "ext": 33.7,
+     "lift_ext": 1.17
+    },
+    "2021-26": {
+     "turn": 62.5,
+     "base": 29.0,
+     "lift": 2.16,
+     "n": 24,
+     "ext": 47.1,
+     "lift_ext": 1.33
+    }
+   },
+   {
+    "item": "Weekly zone, no filter, first touch",
+    "all": {
+     "turn": 16.5,
+     "base": 1.3,
+     "lift": 13.16,
+     "n": 103,
+     "ext": 6.1,
+     "lift_ext": 2.69
+    },
+    "2011-16": {
+     "turn": 24.4,
+     "base": 1.0,
+     "lift": 25.26,
+     "n": 41,
+     "ext": 5.1,
+     "lift_ext": 4.76
+    },
+    "2016-21": {
+     "turn": 15.8,
+     "base": 1.2,
+     "lift": 13.4,
+     "n": 38,
+     "ext": 6.0,
+     "lift_ext": 2.63
+    },
+    "2021-26": {
+     "turn": 4.2,
+     "base": 1.5,
+     "lift": 2.69,
+     "n": 24,
+     "ext": 7.1,
+     "lift_ext": 0.59
+    }
+   },
+   {
+    "item": "Daily zone, 2x filter",
+    "all": {
+     "turn": 49.5,
+     "base": 27.4,
+     "lift": 1.81,
+     "n": 103,
+     "ext": 42.1,
+     "lift_ext": 1.18
+    },
+    "2011-16": {
+     "turn": 48.8,
+     "base": 23.7,
+     "lift": 2.06,
+     "n": 41,
+     "ext": 32.6,
+     "lift_ext": 1.49
+    },
+    "2016-21": {
+     "turn": 50.0,
+     "base": 27.2,
+     "lift": 1.84,
+     "n": 38,
+     "ext": 44.3,
+     "lift_ext": 1.13
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 30.5,
+     "lift": 1.64,
+     "n": 24,
+     "ext": 48.1,
+     "lift_ext": 1.04
+    }
+   },
+   {
+    "item": "Daily zone, 2x, first touch",
+    "all": {
+     "turn": 8.7,
+     "base": 1.2,
+     "lift": 7.28,
+     "n": 103,
+     "ext": 3.1,
+     "lift_ext": 2.81
+    },
+    "2011-16": {
+     "turn": 9.8,
+     "base": 0.7,
+     "lift": 13.64,
+     "n": 41,
+     "ext": 1.6,
+     "lift_ext": 5.98
+    },
+    "2016-21": {
+     "turn": 10.5,
+     "base": 1.6,
+     "lift": 6.75,
+     "n": 38,
+     "ext": 3.5,
+     "lift_ext": 3.04
+    },
+    "2021-26": {
+     "turn": 4.2,
+     "base": 1.3,
+     "lift": 3.23,
+     "n": 24,
+     "ext": 4.0,
+     "lift_ext": 1.04
+    }
+   },
+   {
+    "item": "Daily zone, no filter",
+    "all": {
+     "turn": 61.2,
+     "base": 43.6,
+     "lift": 1.4,
+     "n": 103,
+     "ext": 59.2,
+     "lift_ext": 1.03
+    },
+    "2011-16": {
+     "turn": 61.0,
+     "base": 39.2,
+     "lift": 1.56,
+     "n": 41,
+     "ext": 48.0,
+     "lift_ext": 1.27
+    },
+    "2016-21": {
+     "turn": 63.2,
+     "base": 42.4,
+     "lift": 1.49,
+     "n": 38,
+     "ext": 58.7,
+     "lift_ext": 1.08
+    },
+    "2021-26": {
+     "turn": 58.3,
+     "base": 48.1,
+     "lift": 1.21,
+     "n": 24,
+     "ext": 68.8,
+     "lift_ext": 0.85
+    }
+   },
+   {
+    "item": "Daily zone, no filter, first touch",
+    "all": {
+     "turn": 10.7,
+     "base": 2.4,
+     "lift": 4.47,
+     "n": 103,
+     "ext": 5.3,
+     "lift_ext": 2.0
+    },
+    "2011-16": {
+     "turn": 12.2,
+     "base": 2.0,
+     "lift": 6.2,
+     "n": 41,
+     "ext": 4.4,
+     "lift_ext": 2.75
+    },
+    "2016-21": {
+     "turn": 13.2,
+     "base": 2.6,
+     "lift": 5.13,
+     "n": 38,
+     "ext": 5.5,
+     "lift_ext": 2.37
+    },
+    "2021-26": {
+     "turn": 4.2,
+     "base": 2.6,
+     "lift": 1.61,
+     "n": 24,
+     "ext": 5.9,
+     "lift_ext": 0.7
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 10%+ in 7 days",
+    "all": {
+     "turn": 70.9,
+     "base": 8.8,
+     "lift": 8.09,
+     "n": 103,
+     "ext": 34.1,
+     "lift_ext": 2.08
+    },
+    "2011-16": {
+     "turn": 80.5,
+     "base": 9.5,
+     "lift": 8.46,
+     "n": 41,
+     "ext": 35.9,
+     "lift_ext": 2.24
+    },
+    "2016-21": {
+     "turn": 73.7,
+     "base": 11.5,
+     "lift": 6.39,
+     "n": 38,
+     "ext": 45.3,
+     "lift_ext": 1.63
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 5.8,
+     "lift": 8.55,
+     "n": 24,
+     "ext": 23.4,
+     "lift_ext": 2.14
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
+    "all": {
+     "turn": 29.1,
+     "base": 4.9,
+     "lift": 5.95,
+     "n": 103,
+     "ext": 23.3,
+     "lift_ext": 1.25
+    },
+    "2011-16": {
+     "turn": 34.1,
+     "base": 5.2,
+     "lift": 6.63,
+     "n": 41,
+     "ext": 25.4,
+     "lift_ext": 1.34
+    },
+    "2016-21": {
+     "turn": 26.3,
+     "base": 5.5,
+     "lift": 4.78,
+     "n": 38,
+     "ext": 27.3,
+     "lift_ext": 0.97
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 4.2,
+     "lift": 5.97,
+     "n": 24,
+     "ext": 18.4,
+     "lift_ext": 1.36
+    }
+   },
+   {
+    "item": "Extended into the turn: 20%+ in 30 days",
+    "all": {
+     "turn": 56.3,
+     "base": 13.1,
+     "lift": 4.3,
+     "n": 103,
+     "ext": 29.6,
+     "lift_ext": 1.9
+    },
+    "2011-16": {
+     "turn": 70.7,
+     "base": 14.2,
+     "lift": 4.97,
+     "n": 41,
+     "ext": 35.4,
+     "lift_ext": 2.0
+    },
+    "2016-21": {
+     "turn": 55.3,
+     "base": 16.5,
+     "lift": 3.34,
+     "n": 38,
+     "ext": 37.6,
+     "lift_ext": 1.47
+    },
+    "2021-26": {
+     "turn": 33.3,
+     "base": 9.3,
+     "lift": 3.58,
+     "n": 24,
+     "ext": 18.2,
+     "lift_ext": 1.83
+    }
+   },
+   {
+    "item": "Stretched: 20%+ past weekly EMA50",
+    "all": {
+     "turn": 53.4,
+     "base": 29.3,
+     "lift": 1.82,
+     "n": 103,
+     "ext": 47.7,
+     "lift_ext": 1.12
+    },
+    "2011-16": {
+     "turn": 53.7,
+     "base": 33.8,
+     "lift": 1.59,
+     "n": 41,
+     "ext": 59.7,
+     "lift_ext": 0.9
+    },
+    "2016-21": {
+     "turn": 55.3,
+     "base": 31.1,
+     "lift": 1.78,
+     "n": 38,
+     "ext": 54.3,
+     "lift_ext": 1.02
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 24.3,
+     "lift": 2.06,
+     "n": 24,
+     "ext": 32.4,
+     "lift_ext": 1.54
+    }
+   },
+   {
+    "item": "Past weekly EMA200",
+    "all": {
+     "turn": 60.2,
+     "base": 49.4,
+     "lift": 1.22,
+     "n": 103,
+     "ext": 62.1,
+     "lift_ext": 0.97
+    },
+    "2011-16": {
+     "turn": 61.0,
+     "base": 49.3,
+     "lift": 1.24,
+     "n": 41,
+     "ext": 66.9,
+     "lift_ext": 0.91
+    },
+    "2016-21": {
+     "turn": 55.3,
+     "base": 49.6,
+     "lift": 1.11,
+     "n": 38,
+     "ext": 68.6,
+     "lift_ext": 0.81
+    },
+    "2021-26": {
+     "turn": 66.7,
+     "base": 49.3,
+     "lift": 1.35,
+     "n": 24,
+     "ext": 52.7,
+     "lift_ext": 1.27
+    }
+   },
+   {
+    "item": "Wick 40%+ of range (rejection)",
+    "all": {
+     "turn": 25.2,
+     "base": 27.4,
+     "lift": 0.92,
+     "n": 103,
+     "ext": 22.3,
+     "lift_ext": 1.13
+    },
+    "2011-16": {
+     "turn": 24.4,
+     "base": 28.6,
+     "lift": 0.85,
+     "n": 41,
+     "ext": 20.3,
+     "lift_ext": 1.2
+    },
+    "2016-21": {
+     "turn": 26.3,
+     "base": 27.7,
+     "lift": 0.95,
+     "n": 38,
+     "ext": 23.6,
+     "lift_ext": 1.12
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 26.2,
+     "lift": 0.95,
+     "n": 24,
+     "ext": 23.0,
+     "lift_ext": 1.09
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Bitstamp)",
+    "all": {
+     "turn": 50.5,
+     "base": 15.6,
+     "lift": 3.23,
+     "n": 103,
+     "ext": 27.7,
+     "lift_ext": 1.82
+    },
+    "2011-16": {
+     "turn": 63.4,
+     "base": 17.2,
+     "lift": 3.69,
+     "n": 41,
+     "ext": 29.1,
+     "lift_ext": 2.18
+    },
+    "2016-21": {
+     "turn": 42.1,
+     "base": 14.2,
+     "lift": 2.96,
+     "n": 38,
+     "ext": 25.4,
+     "lift_ext": 1.66
+    },
+    "2021-26": {
+     "turn": 41.7,
+     "base": 15.5,
+     "lift": 2.69,
+     "n": 24,
+     "ext": 28.4,
+     "lift_ext": 1.47
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Binance, 2017+)",
+    "all": {
+     "turn": 32.7,
+     "base": 12.2,
+     "lift": 2.69,
+     "n": 55,
+     "ext": 22.2,
+     "lift_ext": 1.48
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 25.8,
+     "base": 11.6,
+     "lift": 2.22,
+     "n": 31,
+     "ext": 19.8,
+     "lift_ext": 1.3
+    },
+    "2021-26": {
+     "turn": 41.7,
+     "base": 12.5,
+     "lift": 3.33,
+     "n": 24,
+     "ext": 23.7,
+     "lift_ext": 1.76
+    }
+   },
+   {
+    "item": "Buy/sell share already favours the new move (Binance)",
+    "all": {
+     "turn": 29.1,
+     "base": 49.6,
+     "lift": 0.59,
+     "n": 55,
+     "ext": 24.3,
+     "lift_ext": 1.2
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 35.5,
+     "base": 49.4,
+     "lift": 0.72,
+     "n": 31,
+     "ext": 26.9,
+     "lift_ext": 1.32
+    },
+    "2021-26": {
+     "turn": 20.8,
+     "base": 49.8,
+     "lift": 0.42,
+     "n": 24,
+     "ext": 22.7,
+     "lift_ext": 0.92
+    }
+   },
+   {
+    "item": "Open interest down 10%+ in 7 days (2021+)",
+    "all": {
+     "turn": 5.0,
+     "base": 6.7,
+     "lift": 0.75,
+     "n": 20,
+     "ext": 5.2,
+     "lift_ext": 0.97
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2021-26": {
+     "turn": 5.0,
+     "base": 6.7,
+     "lift": 0.75,
+     "n": 20,
+     "ext": 5.2,
+     "lift_ext": 0.97
+    }
+   },
+   {
+    "item": "Funding against the new move over 7 days (2020+)",
+    "all": {
+     "turn": 57.1,
+     "base": 49.7,
+     "lift": 1.15,
+     "n": 35,
+     "ext": 55.6,
+     "lift_ext": 1.03
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 54.5,
+     "base": 48.9,
+     "lift": 1.12,
+     "n": 11,
+     "ext": 71.0,
+     "lift_ext": 0.77
+    },
+    "2021-26": {
+     "turn": 58.3,
+     "base": 49.9,
+     "lift": 1.17,
+     "n": 24,
+     "ext": 51.7,
+     "lift_ext": 1.13
+    }
+   }
+  ],
+  "30": [
+   {
+    "item": "Weekly EMA agrees",
+    "all": {
+     "turn": 49.1,
+     "base": 50.0,
+     "lift": 0.98,
+     "n": 53,
+     "ext": 37.1,
+     "lift_ext": 1.32
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 49.9,
+     "lift": 1.0,
+     "n": 24,
+     "ext": 31.7,
+     "lift_ext": 1.58
+    },
+    "2016-21": {
+     "turn": 47.6,
+     "base": 50.1,
+     "lift": 0.95,
+     "n": 21,
+     "ext": 30.3,
+     "lift_ext": 1.57
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 50.0,
+     "lift": 1.0,
+     "n": 8,
+     "ext": 47.1,
+     "lift_ext": 1.06
+    }
+   },
+   {
+    "item": "Weekly structure agrees",
+    "all": {
+     "turn": 34.0,
+     "base": 49.2,
+     "lift": 0.69,
+     "n": 53,
+     "ext": 39.1,
+     "lift_ext": 0.87
+    },
+    "2011-16": {
+     "turn": 37.5,
+     "base": 45.2,
+     "lift": 0.83,
+     "n": 24,
+     "ext": 27.0,
+     "lift_ext": 1.39
+    },
+    "2016-21": {
+     "turn": 38.1,
+     "base": 50.5,
+     "lift": 0.75,
+     "n": 21,
+     "ext": 33.3,
+     "lift_ext": 1.15
+    },
+    "2021-26": {
+     "turn": 12.5,
+     "base": 51.3,
+     "lift": 0.24,
+     "n": 8,
+     "ext": 53.8,
+     "lift_ext": 0.23
+    }
+   },
+   {
+    "item": "Daily structure agrees",
+    "all": {
+     "turn": 7.5,
+     "base": 54.0,
+     "lift": 0.14,
+     "n": 53,
+     "ext": 14.9,
+     "lift_ext": 0.51
+    },
+    "2011-16": {
+     "turn": 12.5,
+     "base": 53.5,
+     "lift": 0.23,
+     "n": 24,
+     "ext": 13.3,
+     "lift_ext": 0.94
+    },
+    "2016-21": {
+     "turn": 4.8,
+     "base": 53.8,
+     "lift": 0.09,
+     "n": 21,
+     "ext": 13.9,
+     "lift_ext": 0.34
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 54.6,
+     "lift": 0.0,
+     "n": 8,
+     "ext": 17.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, 2x filter",
+    "all": {
+     "turn": 28.3,
+     "base": 15.9,
+     "lift": 1.78,
+     "n": 53,
+     "ext": 22.5,
+     "lift_ext": 1.26
+    },
+    "2011-16": {
+     "turn": 37.5,
+     "base": 15.1,
+     "lift": 2.49,
+     "n": 24,
+     "ext": 16.8,
+     "lift_ext": 2.23
+    },
+    "2016-21": {
+     "turn": 28.6,
+     "base": 16.2,
+     "lift": 1.77,
+     "n": 21,
+     "ext": 21.5,
+     "lift_ext": 1.33
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 16.4,
+     "lift": 0.0,
+     "n": 8,
+     "ext": 28.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, 2x, first touch",
+    "all": {
+     "turn": 13.2,
+     "base": 0.6,
+     "lift": 22.85,
+     "n": 53,
+     "ext": 2.9,
+     "lift_ext": 4.57
+    },
+    "2011-16": {
+     "turn": 20.8,
+     "base": 0.3,
+     "lift": 64.72,
+     "n": 24,
+     "ext": 1.6,
+     "lift_ext": 12.77
+    },
+    "2016-21": {
+     "turn": 9.5,
+     "base": 0.6,
+     "lift": 16.17,
+     "n": 21,
+     "ext": 2.8,
+     "lift_ext": 3.44
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 0.8,
+     "lift": 0.0,
+     "n": 8,
+     "ext": 4.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, no filter",
+    "all": {
+     "turn": 39.6,
+     "base": 24.7,
+     "lift": 1.6,
+     "n": 53,
+     "ext": 37.0,
+     "lift_ext": 1.07
+    },
+    "2011-16": {
+     "turn": 41.7,
+     "base": 22.1,
+     "lift": 1.89,
+     "n": 24,
+     "ext": 28.0,
+     "lift_ext": 1.49
+    },
+    "2016-21": {
+     "turn": 38.1,
+     "base": 22.1,
+     "lift": 1.72,
+     "n": 21,
+     "ext": 33.7,
+     "lift_ext": 1.13
+    },
+    "2021-26": {
+     "turn": 37.5,
+     "base": 29.0,
+     "lift": 1.29,
+     "n": 8,
+     "ext": 47.1,
+     "lift_ext": 0.8
+    }
+   },
+   {
+    "item": "Weekly zone, no filter, first touch",
+    "all": {
+     "turn": 18.9,
+     "base": 1.3,
+     "lift": 15.05,
+     "n": 53,
+     "ext": 6.1,
+     "lift_ext": 3.07
+    },
+    "2011-16": {
+     "turn": 20.8,
+     "base": 1.0,
+     "lift": 21.57,
+     "n": 24,
+     "ext": 5.1,
+     "lift_ext": 4.06
+    },
+    "2016-21": {
+     "turn": 19.0,
+     "base": 1.2,
+     "lift": 16.17,
+     "n": 21,
+     "ext": 6.0,
+     "lift_ext": 3.17
+    },
+    "2021-26": {
+     "turn": 12.5,
+     "base": 1.5,
+     "lift": 8.07,
+     "n": 8,
+     "ext": 7.1,
+     "lift_ext": 1.76
+    }
+   },
+   {
+    "item": "Daily zone, 2x filter",
+    "all": {
+     "turn": 47.2,
+     "base": 27.4,
+     "lift": 1.72,
+     "n": 53,
+     "ext": 42.1,
+     "lift_ext": 1.12
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 23.7,
+     "lift": 2.11,
+     "n": 24,
+     "ext": 32.6,
+     "lift_ext": 1.53
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 27.2,
+     "lift": 1.58,
+     "n": 21,
+     "ext": 44.3,
+     "lift_ext": 0.97
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 30.5,
+     "lift": 1.64,
+     "n": 8,
+     "ext": 48.1,
+     "lift_ext": 1.04
+    }
+   },
+   {
+    "item": "Daily zone, 2x, first touch",
+    "all": {
+     "turn": 5.7,
+     "base": 1.2,
+     "lift": 4.72,
+     "n": 53,
+     "ext": 3.1,
+     "lift_ext": 1.82
+    },
+    "2011-16": {
+     "turn": 4.2,
+     "base": 0.7,
+     "lift": 5.82,
+     "n": 24,
+     "ext": 1.6,
+     "lift_ext": 2.55
+    },
+    "2016-21": {
+     "turn": 9.5,
+     "base": 1.6,
+     "lift": 6.11,
+     "n": 21,
+     "ext": 3.5,
+     "lift_ext": 2.75
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 1.3,
+     "lift": 0.0,
+     "n": 8,
+     "ext": 4.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Daily zone, no filter",
+    "all": {
+     "turn": 58.5,
+     "base": 43.6,
+     "lift": 1.34,
+     "n": 53,
+     "ext": 59.2,
+     "lift_ext": 0.99
+    },
+    "2011-16": {
+     "turn": 54.2,
+     "base": 39.2,
+     "lift": 1.38,
+     "n": 24,
+     "ext": 48.0,
+     "lift_ext": 1.13
+    },
+    "2016-21": {
+     "turn": 61.9,
+     "base": 42.4,
+     "lift": 1.46,
+     "n": 21,
+     "ext": 58.7,
+     "lift_ext": 1.06
+    },
+    "2021-26": {
+     "turn": 62.5,
+     "base": 48.1,
+     "lift": 1.3,
+     "n": 8,
+     "ext": 68.8,
+     "lift_ext": 0.91
+    }
+   },
+   {
+    "item": "Daily zone, no filter, first touch",
+    "all": {
+     "turn": 7.5,
+     "base": 2.4,
+     "lift": 3.16,
+     "n": 53,
+     "ext": 5.3,
+     "lift_ext": 1.41
+    },
+    "2011-16": {
+     "turn": 4.2,
+     "base": 2.0,
+     "lift": 2.12,
+     "n": 24,
+     "ext": 4.4,
+     "lift_ext": 0.94
+    },
+    "2016-21": {
+     "turn": 14.3,
+     "base": 2.6,
+     "lift": 5.57,
+     "n": 21,
+     "ext": 5.5,
+     "lift_ext": 2.58
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 2.6,
+     "lift": 0.0,
+     "n": 8,
+     "ext": 5.9,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 10%+ in 7 days",
+    "all": {
+     "turn": 75.5,
+     "base": 8.8,
+     "lift": 8.62,
+     "n": 53,
+     "ext": 34.1,
+     "lift_ext": 2.21
+    },
+    "2011-16": {
+     "turn": 83.3,
+     "base": 9.5,
+     "lift": 8.76,
+     "n": 24,
+     "ext": 35.9,
+     "lift_ext": 2.32
+    },
+    "2016-21": {
+     "turn": 71.4,
+     "base": 11.5,
+     "lift": 6.19,
+     "n": 21,
+     "ext": 45.3,
+     "lift_ext": 1.58
+    },
+    "2021-26": {
+     "turn": 62.5,
+     "base": 5.8,
+     "lift": 10.69,
+     "n": 8,
+     "ext": 23.4,
+     "lift_ext": 2.67
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
+    "all": {
+     "turn": 35.8,
+     "base": 4.9,
+     "lift": 7.32,
+     "n": 53,
+     "ext": 23.3,
+     "lift_ext": 1.54
+    },
+    "2011-16": {
+     "turn": 33.3,
+     "base": 5.2,
+     "lift": 6.47,
+     "n": 24,
+     "ext": 25.4,
+     "lift_ext": 1.31
+    },
+    "2016-21": {
+     "turn": 33.3,
+     "base": 5.5,
+     "lift": 6.05,
+     "n": 21,
+     "ext": 27.3,
+     "lift_ext": 1.22
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 4.2,
+     "lift": 11.95,
+     "n": 8,
+     "ext": 18.4,
+     "lift_ext": 2.72
+    }
+   },
+   {
+    "item": "Extended into the turn: 20%+ in 30 days",
+    "all": {
+     "turn": 71.7,
+     "base": 13.1,
+     "lift": 5.48,
+     "n": 53,
+     "ext": 29.6,
+     "lift_ext": 2.42
+    },
+    "2011-16": {
+     "turn": 75.0,
+     "base": 14.2,
+     "lift": 5.27,
+     "n": 24,
+     "ext": 35.4,
+     "lift_ext": 2.12
+    },
+    "2016-21": {
+     "turn": 76.2,
+     "base": 16.5,
+     "lift": 4.61,
+     "n": 21,
+     "ext": 37.6,
+     "lift_ext": 2.02
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 9.3,
+     "lift": 5.37,
+     "n": 8,
+     "ext": 18.2,
+     "lift_ext": 2.75
+    }
+   },
+   {
+    "item": "Stretched: 20%+ past weekly EMA50",
+    "all": {
+     "turn": 58.5,
+     "base": 29.3,
+     "lift": 1.99,
+     "n": 53,
+     "ext": 47.7,
+     "lift_ext": 1.23
+    },
+    "2011-16": {
+     "turn": 54.2,
+     "base": 33.8,
+     "lift": 1.6,
+     "n": 24,
+     "ext": 59.7,
+     "lift_ext": 0.91
+    },
+    "2016-21": {
+     "turn": 61.9,
+     "base": 31.1,
+     "lift": 1.99,
+     "n": 21,
+     "ext": 54.3,
+     "lift_ext": 1.14
+    },
+    "2021-26": {
+     "turn": 62.5,
+     "base": 24.3,
+     "lift": 2.57,
+     "n": 8,
+     "ext": 32.4,
+     "lift_ext": 1.93
+    }
+   },
+   {
+    "item": "Past weekly EMA200",
+    "all": {
+     "turn": 62.3,
+     "base": 49.4,
+     "lift": 1.26,
+     "n": 53,
+     "ext": 62.1,
+     "lift_ext": 1.0
+    },
+    "2011-16": {
+     "turn": 58.3,
+     "base": 49.3,
+     "lift": 1.18,
+     "n": 24,
+     "ext": 66.9,
+     "lift_ext": 0.87
+    },
+    "2016-21": {
+     "turn": 61.9,
+     "base": 49.6,
+     "lift": 1.25,
+     "n": 21,
+     "ext": 68.6,
+     "lift_ext": 0.9
+    },
+    "2021-26": {
+     "turn": 75.0,
+     "base": 49.3,
+     "lift": 1.52,
+     "n": 8,
+     "ext": 52.7,
+     "lift_ext": 1.42
+    }
+   },
+   {
+    "item": "Wick 40%+ of range (rejection)",
+    "all": {
+     "turn": 24.5,
+     "base": 27.4,
+     "lift": 0.89,
+     "n": 53,
+     "ext": 22.3,
+     "lift_ext": 1.1
+    },
+    "2011-16": {
+     "turn": 29.2,
+     "base": 28.6,
+     "lift": 1.02,
+     "n": 24,
+     "ext": 20.3,
+     "lift_ext": 1.44
+    },
+    "2016-21": {
+     "turn": 19.0,
+     "base": 27.7,
+     "lift": 0.69,
+     "n": 21,
+     "ext": 23.6,
+     "lift_ext": 0.81
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 26.2,
+     "lift": 0.95,
+     "n": 8,
+     "ext": 23.0,
+     "lift_ext": 1.09
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Bitstamp)",
+    "all": {
+     "turn": 54.7,
+     "base": 15.6,
+     "lift": 3.5,
+     "n": 53,
+     "ext": 27.7,
+     "lift_ext": 1.98
+    },
+    "2011-16": {
+     "turn": 66.7,
+     "base": 17.2,
+     "lift": 3.88,
+     "n": 24,
+     "ext": 29.1,
+     "lift_ext": 2.29
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 14.2,
+     "lift": 3.01,
+     "n": 21,
+     "ext": 25.4,
+     "lift_ext": 1.69
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 15.5,
+     "lift": 3.22,
+     "n": 8,
+     "ext": 28.4,
+     "lift_ext": 1.76
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Binance, 2017+)",
+    "all": {
+     "turn": 32.0,
+     "base": 12.2,
+     "lift": 2.63,
+     "n": 25,
+     "ext": 22.2,
+     "lift_ext": 1.44
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 29.4,
+     "base": 11.6,
+     "lift": 2.53,
+     "n": 17,
+     "ext": 19.8,
+     "lift_ext": 1.48
+    },
+    "2021-26": {
+     "turn": 37.5,
+     "base": 12.5,
+     "lift": 3.0,
+     "n": 8,
+     "ext": 23.7,
+     "lift_ext": 1.58
+    }
+   },
+   {
+    "item": "Buy/sell share already favours the new move (Binance)",
+    "all": {
+     "turn": 32.0,
+     "base": 49.6,
+     "lift": 0.64,
+     "n": 25,
+     "ext": 24.3,
+     "lift_ext": 1.31
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 41.2,
+     "base": 49.4,
+     "lift": 0.83,
+     "n": 17,
+     "ext": 26.9,
+     "lift_ext": 1.53
+    },
+    "2021-26": {
+     "turn": 12.5,
+     "base": 49.8,
+     "lift": 0.25,
+     "n": 8,
+     "ext": 22.7,
+     "lift_ext": 0.55
+    }
+   },
+   {
+    "item": "Open interest down 10%+ in 7 days (2021+)",
+    "all": {
+     "turn": 16.7,
+     "base": 6.7,
+     "lift": 2.49,
+     "n": 6,
+     "ext": 5.2,
+     "lift_ext": 3.23
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2021-26": {
+     "turn": 16.7,
+     "base": 6.7,
+     "lift": 2.49,
+     "n": 6,
+     "ext": 5.2,
+     "lift_ext": 3.23
+    }
+   },
+   {
+    "item": "Funding against the new move over 7 days (2020+)",
+    "all": {
+     "turn": 72.7,
+     "base": 49.7,
+     "lift": 1.46,
+     "n": 11,
+     "ext": 55.6,
+     "lift_ext": 1.31
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 66.7,
+     "base": 48.9,
+     "lift": 1.36,
+     "n": 3,
+     "ext": 71.0,
+     "lift_ext": 0.94
+    },
+    "2021-26": {
+     "turn": 75.0,
+     "base": 49.9,
+     "lift": 1.5,
+     "n": 8,
+     "ext": 51.7,
+     "lift_ext": 1.45
+    }
+   }
+  ],
+  "50": [
+   {
+    "item": "Weekly EMA agrees",
+    "all": {
+     "turn": 47.6,
+     "base": 50.0,
+     "lift": 0.95,
+     "n": 21,
+     "ext": 37.1,
+     "lift_ext": 1.28
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 49.9,
+     "lift": 1.0,
+     "n": 10,
+     "ext": 31.7,
+     "lift_ext": 1.58
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 50.1,
+     "lift": 0.85,
+     "n": 7,
+     "ext": 30.3,
+     "lift_ext": 1.42
+    },
+    "2021-26": {
+     "turn": 50.0,
+     "base": 50.0,
+     "lift": 1.0,
+     "n": 4,
+     "ext": 47.1,
+     "lift_ext": 1.06
+    }
+   },
+   {
+    "item": "Weekly structure agrees",
+    "all": {
+     "turn": 23.8,
+     "base": 49.2,
+     "lift": 0.48,
+     "n": 21,
+     "ext": 39.1,
+     "lift_ext": 0.61
+    },
+    "2011-16": {
+     "turn": 30.0,
+     "base": 45.2,
+     "lift": 0.66,
+     "n": 10,
+     "ext": 27.0,
+     "lift_ext": 1.11
+    },
+    "2016-21": {
+     "turn": 14.3,
+     "base": 50.5,
+     "lift": 0.28,
+     "n": 7,
+     "ext": 33.3,
+     "lift_ext": 0.43
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 51.3,
+     "lift": 0.49,
+     "n": 4,
+     "ext": 53.8,
+     "lift_ext": 0.46
+    }
+   },
+   {
+    "item": "Daily structure agrees",
+    "all": {
+     "turn": 4.8,
+     "base": 54.0,
+     "lift": 0.09,
+     "n": 21,
+     "ext": 14.9,
+     "lift_ext": 0.32
+    },
+    "2011-16": {
+     "turn": 10.0,
+     "base": 53.5,
+     "lift": 0.19,
+     "n": 10,
+     "ext": 13.3,
+     "lift_ext": 0.75
+    },
+    "2016-21": {
+     "turn": 0.0,
+     "base": 53.8,
+     "lift": 0.0,
+     "n": 7,
+     "ext": 13.9,
+     "lift_ext": 0.0
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 54.6,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 17.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, 2x filter",
+    "all": {
+     "turn": 33.3,
+     "base": 15.9,
+     "lift": 2.09,
+     "n": 21,
+     "ext": 22.5,
+     "lift_ext": 1.48
+    },
+    "2011-16": {
+     "turn": 40.0,
+     "base": 15.1,
+     "lift": 2.66,
+     "n": 10,
+     "ext": 16.8,
+     "lift_ext": 2.38
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 16.2,
+     "lift": 2.65,
+     "n": 7,
+     "ext": 21.5,
+     "lift_ext": 2.0
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 16.4,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 28.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, 2x, first touch",
+    "all": {
+     "turn": 14.3,
+     "base": 0.6,
+     "lift": 24.72,
+     "n": 21,
+     "ext": 2.9,
+     "lift_ext": 4.94
+    },
+    "2011-16": {
+     "turn": 10.0,
+     "base": 0.3,
+     "lift": 31.07,
+     "n": 10,
+     "ext": 1.6,
+     "lift_ext": 6.13
+    },
+    "2016-21": {
+     "turn": 28.6,
+     "base": 0.6,
+     "lift": 48.5,
+     "n": 7,
+     "ext": 2.8,
+     "lift_ext": 10.31
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 0.8,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 4.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, no filter",
+    "all": {
+     "turn": 38.1,
+     "base": 24.7,
+     "lift": 1.54,
+     "n": 21,
+     "ext": 37.0,
+     "lift_ext": 1.03
+    },
+    "2011-16": {
+     "turn": 40.0,
+     "base": 22.1,
+     "lift": 1.81,
+     "n": 10,
+     "ext": 28.0,
+     "lift_ext": 1.43
+    },
+    "2016-21": {
+     "turn": 57.1,
+     "base": 22.1,
+     "lift": 2.58,
+     "n": 7,
+     "ext": 33.7,
+     "lift_ext": 1.69
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 29.0,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 47.1,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Weekly zone, no filter, first touch",
+    "all": {
+     "turn": 19.0,
+     "base": 1.3,
+     "lift": 15.19,
+     "n": 21,
+     "ext": 6.1,
+     "lift_ext": 3.1
+    },
+    "2011-16": {
+     "turn": 10.0,
+     "base": 1.0,
+     "lift": 10.36,
+     "n": 10,
+     "ext": 5.1,
+     "lift_ext": 1.95
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 1.2,
+     "lift": 36.38,
+     "n": 7,
+     "ext": 6.0,
+     "lift_ext": 7.14
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 1.5,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 7.1,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Daily zone, 2x filter",
+    "all": {
+     "turn": 52.4,
+     "base": 27.4,
+     "lift": 1.91,
+     "n": 21,
+     "ext": 42.1,
+     "lift_ext": 1.24
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 23.7,
+     "lift": 2.11,
+     "n": 10,
+     "ext": 32.6,
+     "lift_ext": 1.53
+    },
+    "2016-21": {
+     "turn": 71.4,
+     "base": 27.2,
+     "lift": 2.63,
+     "n": 7,
+     "ext": 44.3,
+     "lift_ext": 1.61
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 30.5,
+     "lift": 0.82,
+     "n": 4,
+     "ext": 48.1,
+     "lift_ext": 0.52
+    }
+   },
+   {
+    "item": "Daily zone, 2x, first touch",
+    "all": {
+     "turn": 4.8,
+     "base": 1.2,
+     "lift": 3.97,
+     "n": 21,
+     "ext": 3.1,
+     "lift_ext": 1.53
+    },
+    "2011-16": {
+     "turn": 0.0,
+     "base": 0.7,
+     "lift": 0.0,
+     "n": 10,
+     "ext": 1.6,
+     "lift_ext": 0.0
+    },
+    "2016-21": {
+     "turn": 14.3,
+     "base": 1.6,
+     "lift": 9.16,
+     "n": 7,
+     "ext": 3.5,
+     "lift_ext": 4.12
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 1.3,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 4.0,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Daily zone, no filter",
+    "all": {
+     "turn": 52.4,
+     "base": 43.6,
+     "lift": 1.2,
+     "n": 21,
+     "ext": 59.2,
+     "lift_ext": 0.89
+    },
+    "2011-16": {
+     "turn": 50.0,
+     "base": 39.2,
+     "lift": 1.28,
+     "n": 10,
+     "ext": 48.0,
+     "lift_ext": 1.04
+    },
+    "2016-21": {
+     "turn": 71.4,
+     "base": 42.4,
+     "lift": 1.68,
+     "n": 7,
+     "ext": 58.7,
+     "lift_ext": 1.22
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 48.1,
+     "lift": 0.52,
+     "n": 4,
+     "ext": 68.8,
+     "lift_ext": 0.36
+    }
+   },
+   {
+    "item": "Daily zone, no filter, first touch",
+    "all": {
+     "turn": 4.8,
+     "base": 2.4,
+     "lift": 1.99,
+     "n": 21,
+     "ext": 5.3,
+     "lift_ext": 0.89
+    },
+    "2011-16": {
+     "turn": 0.0,
+     "base": 2.0,
+     "lift": 0.0,
+     "n": 10,
+     "ext": 4.4,
+     "lift_ext": 0.0
+    },
+    "2016-21": {
+     "turn": 14.3,
+     "base": 2.6,
+     "lift": 5.57,
+     "n": 7,
+     "ext": 5.5,
+     "lift_ext": 2.58
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 2.6,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 5.9,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 10%+ in 7 days",
+    "all": {
+     "turn": 76.2,
+     "base": 8.8,
+     "lift": 8.7,
+     "n": 21,
+     "ext": 34.1,
+     "lift_ext": 2.23
+    },
+    "2011-16": {
+     "turn": 100.0,
+     "base": 9.5,
+     "lift": 10.51,
+     "n": 10,
+     "ext": 35.9,
+     "lift_ext": 2.79
+    },
+    "2016-21": {
+     "turn": 71.4,
+     "base": 11.5,
+     "lift": 6.19,
+     "n": 7,
+     "ext": 45.3,
+     "lift_ext": 1.58
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 5.8,
+     "lift": 4.27,
+     "n": 4,
+     "ext": 23.4,
+     "lift_ext": 1.07
+    }
+   },
+   {
+    "item": "Sharp move into the turn: 3+ daily ranges in 7 days",
+    "all": {
+     "turn": 38.1,
+     "base": 4.9,
+     "lift": 7.78,
+     "n": 21,
+     "ext": 23.3,
+     "lift_ext": 1.63
+    },
+    "2011-16": {
+     "turn": 40.0,
+     "base": 5.2,
+     "lift": 7.77,
+     "n": 10,
+     "ext": 25.4,
+     "lift_ext": 1.57
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 5.5,
+     "lift": 7.78,
+     "n": 7,
+     "ext": 27.3,
+     "lift_ext": 1.57
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 4.2,
+     "lift": 5.97,
+     "n": 4,
+     "ext": 18.4,
+     "lift_ext": 1.36
+    }
+   },
+   {
+    "item": "Extended into the turn: 20%+ in 30 days",
+    "all": {
+     "turn": 76.2,
+     "base": 13.1,
+     "lift": 5.82,
+     "n": 21,
+     "ext": 29.6,
+     "lift_ext": 2.57
+    },
+    "2011-16": {
+     "turn": 90.0,
+     "base": 14.2,
+     "lift": 6.32,
+     "n": 10,
+     "ext": 35.4,
+     "lift_ext": 2.54
+    },
+    "2016-21": {
+     "turn": 85.7,
+     "base": 16.5,
+     "lift": 5.19,
+     "n": 7,
+     "ext": 37.6,
+     "lift_ext": 2.28
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 9.3,
+     "lift": 2.68,
+     "n": 4,
+     "ext": 18.2,
+     "lift_ext": 1.37
+    }
+   },
+   {
+    "item": "Stretched: 20%+ past weekly EMA50",
+    "all": {
+     "turn": 71.4,
+     "base": 29.3,
+     "lift": 2.43,
+     "n": 21,
+     "ext": 47.7,
+     "lift_ext": 1.5
+    },
+    "2011-16": {
+     "turn": 60.0,
+     "base": 33.8,
+     "lift": 1.77,
+     "n": 10,
+     "ext": 59.7,
+     "lift_ext": 1.01
+    },
+    "2016-21": {
+     "turn": 85.7,
+     "base": 31.1,
+     "lift": 2.76,
+     "n": 7,
+     "ext": 54.3,
+     "lift_ext": 1.58
+    },
+    "2021-26": {
+     "turn": 75.0,
+     "base": 24.3,
+     "lift": 3.09,
+     "n": 4,
+     "ext": 32.4,
+     "lift_ext": 2.32
+    }
+   },
+   {
+    "item": "Past weekly EMA200",
+    "all": {
+     "turn": 71.4,
+     "base": 49.4,
+     "lift": 1.45,
+     "n": 21,
+     "ext": 62.1,
+     "lift_ext": 1.15
+    },
+    "2011-16": {
+     "turn": 60.0,
+     "base": 49.3,
+     "lift": 1.22,
+     "n": 10,
+     "ext": 66.9,
+     "lift_ext": 0.9
+    },
+    "2016-21": {
+     "turn": 85.7,
+     "base": 49.6,
+     "lift": 1.73,
+     "n": 7,
+     "ext": 68.6,
+     "lift_ext": 1.25
+    },
+    "2021-26": {
+     "turn": 75.0,
+     "base": 49.3,
+     "lift": 1.52,
+     "n": 4,
+     "ext": 52.7,
+     "lift_ext": 1.42
+    }
+   },
+   {
+    "item": "Wick 40%+ of range (rejection)",
+    "all": {
+     "turn": 33.3,
+     "base": 27.4,
+     "lift": 1.22,
+     "n": 21,
+     "ext": 22.3,
+     "lift_ext": 1.49
+    },
+    "2011-16": {
+     "turn": 40.0,
+     "base": 28.6,
+     "lift": 1.4,
+     "n": 10,
+     "ext": 20.3,
+     "lift_ext": 1.97
+    },
+    "2016-21": {
+     "turn": 28.6,
+     "base": 27.7,
+     "lift": 1.03,
+     "n": 7,
+     "ext": 23.6,
+     "lift_ext": 1.21
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 26.2,
+     "lift": 0.95,
+     "n": 4,
+     "ext": 23.0,
+     "lift_ext": 1.09
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Bitstamp)",
+    "all": {
+     "turn": 52.4,
+     "base": 15.6,
+     "lift": 3.35,
+     "n": 21,
+     "ext": 27.7,
+     "lift_ext": 1.89
+    },
+    "2011-16": {
+     "turn": 60.0,
+     "base": 17.2,
+     "lift": 3.49,
+     "n": 10,
+     "ext": 29.1,
+     "lift_ext": 2.06
+    },
+    "2016-21": {
+     "turn": 57.1,
+     "base": 14.2,
+     "lift": 4.01,
+     "n": 7,
+     "ext": 25.4,
+     "lift_ext": 2.25
+    },
+    "2021-26": {
+     "turn": 25.0,
+     "base": 15.5,
+     "lift": 1.61,
+     "n": 4,
+     "ext": 28.4,
+     "lift_ext": 0.88
+    }
+   },
+   {
+    "item": "Volume 1.5x+ (Binance, 2017+)",
+    "all": {
+     "turn": 27.3,
+     "base": 12.2,
+     "lift": 2.24,
+     "n": 11,
+     "ext": 22.2,
+     "lift_ext": 1.23
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 11.6,
+     "lift": 3.68,
+     "n": 7,
+     "ext": 19.8,
+     "lift_ext": 2.16
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 12.5,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 23.7,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Buy/sell share already favours the new move (Binance)",
+    "all": {
+     "turn": 27.3,
+     "base": 49.6,
+     "lift": 0.55,
+     "n": 11,
+     "ext": 24.3,
+     "lift_ext": 1.12
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 42.9,
+     "base": 49.4,
+     "lift": 0.87,
+     "n": 7,
+     "ext": 26.9,
+     "lift_ext": 1.59
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 49.8,
+     "lift": 0.0,
+     "n": 4,
+     "ext": 22.7,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Open interest down 10%+ in 7 days (2021+)",
+    "all": {
+     "turn": 0.0,
+     "base": 6.7,
+     "lift": 0.0,
+     "n": 2,
+     "ext": 5.2,
+     "lift_ext": 0.0
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2021-26": {
+     "turn": 0.0,
+     "base": 6.7,
+     "lift": 0.0,
+     "n": 2,
+     "ext": 5.2,
+     "lift_ext": 0.0
+    }
+   },
+   {
+    "item": "Funding against the new move over 7 days (2020+)",
+    "all": {
+     "turn": 83.3,
+     "base": 49.7,
+     "lift": 1.68,
+     "n": 6,
+     "ext": 55.6,
+     "lift_ext": 1.5
+    },
+    "2011-16": {
+     "turn": null,
+     "base": null,
+     "lift": null,
+     "n": 0,
+     "ext": null,
+     "lift_ext": null
+    },
+    "2016-21": {
+     "turn": 50.0,
+     "base": 48.9,
+     "lift": 1.02,
+     "n": 2,
+     "ext": 71.0,
+     "lift_ext": 0.7
+    },
+    "2021-26": {
+     "turn": 100.0,
+     "base": 49.9,
+     "lift": 2.0,
+     "n": 4,
+     "ext": 51.7,
+     "lift_ext": 1.94
+    }
+   }
+  ]
+ },
+ "combos": {
+  "10": [
+   {
+    "setup": "Sharp move",
+    "turns": 18,
+    "share": 6.8,
+    "ordinary_days": 112,
+    "turns_per_100_days": 13.8,
+    "eras": {
+     "2011-16": 9,
+     "2016-21": 6,
+     "2021-26": 3
+    }
+   },
+   {
+    "setup": "(none)",
+    "turns": 15,
+    "share": 5.7,
+    "ordinary_days": 131,
+    "turns_per_100_days": 10.3,
+    "eras": {
+     "2011-16": 7,
+     "2016-21": 8,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Volume",
+    "turns": 10,
+    "share": 3.8,
+    "ordinary_days": 38,
+    "turns_per_100_days": 20.8,
+    "eras": {
+     "2011-16": 6,
+     "2016-21": 2,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "Daily zone",
+    "turns": 9,
+    "share": 3.4,
+    "ordinary_days": 80,
+    "turns_per_100_days": 10.1,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 5,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "Sharp move + Volume",
+    "turns": 9,
+    "share": 3.4,
+    "ordinary_days": 48,
+    "turns_per_100_days": 15.8,
+    "eras": {
+     "2011-16": 6,
+     "2016-21": 3,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Sharp move",
+    "turns": 7,
+    "share": 2.6,
+    "ordinary_days": 14,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Volume",
+    "turns": 6,
+    "share": 2.3,
+    "ordinary_days": 23,
+    "turns_per_100_days": 20.7,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 4
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 6,
+    "share": 2.3,
+    "ordinary_days": 6,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 6,
+    "share": 2.3,
+    "ordinary_days": 13,
+    "turns_per_100_days": 31.6,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 3,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move + Volume",
+    "turns": 6,
+    "share": 2.3,
+    "ordinary_days": 8,
+    "turns_per_100_days": 42.9,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 3
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone",
+    "turns": 6,
+    "share": 2.3,
+    "ordinary_days": 10,
+    "turns_per_100_days": 37.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 3
+    }
+   },
+   {
+    "setup": "EMA",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 29,
+    "turns_per_100_days": 14.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 38.5,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 0,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Daily zone",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 19,
+    "turns_per_100_days": 20.8,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 3,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 29,
+    "turns_per_100_days": 14.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 4,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 39,
+    "turns_per_100_days": 11.4,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "Structure",
+    "turns": 5,
+    "share": 1.9,
+    "ordinary_days": 53,
+    "turns_per_100_days": 8.6,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 3,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Volume",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 8,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Structure",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 56,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 3,
+    "turns_per_100_days": 57.1,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Wick",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 11,
+    "turns_per_100_days": 26.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 3,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 4,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone",
+    "turns": 4,
+    "share": 1.5,
+    "ordinary_days": 17,
+    "turns_per_100_days": 19.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 4,
+    "turns_per_100_days": 42.9,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 7,
+    "turns_per_100_days": 30.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Wick + Volume",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 8,
+    "turns_per_100_days": 27.3,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 26,
+    "turns_per_100_days": 10.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 4,
+    "turns_per_100_days": 42.9,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 6,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 4,
+    "turns_per_100_days": 42.9,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 7,
+    "turns_per_100_days": 30.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Wick",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 18,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 12,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 1,
+    "turns_per_100_days": 75.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Wick",
+    "turns": 3,
+    "share": 1.1,
+    "ordinary_days": 11,
+    "turns_per_100_days": 21.4,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Sharp move + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 2,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Sharp move + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 2,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 2,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 6,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 14,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Sharp move + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 7,
+    "turns_per_100_days": 22.2,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 11,
+    "turns_per_100_days": 15.4,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Wick + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 4,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Volume",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 14,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 13,
+    "turns_per_100_days": 13.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Wick",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 2,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move",
+    "turns": 2,
+    "share": 0.8,
+    "ordinary_days": 6,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 0,
+    "turns_per_100_days": 100.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 14,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 26,
+    "turns_per_100_days": 3.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 0,
+    "turns_per_100_days": 100.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Sharp move",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 24,
+    "turns_per_100_days": 4.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 1,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 1,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 1,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Wick + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 22,
+    "turns_per_100_days": 4.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Sharp move",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Volume",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Weekly zone",
+    "turns": 1,
+    "share": 0.4,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   }
+  ],
+  "20": [
+   {
+    "setup": "Sharp move",
+    "turns": 12,
+    "share": 11.7,
+    "ordinary_days": 112,
+    "turns_per_100_days": 9.7,
+    "eras": {
+     "2011-16": 5,
+     "2016-21": 5,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "(none)",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 131,
+    "turns_per_100_days": 3.0,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 6,
+    "turns_per_100_days": 40.0,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 48,
+    "turns_per_100_days": 7.7,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 44.4,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 44.4,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 3,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 13,
+    "turns_per_100_days": 23.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 2
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move + Volume",
+    "turns": 4,
+    "share": 3.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Volume",
+    "turns": 3,
+    "share": 2.9,
+    "ordinary_days": 38,
+    "turns_per_100_days": 7.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 2.9,
+    "ordinary_days": 3,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Volume",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 23,
+    "turns_per_100_days": 8.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Sharp move + Wick",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 2,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 17,
+    "turns_per_100_days": 10.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 4,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 29,
+    "turns_per_100_days": 6.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 10,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Wick",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Wick",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone",
+    "turns": 2,
+    "share": 1.9,
+    "ordinary_days": 12,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 39,
+    "turns_per_100_days": 2.5,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 0,
+    "turns_per_100_days": 100.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 14,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 14,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 19,
+    "turns_per_100_days": 5.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 80,
+    "turns_per_100_days": 1.2,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Weekly zone + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 1,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone + Daily zone + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 29,
+    "turns_per_100_days": 3.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Wick + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Volume",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 3,
+    "turns_per_100_days": 25.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Sharp move",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Wick",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 11,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Weekly zone",
+    "turns": 1,
+    "share": 1.0,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   }
+  ],
+  "30": [
+   {
+    "setup": "Sharp move",
+    "turns": 8,
+    "share": 15.1,
+    "ordinary_days": 112,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 4,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "(none)",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 131,
+    "turns_per_100_days": 2.2,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 6,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 5,
+    "turns_per_100_days": 37.5,
+    "eras": {
+     "2011-16": 3,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 3,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 13,
+    "turns_per_100_days": 18.8,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Structure + Sharp move + Volume",
+    "turns": 3,
+    "share": 5.7,
+    "ordinary_days": 8,
+    "turns_per_100_days": 27.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 2,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Sharp move + Volume",
+    "turns": 2,
+    "share": 3.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Volume",
+    "turns": 2,
+    "share": 3.8,
+    "ordinary_days": 38,
+    "turns_per_100_days": 5.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Wick",
+    "turns": 2,
+    "share": 3.8,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 48,
+    "turns_per_100_days": 2.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 4,
+    "turns_per_100_days": 20.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 29,
+    "turns_per_100_days": 3.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 10,
+    "turns_per_100_days": 9.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Wick",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 22,
+    "turns_per_100_days": 4.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Sharp move",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 14,
+    "turns_per_100_days": 6.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Wick",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 19,
+    "turns_per_100_days": 5.0,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Structure + Weekly zone",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 12,
+    "turns_per_100_days": 7.7,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Sharp move + Volume",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 7,
+    "turns_per_100_days": 12.5,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 29,
+    "turns_per_100_days": 3.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Wick",
+    "turns": 1,
+    "share": 1.9,
+    "ordinary_days": 11,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   }
+  ],
+  "50": [
+   {
+    "setup": "Sharp move",
+    "turns": 4,
+    "share": 19.0,
+    "ordinary_days": 112,
+    "turns_per_100_days": 3.4,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 3,
+    "share": 14.3,
+    "ordinary_days": 3,
+    "turns_per_100_days": 50.0,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Wick + Volume",
+    "turns": 2,
+    "share": 9.5,
+    "ordinary_days": 5,
+    "turns_per_100_days": 28.6,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Wick",
+    "turns": 2,
+    "share": 9.5,
+    "ordinary_days": 22,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 2,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Sharp move + Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 48,
+    "turns_per_100_days": 2.0,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 5,
+    "turns_per_100_days": 16.7,
+    "eras": {
+     "2011-16": 1,
+     "2016-21": 0,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Structure + Weekly zone + Daily zone + Sharp move + Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 6,
+    "turns_per_100_days": 14.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 29,
+    "turns_per_100_days": 3.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Weekly zone + Daily zone + Wick",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Daily zone + Sharp move + Wick + Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 2,
+    "turns_per_100_days": 33.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 38,
+    "turns_per_100_days": 2.6,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 1,
+     "2021-26": 0
+    }
+   },
+   {
+    "setup": "EMA + Daily zone + Volume",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 8,
+    "turns_per_100_days": 11.1,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "EMA",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 29,
+    "turns_per_100_days": 3.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   },
+   {
+    "setup": "Structure + Wick",
+    "turns": 1,
+    "share": 4.8,
+    "ordinary_days": 11,
+    "turns_per_100_days": 8.3,
+    "eras": {
+     "2011-16": 0,
+     "2016-21": 0,
+     "2021-26": 1
+    }
+   }
+  ]
+ },
+ "examples": [
+  {
+   "name": "Mar 2026 bottom",
+   "start": "2026-03-29",
+   "level": 10,
+   "pct": 24.6,
+   "on": [
+    "Weekly EMA agrees",
+    "Weekly zone, no filter",
+    "Daily zone, 2x filter",
+    "Daily zone, no filter",
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200",
+    "Wick 40%+ of range (rejection)",
+    "Funding against the new move over 7 days (2020+)"
+   ],
+   "choch_days": 9
+  },
+  {
+   "name": "Jun 2026 bottom",
+   "start": "2026-06-30",
+   "level": 10,
+   "pct": 47.9,
+   "on": [
+    "Weekly EMA agrees",
+    "Weekly zone, 2x filter",
+    "Weekly zone, no filter",
+    "Daily zone, no filter",
+    "Extended into the turn: 20%+ in 30 days",
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200"
+   ],
+   "choch_days": 14
+  },
+  {
+   "name": "Mar 2020 bottom",
+   "start": "2020-03-12",
+   "level": 20,
+   "pct": 739.9,
+   "on": [
+    "Weekly EMA agrees",
+    "Weekly zone, 2x filter",
+    "Weekly zone, 2x, first touch",
+    "Weekly zone, no filter",
+    "Weekly zone, no filter, first touch",
+    "Daily zone, 2x filter",
+    "Daily zone, no filter",
+    "Sharp move into the turn: 10%+ in 7 days",
+    "Sharp move into the turn: 3+ daily ranges in 7 days",
+    "Extended into the turn: 20%+ in 30 days",
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200",
+    "Volume 1.5x+ (Bitstamp)",
+    "Volume 1.5x+ (Binance, 2017+)"
+   ],
+   "choch_days": 25
+  },
+  {
+   "name": "Sep 2023 bottom",
+   "start": "2023-09-11",
+   "level": 20,
+   "pct": 190.7,
+   "on": [
+    "Weekly EMA agrees",
+    "Weekly structure agrees",
+    "Weekly zone, 2x filter",
+    "Weekly zone, no filter",
+    "Past weekly EMA200"
+   ],
+   "choch_days": 3
+  },
+  {
+   "name": "Dec 2024 top",
+   "start": "2024-12-17",
+   "level": 20,
+   "pct": -28.2,
+   "on": [
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200",
+    "Wick 40%+ of range (rejection)",
+    "Buy/sell share already favours the new move (Binance)",
+    "Funding against the new move over 7 days (2020+)"
+   ],
+   "choch_days": 47
+  },
+  {
+   "name": "Nov 2022 bottom",
+   "start": "2022-11-21",
+   "level": 30,
+   "pct": 691.1,
+   "on": [
+    "Weekly EMA agrees",
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200",
+    "Funding against the new move over 7 days (2020+)"
+   ],
+   "choch_days": 9
+  },
+  {
+   "name": "Nov 2021 top",
+   "start": "2021-11-08",
+   "level": 50,
+   "pct": -76.7,
+   "on": [
+    "Sharp move into the turn: 10%+ in 7 days",
+    "Extended into the turn: 20%+ in 30 days",
+    "Stretched: 20%+ past weekly EMA50",
+    "Past weekly EMA200",
+    "Funding against the new move over 7 days (2020+)"
+   ],
+   "choch_days": 8
+  }
+ ],
+ "counts": {
+  "10": {
+   "2011-16": 86,
+   "2016-21": 113,
+   "2021-26": 66
+  },
+  "20": {
+   "2011-16": 41,
+   "2016-21": 38,
+   "2021-26": 24
+  },
+  "30": {
+   "2011-16": 24,
+   "2016-21": 21,
+   "2021-26": 8
+  },
+  "50": {
+   "2011-16": 10,
+   "2016-21": 7,
+   "2021-26": 4
+  }
+ },
+ "stack": {
+  "10": [
+   {
+    "k": 0,
+    "turns": 50,
+    "share": 18.9,
+    "days": 453,
+    "per100": 9.9,
+    "t3": 15,
+    "d3": 204
+   },
+   {
+    "k": 1,
+    "turns": 76,
+    "share": 28.7,
+    "days": 470,
+    "per100": 13.9,
+    "t3": 19,
+    "d3": 176
+   },
+   {
+    "k": 2,
+    "turns": 84,
+    "share": 31.7,
+    "days": 297,
+    "per100": 22.0,
+    "t3": 26,
+    "d3": 96
+   },
+   {
+    "k": 3,
+    "turns": 38,
+    "share": 14.3,
+    "days": 144,
+    "per100": 20.9,
+    "t3": 6,
+    "d3": 41
+   },
+   {
+    "k": 4,
+    "turns": 17,
+    "share": 6.4,
+    "days": 20,
+    "per100": 45.9,
+    "t3": 0,
+    "d3": 5
+   }
+  ],
+  "20": [
+   {
+    "k": 0,
+    "turns": 6,
+    "share": 5.8,
+    "days": 453,
+    "per100": 1.3,
+    "t3": 3,
+    "d3": 204
+   },
+   {
+    "k": 1,
+    "turns": 19,
+    "share": 18.4,
+    "days": 470,
+    "per100": 3.9,
+    "t3": 5,
+    "d3": 176
+   },
+   {
+    "k": 2,
+    "turns": 44,
+    "share": 42.7,
+    "days": 297,
+    "per100": 12.9,
+    "t3": 13,
+    "d3": 96
+   },
+   {
+    "k": 3,
+    "turns": 23,
+    "share": 22.3,
+    "days": 144,
+    "per100": 13.8,
+    "t3": 3,
+    "d3": 41
+   },
+   {
+    "k": 4,
+    "turns": 11,
+    "share": 10.7,
+    "days": 20,
+    "per100": 35.5,
+    "t3": 0,
+    "d3": 5
+   }
+  ],
+  "30": [
+   {
+    "k": 0,
+    "turns": 3,
+    "share": 5.7,
+    "days": 453,
+    "per100": 0.7,
+    "t3": 2,
+    "d3": 204
+   },
+   {
+    "k": 1,
+    "turns": 8,
+    "share": 15.1,
+    "days": 470,
+    "per100": 1.7,
+    "t3": 1,
+    "d3": 176
+   },
+   {
+    "k": 2,
+    "turns": 19,
+    "share": 35.8,
+    "days": 297,
+    "per100": 6.0,
+    "t3": 3,
+    "d3": 96
+   },
+   {
+    "k": 3,
+    "turns": 16,
+    "share": 30.2,
+    "days": 144,
+    "per100": 10.0,
+    "t3": 2,
+    "d3": 41
+   },
+   {
+    "k": 4,
+    "turns": 7,
+    "share": 13.2,
+    "days": 20,
+    "per100": 25.9,
+    "t3": 0,
+    "d3": 5
+   }
+  ],
+  "50": [
+   {
+    "k": 0,
+    "turns": 2,
+    "share": 9.5,
+    "days": 453,
+    "per100": 0.4,
+    "t3": 2,
+    "d3": 204
+   },
+   {
+    "k": 1,
+    "turns": 2,
+    "share": 9.5,
+    "days": 470,
+    "per100": 0.4,
+    "t3": 1,
+    "d3": 176
+   },
+   {
+    "k": 2,
+    "turns": 8,
+    "share": 38.1,
+    "days": 297,
+    "per100": 2.6,
+    "t3": 1,
+    "d3": 96
+   },
+   {
+    "k": 3,
+    "turns": 4,
+    "share": 19.0,
+    "days": 144,
+    "per100": 2.7,
+    "t3": 0,
+    "d3": 41
+   },
+   {
+    "k": 4,
+    "turns": 5,
+    "share": 23.8,
+    "days": 20,
+    "per100": 20.0,
+    "t3": 0,
+    "d3": 5
+   }
+  ]
+ }
+}
