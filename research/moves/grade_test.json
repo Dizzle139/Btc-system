@@ -1,0 +1,4620 @@
+{
+ "selection": {
+  "strict": {
+   "bottom": {
+    "Cycle: 6-18 months after halving": [
+     1,
+     1.849525762624968
+    ],
+    "Cycle: 18-30 months after halving": [
+     -1,
+     0.5795180722891566
+    ],
+    "Cycle: new all-time high in the last 30 days": [
+     1,
+     4.293724966622163
+    ],
+    "Slow: daily range squeezed (bottom 20% of last 180 days)": [
+     -1,
+     0.0964770523594053
+    ],
+    "Slow: volume drying up (20-day avg < 0.7x 90-day avg)": [
+     -1,
+     0.3712871287128713
+    ],
+    "Slow: move into the turn lasted 30+ days": [
+     -1,
+     0.6771354053466637
+    ],
+    "US dollar (DXY) up over 30 days": [
+     -1,
+     0.7423123304190534
+    ],
+    "S&P 500 up over 30 days": [
+     1,
+     1.2419865605931875
+    ],
+    "BTC dominance up over 30 days": [
+     -1,
+     0.7341176470588235
+    ]
+   },
+   "top": {
+    "Cycle: 18-30 months after halving": [
+     1,
+     2.288643937451935
+    ],
+    "Slow: daily range squeezed (bottom 20% of last 180 days)": [
+     -1,
+     0.4295535186280307
+    ],
+    "Slow: last 30 days moved less than the 30 before (same direction)": [
+     1,
+     1.1646634615384617
+    ]
+   }
+  },
+  "full": {
+   "bottom": {
+    "Cycle: 0-6 months after halving": [
+     1,
+     1.35249500998004
+    ],
+    "Cycle: 6-18 months after halving": [
+     1,
+     1.8289634323585837
+    ],
+    "Cycle: 18-30 months after halving": [
+     -1,
+     0.6488515506300832
+    ],
+    "Cycle: 70%+ below all-time high": [
+     1,
+     2.150336574420344
+    ],
+    "Slow: daily range squeezed (bottom 20% of last 180 days)": [
+     -1,
+     0.057296260786193674
+    ],
+    "Slow: volume drying up (20-day avg < 0.7x 90-day avg)": [
+     -1,
+     0.44954954954954957
+    ],
+    "US dollar (DXY) up over 30 days": [
+     -1,
+     0.7663957012951226
+    ],
+    "VIX 30+ (fear)": [
+     1,
+     3.300705668108354
+    ],
+    "Gold up over 30 days": [
+     1,
+     1.2231646814056105
+    ],
+    "USDT dominance up over 30 days": [
+     1,
+     1.2522461538461538
+    ]
+   },
+   "top": {
+    "Cycle: 0-6 months after halving": [
+     -1,
+     0.5114977146299118
+    ],
+    "Cycle: 18-30 months after halving": [
+     1,
+     1.729315013539264
+    ],
+    "Cycle: 30+ months after halving": [
+     -1,
+     0.7462779156327544
+    ],
+    "Cycle: 50%+ below all-time high": [
+     -1,
+     0.9023048061461497
+    ],
+    "Cycle: last all-time high over a year ago": [
+     -1,
+     0.6426943005181347
+    ],
+    "Slow: daily range squeezed (bottom 20% of last 180 days)": [
+     -1,
+     0.603983248022336
+    ],
+    "Slow: volume drying up (20-day avg < 0.7x 90-day avg)": [
+     -1,
+     0.783443513411091
+    ],
+    "USDT dominance up over 30 days": [
+     -1,
+     1.0389176041349955
+    ]
+   }
+  }
+ },
+ "results": [
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 3,
+    "hits": 3,
+    "hit_rate": 100.0,
+    "turns": 64,
+    "caught": 3,
+    "catch_rate": 4.7,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 9,
+    "hit_rate": 69.2,
+    "turns": 64,
+    "caught": 12,
+    "catch_rate": 18.8,
+    "adverse": -1.8
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 21,
+    "hit_rate": 65.6,
+    "turns": 64,
+    "caught": 22,
+    "catch_rate": 34.4,
+    "adverse": -5.7
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 3,
+    "hits": 3,
+    "hit_rate": 100.0,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 4,
+    "hit_rate": 30.8,
+    "turns": 20,
+    "caught": 4,
+    "catch_rate": 20.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 33,
+    "hits": 9,
+    "hit_rate": 27.3,
+    "turns": 20,
+    "caught": 9,
+    "catch_rate": 45.0,
+    "adverse": -6.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 3,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 33,
+    "hits": 3,
+    "hit_rate": 9.1,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -6.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 3,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 30,
+    "hits": 1,
+    "hit_rate": 3.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 65,
+    "caught": 1,
+    "catch_rate": 1.5,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 23,
+    "hit_rate": 67.6,
+    "turns": 65,
+    "caught": 24,
+    "catch_rate": 36.9,
+    "adverse": -8.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 6,
+    "hit_rate": 42.9,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 21,
+    "caught": 1,
+    "catch_rate": 4.8,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 11,
+    "hit_rate": 32.4,
+    "turns": 21,
+    "caught": 11,
+    "catch_rate": 52.4,
+    "adverse": -11.6
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 5,
+    "hit_rate": 35.7,
+    "turns": 21,
+    "caught": 5,
+    "catch_rate": 23.8,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 7,
+    "caught": 1,
+    "catch_rate": 14.3,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 2,
+    "hit_rate": 5.9,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -11.6
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 7,
+    "caught": 3,
+    "catch_rate": 42.9,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 1,
+    "hit_rate": 3.0,
+    "turns": 4,
+    "caught": 1,
+    "catch_rate": 25.0,
+    "adverse": -10.3
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 4,
+    "caught": 2,
+    "catch_rate": 50.0,
+    "adverse": -13.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 4,
+    "hit_rate": 80.0,
+    "turns": 64,
+    "caught": 4,
+    "catch_rate": 6.2,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 9,
+    "hit_rate": 60.0,
+    "turns": 64,
+    "caught": 12,
+    "catch_rate": 18.8,
+    "adverse": -4.0
+   },
+   "C": {
+    "alerts": 31,
+    "hits": 20,
+    "hit_rate": 64.5,
+    "turns": 64,
+    "caught": 21,
+    "catch_rate": 32.8,
+    "adverse": -5.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 3,
+    "hit_rate": 60.0,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 4,
+    "hit_rate": 26.7,
+    "turns": 20,
+    "caught": 4,
+    "catch_rate": 20.0,
+    "adverse": -5.8
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 9,
+    "hit_rate": 28.1,
+    "turns": 20,
+    "caught": 9,
+    "catch_rate": 45.0,
+    "adverse": -6.5
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.8
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 3,
+    "hit_rate": 9.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -6.5
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.8
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 1,
+    "hit_rate": 3.4,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -7.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 65,
+    "caught": 1,
+    "catch_rate": 1.5,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 23,
+    "hit_rate": 67.6,
+    "turns": 65,
+    "caught": 24,
+    "catch_rate": 36.9,
+    "adverse": -8.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 6,
+    "hit_rate": 42.9,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 21,
+    "caught": 1,
+    "catch_rate": 4.8,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 11,
+    "hit_rate": 32.4,
+    "turns": 21,
+    "caught": 11,
+    "catch_rate": 52.4,
+    "adverse": -11.6
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 5,
+    "hit_rate": 35.7,
+    "turns": 21,
+    "caught": 5,
+    "catch_rate": 23.8,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 1,
+    "hits": 1,
+    "hit_rate": 100.0,
+    "turns": 7,
+    "caught": 1,
+    "catch_rate": 14.3,
+    "adverse": 0.0
+   },
+   "B": {
+    "alerts": 34,
+    "hits": 2,
+    "hit_rate": 5.9,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -11.6
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 7,
+    "caught": 3,
+    "catch_rate": 42.9,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 1,
+    "hit_rate": 3.0,
+    "turns": 4,
+    "caught": 1,
+    "catch_rate": 25.0,
+    "adverse": -10.3
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 4,
+    "caught": 2,
+    "catch_rate": 50.0,
+    "adverse": -13.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 4,
+    "hit_rate": 80.0,
+    "turns": 64,
+    "caught": 4,
+    "catch_rate": 6.2,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 7,
+    "hits": 5,
+    "hit_rate": 71.4,
+    "turns": 64,
+    "caught": 8,
+    "catch_rate": 12.5,
+    "adverse": -1.8
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 24,
+    "hit_rate": 68.6,
+    "turns": 64,
+    "caught": 25,
+    "catch_rate": 39.1,
+    "adverse": -5.6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 3,
+    "hit_rate": 60.0,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 7,
+    "hits": 2,
+    "hit_rate": 28.6,
+    "turns": 20,
+    "caught": 2,
+    "catch_rate": 10.0,
+    "adverse": -1.8
+   },
+   "C": {
+    "alerts": 36,
+    "hits": 11,
+    "hit_rate": 30.6,
+    "turns": 20,
+    "caught": 11,
+    "catch_rate": 55.0,
+    "adverse": -6.6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 7,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -1.8
+   },
+   "C": {
+    "alerts": 36,
+    "hits": 3,
+    "hit_rate": 8.3,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -6.6
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 7,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -1.8
+   },
+   "C": {
+    "alerts": 33,
+    "hits": 1,
+    "hit_rate": 3.0,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -7.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 4,
+    "hit_rate": 57.1,
+    "turns": 65,
+    "caught": 4,
+    "catch_rate": 6.2,
+    "adverse": -2.9
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 20,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 21,
+    "catch_rate": 32.3,
+    "adverse": -10.3
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 6,
+    "hit_rate": 42.9,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 2,
+    "hit_rate": 28.6,
+    "turns": 21,
+    "caught": 2,
+    "catch_rate": 9.5,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 10,
+    "hit_rate": 34.5,
+    "turns": 21,
+    "caught": 10,
+    "catch_rate": 47.6,
+    "adverse": -14.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 5,
+    "hit_rate": 35.7,
+    "turns": 21,
+    "caught": 5,
+    "catch_rate": 23.8,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 1,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 1,
+    "catch_rate": 14.3,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 2,
+    "hit_rate": 6.9,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -14.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 7,
+    "caught": 3,
+    "catch_rate": 42.9,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -7.2
+   },
+   "B": {
+    "alerts": 28,
+    "hits": 1,
+    "hit_rate": 3.6,
+    "turns": 4,
+    "caught": 1,
+    "catch_rate": 25.0,
+    "adverse": -13.5
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 4,
+    "caught": 2,
+    "catch_rate": 50.0,
+    "adverse": -13.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 4,
+    "hit_rate": 80.0,
+    "turns": 64,
+    "caught": 4,
+    "catch_rate": 6.2,
+    "adverse": -2.3
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 6,
+    "hit_rate": 54.5,
+    "turns": 64,
+    "caught": 9,
+    "catch_rate": 14.1,
+    "adverse": -2.7
+   },
+   "C": {
+    "alerts": 33,
+    "hits": 23,
+    "hit_rate": 69.7,
+    "turns": 64,
+    "caught": 24,
+    "catch_rate": 37.5,
+    "adverse": -5.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 3,
+    "hit_rate": 60.0,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 2,
+    "hit_rate": 18.2,
+    "turns": 20,
+    "caught": 2,
+    "catch_rate": 10.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 11,
+    "hit_rate": 32.4,
+    "turns": 20,
+    "caught": 11,
+    "catch_rate": 55.0,
+    "adverse": -7.2
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 3,
+    "hit_rate": 8.8,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -7.2
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.0
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.5
+   },
+   "C": {
+    "alerts": 31,
+    "hits": 1,
+    "hit_rate": 3.2,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -7.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 4,
+    "hit_rate": 57.1,
+    "turns": 65,
+    "caught": 4,
+    "catch_rate": 6.2,
+    "adverse": -2.9
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 20,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 21,
+    "catch_rate": 32.3,
+    "adverse": -10.3
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 6,
+    "hit_rate": 42.9,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 2,
+    "hit_rate": 28.6,
+    "turns": 21,
+    "caught": 2,
+    "catch_rate": 9.5,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 10,
+    "hit_rate": 34.5,
+    "turns": 21,
+    "caught": 10,
+    "catch_rate": 47.6,
+    "adverse": -14.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 5,
+    "hit_rate": 35.7,
+    "turns": 21,
+    "caught": 5,
+    "catch_rate": 23.8,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 7,
+    "hits": 1,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 1,
+    "catch_rate": 14.3,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 2,
+    "hit_rate": 6.9,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -14.1
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 7,
+    "caught": 3,
+    "catch_rate": 42.9,
+    "adverse": -15.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "strict",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 5,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -7.2
+   },
+   "B": {
+    "alerts": 28,
+    "hits": 1,
+    "hit_rate": 3.6,
+    "turns": 4,
+    "caught": 1,
+    "catch_rate": 25.0,
+    "adverse": -13.5
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 4,
+    "caught": 2,
+    "catch_rate": 50.0,
+    "adverse": -13.9
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 33,
+    "hit_rate": 75.0,
+    "turns": 137,
+    "caught": 49,
+    "catch_rate": 35.8,
+    "adverse": -11.2
+   },
+   "A": {
+    "alerts": 15,
+    "hits": 14,
+    "hit_rate": 93.3,
+    "turns": 137,
+    "caught": 17,
+    "catch_rate": 12.4,
+    "adverse": -6.7
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 24,
+    "hit_rate": 82.8,
+    "turns": 137,
+    "caught": 30,
+    "catch_rate": 21.9,
+    "adverse": -10.9
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 6,
+    "hit_rate": 42.9,
+    "turns": 137,
+    "caught": 9,
+    "catch_rate": 6.6,
+    "adverse": -14.5
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 17,
+    "hits": 14,
+    "hit_rate": 82.4,
+    "turns": 64,
+    "caught": 18,
+    "catch_rate": 28.1,
+    "adverse": -2.7
+   },
+   "B": {
+    "alerts": 24,
+    "hits": 17,
+    "hit_rate": 70.8,
+    "turns": 64,
+    "caught": 17,
+    "catch_rate": 26.6,
+    "adverse": -4.5
+   },
+   "C": {
+    "alerts": 13,
+    "hits": 5,
+    "hit_rate": 38.5,
+    "turns": 64,
+    "caught": 5,
+    "catch_rate": 7.8,
+    "adverse": -8.1
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 30,
+    "hit_rate": 68.2,
+    "turns": 54,
+    "caught": 32,
+    "catch_rate": 59.3,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 15,
+    "hits": 12,
+    "hit_rate": 80.0,
+    "turns": 54,
+    "caught": 12,
+    "catch_rate": 22.2,
+    "adverse": -13.3
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 21,
+    "hit_rate": 72.4,
+    "turns": 54,
+    "caught": 23,
+    "catch_rate": 42.6,
+    "adverse": -12.9
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 54,
+    "caught": 3,
+    "catch_rate": 5.6,
+    "adverse": -20.2
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 17,
+    "hits": 9,
+    "hit_rate": 52.9,
+    "turns": 20,
+    "caught": 9,
+    "catch_rate": 45.0,
+    "adverse": -5.5
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 7,
+    "hit_rate": 28.0,
+    "turns": 20,
+    "caught": 7,
+    "catch_rate": 35.0,
+    "adverse": -7.6
+   },
+   "C": {
+    "alerts": 13,
+    "hits": 1,
+    "hit_rate": 7.7,
+    "turns": 20,
+    "caught": 1,
+    "catch_rate": 5.0,
+    "adverse": -8.1
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 19,
+    "hit_rate": 43.2,
+    "turns": 28,
+    "caught": 21,
+    "catch_rate": 75.0,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 15,
+    "hits": 8,
+    "hit_rate": 53.3,
+    "turns": 28,
+    "caught": 8,
+    "catch_rate": 28.6,
+    "adverse": -13.3
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 13,
+    "hit_rate": 44.8,
+    "turns": 28,
+    "caught": 15,
+    "catch_rate": 53.6,
+    "adverse": -13.5
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 28,
+    "caught": 3,
+    "catch_rate": 10.7,
+    "adverse": -20.2
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 17,
+    "hits": 1,
+    "hit_rate": 5.9,
+    "turns": 6,
+    "caught": 1,
+    "catch_rate": 16.7,
+    "adverse": -5.5
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 2,
+    "hit_rate": 8.0,
+    "turns": 6,
+    "caught": 2,
+    "catch_rate": 33.3,
+    "adverse": -7.6
+   },
+   "C": {
+    "alerts": 13,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -8.1
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 8,
+    "hit_rate": 18.2,
+    "turns": 11,
+    "caught": 8,
+    "catch_rate": 72.7,
+    "adverse": -16.2
+   },
+   "A": {
+    "alerts": 15,
+    "hits": 3,
+    "hit_rate": 20.0,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -13.4
+   },
+   "B": {
+    "alerts": 29,
+    "hits": 7,
+    "hit_rate": 24.1,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -18.4
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -20.2
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 17,
+    "hits": 1,
+    "hit_rate": 5.9,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -5.5
+   },
+   "B": {
+    "alerts": 24,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -6.7
+   },
+   "C": {
+    "alerts": 11,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.8
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 31,
+    "hit_rate": 72.1,
+    "turns": 138,
+    "caught": 44,
+    "catch_rate": 31.9,
+    "adverse": -15.4
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 138,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 13,
+    "hit_rate": 86.7,
+    "turns": 138,
+    "caught": 22,
+    "catch_rate": 15.9,
+    "adverse": -8.3
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 22,
+    "hit_rate": 62.9,
+    "turns": 138,
+    "caught": 28,
+    "catch_rate": 20.3,
+    "adverse": -17.7
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 65,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 6,
+    "hit_rate": 54.5,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -9.0
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 23,
+    "hit_rate": 67.6,
+    "turns": 65,
+    "caught": 24,
+    "catch_rate": 36.9,
+    "adverse": -8.2
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 26,
+    "hit_rate": 60.5,
+    "turns": 55,
+    "caught": 28,
+    "catch_rate": 50.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 55,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 12,
+    "hit_rate": 80.0,
+    "turns": 55,
+    "caught": 13,
+    "catch_rate": 23.6,
+    "adverse": -8.3
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 17,
+    "hit_rate": 48.6,
+    "turns": 55,
+    "caught": 18,
+    "catch_rate": 32.7,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 21,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 4,
+    "hit_rate": 36.4,
+    "turns": 21,
+    "caught": 4,
+    "catch_rate": 19.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 12,
+    "hit_rate": 35.3,
+    "turns": 21,
+    "caught": 12,
+    "catch_rate": 57.1,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 18,
+    "hit_rate": 41.9,
+    "turns": 28,
+    "caught": 19,
+    "catch_rate": 67.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 28,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 10,
+    "hit_rate": 66.7,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -13.6
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 10,
+    "hit_rate": 28.6,
+    "turns": 28,
+    "caught": 11,
+    "catch_rate": 39.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 7,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 2,
+    "hit_rate": 18.2,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 4,
+    "hit_rate": 11.8,
+    "turns": 7,
+    "caught": 4,
+    "catch_rate": 57.1,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 7,
+    "hit_rate": 16.3,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 5,
+    "hit_rate": 33.3,
+    "turns": 11,
+    "caught": 5,
+    "catch_rate": 45.5,
+    "adverse": -13.6
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 3,
+    "hit_rate": 8.6,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 9,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 3,
+    "hit_rate": 8.8,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 33,
+    "hit_rate": 75.0,
+    "turns": 137,
+    "caught": 49,
+    "catch_rate": 35.8,
+    "adverse": -11.2
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 10,
+    "hit_rate": 100.0,
+    "turns": 137,
+    "caught": 12,
+    "catch_rate": 8.8,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 27,
+    "hit_rate": 81.8,
+    "turns": 137,
+    "caught": 36,
+    "catch_rate": 26.3,
+    "adverse": -8.2
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 5,
+    "hit_rate": 35.7,
+    "turns": 137,
+    "caught": 7,
+    "catch_rate": 5.1,
+    "adverse": -13.1
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 16,
+    "hits": 15,
+    "hit_rate": 93.8,
+    "turns": 64,
+    "caught": 19,
+    "catch_rate": 29.7,
+    "adverse": -0.2
+   },
+   "B": {
+    "alerts": 31,
+    "hits": 21,
+    "hit_rate": 67.7,
+    "turns": 64,
+    "caught": 21,
+    "catch_rate": 32.8,
+    "adverse": -4.1
+   },
+   "C": {
+    "alerts": 8,
+    "hits": 1,
+    "hit_rate": 12.5,
+    "turns": 64,
+    "caught": 1,
+    "catch_rate": 1.6,
+    "adverse": -11.0
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 30,
+    "hit_rate": 68.2,
+    "turns": 54,
+    "caught": 32,
+    "catch_rate": 59.3,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 9,
+    "hit_rate": 90.0,
+    "turns": 54,
+    "caught": 9,
+    "catch_rate": 16.7,
+    "adverse": -13.1
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 23,
+    "hit_rate": 69.7,
+    "turns": 54,
+    "caught": 25,
+    "catch_rate": 46.3,
+    "adverse": -10.7
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 54,
+    "caught": 2,
+    "catch_rate": 3.7,
+    "adverse": -17.6
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 16,
+    "hits": 9,
+    "hit_rate": 56.2,
+    "turns": 20,
+    "caught": 9,
+    "catch_rate": 45.0,
+    "adverse": -4.1
+   },
+   "B": {
+    "alerts": 32,
+    "hits": 8,
+    "hit_rate": 25.0,
+    "turns": 20,
+    "caught": 8,
+    "catch_rate": 40.0,
+    "adverse": -6.2
+   },
+   "C": {
+    "alerts": 8,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 20,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -11.0
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 19,
+    "hit_rate": 43.2,
+    "turns": 28,
+    "caught": 21,
+    "catch_rate": 75.0,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 7,
+    "hit_rate": 70.0,
+    "turns": 28,
+    "caught": 7,
+    "catch_rate": 25.0,
+    "adverse": -13.1
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 14,
+    "hit_rate": 42.4,
+    "turns": 28,
+    "caught": 16,
+    "catch_rate": 57.1,
+    "adverse": -13.4
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 1,
+    "hit_rate": 7.1,
+    "turns": 28,
+    "caught": 1,
+    "catch_rate": 3.6,
+    "adverse": -17.6
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 17,
+    "hits": 1,
+    "hit_rate": 5.9,
+    "turns": 6,
+    "caught": 1,
+    "catch_rate": 16.7,
+    "adverse": -2.7
+   },
+   "B": {
+    "alerts": 32,
+    "hits": 2,
+    "hit_rate": 6.2,
+    "turns": 6,
+    "caught": 2,
+    "catch_rate": 33.3,
+    "adverse": -6.2
+   },
+   "C": {
+    "alerts": 8,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -11.0
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 8,
+    "hit_rate": 18.2,
+    "turns": 11,
+    "caught": 8,
+    "catch_rate": 72.7,
+    "adverse": -16.2
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 3,
+    "hit_rate": 30.0,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -13.1
+   },
+   "B": {
+    "alerts": 33,
+    "hits": 7,
+    "hit_rate": 21.2,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -13.7
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -17.6
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 16,
+    "hits": 1,
+    "hit_rate": 6.2,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -4.1
+   },
+   "B": {
+    "alerts": 30,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -6.2
+   },
+   "C": {
+    "alerts": 7,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -12.2
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 31,
+    "hit_rate": 72.1,
+    "turns": 138,
+    "caught": 44,
+    "catch_rate": 31.9,
+    "adverse": -15.4
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 138,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 13,
+    "hit_rate": 86.7,
+    "turns": 138,
+    "caught": 22,
+    "catch_rate": 15.9,
+    "adverse": -8.3
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 22,
+    "hit_rate": 62.9,
+    "turns": 138,
+    "caught": 28,
+    "catch_rate": 20.3,
+    "adverse": -17.7
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 65,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 6,
+    "hit_rate": 54.5,
+    "turns": 65,
+    "caught": 6,
+    "catch_rate": 9.2,
+    "adverse": -9.0
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 23,
+    "hit_rate": 67.6,
+    "turns": 65,
+    "caught": 24,
+    "catch_rate": 36.9,
+    "adverse": -8.2
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 26,
+    "hit_rate": 60.5,
+    "turns": 55,
+    "caught": 28,
+    "catch_rate": 50.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 55,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 12,
+    "hit_rate": 80.0,
+    "turns": 55,
+    "caught": 13,
+    "catch_rate": 23.6,
+    "adverse": -8.3
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 17,
+    "hit_rate": 48.6,
+    "turns": 55,
+    "caught": 18,
+    "catch_rate": 32.7,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 21,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 4,
+    "hit_rate": 36.4,
+    "turns": 21,
+    "caught": 4,
+    "catch_rate": 19.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 12,
+    "hit_rate": 35.3,
+    "turns": 21,
+    "caught": 12,
+    "catch_rate": 57.1,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 18,
+    "hit_rate": 41.9,
+    "turns": 28,
+    "caught": 19,
+    "catch_rate": 67.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 28,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 10,
+    "hit_rate": 66.7,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -13.6
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 10,
+    "hit_rate": 28.6,
+    "turns": 28,
+    "caught": 11,
+    "catch_rate": 39.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 7,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 11,
+    "hits": 2,
+    "hit_rate": 18.2,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 4,
+    "hit_rate": 11.8,
+    "turns": 7,
+    "caught": 4,
+    "catch_rate": 57.1,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 7,
+    "hit_rate": 16.3,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 5,
+    "hit_rate": 33.3,
+    "turns": 11,
+    "caught": 5,
+    "catch_rate": 45.5,
+    "adverse": -13.6
+   },
+   "C": {
+    "alerts": 35,
+    "hits": 3,
+    "hit_rate": 8.6,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "equal",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 9,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 34,
+    "hits": 3,
+    "hit_rate": 8.8,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -12.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 33,
+    "hit_rate": 75.0,
+    "turns": 137,
+    "caught": 49,
+    "catch_rate": 35.8,
+    "adverse": -11.2
+   },
+   "A": {
+    "alerts": 9,
+    "hits": 9,
+    "hit_rate": 100.0,
+    "turns": 137,
+    "caught": 11,
+    "catch_rate": 8.0,
+    "adverse": -0.9
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 22,
+    "hit_rate": 88.0,
+    "turns": 137,
+    "caught": 29,
+    "catch_rate": 21.2,
+    "adverse": -8.2
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 11,
+    "hit_rate": 47.8,
+    "turns": 137,
+    "caught": 15,
+    "catch_rate": 10.9,
+    "adverse": -13.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 10,
+    "hit_rate": 100.0,
+    "turns": 64,
+    "caught": 14,
+    "catch_rate": 21.9,
+    "adverse": -0.2
+   },
+   "B": {
+    "alerts": 24,
+    "hits": 19,
+    "hit_rate": 79.2,
+    "turns": 64,
+    "caught": 19,
+    "catch_rate": 29.7,
+    "adverse": -5.0
+   },
+   "C": {
+    "alerts": 18,
+    "hits": 8,
+    "hit_rate": 44.4,
+    "turns": 64,
+    "caught": 8,
+    "catch_rate": 12.5,
+    "adverse": -7.4
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 30,
+    "hit_rate": 68.2,
+    "turns": 54,
+    "caught": 32,
+    "catch_rate": 59.3,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 9,
+    "hits": 8,
+    "hit_rate": 88.9,
+    "turns": 54,
+    "caught": 8,
+    "catch_rate": 14.8,
+    "adverse": -13.3
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 19,
+    "hit_rate": 76.0,
+    "turns": 54,
+    "caught": 21,
+    "catch_rate": 38.9,
+    "adverse": -10.7
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 8,
+    "hit_rate": 34.8,
+    "turns": 54,
+    "caught": 8,
+    "catch_rate": 14.8,
+    "adverse": -19.4
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 6,
+    "hit_rate": 60.0,
+    "turns": 20,
+    "caught": 6,
+    "catch_rate": 30.0,
+    "adverse": -1.5
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 8,
+    "hit_rate": 32.0,
+    "turns": 20,
+    "caught": 8,
+    "catch_rate": 40.0,
+    "adverse": -7.0
+   },
+   "C": {
+    "alerts": 19,
+    "hits": 3,
+    "hit_rate": 15.8,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -9.6
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 19,
+    "hit_rate": 43.2,
+    "turns": 28,
+    "caught": 21,
+    "catch_rate": 75.0,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 9,
+    "hits": 6,
+    "hit_rate": 66.7,
+    "turns": 28,
+    "caught": 6,
+    "catch_rate": 21.4,
+    "adverse": -13.3
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 13,
+    "hit_rate": 52.0,
+    "turns": 28,
+    "caught": 15,
+    "catch_rate": 53.6,
+    "adverse": -12.9
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 5,
+    "hit_rate": 21.7,
+    "turns": 28,
+    "caught": 5,
+    "catch_rate": 17.9,
+    "adverse": -19.4
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 1,
+    "hit_rate": 10.0,
+    "turns": 6,
+    "caught": 1,
+    "catch_rate": 16.7,
+    "adverse": -1.5
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -7.0
+   },
+   "C": {
+    "alerts": 19,
+    "hits": 2,
+    "hit_rate": 10.5,
+    "turns": 6,
+    "caught": 2,
+    "catch_rate": 33.3,
+    "adverse": -9.6
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 8,
+    "hit_rate": 18.2,
+    "turns": 11,
+    "caught": 8,
+    "catch_rate": 72.7,
+    "adverse": -16.2
+   },
+   "A": {
+    "alerts": 9,
+    "hits": 3,
+    "hit_rate": 33.3,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -13.3
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 7,
+    "hit_rate": 28.0,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -18.4
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 2,
+    "hit_rate": 8.7,
+    "turns": 11,
+    "caught": 2,
+    "catch_rate": 18.2,
+    "adverse": -19.4
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 1,
+    "hit_rate": 10.0,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -1.5
+   },
+   "B": {
+    "alerts": 24,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -6.6
+   },
+   "C": {
+    "alerts": 16,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.7
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 31,
+    "hit_rate": 72.1,
+    "turns": 138,
+    "caught": 44,
+    "catch_rate": 31.9,
+    "adverse": -15.4
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 138,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 17,
+    "hit_rate": 77.3,
+    "turns": 138,
+    "caught": 26,
+    "catch_rate": 18.8,
+    "adverse": -8.2
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 17,
+    "hit_rate": 58.6,
+    "turns": 138,
+    "caught": 22,
+    "catch_rate": 15.9,
+    "adverse": -17.7
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 65,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 8,
+    "hit_rate": 53.3,
+    "turns": 65,
+    "caught": 8,
+    "catch_rate": 12.3,
+    "adverse": -9.0
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 22,
+    "hit_rate": 68.8,
+    "turns": 65,
+    "caught": 23,
+    "catch_rate": 35.4,
+    "adverse": -7.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 26,
+    "hit_rate": 60.5,
+    "turns": 55,
+    "caught": 28,
+    "catch_rate": 50.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 55,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 14,
+    "hit_rate": 63.6,
+    "turns": 55,
+    "caught": 15,
+    "catch_rate": 27.3,
+    "adverse": -10.9
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 14,
+    "hit_rate": 48.3,
+    "turns": 55,
+    "caught": 15,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 21,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 6,
+    "hit_rate": 40.0,
+    "turns": 21,
+    "caught": 6,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 11,
+    "hit_rate": 34.4,
+    "turns": 21,
+    "caught": 11,
+    "catch_rate": 52.4,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 18,
+    "hit_rate": 41.9,
+    "turns": 28,
+    "caught": 19,
+    "catch_rate": 67.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 28,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 10,
+    "hit_rate": 45.5,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -14.5
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 9,
+    "hit_rate": 31.0,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 7,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 2,
+    "hit_rate": 13.3,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 4,
+    "hit_rate": 12.5,
+    "turns": 7,
+    "caught": 4,
+    "catch_rate": 57.1,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 7,
+    "hit_rate": 16.3,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 5,
+    "hit_rate": 22.7,
+    "turns": 11,
+    "caught": 5,
+    "catch_rate": 45.5,
+    "adverse": -14.5
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 3,
+    "hit_rate": 10.3,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "in",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 3,
+    "hit_rate": 9.4,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 33,
+    "hit_rate": 75.0,
+    "turns": 137,
+    "caught": 49,
+    "catch_rate": 35.8,
+    "adverse": -11.2
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 10,
+    "hit_rate": 100.0,
+    "turns": 137,
+    "caught": 13,
+    "catch_rate": 9.5,
+    "adverse": -3.8
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 21,
+    "hit_rate": 84.0,
+    "turns": 137,
+    "caught": 28,
+    "catch_rate": 20.4,
+    "adverse": -8.2
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 12,
+    "hit_rate": 52.2,
+    "turns": 137,
+    "caught": 16,
+    "catch_rate": 11.7,
+    "adverse": -13.8
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 46,
+    "hits": 33,
+    "hit_rate": 71.7,
+    "turns": 64,
+    "caught": 37,
+    "catch_rate": 57.8,
+    "adverse": -5.0
+   },
+   "A": {
+    "alerts": 13,
+    "hits": 12,
+    "hit_rate": 92.3,
+    "turns": 64,
+    "caught": 16,
+    "catch_rate": 25.0,
+    "adverse": -0.1
+   },
+   "B": {
+    "alerts": 27,
+    "hits": 19,
+    "hit_rate": 70.4,
+    "turns": 64,
+    "caught": 19,
+    "catch_rate": 29.7,
+    "adverse": -4.9
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 7,
+    "hit_rate": 50.0,
+    "turns": 64,
+    "caught": 7,
+    "catch_rate": 10.9,
+    "adverse": -9.5
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 30,
+    "hit_rate": 68.2,
+    "turns": 54,
+    "caught": 32,
+    "catch_rate": 59.3,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 9,
+    "hit_rate": 90.0,
+    "turns": 54,
+    "caught": 9,
+    "catch_rate": 16.7,
+    "adverse": -14.8
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 19,
+    "hit_rate": 76.0,
+    "turns": 54,
+    "caught": 21,
+    "catch_rate": 38.9,
+    "adverse": -10.7
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 8,
+    "hit_rate": 34.8,
+    "turns": 54,
+    "caught": 8,
+    "catch_rate": 14.8,
+    "adverse": -19.4
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 16,
+    "hit_rate": 34.0,
+    "turns": 20,
+    "caught": 16,
+    "catch_rate": 80.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 13,
+    "hits": 6,
+    "hit_rate": 46.2,
+    "turns": 20,
+    "caught": 6,
+    "catch_rate": 30.0,
+    "adverse": -2.7
+   },
+   "B": {
+    "alerts": 28,
+    "hits": 8,
+    "hit_rate": 28.6,
+    "turns": 20,
+    "caught": 8,
+    "catch_rate": 40.0,
+    "adverse": -6.0
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 3,
+    "hit_rate": 21.4,
+    "turns": 20,
+    "caught": 3,
+    "catch_rate": 15.0,
+    "adverse": -11.0
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 19,
+    "hit_rate": 43.2,
+    "turns": 28,
+    "caught": 21,
+    "catch_rate": 75.0,
+    "adverse": -13.8
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 7,
+    "hit_rate": 70.0,
+    "turns": 28,
+    "caught": 7,
+    "catch_rate": 25.0,
+    "adverse": -14.9
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 13,
+    "hit_rate": 52.0,
+    "turns": 28,
+    "caught": 15,
+    "catch_rate": 53.6,
+    "adverse": -12.9
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 5,
+    "hit_rate": 21.7,
+    "turns": 28,
+    "caught": 5,
+    "catch_rate": 17.9,
+    "adverse": -19.4
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 47,
+    "hits": 3,
+    "hit_rate": 6.4,
+    "turns": 6,
+    "caught": 3,
+    "catch_rate": 50.0,
+    "adverse": -5.9
+   },
+   "A": {
+    "alerts": 14,
+    "hits": 1,
+    "hit_rate": 7.1,
+    "turns": 6,
+    "caught": 1,
+    "catch_rate": 16.7,
+    "adverse": -1.5
+   },
+   "B": {
+    "alerts": 28,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 6,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -6.0
+   },
+   "C": {
+    "alerts": 14,
+    "hits": 2,
+    "hit_rate": 14.3,
+    "turns": 6,
+    "caught": 2,
+    "catch_rate": 33.3,
+    "adverse": -11.0
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 44,
+    "hits": 8,
+    "hit_rate": 18.2,
+    "turns": 11,
+    "caught": 8,
+    "catch_rate": 72.7,
+    "adverse": -16.2
+   },
+   "A": {
+    "alerts": 10,
+    "hits": 3,
+    "hit_rate": 30.0,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -14.9
+   },
+   "B": {
+    "alerts": 25,
+    "hits": 7,
+    "hit_rate": 28.0,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -18.4
+   },
+   "C": {
+    "alerts": 23,
+    "hits": 2,
+    "hit_rate": 8.7,
+    "turns": 11,
+    "caught": 2,
+    "catch_rate": 18.2,
+    "adverse": -19.4
+   },
+   "verdict": "PASS"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "bottom",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 44,
+    "hits": 1,
+    "hit_rate": 2.3,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -6.5
+   },
+   "A": {
+    "alerts": 13,
+    "hits": 1,
+    "hit_rate": 7.7,
+    "turns": 3,
+    "caught": 1,
+    "catch_rate": 33.3,
+    "adverse": -2.7
+   },
+   "B": {
+    "alerts": 27,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -5.9
+   },
+   "C": {
+    "alerts": 12,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 3,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -12.6
+   },
+   "verdict": "fail"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 31,
+    "hit_rate": 72.1,
+    "turns": 138,
+    "caught": 44,
+    "catch_rate": 31.9,
+    "adverse": -15.4
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 138,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 17,
+    "hit_rate": 77.3,
+    "turns": 138,
+    "caught": 26,
+    "catch_rate": 18.8,
+    "adverse": -8.2
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 17,
+    "hit_rate": 58.6,
+    "turns": 138,
+    "caught": 22,
+    "catch_rate": 15.9,
+    "adverse": -17.7
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 10,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 29,
+    "hit_rate": 69.0,
+    "turns": 65,
+    "caught": 30,
+    "catch_rate": 46.2,
+    "adverse": -6.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 65,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 8,
+    "hit_rate": 53.3,
+    "turns": 65,
+    "caught": 8,
+    "catch_rate": 12.3,
+    "adverse": -9.0
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 22,
+    "hit_rate": 68.8,
+    "turns": 65,
+    "caught": 23,
+    "catch_rate": 35.4,
+    "adverse": -7.1
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 26,
+    "hit_rate": 60.5,
+    "turns": 55,
+    "caught": 28,
+    "catch_rate": 50.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 55,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 14,
+    "hit_rate": 63.6,
+    "turns": 55,
+    "caught": 15,
+    "catch_rate": 27.3,
+    "adverse": -10.9
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 14,
+    "hit_rate": 48.3,
+    "turns": 55,
+    "caught": 15,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 20,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 16,
+    "hit_rate": 38.1,
+    "turns": 21,
+    "caught": 16,
+    "catch_rate": 76.2,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 21,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 6,
+    "hit_rate": 40.0,
+    "turns": 21,
+    "caught": 6,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 11,
+    "hit_rate": 34.4,
+    "turns": 21,
+    "caught": 11,
+    "catch_rate": 52.4,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 18,
+    "hit_rate": 41.9,
+    "turns": 28,
+    "caught": 19,
+    "catch_rate": 67.9,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 28,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 10,
+    "hit_rate": 45.5,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -14.5
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 9,
+    "hit_rate": 31.0,
+    "turns": 28,
+    "caught": 10,
+    "catch_rate": 35.7,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 30,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 42,
+    "hits": 6,
+    "hit_rate": 14.3,
+    "turns": 7,
+    "caught": 6,
+    "catch_rate": 85.7,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 7,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 15,
+    "hits": 2,
+    "hit_rate": 13.3,
+    "turns": 7,
+    "caught": 2,
+    "catch_rate": 28.6,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 4,
+    "hit_rate": 12.5,
+    "turns": 7,
+    "caught": 4,
+    "catch_rate": 57.1,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2011-18",
+   "plain": {
+    "alerts": 43,
+    "hits": 7,
+    "hit_rate": 16.3,
+    "turns": 11,
+    "caught": 7,
+    "catch_rate": 63.6,
+    "adverse": -17.7
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 11,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 22,
+    "hits": 5,
+    "hit_rate": 22.7,
+    "turns": 11,
+    "caught": 5,
+    "catch_rate": 45.5,
+    "adverse": -14.5
+   },
+   "C": {
+    "alerts": 29,
+    "hits": 3,
+    "hit_rate": 10.3,
+    "turns": 11,
+    "caught": 3,
+    "catch_rate": 27.3,
+    "adverse": -23.3
+   },
+   "verdict": "not enough data"
+  },
+  {
+   "test": "full",
+   "weights": "weighted",
+   "dollar_gold": "out",
+   "side": "top",
+   "size": 50,
+   "half": "2019-26",
+   "plain": {
+    "alerts": 40,
+    "hits": 3,
+    "hit_rate": 7.5,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.1
+   },
+   "A": {
+    "alerts": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": null
+   },
+   "B": {
+    "alerts": 13,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "turns": 4,
+    "caught": 0,
+    "catch_rate": 0.0,
+    "adverse": -9.9
+   },
+   "C": {
+    "alerts": 32,
+    "hits": 3,
+    "hit_rate": 9.4,
+    "turns": 4,
+    "caught": 3,
+    "catch_rate": 75.0,
+    "adverse": -10.8
+   },
+   "verdict": "not enough data"
+  }
+ ],
+ "weighted_vs_equal": [
+  {
+   "side": "bottom",
+   "size": 10,
+   "dollar_gold": "in",
+   "equal_A": 100.0,
+   "weighted_A": 80.0,
+   "equal_A_n": 3,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 20,
+   "dollar_gold": "in",
+   "equal_A": 100.0,
+   "weighted_A": 60.0,
+   "equal_A_n": 3,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 30,
+   "dollar_gold": "in",
+   "equal_A": 0.0,
+   "weighted_A": 0.0,
+   "equal_A_n": 3,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 50,
+   "dollar_gold": "in",
+   "equal_A": 0.0,
+   "weighted_A": 0.0,
+   "equal_A_n": 3,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 10,
+   "dollar_gold": "in",
+   "equal_A": 100.0,
+   "weighted_A": 57.1,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 20,
+   "dollar_gold": "in",
+   "equal_A": 100.0,
+   "weighted_A": 28.6,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 30,
+   "dollar_gold": "in",
+   "equal_A": 100.0,
+   "weighted_A": 14.3,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 50,
+   "dollar_gold": "in",
+   "equal_A": null,
+   "weighted_A": 0.0,
+   "equal_A_n": 0,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 10,
+   "dollar_gold": "out",
+   "equal_A": 80.0,
+   "weighted_A": 80.0,
+   "equal_A_n": 5,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 20,
+   "dollar_gold": "out",
+   "equal_A": 60.0,
+   "weighted_A": 60.0,
+   "equal_A_n": 5,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 30,
+   "dollar_gold": "out",
+   "equal_A": 0.0,
+   "weighted_A": 0.0,
+   "equal_A_n": 5,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "bottom",
+   "size": 50,
+   "dollar_gold": "out",
+   "equal_A": 0.0,
+   "weighted_A": 0.0,
+   "equal_A_n": 5,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 10,
+   "dollar_gold": "out",
+   "equal_A": 100.0,
+   "weighted_A": 57.1,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 20,
+   "dollar_gold": "out",
+   "equal_A": 100.0,
+   "weighted_A": 28.6,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 30,
+   "dollar_gold": "out",
+   "equal_A": 100.0,
+   "weighted_A": 14.3,
+   "equal_A_n": 1,
+   "weighted_A_n": 7,
+   "keep_weighted": false
+  },
+  {
+   "side": "top",
+   "size": 50,
+   "dollar_gold": "out",
+   "equal_A": null,
+   "weighted_A": 0.0,
+   "equal_A_n": 0,
+   "weighted_A_n": 5,
+   "keep_weighted": false
+  }
+ ]
+}

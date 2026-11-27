@@ -1,0 +1,7 @@
+2020-03-12: alert 2020-03-12, grade C (-1): BTC dominance up over 30 days -1
+2026-06-30: alert 2026-06-30, grade C (-3): Cycle: 18-30 months after halving -1; Slow: move into the turn lasted 30+ days -1; US dollar (DXY) up over 30 days -1
+2021-11-08: alert 2021-11-08, grade C (-1): Slow: daily range squeezed (bottom 20% of last 180 days) -1
+2022-11-21: no 2+ alert within 5 days before the turn
+2023-09-11: no 2+ alert within 5 days before the turn
+2026-03-29: no 2+ alert within 5 days before the turn
+2024-12-17: no 2+ alert within 5 days before the turn
