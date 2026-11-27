@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTC Move Marker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work tool: plain, step-by-step, nothing decorative
+   IDEA the trader marks the moves they want; Claude reads the marks and defines them
+   PICTURE the same log chart as the Move Map, with a three-tap marking flow and a list of saved marks
+   COLOUR chart-black ground, TradingView teal/red, one amber for the user's own marks
+   TYPE Space Grotesk 700 titles + Inter text
+   LAYOUT title + steps, toolbar, chart, marking panel, saved marks */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#0f1114);--panel:light-dark(#f4f5f7,#171a1f);--ink:light-dark(#121417,#e8eaed);--mute:light-dark(#5d636b,#9aa1ab);--rule:light-dark(#e1e4e8,#2a2f36);--bull:#1f9e8f;--bear:#e2463f;--sig:#e0a100;--grid:light-dark(#eef0f2,#1c2026);--candle:light-dark(#9aa1ab,#59606b)}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(18px,3vw,36px) max(4vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+h1,h2{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.1;margin:0}
+h1{font-size:clamp(28px,4vw,40px)}
+h2{font-size:clamp(21px,2.4vw,26px);margin-bottom:10px}
+p{margin:.4em 0;max-width:72ch}
+.lede{color:var(--mute)}
+ol.steps{margin:.6em 0 0;padding-left:1.3em;color:var(--mute)}
+ol.steps li{margin:.25em 0}
+.bar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:12px 0}
+.grp{display:flex;align-items:center;gap:6px}
+.grp>span{font-size:13px;color:var(--mute)}
+.tabs{display:flex;border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.tabs button{border:0;border-right:1px solid var(--rule);border-radius:0}
+.tabs button:last-child{border-right:0}
+button{font:500 15px Inter,sans-serif;min-height:44px;padding:0 14px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-radius:10px;cursor:pointer}
+button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+button.go{background:var(--sig);color:#111;border-color:var(--sig);font-weight:600}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--sig);outline-offset:2px}
+.fig{position:relative;height:clamp(420px,62vh,660px);border:1px solid var(--rule);border-radius:12px;overflow:hidden;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.fig.marking{outline:2px solid var(--sig);outline-offset:-2px}
+.fig canvas{position:absolute;inset:0;width:100%;height:100%}
+.prompt{position:absolute;left:12px;top:10px;right:76px;background:color-mix(in srgb,var(--sig) 92%,transparent);color:#111;font-weight:600;border-radius:8px;padding:8px 12px;display:none;pointer-events:none}
+.fig.marking .prompt{display:block}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mute);margin-top:8px}
+.key i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+.panel{margin-top:12px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--sig);border-radius:10px;padding:14px 16px}
+.panel[hidden]{display:none}
+.picked{display:grid;grid-template-columns:repeat(auto-fit,minmax(14em,1fr));gap:8px 16px;margin:8px 0}
+.picked div{background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:8px 10px}
+.picked dt{font-size:12px;color:var(--mute)}.picked dd{margin:2px 0 6px;font-weight:500;font-variant-numeric:tabular-nums}
+.nudge{display:flex;gap:6px}
+.nudge button{min-width:44px;padding:0 10px}
+label.lab{display:block;font-size:13px;color:var(--mute);margin:12px 0 6px}
+textarea{width:100%;min-height:92px;font:16px/1.45 Inter,sans-serif;padding:10px;border-radius:8px;border:1px solid var(--rule);background:var(--bg);color:var(--ink)}
+.types{display:flex;flex-wrap:wrap;gap:8px}
+.types button{flex:1 1 10em}
+.help{font-size:13px;color:var(--mute)}
+.msg{font-size:14px;color:var(--mute);margin-top:8px}
+.list{display:grid;gap:10px}
+.card{border:1px solid var(--rule);border-radius:10px;padding:12px 14px;background:var(--panel)}
+.card h3{margin:0 0 4px;font:600 16px Inter,sans-serif;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+.card .tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid var(--rule);color:var(--mute)}
+.card p{margin:4px 0;white-space:pre-wrap}
+.card .row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.up{color:var(--bull);font-weight:600}.dn{color:var(--bear);font-weight:600}
+.note{font-size:13px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header class="band"><div class="wrap">
+<h1>Mark the moves you want to catch</h1>
+<p class="lede">BITSTAMP:BTCUSD daily, Aug 2011 to <span id="asof"></span>. Your marks are saved here, and Claude reads them to define each kind of move and measure what came before it.</p>
+<ol class="steps">
+<li>Find a move on the chart (drag sideways, pinch to zoom). Tap <b>Mark a move</b>.</li>
+<li>Tap where the move <b>started</b>, then where it <b>ended</b>, then where you would have <b>entered</b> (or skip that).</li>
+<li>Pick the kind of move and write what you saw. Save. Mark as many as you like.</li>
+</ol>
+</div></header>
+
+<main class="band" style="padding-top:0"><div class="wrap">
+<div class="bar">
+<button class="go" id="mark">Mark a move</button>
+<div class="grp"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="all">Full history</button></div>
+<div class="grp"><span>Reference</span><div class="tabs" id="ref"><button data-v="0" aria-pressed="true">Off</button><button data-v="10" aria-pressed="false">10% moves</button><button data-v="20" aria-pressed="false">20%</button><button data-v="50" aria-pressed="false">50%</button></div></div>
+</div>
+<div class="fig" id="fig"><canvas id="cv"></canvas><div class="prompt" id="prompt"></div></div>
+<div class="key">
+<span><i style="background:var(--sig)"></i>Your marks (dot = your entry)</span>
+<span><i style="background:var(--bull);opacity:.5"></i><i style="background:var(--bear);opacity:.5"></i>Reference: the marked 10%+ moves on daily closes</span>
+<span>Price scale is logarithmic. Tap a candle when marking; use ◀ ▶ to move one candle.</span>
+</div>
+
+<section class="panel" id="panel" hidden aria-live="polite">
+<h2 id="ptitle">New mark</h2>
+<dl class="picked" id="picked"></dl>
+<div class="nudge" id="nudge"></div>
+<label class="lab">What kind of move is it?</label>
+<div class="types" id="types">
+<button data-v="breakout" aria-pressed="false">Breakout</button>
+<button data-v="pullback" aria-pressed="false">Pullback in a trend</button>
+<button data-v="reversal" aria-pressed="false">Reversal (top or bottom)</button>
+<button data-v="other" aria-pressed="false">Other</button>
+</div>
+<label class="lab" for="why">What did you see? (the levels, zones, candles, anything that made it a setup for you)</label>
+<textarea id="why" placeholder="e.g. broke the range high it had held for 3 weeks, closed above the weekly FVG, volume picked up"></textarea>
+<div class="bar"><button class="go" id="save" disabled>Save mark</button><button id="redo">Re-pick points</button><button id="cancel">Cancel</button></div>
+<p class="msg" id="pmsg"></p>
+</section>
+
+<section style="margin-top:28px">
+<h2>Your marks <span class="note" id="cnt"></span></h2>
+<p class="msg" id="dbmsg">Loading your saved marks…</p>
+<div class="list" id="list"></div>
+</section>
+</div></main>
+
+<footer class="band"><div class="wrap"><p class="note">Moves are measured on daily closes. Research tool, not financial advice.</p></div></footer>
+
+<script>
+{
+const cv=document.getElementById('cv'),fig=document.getElementById('fig'),ctx=cv.getContext('2d');
+const $=id=>document.getElementById(id);
+let D=null,view=[0,0],ref=0,marks=[],db=null,canWrite=true;
+let mode=null,pick={start:null,end:null,entry:null},ptype=null,editing=null;
+const PAD={l:8,r:64,t:10,b:30};
+const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
+const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
+const fmt=x=>x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
+const nice=d=>new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'});
+const idxOf=date=>{let lo=0,hi=D.c.length-1;while(lo<hi){const m=(lo+hi)>>1;if(D.c[m][0]<date)lo=m+1;else hi=m}return lo};
+const TYPES={breakout:'Breakout',pullback:'Pullback in a trend',reversal:'Reversal',other:'Other'};
+function draw(){
+ if(!D)return;
+ const dpr=window.devicePixelRatio||1,W=fig.clientWidth,H=fig.clientHeight;
+ if(cv.width!==Math.round(W*dpr)||cv.height!==Math.round(H*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr)}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+ const c=D.c,[a,b]=view,i0=Math.max(0,Math.floor(a)),i1=Math.min(c.length-1,Math.ceil(b));
+ const pw=W-PAD.l-PAD.r,ph=H-PAD.t-PAD.b,bw=pw/(b-a+1);ctx.__bw=bw;
+ let lo=Infinity,hi=-Infinity;for(let i=i0;i<=i1;i++){lo=Math.min(lo,c[i][3]);hi=Math.max(hi,c[i][2])}
+ lo=Math.log(lo);hi=Math.log(hi);const mg=(hi-lo)*.06||.05;lo-=mg;hi+=mg;
+ const X=i=>PAD.l+(i-a+.5)*bw,Y=p=>PAD.t+(hi-Math.log(p))/(hi-lo)*ph;
+ const mute=css('--mute'),grid=css('--grid'),bull=css('--bull'),bear=css('--bear'),sig=css('--sig'),cnd=css('--candle'),ink=css('--ink');
+ ctx.font='13px Inter,sans-serif';ctx.textBaseline='middle';
+ for(const p of ticks(Math.exp(lo),Math.exp(hi))){const y=Y(p);ctx.strokeStyle=grid;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(PAD.l,y);ctx.lineTo(W-PAD.r,y);ctx.stroke();ctx.fillStyle=mute;ctx.fillText(fmtK(p),W-PAD.r+6,y)}
+ ctx.textBaseline='top';ctx.textAlign='center';const span=b-a,yearly=span>500;let lastx=-1e9;
+ for(let i=i0;i<=i1;i++){const d=c[i][0];const first=yearly?d.endsWith('-01-01'):(d.endsWith('-01')&&(span<200||['01','04','07','10'].includes(d.slice(5,7))));if(!first)continue;const x=X(i);if(x-lastx<60)continue;lastx=x;ctx.fillStyle=mute;ctx.fillText(yearly?d.slice(0,4):new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',year:'2-digit',timeZone:'UTC'}),x,H-PAD.b+8)}
+ ctx.textAlign='left';ctx.save();ctx.beginPath();ctx.rect(PAD.l,PAD.t,pw,ph);ctx.clip();
+ if(bw>=2.5){for(let i=i0;i<=i1;i++){const[,o,h,l,cl]=c[i],x=X(i);ctx.strokeStyle=cnd;ctx.fillStyle=cnd;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,Y(h));ctx.lineTo(x,Y(l));ctx.stroke();const w=Math.max(1,bw*.6),y=Y(Math.max(o,cl)),hh=Math.max(1,Math.abs(Y(o)-Y(cl)));if(cl>=o)ctx.strokeRect(x-w/2,y,w,hh);else ctx.fillRect(x-w/2,y,w,hh)}}
+ else{ctx.strokeStyle=cnd;ctx.lineWidth=1;ctx.beginPath();for(let i=i0;i<=i1;i++){const x=X(i);i===i0?ctx.moveTo(x,Y(c[i][4])):ctx.lineTo(x,Y(c[i][4]))}ctx.stroke()}
+ if(ref){ctx.lineCap='round';ctx.globalAlpha=.45;for(const[l,s,e,p]of D.m){if(l!==ref||e<a||s>b)continue;ctx.strokeStyle=p>0?bull:bear;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke()}ctx.globalAlpha=1}
+ // saved marks
+ ctx.lineCap='round';
+ for(const m of marks){const s=idxOf(m.start),e=idxOf(m.end);if(e<a||s>b)continue;
+  ctx.strokeStyle=sig;ctx.lineWidth=editing===m.id?4:3;ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke();
+  if(m.entry){const k=idxOf(m.entry);ctx.fillStyle=sig;ctx.beginPath();ctx.arc(X(k),Y(c[k][4]),5,0,7);ctx.fill()}
+  ctx.fillStyle=sig;ctx.font='600 12px Inter,sans-serif';ctx.textAlign='center';const up=c[e][4]>c[s][4];ctx.textBaseline=up?'bottom':'top';
+  ctx.fillText(TYPES[m.type]||'',X(e),up?Y(c[e][4])-7:Y(c[e][4])+7);ctx.textAlign='left'}
+ // the mark being made
+ const pts=[['start','Start'],['end','End'],['entry','Entry']];
+ for(const[k,lab]of pts){const i=pick[k];if(i===null)continue;const x=X(i),y=Y(c[i][4]);
+  ctx.strokeStyle=ink;ctx.setLineDash([4,4]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,PAD.t);ctx.lineTo(x,PAD.t+ph);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle=sig;ctx.strokeStyle=css('--bg');ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,7,0,7);ctx.fill();ctx.stroke();
+  ctx.fillStyle=ink;ctx.font='600 12px Inter,sans-serif';ctx.textBaseline='bottom';ctx.fillText(lab,x+9,y-6)}
+ if(pick.start!==null&&pick.end!==null){ctx.strokeStyle=sig;ctx.lineWidth=3;ctx.setLineDash([8,6]);ctx.beginPath();ctx.moveTo(X(pick.start),Y(c[pick.start][4]));ctx.lineTo(X(pick.end),Y(c[pick.end][4]));ctx.stroke();ctx.setLineDash([])}
+ ctx.restore();ctx.strokeStyle=css('--rule');ctx.strokeRect(PAD.l,PAD.t,pw,ph);
+}
+function ticks(lo,hi){const out=[];for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++)for(const f of[1,2,5]){const v=f*10**e;if(v>=lo&&v<=hi)out.push(v)}if(out.length<4){out.length=0;const st=niceStep((hi-lo)/5);for(let v=Math.ceil(lo/st)*st;v<=hi;v+=st)out.push(v)}return out}
+function niceStep(r){const p=10**Math.floor(Math.log10(r)),f=r/p;return(f<1.5?1:f<3?2:f<7?5:10)*p}
+function fmtK(p){return p>=10000?(p/1000).toFixed(p%1000?1:0)+'k':p>=1?Math.round(p).toLocaleString('en-US'):p.toFixed(2)}
+// ---- gestures: one finger drags sideways, two fingers pinch, a tap picks a candle while marking ----
+const ptr=new Map();let g=null,raf=0;
+const pos=e=>{const r=fig.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
+const idxAt=x=>view[0]+(x-PAD.l)/(ctx.__bw||1)-.5;
+function base(){const p=[...ptr.values()];if(p.length===1)g={mode:'pan',x0:p[0].x,y0:p[0].y,v0:[...view],t0:performance.now(),moved:g?g.moved:false};else if(p.length>=2){const[q,r]=p;g={mode:'pinch',d0:Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),c0:idxAt((q.x+r.x)/2),v0:[...view],moved:true}}else g=null}
+function later(){if(!raf)raf=requestAnimationFrame(()=>{raf=0;draw()})}
+fig.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;try{fig.setPointerCapture(e.pointerId)}catch(_){}ptr.set(e.pointerId,pos(e));base();if(ptr.size===1){g.moved=false;g.t0=performance.now()}});
+fig.addEventListener('pointermove',e=>{if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.set(e.pointerId,p);if(!g)return;
+ if(g.mode==='pan'){const dx=p.x-g.x0,dy=p.y-g.y0;if(Math.hypot(dx,dy)>6)g.moved=true;const sh=dx/(ctx.__bw||1);setView(g.v0[0]-sh,g.v0[1]-sh,true)}
+ else{const[q,r]=[...ptr.values()],d=Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),cx=(q.x+r.x)/2,sp=(g.v0[1]-g.v0[0])*g.d0/d,f=(cx-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=g.c0+.5-f*sp;setView(na,na+sp,true)}});
+function end(e,cancel){if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.delete(e.pointerId);if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<600)tap(p.x);if(ptr.size)base();else g=null}
+fig.addEventListener('pointerup',e=>end(e,false));fig.addEventListener('pointercancel',e=>end(e,true));
+fig.addEventListener('wheel',e=>{e.preventDefault();const p=pos(e);if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){const sh=e.deltaX/(ctx.__bw||1);setView(view[0]+sh,view[1]+sh,true);return}zoomAt(p.x,Math.exp(e.deltaY*.0025))},{passive:false});
+function setView(a,b,lazy){const n=D.c.length,sp=Math.max(20,Math.min(n+20,b-a));if(a<-10)a=-10;if(a+sp>n+15)a=n+15-sp;view=[a,a+sp];lazy?later():draw()}
+function zoomAt(x,f){const i=idxAt(x),[a,b]=view,sp=(b-a)*f,fr=(x-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=i+.5-fr*sp;setView(na,na+sp,true)}
+function zoom(f){const[a,b]=view,mid=(a+b)/2,sp=(b-a)*f;setView(mid-sp/2,mid+sp/2)}
+$('zin').onclick=()=>zoom(1/1.5);$('zout').onclick=()=>zoom(1.5);$('all').onclick=()=>setView(-5,D.c.length+10);
+for(const bt of $('ref').querySelectorAll('button'))bt.onclick=()=>{ref=+bt.dataset.v;for(const x of $('ref').querySelectorAll('button'))x.setAttribute('aria-pressed',x===bt);draw()};
+// ---- marking flow ----
+const STEP={start:'Tap the candle where the move STARTED',end:'Now tap the candle where the move ENDED',entry:'Tap where you would have ENTERED (or press Skip below)'};
+function setMode(m){mode=m;fig.classList.toggle('marking',!!m);$('prompt').textContent=m?STEP[m]:'';renderPanel();draw()}
+function tap(x){if(!mode||!D)return;const i=Math.max(0,Math.min(D.c.length-1,Math.round(idxAt(x))));pick[mode]=i;
+ if(mode==='start')setMode('end');else if(mode==='end'){if(pick.end<pick.start)[pick.start,pick.end]=[pick.end,pick.start];setMode('entry')}else setMode(null)}
+$('mark').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=false;$('ptitle').textContent='New mark';setMode('start');fig.scrollIntoView({behavior:'smooth',block:'center'})};
+$('redo').onclick=()=>{pick={start:null,end:null,entry:null};setMode('start')};
+$('cancel').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};$('panel').hidden=true;setMode(null)};
+for(const bt of $('types').querySelectorAll('button'))bt.onclick=()=>{ptype=bt.dataset.v;renderPanel()};
+function row(dl,k,v){const d=document.createElement('div');const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');dd.textContent=v;d.append(dt,dd);dl.append(d)}
+function renderPanel(){
+ for(const x of $('types').querySelectorAll('button'))x.setAttribute('aria-pressed',x.dataset.v===ptype);
+ const dl=$('picked');dl.innerHTML='';const c=D?D.c:[];
+ const show=(k,lab)=>{const i=pick[k];row(dl,lab,i===null?(mode===k?'tap the chart…':'—'):`${nice(c[i][0])} · close ${fmt(c[i][4])} (high ${fmt(c[i][2])}, low ${fmt(c[i][3])})`)};
+ show('start','Start');show('end','End');show('entry','Your entry');
+ if(pick.start!==null&&pick.end!==null){const s=c[pick.start][4],e=c[pick.end][4];row(dl,'Move',`${((e/s-1)*100).toFixed(1)}% in ${pick.end-pick.start} days (closes)`)}
+ const nz=$('nudge');nz.innerHTML='';
+ if(mode==='entry'){const sk=document.createElement('button');sk.textContent='Skip entry';sk.onclick=()=>{pick.entry=null;setMode(null)};nz.append(sk)}
+ for(const[k,lab]of[['start','Start'],['end','End'],['entry','Entry']]){if(pick[k]===null)continue;
+  for(const[d,t]of[[-1,'◀'],[1,'▶']]){const b=document.createElement('button');b.textContent=`${lab} ${t}`;b.setAttribute('aria-label',`Move ${lab.toLowerCase()} one candle ${d<0?'earlier':'later'}`);b.onclick=()=>{pick[k]=Math.max(0,Math.min(D.c.length-1,pick[k]+d));renderPanel();draw()};nz.append(b)}}
+ $('save').disabled=!(pick.start!==null&&pick.end!==null&&ptype&&!mode)||!canWrite;
+ $('pmsg').textContent=!canWrite?'Saving is not available in this view.':(mode?'':(!ptype&&pick.end!==null?'Pick the kind of move to save it.':''));
+}
+$('save').onclick=async()=>{
+ const c=D.c,s=pick.start,e=pick.end,en=pick.entry;
+ const body={start:c[s][0],end:c[e][0],entry:en===null?null:c[en][0],type:ptype,why:$('why').value.trim().slice(0,4000),
+  start_close:c[s][4],end_close:c[e][4],entry_close:en===null?null:c[en][4],pct:+((c[e][4]/c[s][4]-1)*100).toFixed(1),days:e-s,
+  updated:new Date().toISOString()};
+ $('save').disabled=true;$('pmsg').textContent='Saving…';
+ try{
+  if(db){if(editing){await db.collection('marks').doc(editing).set(Object.assign({created:(marks.find(m=>m.id===editing)||{}).created||body.updated},body))}else{await db.collection('marks').add(Object.assign({created:body.updated},body))}}
+  else{const id=editing||('local-'+Date.now());marks=marks.filter(m=>m.id!==id).concat([Object.assign({id,created:body.updated},body)]);renderList()}
+  editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=true;$('pmsg').textContent='';setMode(null);
+ }catch(err){$('pmsg').textContent=err&&err.code==='quota_exceeded'?'The store is full; delete some marks first.':'Could not save. Try again.';if(err&&err.code==='invalid_argument')canWrite=false;renderPanel()}
+};
+function renderList(){
+ const L=$('list');L.innerHTML='';$('cnt').textContent=marks.length?`· ${marks.length}`:'';
+ const sorted=[...marks].sort((x,y)=>x.start<y.start?1:-1);
+ for(const m of sorted){const card=document.createElement('article');card.className='card';
+  const h=document.createElement('h3');const t=document.createElement('span');t.textContent=`${nice(m.start)} → ${nice(m.end)}`;
+  const p=document.createElement('span');p.className=m.pct>=0?'up':'dn';p.textContent=`${m.pct>0?'+':''}${m.pct}%`;
+  const tag=document.createElement('span');tag.className='tag';tag.textContent=TYPES[m.type]||m.type;h.append(t,p,tag);
+  const meta=document.createElement('p');meta.className='note';meta.textContent=`${fmt(m.start_close)} → ${fmt(m.end_close)} · ${m.days} days`+(m.entry?` · your entry ${nice(m.entry)} at ${fmt(m.entry_close)}`:'');
+  const why=document.createElement('p');why.textContent=m.why||'(no notes)';
+  const r=document.createElement('div');r.className='row';
+  const go=document.createElement('button');go.textContent='Show on chart';go.onclick=()=>{const s=idxOf(m.start),e=idxOf(m.end),pad=Math.max(20,(e-s)*.6);setView(s-pad,e+pad);fig.scrollIntoView({behavior:'smooth',block:'center'})};
+  const ed=document.createElement('button');ed.textContent='Edit';ed.onclick=()=>{editing=m.id;pick={start:idxOf(m.start),end:idxOf(m.end),entry:m.entry?idxOf(m.entry):null};ptype=m.type;$('why').value=m.why||'';$('ptitle').textContent='Edit mark';$('panel').hidden=false;setMode(null);go.onclick()};
+  const del=document.createElement('button');del.textContent='Delete';del.onclick=async()=>{if(del.dataset.armed!=='1'){del.dataset.armed='1';del.textContent='Tap again to delete';setTimeout(()=>{del.dataset.armed='';del.textContent='Delete'},4000);return}
+   try{if(db&&!String(m.id).startsWith('local-'))await db.collection('marks').doc(m.id).delete();else{marks=marks.filter(x=>x.id!==m.id);renderList()}}catch(_){del.textContent='Could not delete'}};
+  r.append(go,ed,del);card.append(h,meta,why,r);L.append(card)}
+ draw();
+}
+new ResizeObserver(()=>draw()).observe(fig);
+fetch('data.json').then(r=>r.json()).then(d=>{D=d;$('asof').textContent=nice(d.asof);setView(d.c.length-365,d.c.length+8);renderPanel();renderList()}).catch(()=>{$('dbmsg').textContent='Chart data did not load. Reload the page to try again.'});
+// ---- saved marks (db) ----
+(async()=>{
+ let timer=setTimeout(()=>{$('dbmsg').textContent='Your saved marks can’t be reached yet. New marks will still save once it connects.'},10000);
+ try{db=await claude.use('db')}catch(_){db=null}
+ if(!db){clearTimeout(timer);$('dbmsg').textContent='Saving isn’t available in this view, so marks stay on this page until you close it. Open the page from the Claude app to save them.';return}
+ try{const u=await claude.use('user');if(u&&u.can){const ok=await u.can('data.write');if(ok===false){canWrite=false;renderPanel()}}}catch(_){}
+ db.collection('marks').onSnapshot(snap=>{if(!snap.metadata.fromCache){clearTimeout(timer)}$('dbmsg').textContent=snap.empty?'No marks yet. Tap “Mark a move” to add your first.':'';
+  marks=snap.docs.map(x=>Object.assign({id:x.id},x.data()));renderList()},err=>{clearTimeout(timer);$('dbmsg').textContent='Your saved marks could not be loaded.'});
+})();
+}
+</script>
+</body>
+</html>
