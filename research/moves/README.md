@@ -10,3 +10,8 @@ Run in order from this folder: `python mark_moves.py` → `python turns.py` → 
 
 The page in `site/move-map/` shows it all (open `index.html` through a local web server).
 Status: research only. Nothing here changes the alert bot.
+
+## Step 4: stacking test (`stack_test.py`)
+Fixed rule approved before running: new 10-day closing extreme + count of 4 items (sharp 10%/7d, extended 20%/30d,
+Bitstamp volume 1.5x, weekly zone 2x). Alert levels 2+/3+/4, episodes, windows 0/3/5/10 days, halves 2011-18 / 2019-26.
+Outputs `stack_test.csv`, `stack_verdicts.json`, `stack_today.json`.

@@ -1,0 +1,162 @@
+{
+ "10|bottom|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|bottom|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|bottom|5": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|bottom|10": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|top|0": {
+  "2": "fail",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|top|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|top|5": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "10|top|10": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|bottom|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|bottom|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|bottom|5": {
+  "2": "PASS",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "20|bottom|10": {
+  "2": "PASS",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "20|top|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|top|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|top|5": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "20|top|10": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "30|bottom|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "30|bottom|3": {
+  "2": "PASS",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "30|bottom|5": {
+  "2": "PASS",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "30|bottom|10": {
+  "2": "PASS",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "30|top|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "30|top|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "30|top|5": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "30|top|10": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "50|bottom|0": {
+  "2": "fail",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "50|bottom|3": {
+  "2": "fail",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "50|bottom|5": {
+  "2": "fail",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "50|bottom|10": {
+  "2": "fail",
+  "3": "PASS",
+  "4": "not enough data"
+ },
+ "50|top|0": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "50|top|3": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "50|top|5": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ },
+ "50|top|10": {
+  "2": "PASS",
+  "3": "fail",
+  "4": "not enough data"
+ }
+}
