@@ -14,9 +14,9 @@ Runs on GitHub Actions (its servers can reach these sites; Claude's workspace ca
   Macro / other markets (added Nov 27, 2026)
     data/fred_<SERIES>.csv     FRED (St. Louis Fed, free, no key): broad US dollar index, 10-year yield,
                                Fed funds rate, M2 money supply (weekly), VIX
-    data/stooq_<symbol>.csv    Stooq daily: S&P 500, gold, US dollar index (DXY futures)
-    data/btc_dominance_4y.csv  BGeometrics free API: BTC dominance, last ~4 years only (full history needs a
-                               TradingView export, CRYPTOCAP:BTC.D)
+    data/yahoo_<symbol>.csv    Yahoo Finance daily (Stooq refused automated downloads): S&P 500, gold futures,
+                               US dollar index (DXY), VIX, 10-year yield
+    data/btc_dominance.csv     BGeometrics free API: BTC dominance, daily from Apr 2013
 Every file gets a validation line in data/DATA_REPORT.md (rows, range, gaps).
 """
 import io, time, zipfile, sys
@@ -133,12 +133,24 @@ def funding(symbol, start):
 # ---------------- macro / other markets ----------------
 FRED = {"DTWEXBGS": "broad US dollar index", "DGS10": "US 10-year yield", "DFF": "Fed funds rate",
         "WM2NS": "M2 money supply (weekly)", "VIXCLS": "VIX"}
-STOOQ = {"^spx": "S&P 500", "xauusd": "gold", "dx.f": "US dollar index (DXY futures)"}
+YAHOO = {"^GSPC": "S&P 500", "GC=F": "gold futures", "DX-Y.NYB": "US dollar index (DXY)", "^VIX": "VIX", "^TNX": "US 10-year yield x10"}
+
+
+def get(url, tries=3, **kw):
+    """GET with retries and a long timeout (FRED timed out at 60 s from GitHub's servers)."""
+    for k in range(tries):
+        try:
+            r = S.get(url, timeout=180, **kw)
+            r.raise_for_status()
+            return r
+        except Exception:
+            if k == tries - 1:
+                raise
+            time.sleep(10 * (k + 1))
 
 
 def fred(series):
-    r = S.get("https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": series}, timeout=60)
-    r.raise_for_status()
+    r = get("https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": series})
     d = pd.read_csv(io.StringIO(r.text))
     d.columns = ["time", "value"]
     d["time"] = pd.to_datetime(d.time)
@@ -149,21 +161,22 @@ def fred(series):
     return d
 
 
-def stooq(symbol):
-    r = S.get("https://stooq.com/q/d/l/", params={"s": symbol, "i": "d"}, timeout=60)
-    r.raise_for_status()
-    if not r.text.lower().startswith("date"):
-        raise RuntimeError(f"unexpected reply: {r.text[:80]!r}")
-    d = pd.read_csv(io.StringIO(r.text)).rename(columns=str.lower).rename(columns={"date": "time"})
-    d["time"] = pd.to_datetime(d.time)
+def yahoo(symbol):
+    r = get(f"https://query2.finance.yahoo.com/v8/finance/chart/{symbol}",
+            params={"period1": 1262304000, "period2": int(time.time()), "interval": "1d"},
+            headers={"User-Agent": "Mozilla/5.0"})
+    j = r.json()["chart"]["result"][0]
+    q = j["indicators"]["quote"][0]
+    d = pd.DataFrame({"time": pd.to_datetime(j["timestamp"], unit="s").normalize(), "open": q["open"], "high": q["high"],
+                      "low": q["low"], "close": q["close"], "volume": q.get("volume")}).dropna(subset=["close"])
+    d = d.drop_duplicates("time", keep="last")
     if len(d) < 100:
         raise RuntimeError(f"only {len(d)} rows")
     return d
 
 
-def dominance_4y():
-    r = S.get("https://bitcoin-data.com/v1/bitcoin-dominance/csv", timeout=60)
-    r.raise_for_status()
+def dominance():
+    r = get("https://bitcoin-data.com/v1/bitcoin-dominance/csv")
     d = pd.read_csv(io.StringIO(r.text))
     tcol = [c for c in d.columns if c.lower() in ("d", "date", "day", "time", "unixts")][0]
     d = d.rename(columns={tcol: "time"})
@@ -189,17 +202,19 @@ def run(name, fn, path, step=None):
 
 
 if __name__ == "__main__":
+  only = sys.argv[1] if len(sys.argv) > 1 else "all"      # "macro" = only the macro/other-market files
+  if only != "macro":
     run("bitstamp 1D", lambda: bitstamp(86400, "2011-08-01"), "btc_1D.csv", pd.Timedelta(days=1))
     run("bitstamp 4H", lambda: bitstamp(14400, "2014-01-01"), "btc_4H.csv", pd.Timedelta(hours=4))
     run("binance spot", lambda: klines("spot", "BTCUSDT", date(2017, 8, 1)), "binance_spot_1D.csv", pd.Timedelta(days=1))
     run("binance perp", lambda: klines("perp", "BTCUSDT", date(2019, 9, 1)), "binance_perp_1D.csv", pd.Timedelta(days=1))
     run("binance OI", lambda: open_interest("BTCUSDT", date(2021, 12, 1)), "binance_oi_1D.csv", pd.Timedelta(days=1))
     run("binance funding", lambda: funding("BTCUSDT", date(2019, 9, 1)), "binance_funding.csv")
-    for sid in FRED:
-        run(f"FRED {sid}", lambda sid=sid: fred(sid), f"fred_{sid}.csv")
-    for sym in STOOQ:
-        run(f"Stooq {sym}", lambda sym=sym: stooq(sym), f"stooq_{sym.replace('^', '').replace('.', '_')}.csv")
-    run("BTC dominance (4y)", dominance_4y, "btc_dominance_4y.csv")
-    (OUT / "DATA_REPORT.md").write_text(
-        f"# Data report ({pd.Timestamp.now(tz='UTC'):%Y-%m-%d %H:%M} UTC)\n\n| file | rows | from | to | gaps |\n|---|---|---|---|---|\n"
-        + "\n".join(report) + "\n")
+  for sid in FRED:
+    run(f"FRED {sid}", lambda sid=sid: fred(sid), f"fred_{sid}.csv")
+  for sym in YAHOO:
+    run(f"Yahoo {sym}", lambda sym=sym: yahoo(sym), f"yahoo_{sym.replace('^', '').replace('=', '_').replace('.', '_').replace('-', '_')}.csv")
+  run("BTC dominance", dominance, "btc_dominance.csv")
+  (OUT / "DATA_REPORT.md").write_text(
+      f"# Data report ({pd.Timestamp.now(tz='UTC'):%Y-%m-%d %H:%M} UTC)\n\n| file | rows | from | to | gaps |\n|---|---|---|---|---|\n"
+      + "\n".join(report) + "\n")
