@@ -17,9 +17,9 @@ from engine import Engine, D1
 
 
 def send(text, dry):
-    if dry:
-        print("---- ALERT ----\n" + text + "\n"); return
-    tok, chat = os.environ["TELEGRAM_BOT_TOKEN"], os.environ["TELEGRAM_CHAT_ID"]
+    tok, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
+    if dry or not tok or not chat:
+        print(("---- ALERT (Telegram not set up, printed only) ----\n" if not dry else "---- ALERT ----\n") + text + "\n"); return
     requests.post(f"https://api.telegram.org/bot{tok}/sendMessage",
                   json={"chat_id": chat, "text": text}, timeout=20).raise_for_status()
 
@@ -55,6 +55,13 @@ def main():
     if a.status or eng.D.time[i].weekday() == 6:           # weekly status after Sunday's close
         send("[STATUS]\n" + eng.status(), a.dry_run)
     print(f"checked daily close {eng.D.time[i] + D1:%Y-%m-%d}")
+    # turn watch (research/moves): alerts for possible 10%+ turns, daily log and journal
+    import turnwatch
+    closed = d[d.time + D1 <= pd.Timestamp.now(tz="UTC")].reset_index(drop=True)
+    mac, asof = turnwatch.market_live()
+    day = closed.time.iloc[-1].tz_convert(None).strftime("%Y-%m-%d")
+    msgs, _ = turnwatch.process(closed, mac, asof, [day], "live", send=lambda m: send(m, a.dry_run))
+    print(f"turn watch {day}: {len(msgs)} alert(s); journal updated")
 
 
 if __name__ == "__main__":

@@ -16,10 +16,11 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install pandas numpy
       - run: python research/run_all.py
+      - run: cd research/moves && python mark_moves.py     # refresh the answer key the turn watch compares against
       - run: |
           git config user.name "research-bot"
           git config user.email "research-bot@users.noreply.github.com"
           git pull --rebase || true
-          git add research/results.md
+          git add research/results.md research/moves/moves.csv
           git commit -m "Research results $(date -u +%F)" || echo "no changes"
           git push

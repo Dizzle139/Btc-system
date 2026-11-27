@@ -34,7 +34,8 @@ def daily_history(since="2016-01-01"):
             break
         parts.append(df)
         last = df.time.iloc[-1].timestamp()
-        if len(df) < 1000 or last <= start:
+        # pages can be short in early years, so a short page does NOT mean the end; stop only at the present
+        if last <= start - 86400 or last >= time.time() - 2 * 86400:
             break
         start = last + 86400
         time.sleep(0.3)
