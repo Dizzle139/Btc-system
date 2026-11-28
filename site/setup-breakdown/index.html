@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTC Setup Breakdown</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE a trader's research sheet: exact, plain, every number checkable
+   IDEA each trade the user marked, taken apart step by step, then the rule tested on all of history
+   PICTURE per trade: a zoomed daily chart with the zones, EMAs, structure, volume and cycle that explain it
+   COLOUR chart-black ground, TradingView teal/red, green/grey zones, amber = the user's trade, blue = the rule
+   TYPE Space Grotesk 700 titles + Inter text
+   LAYOUT title, step 1 rules, step 2 trades (chart + checklist), step 3 does each rule hold up, next steps */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#0f1114);--panel:light-dark(#f4f5f7,#171a1f);--ink:light-dark(#121417,#e8eaed);--mute:light-dark(#5d636b,#9aa1ab);--rule:light-dark(#e1e4e8,#2a2f36);--bull:#1f9e8f;--bear:#e2463f;--sig:#e0a100;--blue:#3b82f6;--grid:light-dark(#eef0f2,#1c2026);--zb:#22c55e;--zs:light-dark(#6b7280,#9ca3af);--e50:#5b8def;--e200:#b07cf0}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(18px,3vw,36px) max(4vw,16px)}
+.wrap{max-width:1200px;margin:0 auto}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.12;margin:0}
+h1{font-size:clamp(28px,4vw,42px);text-wrap:balance}
+h2{font-size:clamp(22px,2.6vw,28px);margin-bottom:10px}
+h3{font-size:19px}
+p{margin:.45em 0;max-width:74ch}
+.lede{color:var(--mute)}
+.note{font-size:13px;color:var(--mute)}
+.step{display:inline-block;font:600 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--sig);margin-bottom:6px}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;margin-top:10px}
+.rcard{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:14px 16px}
+.rcard h3{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pill{font:600 12px Inter,sans-serif;padding:2px 8px;border-radius:999px;border:1px solid var(--rule);color:var(--mute)}
+.pill.l{color:var(--bull);border-color:color-mix(in srgb,var(--bull) 50%,transparent)}.pill.s{color:var(--bear);border-color:color-mix(in srgb,var(--bear) 50%,transparent)}
+ol.chk{margin:.5em 0 0;padding-left:1.25em}ol.chk li{margin:.3em 0}
+.trade{border-top:1px solid var(--rule);padding:26px 0}
+.thead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;margin-bottom:6px}
+.up{color:var(--bull);font-weight:600}.dn{color:var(--bear);font-weight:600}
+.quote{border-left:3px solid var(--sig);padding:4px 12px;margin:8px 0;color:var(--ink);background:var(--panel);border-radius:0 8px 8px 0}
+.tgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:860px){.tgrid{grid-template-columns:1fr}}
+.cbox{position:relative;height:clamp(320px,46vw,460px);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.cbox canvas{position:absolute;inset:0;width:100%;height:100%}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.steps li{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:10px 12px}
+.steps .t{font-weight:600;display:flex;gap:8px;align-items:center}
+.ok{color:var(--bull)}.no{color:var(--bear)}
+.mark{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:none}
+.mark.ok{background:color-mix(in srgb,var(--bull) 20%,transparent)}.mark.no{background:color-mix(in srgb,var(--bear) 20%,transparent)}
+.steps .v{font-size:14px;color:var(--mute);margin-top:2px}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--mute);margin:10px 0}
+.key i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:6px;vertical-align:3px}
+.key b.box{display:inline-block;width:16px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;border:1px solid}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-size:13px;color:var(--mute);font-weight:600}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+details{margin-top:8px}details summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:500}
+.verdict{font-weight:600}
+.callout{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--sig);border-radius:10px;padding:14px 16px;margin:14px 0}
+</style>
+</head>
+<body>
+<header class="band"><div class="wrap">
+<h1>Your trades, taken apart and tested</h1>
+<p class="lede">Each move you marked, reverse-engineered on the daily chart: the cycle it was in, the weekly FVG or order block, the EMAs, the structure (swings, BOS, CHoCH) and volume. Then the setup behind it is written as an exact rule and run on all of BTC history since 2011 to see whether it holds up.</p>
+<div class="callout"><b>Read this first.</b> These rules were written from your own marks, so this first test has already seen the answers. It shows how often each setup fired and what happened, so we can refine it. The real verdict comes after you approve the rules: fixed on 2011–18, scored on 2019–26 only. Research, not financial advice.</div>
+</div></header>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 1</span>
+<h2>The five setups in your marks, as exact rules</h2>
+<p>Everything is checked at the daily close using only what was known then. Weekly values come from the last closed weekly candle. The halving clock splits the cycle into a <b>bull phase</b> (0–18 months and 30+ months after a halving) and a <b>bear phase</b> (18–30 months).</p>
+<div class="rules" id="rules"></div>
+<p class="note">Two ways to enter each one: <b>early</b> = the close of the first day all three conditions are true (stop just beyond that day's low or high); <b>confirmed</b> = the close of the first daily CHoCH in the trade's direction within 15 days (stop beyond the lowest low or highest high since the setup day).</p>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 2</span>
+<h2>Your trades, one by one</h2>
+<p>For each trade: what the chart showed, which rule it fits, whether every condition was there, and where the rule would have got you in compared with your own entry.</p>
+<div class="key">
+<span><i style="background:var(--sig)"></i>Your move (dot = your entry)</span>
+<span>▲▼ <span style="color:var(--blue);font-weight:600">blue</span> = the rule's setup day · ● blue = its confirmed entry</span>
+<span><b class="box" style="border-color:var(--zb);background:color-mix(in srgb,var(--zb) 18%,transparent)"></b>Bullish weekly FVG/OB</span>
+<span><b class="box" style="border-color:var(--zs);background:color-mix(in srgb,var(--zs) 18%,transparent)"></b>Bearish weekly FVG/OB</span>
+<span><i style="background:var(--e50)"></i>Weekly EMA50 <i style="background:var(--e200);margin-left:8px"></i>Weekly EMA200</span>
+<span>HH/HL/LH/LL swings · BOS/CHoCH lines · volume below · background = halving phase (teal bull, red bear)</span>
+</div>
+<div id="trades"></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 3</span>
+<h2>Does each rule hold up? First look, all history</h2>
+<p>For every time a rule fired since 2011, did price move 10% (or 20%) in the trade's direction before closing beyond the stop? Compared with entering on a random day with the same stop width.</p>
+<div class="scroll"><table id="bt"><thead><tr><th>Setup</th><th class="n">Times it fired</th><th class="n">Early entry: +10% before stop</th><th class="n">Random, same stop</th><th class="n">Confirmed entry: +10% before stop</th><th class="n">Random, same stop</th><th class="n">Confirmed, +20%</th></tr></thead><tbody></tbody></table></div>
+<div id="btlist"></div>
+<div class="callout" id="read"></div>
+</div></section>
+
+<footer class="band"><div class="wrap"><p class="note">BITSTAMP:BTCUSD daily closes, Aug 2011 to Nov 26, 2026. Zones use the research rules (displacement candle 2× the 20-candle average body). Research, not financial advice.</p></div></footer>
+
+<script>
+{
+const $=id=>document.getElementById(id);
+const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
+const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
+const fmt=x=>(x==null||isNaN(x))?'–':x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
+const nice=d=>d?new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}):'–';
+const el=(t,cls,txt)=>{const e=document.createElement(t);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+function bs(arr,key){let lo=0,hi=arr.length-1;while(lo<hi){const m=(lo+hi)>>1;if(arr[m][0]<key)lo=m+1;else hi=m}return lo}
+const HALV=['2012-11-28','2016-07-09','2020-05-11','2024-04-20'];
+const WHY={S1:'Bull pullback: in an uptrend, price pulls back into a weekly FVG/OB right at the weekly EMA50, then turns up with the trend.',
+ S2:'Bear rally into resistance: in a bear phase, price rallies back up into a bearish weekly FVG/OB and fails there, then the downtrend continues.',
+ S3:'Bear-market bounce: deep in a bear, a sharp drop reaches a bullish weekly FVG/OB and bounces, against the bigger trend.',
+ S4:'Cycle bottom: 70%+ below the all-time high, late in the halving cycle, far below the weekly EMA50, at a new 60-day low.',
+ S5:'Cycle top: at the all-time high, 12–24 months after a halving, stretched 90%+ above the weekly EMA200.'};
+let D,Wk,S;
+function phaseAt(date){let h=null;for(const x of HALV)if(x<=date)h=x;if(!h)return null;const days=(new Date(date)-new Date(h))/864e5;return(days<548||days>=913)?'bull':'bear'}
+function weeklyAt(date,arr){let k=bs(Wk.c,date);if(k>=Wk.c.length||Wk.c[k][0]>date)k--;k--;return k>=0?arr[k]:null}
+function chart(box,t){
+ const cv=document.createElement('canvas');box.append(cv);const ctx=cv.getContext('2d');
+ const c=D.c,s=bs(c,t.mark.start),e=bs(c,t.mark.end),loc=t.first_loc?bs(c,t.first_loc):null,conf=t.conf?bs(c,t.conf):null;
+ const lead=Math.max(45,Math.round((e-s)*.25)),a=Math.max(0,Math.min(s,loc??s)-lead),b=Math.min(c.length-1,e+Math.max(10,Math.round((e-s)*.1)));
+ const draw=()=>{const dpr=window.devicePixelRatio||1,W=box.clientWidth,H=box.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+  const P={l:6,r:58,t:8,b:22},pw=W-P.l-P.r,full=H-P.t-P.b,vh=Math.round(full*.17),ph=full-vh-6,bw=pw/(b-a+1);
+  const we50=[],we200=[];for(let i=a;i<=b;i++){we50.push(weeklyAt(c[i][0],Wk.e50));we200.push(weeklyAt(c[i][0],Wk.e200))}
+  let lo=Infinity,hi=-Infinity;for(let i=a;i<=b;i++){lo=Math.min(lo,c[i][3]);hi=Math.max(hi,c[i][2])}
+  for(const v of[...we50,...we200])if(v){if(v>lo*.85&&v<hi*1.15){lo=Math.min(lo,v);hi=Math.max(hi,v)}}
+  lo=Math.log(lo);hi=Math.log(hi);const mg=(hi-lo)*.07;lo-=mg;hi+=mg;
+  const X=i=>P.l+(i-a+.5)*bw,Y=p=>P.t+(hi-Math.log(p))/(hi-lo)*ph;
+  const col={mute:css('--mute'),grid:css('--grid'),bull:css('--bull'),bear:css('--bear'),sig:css('--sig'),blue:css('--blue'),ink:css('--ink'),zb:css('--zb'),zs:css('--zs'),e50:css('--e50'),e200:css('--e200'),rule:css('--rule'),bg:css('--bg')};
+  // phase background
+  for(let i=a;i<=b;i++){const ph_=phaseAt(c[i][0]);if(!ph_)continue;ctx.fillStyle=ph_==='bull'?col.bull:col.bear;ctx.globalAlpha=.06;ctx.fillRect(X(i)-bw/2,P.t,bw+.5,ph)}ctx.globalAlpha=1;
+  // grid + axis
+  ctx.font='12px Inter,sans-serif';ctx.textBaseline='middle';const r=Math.exp(hi-lo);
+  const st=(()=>{const span=Math.exp(hi)-Math.exp(lo),raw=span/5,p=10**Math.floor(Math.log10(raw)),f=raw/p;return(f<1.5?1:f<3?2:f<7?5:10)*p})();
+  for(let v=Math.ceil(Math.exp(lo)/st)*st;v<=Math.exp(hi);v+=st){const y=Y(v);ctx.strokeStyle=col.grid;ctx.beginPath();ctx.moveTo(P.l,y);ctx.lineTo(W-P.r,y);ctx.stroke();ctx.fillStyle=col.mute;ctx.fillText(v>=10000?(v/1000).toFixed(v>=100000?0:1).replace(/\.0$/,'')+'k':fmt(v),W-P.r+5,y)}
+  ctx.textAlign='center';ctx.textBaseline='top';let lx=-1e9;for(let i=a;i<=b;i++){const d=c[i][0];if(i>a&&d.slice(0,7)===c[i-1][0].slice(0,7))continue;const x=X(i);if(x-lx<70)continue;lx=x;ctx.fillStyle=col.mute;ctx.fillText(new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',year:'2-digit',timeZone:'UTC'}),x,H-P.b+5)}ctx.textAlign='left';
+  ctx.save();ctx.beginPath();ctx.rect(P.l,P.t,pw,ph);ctx.clip();
+  // weekly zones active in the window, on the trade's side and the opposite side
+  ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='top';
+  for(const[bull,kind,f0,k0,iv,bot,top,ft]of D.wz){const endI=iv<0?c.length:iv;if(endI<a||f0>b||top<Math.exp(lo)||bot>Math.exp(hi))continue;
+   const x0=Math.max(P.l,X(Math.max(f0-1,a))-bw/2),x1=Math.min(W-P.r,X(Math.min(endI,b))+bw/2);if(x1<=x0)continue;const cc=bull?col.zb:col.zs,y0=Y(top),y1=Y(bot);
+   ctx.globalAlpha=.14;ctx.fillStyle=cc;ctx.fillRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=.9;ctx.strokeStyle=cc;ctx.lineWidth=1.6;ctx.strokeRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=1;
+   if(y1-y0>12&&x1-x0>80){ctx.fillStyle=cc;ctx.fillText(`W ${['FVG','OB','FVG+OB'][kind]} ${fmt(bot)}–${fmt(top)}`,x0+4,y0+2)}}
+  // candles
+  for(let i=a;i<=b;i++){const[,o,h,l,cl]=c[i],x=X(i),cc=cl>=o?col.bull:col.bear;ctx.strokeStyle=cc;ctx.fillStyle=cc;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,Y(h));ctx.lineTo(x,Y(l));ctx.stroke();const w=Math.max(1,bw*.65);ctx.fillRect(x-w/2,Y(Math.max(o,cl)),w,Math.max(1,Math.abs(Y(o)-Y(cl))))}
+  // weekly EMAs
+  for(const[arr,cc]of[[we50,col.e50],[we200,col.e200]]){ctx.strokeStyle=cc;ctx.lineWidth=2;ctx.setLineDash([7,4]);ctx.beginPath();let on=false;arr.forEach((v,k)=>{if(v==null){on=false;return}const x=X(a+k),y=Y(v);on?ctx.lineTo(x,y):ctx.moveTo(x,y);on=true});ctx.stroke();ctx.setLineDash([])}
+  // structure
+  ctx.font='600 10px Inter,sans-serif';ctx.textAlign='center';
+  if(bw>=3.2){for(const[i,isH,px,lab]of D.sw){if(i<a||i>b||lab.length<2)continue;ctx.fillStyle=(lab==='HH'||lab==='HL')?col.bull:col.bear;ctx.textBaseline=isH?'bottom':'top';ctx.fillText(lab,X(i),isH?Y(c[i][2])-3:Y(c[i][3])+3)}}
+  ctx.textAlign='left';
+  for(const[i,kind,dir,lev]of D.ev){if(i<a||i>b)continue;let s0=i-1;for(const w of D.sw){if(w[0]<i&&w[2]===lev&&(w[1]===(dir>0?1:0)))s0=w[0]}const y=Y(lev),cc=dir>0?col.bull:col.bear;ctx.strokeStyle=cc;ctx.lineWidth=kind?1.6:1;ctx.setLineDash(kind?[]:[4,3]);ctx.beginPath();ctx.moveTo(X(Math.max(s0,a)),y);ctx.lineTo(X(i),y);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=cc;ctx.font=`${kind?700:600} 10px Inter,sans-serif`;ctx.textBaseline=dir>0?'bottom':'top';ctx.fillText(kind?'CHoCH':'BOS',X(Math.max(s0,a))+2,dir>0?y-2:y+2)}
+  // the user's trade
+  ctx.strokeStyle=col.sig;ctx.lineWidth=3.5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke();
+  const en=bs(c,t.mark.entry);ctx.fillStyle=col.sig;ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(en),Y(c[en][4]),6,0,7);ctx.fill();ctx.stroke();
+  // the rule
+  const long=S.rules[t.setup].side>0;
+  if(loc!=null){const x=X(loc),y=long?Y(c[loc][3])+14:Y(c[loc][2])-14;ctx.fillStyle=col.blue;ctx.beginPath();if(long){ctx.moveTo(x,y-9);ctx.lineTo(x-7,y+4);ctx.lineTo(x+7,y+4)}else{ctx.moveTo(x,y+9);ctx.lineTo(x-7,y-4);ctx.lineTo(x+7,y-4)}ctx.fill();
+   ctx.font='600 11px Inter,sans-serif';ctx.textBaseline=long?'top':'bottom';ctx.fillText('setup',x+9,long?y-2:y+2)}
+  if(conf!=null){ctx.fillStyle=col.blue;ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(conf),Y(c[conf][4]),6,0,7);ctx.fill();ctx.stroke();ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='bottom';ctx.fillText('confirmed',X(conf)+8,Y(c[conf][4])-6)}
+  ctx.restore();
+  // volume
+  const vt=P.t+ph+6;let vmax=0;for(let i=a;i<=b;i++)vmax=Math.max(vmax,c[i][5]);
+  for(let i=a;i<=b;i++){const h=c[i][5]/vmax*vh;ctx.globalAlpha=(i===loc||i===s)?.95:.45;ctx.fillStyle=c[i][4]>=c[i][1]?col.bull:col.bear;ctx.fillRect(X(i)-Math.max(1,bw*.65)/2,vt+vh-h,Math.max(1,bw*.65),h)}ctx.globalAlpha=1;
+  ctx.strokeStyle=col.rule;ctx.strokeRect(P.l,vt,pw,vh);ctx.strokeRect(P.l,P.t,pw,ph);ctx.fillStyle=col.mute;ctx.font='11px Inter,sans-serif';ctx.textBaseline='top';ctx.fillText('Volume',P.l+4,vt+2)};
+ new ResizeObserver(draw).observe(box);
+}
+function rules(){const box=$('rules');
+ for(const[k,r]of Object.entries(S.rules)){const card=el('article','rcard');const h=el('h3');h.append(el('span',null,`${k} · ${r.name}`),el('span','pill '+(r.side>0?'l':'s'),r.side>0?'long':'short'));
+  const p=el('p','note',WHY[k]);const ol=el('ol','chk');for(const[n,txt]of r.checks){const li=el('li');li.append(el('b',null,n+': '),document.createTextNode(txt));ol.append(li)}
+  card.append(h,p,ol);box.append(card)}}
+function trades(){const box=$('trades');
+ const seen={};
+ for(const t of S.trades){const m=t.mark,c=D.c,sP=c[bs(c,m.start)][4],eP=c[bs(c,m.end)][4],pct=(eP/sP-1)*100;
+  const sec=el('article','trade');const hd=el('div','thead');hd.append(el('h3',null,`${nice(m.start)} → ${nice(m.end)}`),el('span',pct>=0?'up':'dn',`${pct>0?'+':''}${pct.toFixed(1)}%`),el('span','pill',`you called it: ${m.type}`),el('span','pill '+(S.rules[t.setup].side>0?'l':'s'),`fits ${t.setup} · ${t.setup_name}`));
+  sec.append(hd);
+  if(m.why)sec.append(el('div','quote',`Your note: “${m.why}”`));
+  const g=el('div','tgrid');const cb=el('div','cbox');g.append(cb);
+  const right=el('div');const ul=el('ul','steps');
+  const v=t.values;
+  const facts={Regime:`Halving clock ${v.halving_months} months (${v.phase}); ${v.below_ath}% below the all-time high; weekly EMA50 ${fmt(v.w_e50)}, EMA200 ${fmt(v.w_e200)}.`,
+   Pullback:`Close ${fmt(v.close)} was ${Math.abs(v.from_hi60)}% below the 60-day high.`,
+   Rally:`Close ${fmt(v.close)} was ${v.from_lo60}% above the 60-day low.`,
+   Drop:`Close ${fmt(v.close)} after a sharp drop; ${Math.abs(v.from_hi60)}% below the 60-day high.`,
+   Stretch:`Close ${v.vs_e50>0?'+':''}${v.vs_e50}% vs the weekly EMA50, ${v.vs_e200>0?'+':''}${v.vs_e200}% vs the EMA200.`,
+   Location:`On ${nice(t.first_loc)}: close ${v.vs_e50>0?'+':''}${v.vs_e50}% from the weekly EMA50; volume ${v.vol_x}× its 20-day average.`};
+  t.checks.forEach((ck,k)=>{const li=el('li');const tt=el('div','t');tt.append(el('span','mark '+(ck.ok?'ok':'no'),ck.ok?'✓':'✗'),el('span',null,`${k+1}. ${ck.name}: ${ck.text}`));li.append(tt,el('div','v',ck.ok?facts[ck.name]||'':(ck.days.length?`Only on ${ck.days.map(nice).join(', ')}`:'Not met in the 20 days before your start.')));ul.append(li)});
+  // entries
+  const li=el('li');const tt=el('div','t');tt.append(el('span','mark '+(t.first_loc?'ok':'no'),t.first_loc?'✓':'✗'),el('span',null,'4. Entry: the rule vs you'));li.append(tt);
+  const tb=el('table');tb.innerHTML='<thead><tr><th>Entry</th><th>Date</th><th class="n">Close</th><th class="n">Left of your move</th></tr></thead>';const body=el('tbody');
+  const left=(p)=>{const r=S.rules[t.setup].side;const tot=(eP/sP-1)*r,got=(eP/p-1)*r;return tot?`${Math.round(got/tot*100)}%`:'–'};
+  const addRow=(lab,d,p)=>{const tr=el('tr');[lab,d?nice(d):'none',d?fmt(p):'–',d?left(p):'–'].forEach((x,k)=>{const td=el('td',k>=2?'n':null,x);tr.append(td)});body.append(tr)};
+  addRow('Rule, early (setup day)',t.rule_entry_aggr&&t.rule_entry_aggr.date,t.rule_entry_aggr&&t.rule_entry_aggr.close);
+  addRow('Rule, confirmed (daily CHoCH)',t.rule_entry_conf&&t.rule_entry_conf.date,t.rule_entry_conf&&t.rule_entry_conf.close);
+  addRow('You',m.entry,c[bs(c,m.entry)][4]);tb.append(body);li.append(tb);
+  if(!t.first_loc)li.append(el('div','v','The rule as written did not fire for this trade, so it needs refining (see below).'));
+  else if(!t.conf)li.append(el('div','v','No daily CHoCH came within 15 days of the setup day, so the confirmed entry did not trigger.'));
+  ul.append(li);right.append(ul);g.append(right);sec.append(g);box.append(sec);chart(cb,t)}}
+function pctCell(x,n){return x==null?'–':`${x}% (${n})`}
+function backtest(){const tb=document.querySelector('#bt tbody');
+ for(const[k,r]of Object.entries(S.rules)){const a=r.all.aggr,c=r.all.conf,ba=r.baseline.aggr,bc=r.baseline.conf;const tr=el('tr');
+  const cells=[`${k} · ${r.name}`,a.n,pctCell(a.win10,a.n10),`${ba.win10}% (stop ${ba.stop}%)`,pctCell(c.win10,c.n10),`${bc.win10}% (stop ${bc.stop}%)`,pctCell(c.win20,c.n20)];
+  cells.forEach((x,i)=>{const td=el('td',i?'n':null,String(x));if(i===2&&a.win10!=null)td.className+=' '+(a.win10>ba.win10?'up':'dn');if(i===4&&c.win10!=null)td.className+=' '+(c.win10>bc.win10?'up':'dn');tr.append(td)});tb.append(tr)}
+ const box=$('btlist');
+ for(const[k,r]of Object.entries(S.rules)){const d=el('details');d.append(el('summary',null,`${k} · ${r.name}: every time it fired (${r.signals.length})`));
+  const t=el('table');t.innerHTML='<thead><tr><th>Setup day</th><th class="n">Early entry: result</th><th class="n">Best move</th><th>Confirmed entry</th><th class="n">Result</th><th class="n">Best move</th></tr></thead>';const b=el('tbody');
+  const res=x=>!x?'–':(x.win10===null?'still open':(x.win20?'+20% before stop':x.win10?'+10% before stop':'stopped first'));
+  for(const s of r.signals){const tr=el('tr');[nice(s.loc),res(s.aggr),s.aggr?`${s.aggr.best}%`:'–',s.conf?nice(s.conf):'no CHoCH in 15 days',res(s.conf_res),s.conf_res?`${s.conf_res.best}%`:'–'].forEach((x,i)=>{const td=el('td',(i===1||i===2||i===4||i===5)?'n':null,x);if(i===1||i===4){if(String(x).startsWith('+'))td.className+=' up';else if(x==='stopped first')td.className+=' dn'}tr.append(td)});b.append(tr)}
+  t.append(b);const sc=el('div','scroll');sc.append(t);d.append(sc);
+  const h1=r.h1.conf,h2=r.h2.conf;d.append(el('p','note',`Confirmed entries by half: 2011–18 ${pctCell(h1.win10,h1.n10)}, 2019–26 ${pctCell(h2.win10,h2.n10)} reached +10% before the stop.`));box.append(d)}
+ const rd=$('read');rd.innerHTML='';rd.append(el('b',null,'What this first look says'));
+ const ul=el('ul');[
+  'S2 (bear rally into resistance) is the strongest: 7 of 8 confirmed entries reached +10% before the stop, against 46% for a random short with the same stop. Only 8 cases.',
+  'S5 (cycle top) with confirmation: 4 of 6 reached +10%, against 46% random. The early entry at the top almost always got stopped: the top is a few days of chop, not one candle.',
+  'S1 (bull pullback): the early entry beat random (43% vs 33% with the same tight stop), but the confirmed entry did worse than random (44% vs 61%). By the time the daily CHoCH arrives the stop is far away. 13 of its 14 signals are after 2019: before then BTC rarely pulled back to the weekly EMA50 in a bull.',
+  'S3 (bear-market bounce) did worse than random both ways. Bounces in a bear fail more often than they work.',
+  'S4 (cycle bottom) as written missed two of your three bottoms (Feb 2019 and Dec 2022 never made a new 60-day low on the day the other conditions held). It needs a different trigger.',
+  'All samples are small (3 to 28 signals), and the rules were made from your marks, so treat every number here as a lead, not a result.'].forEach(s=>ul.append(el('li',null,s)));rd.append(ul)}
+Promise.all(['d1.json','w1.json','setups.json'].map(f=>fetch(f).then(r=>r.json()))).then(([d,w,s])=>{D=d;Wk=w;S=s;rules();trades();backtest()}).catch(()=>{$('trades').textContent='The data did not load. Reload the page to try again.'});
+}
+</script>
+</body>
+</html>

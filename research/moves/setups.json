@@ -1,0 +1,2903 @@
+{
+ "rules": {
+  "S1": {
+   "name": "Bull pullback",
+   "side": 1,
+   "checks": [
+    [
+     "Regime",
+     "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200"
+    ],
+    [
+     "Pullback",
+     "close 10%+ below the highest close of the last 60 days"
+    ],
+    [
+     "Location",
+     "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50"
+    ]
+   ],
+   "all": {
+    "aggr": {
+     "n": 14,
+     "win10": 43,
+     "n10": 14,
+     "win20": 36,
+     "n20": 14,
+     "best_med": 6.6,
+     "stop_med": 1.55
+    },
+    "conf": {
+     "n": 9,
+     "win10": 44,
+     "n10": 9,
+     "win20": 38,
+     "n20": 8,
+     "best_med": 3.9,
+     "stop_med": 11.3
+    }
+   },
+   "h1": {
+    "aggr": {
+     "n": 1,
+     "win10": 100,
+     "n10": 1,
+     "win20": 100,
+     "n20": 1,
+     "best_med": 58.4,
+     "stop_med": 24.5
+    },
+    "conf": {
+     "n": 1,
+     "win10": 100,
+     "n10": 1,
+     "win20": 100,
+     "n20": 1,
+     "best_med": 28.6,
+     "stop_med": 53.3
+    }
+   },
+   "h2": {
+    "aggr": {
+     "n": 13,
+     "win10": 38,
+     "n10": 13,
+     "win20": 31,
+     "n20": 13,
+     "best_med": 6.6,
+     "stop_med": 1.5
+    },
+    "conf": {
+     "n": 8,
+     "win10": 38,
+     "n10": 8,
+     "win20": 29,
+     "n20": 7,
+     "best_med": 2.3,
+     "stop_med": 10.95
+    }
+   },
+   "baseline": {
+    "aggr": {
+     "stop": 1.55,
+     "win10": 33,
+     "win20": 26
+    },
+    "conf": {
+     "stop": 11.3,
+     "win10": 61,
+     "win20": 49
+    }
+   },
+   "signals": [
+    {
+     "loc": "2014-04-11",
+     "conf": "2014-04-15",
+     "aggr": {
+      "entry": "2014-04-11",
+      "stop": 339.79,
+      "stop_dist": 24.5,
+      "win10": true,
+      "win20": true,
+      "days10": 4,
+      "best": 58.4,
+      "status": "time"
+     },
+     "conf_res": {
+      "entry": "2014-04-15",
+      "stop": 339.79,
+      "stop_dist": 53.3,
+      "win10": true,
+      "win20": true,
+      "days10": 40,
+      "best": 28.6,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2019-09-26",
+     "conf": "2019-10-09",
+     "aggr": {
+      "entry": "2019-09-26",
+      "stop": 7733.99,
+      "stop_dist": 4.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 6.6,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2019-10-09",
+      "stop": 7714.7,
+      "stop_dist": 11.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2019-11-18",
+     "conf": null,
+     "aggr": {
+      "entry": "2019-11-18",
+      "stop": 8010.7,
+      "stop_dist": 2.0,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2021-06-07",
+     "conf": "2021-06-13",
+     "aggr": {
+      "entry": "2021-06-07",
+      "stop": 33321.09,
+      "stop_dist": 0.8,
+      "win10": true,
+      "win20": true,
+      "days10": 2,
+      "best": 20.7,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2021-06-13",
+      "stop": 31025.0,
+      "stop_dist": 25.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 3.9,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2021-07-01",
+     "conf": null,
+     "aggr": {
+      "entry": "2021-07-01",
+      "stop": 32700.88,
+      "stop_dist": 2.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 5.1,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2023-05-24",
+     "conf": "2023-05-28",
+     "aggr": {
+      "entry": "2023-05-24",
+      "stop": 26076.0,
+      "stop_dist": 1.0,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 6.6,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2023-05-28",
+      "stop": 25878.0,
+      "stop_dist": 8.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2023-06-13",
+     "conf": "2023-06-17",
+     "aggr": {
+      "entry": "2023-06-13",
+      "stop": 25718.0,
+      "stop_dist": 0.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2023-06-17",
+      "stop": 24756.0,
+      "stop_dist": 7.1,
+      "win10": true,
+      "win20": null,
+      "days10": 4,
+      "best": 18.7,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2023-08-17",
+     "conf": "2023-08-29",
+     "aggr": {
+      "entry": "2023-08-17",
+      "stop": 26266.0,
+      "stop_dist": 1.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2023-08-29",
+      "stop": 25350.0,
+      "stop_dist": 9.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2023-09-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2023-09-14",
+      "stop": 26143.0,
+      "stop_dist": 1.5,
+      "win10": true,
+      "win20": true,
+      "days10": 36,
+      "best": 77.1,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2024-08-05",
+     "conf": null,
+     "aggr": {
+      "entry": "2024-08-05",
+      "stop": 49577.0,
+      "stop_dist": 8.9,
+      "win10": true,
+      "win20": true,
+      "days10": 3,
+      "best": 83.3,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2024-09-06",
+     "conf": "2024-09-12",
+     "aggr": {
+      "entry": "2024-09-06",
+      "stop": 52546.0,
+      "stop_dist": 2.7,
+      "win10": true,
+      "win20": true,
+      "days10": 7,
+      "best": 96.8,
+      "status": "time"
+     },
+     "conf_res": {
+      "entry": "2024-09-12",
+      "stop": 52546.0,
+      "stop_dist": 10.6,
+      "win10": true,
+      "win20": true,
+      "days10": 12,
+      "best": 82.6,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2025-03-10",
+     "conf": "2025-03-19",
+     "aggr": {
+      "entry": "2025-03-10",
+      "stop": 77393.0,
+      "stop_dist": 1.5,
+      "win10": true,
+      "win20": false,
+      "days10": 9,
+      "best": 11.4,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2025-03-19",
+      "stop": 76600.0,
+      "stop_dist": 13.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.7,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2025-04-06",
+     "conf": "2025-04-21",
+     "aggr": {
+      "entry": "2025-04-06",
+      "stop": 77098.0,
+      "stop_dist": 1.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 1.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2025-04-21",
+      "stop": 74434.0,
+      "stop_dist": 17.6,
+      "win10": true,
+      "win20": true,
+      "days10": 10,
+      "best": 41.0,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2026-10-30",
+     "conf": null,
+     "aggr": {
+      "entry": "2026-10-30",
+      "stop": 76172.75,
+      "stop_dist": 1.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.2,
+      "status": "stopped"
+     },
+     "conf_res": null
+    }
+   ]
+  },
+  "S2": {
+   "name": "Bear rally into resistance",
+   "side": -1,
+   "checks": [
+    [
+     "Regime",
+     "bear phase of the halving clock; close 20%+ below the all-time high"
+    ],
+    [
+     "Rally",
+     "close 10%+ above the lowest close of the last 60 days"
+    ],
+    [
+     "Location",
+     "high in a bearish weekly FVG/OB"
+    ]
+   ],
+   "all": {
+    "aggr": {
+     "n": 16,
+     "win10": 25,
+     "n10": 16,
+     "win20": 12,
+     "n20": 16,
+     "best_med": 4.1,
+     "stop_med": 1.35
+    },
+    "conf": {
+     "n": 8,
+     "win10": 88,
+     "n10": 8,
+     "win20": 86,
+     "n20": 7,
+     "best_med": 27.0,
+     "stop_med": 13.450000000000001
+    }
+   },
+   "h1": {
+    "aggr": {
+     "n": 5,
+     "win10": 60,
+     "n10": 5,
+     "win20": 40,
+     "n20": 5,
+     "best_med": 17.9,
+     "stop_med": 2.3
+    },
+    "conf": {
+     "n": 2,
+     "win10": 100,
+     "n10": 2,
+     "win20": 100,
+     "n20": 2,
+     "best_med": 44.25,
+     "stop_med": 21.25
+    }
+   },
+   "h2": {
+    "aggr": {
+     "n": 11,
+     "win10": 9,
+     "n10": 11,
+     "win20": 0,
+     "n20": 11,
+     "best_med": 0.4,
+     "stop_med": 1.1
+    },
+    "conf": {
+     "n": 6,
+     "win10": 83,
+     "n10": 6,
+     "win20": 80,
+     "n20": 5,
+     "best_med": 25.2,
+     "stop_med": 8.5
+    }
+   },
+   "baseline": {
+    "aggr": {
+     "stop": 1.35,
+     "win10": 20,
+     "win20": 13
+    },
+    "conf": {
+     "stop": 13.450000000000001,
+     "win10": 46,
+     "win20": 33
+    }
+   },
+   "signals": [
+    {
+     "loc": "2014-11-13",
+     "conf": "2014-11-20",
+     "aggr": {
+      "entry": "2014-11-13",
+      "stop": 453.92,
+      "stop_dist": 7.3,
+      "win10": true,
+      "win20": true,
+      "days10": 2,
+      "best": 59.3,
+      "status": "time"
+     },
+     "conf_res": {
+      "entry": "2014-11-20",
+      "stop": 453.92,
+      "stop_dist": 21.5,
+      "win10": true,
+      "win20": true,
+      "days10": 28,
+      "best": 51.9,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2015-01-27",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-01-27",
+      "stop": 278.51,
+      "stop_dist": 5.2,
+      "win10": true,
+      "win20": false,
+      "days10": 1,
+      "best": 17.9,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-02-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-02-14",
+      "stop": 259.31,
+      "stop_dist": 0.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 8.7,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-02-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-02-14",
+      "stop": 9515.0,
+      "stop_dist": 0.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-03-05",
+     "conf": "2018-03-09",
+     "aggr": {
+      "entry": "2018-03-05",
+      "stop": 11688.0,
+      "stop_dist": 2.3,
+      "win10": true,
+      "win20": true,
+      "days10": 2,
+      "best": 48.8,
+      "status": "time"
+     },
+     "conf_res": {
+      "entry": "2018-03-09",
+      "stop": 11688.0,
+      "stop_dist": 21.0,
+      "win10": true,
+      "win20": true,
+      "days10": 5,
+      "best": 36.6,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2022-07-08",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-07-08",
+      "stop": 22401.0,
+      "stop_dist": 3.6,
+      "win10": true,
+      "win20": false,
+      "days10": 4,
+      "best": 10.5,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-07-24",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-07-24",
+      "stop": 23006.77,
+      "stop_dist": 1.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 5.9,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-08-09",
+     "conf": "2022-08-19",
+     "aggr": {
+      "entry": "2022-08-09",
+      "stop": 23927.44,
+      "stop_dist": 3.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2022-08-19",
+      "stop": 25212.0,
+      "stop_dist": 17.3,
+      "win10": true,
+      "win20": true,
+      "days10": 33,
+      "best": 24.4,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2022-09-11",
+     "conf": "2022-09-20",
+     "aggr": {
+      "entry": "2022-09-11",
+      "stop": 21871.0,
+      "stop_dist": 0.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2022-09-20",
+      "stop": 22781.0,
+      "stop_dist": 17.1,
+      "win10": true,
+      "win20": null,
+      "days10": 50,
+      "best": 16.5,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2026-01-13",
+     "conf": "2026-01-20",
+     "aggr": {
+      "entry": "2026-01-13",
+      "stop": 96474.0,
+      "stop_dist": 1.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-01-20",
+      "stop": 97939.0,
+      "stop_dist": 9.8,
+      "win10": true,
+      "win20": true,
+      "days10": 11,
+      "best": 28.9,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2026-04-22",
+     "conf": null,
+     "aggr": {
+      "entry": "2026-04-22",
+      "stop": 79500.0,
+      "stop_dist": 1.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 3.1,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2026-05-08",
+     "conf": "2026-05-15",
+     "aggr": {
+      "entry": "2026-05-08",
+      "stop": 80500.0,
+      "stop_dist": 0.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-05-15",
+      "stop": 82458.0,
+      "stop_dist": 4.1,
+      "win10": true,
+      "win20": true,
+      "days10": 18,
+      "best": 26.0,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2026-07-21",
+     "conf": null,
+     "aggr": {
+      "entry": "2026-07-21",
+      "stop": 66920.74,
+      "stop_dist": 0.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 5.7,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2026-08-19",
+     "conf": null,
+     "aggr": {
+      "entry": "2026-08-19",
+      "stop": 70033.39,
+      "stop_dist": 1.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2026-09-04",
+     "conf": "2026-09-15",
+     "aggr": {
+      "entry": "2026-09-04",
+      "stop": 81426.37,
+      "stop_dist": 2.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 5.1,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-09-15",
+      "stop": 81426.37,
+      "stop_dist": 7.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2026-10-01",
+     "conf": "2026-10-08",
+     "aggr": {
+      "entry": "2026-10-01",
+      "stop": 85232.94,
+      "stop_dist": 0.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.4,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-10-08",
+      "stop": 87219.4,
+      "stop_dist": 6.4,
+      "win10": true,
+      "win20": true,
+      "days10": 35,
+      "best": 28.0,
+      "status": "open"
+     }
+    }
+   ]
+  },
+  "S3": {
+   "name": "Bear-market bounce",
+   "side": 1,
+   "checks": [
+    [
+     "Regime",
+     "bear phase of the halving clock; close 40%+ below the all-time high"
+    ],
+    [
+     "Drop",
+     "close 15%+ below the highest close of the last 30 days"
+    ],
+    [
+     "Location",
+     "low in a bullish weekly FVG/OB"
+    ]
+   ],
+   "all": {
+    "aggr": {
+     "n": 28,
+     "win10": 21,
+     "n10": 28,
+     "win20": 7,
+     "n20": 27,
+     "best_med": 3.5,
+     "stop_med": 2.4
+    },
+    "conf": {
+     "n": 13,
+     "win10": 54,
+     "n10": 13,
+     "win20": 46,
+     "n20": 13,
+     "best_med": 13.0,
+     "stop_med": 12.6
+    }
+   },
+   "h1": {
+    "aggr": {
+     "n": 21,
+     "win10": 14,
+     "n10": 21,
+     "win20": 5,
+     "n20": 21,
+     "best_med": 2.5,
+     "stop_med": 1.7
+    },
+    "conf": {
+     "n": 9,
+     "win10": 56,
+     "n10": 9,
+     "win20": 56,
+     "n20": 9,
+     "best_med": 20.8,
+     "stop_med": 12.6
+    }
+   },
+   "h2": {
+    "aggr": {
+     "n": 7,
+     "win10": 43,
+     "n10": 7,
+     "win20": 17,
+     "n20": 6,
+     "best_med": 9.9,
+     "stop_med": 6.2
+    },
+    "conf": {
+     "n": 4,
+     "win10": 50,
+     "n10": 4,
+     "win20": 25,
+     "n20": 4,
+     "best_med": 8.9,
+     "stop_med": 13.9
+    }
+   },
+   "baseline": {
+    "aggr": {
+     "stop": 2.4,
+     "win10": 38,
+     "win20": 30
+    },
+    "conf": {
+     "stop": 12.6,
+     "win10": 62,
+     "win20": 51
+    }
+   },
+   "signals": [
+    {
+     "loc": "2014-08-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2014-08-14",
+      "stop": 497.0,
+      "stop_dist": 2.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.8,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2014-08-30",
+     "conf": null,
+     "aggr": {
+      "entry": "2014-08-30",
+      "stop": 498.13,
+      "stop_dist": 0.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2014-09-28",
+     "conf": null,
+     "aggr": {
+      "entry": "2014-09-28",
+      "stop": 368.9,
+      "stop_dist": 1.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.2,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2014-12-18",
+     "conf": null,
+     "aggr": {
+      "entry": "2014-12-18",
+      "stop": 304.99,
+      "stop_dist": 2.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 7.8,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-01-03",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-01-03",
+      "stop": 280.0,
+      "stop_dist": 0.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-01-19",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-01-19",
+      "stop": 207.7,
+      "stop_dist": 4.2,
+      "win10": true,
+      "win20": true,
+      "days10": 5,
+      "best": 37.1,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-02-04",
+     "conf": "2015-02-13",
+     "aggr": {
+      "entry": "2015-02-04",
+      "stop": 220.02,
+      "stop_dist": 3.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2015-02-13",
+      "stop": 210.43,
+      "stop_dist": 12.6,
+      "win10": true,
+      "win20": true,
+      "days10": 17,
+      "best": 25.1,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2015-03-24",
+     "conf": "2015-04-03",
+     "aggr": {
+      "entry": "2015-03-24",
+      "stop": 241.84,
+      "stop_dist": 1.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 6.3,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2015-04-03",
+      "stop": 236.4,
+      "stop_dist": 7.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.5,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2015-04-19",
+     "conf": "2015-04-21",
+     "aggr": {
+      "entry": "2015-04-19",
+      "stop": 221.91,
+      "stop_dist": 0.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 6.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2015-04-21",
+      "stop": 221.43,
+      "stop_dist": 6.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.1,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2018-01-16",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-01-16",
+      "stop": 10162.0,
+      "stop_dist": 12.0,
+      "win10": true,
+      "win20": false,
+      "days10": 4,
+      "best": 12.2,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-02-01",
+     "conf": "2018-02-14",
+     "aggr": {
+      "entry": "2018-02-01",
+      "stop": 8455.0,
+      "stop_dist": 6.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.5,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-02-14",
+      "stop": 5920.72,
+      "stop_dist": 60.3,
+      "win10": true,
+      "win20": true,
+      "days10": 3,
+      "best": 20.8,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2018-03-18",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-03-18",
+      "stop": 7325.37,
+      "stop_dist": 11.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 8.9,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-04-03",
+     "conf": "2018-04-12",
+     "aggr": {
+      "entry": "2018-04-03",
+      "stop": 7001.28,
+      "stop_dist": 5.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-04-12",
+      "stop": 6510.0,
+      "stop_dist": 21.7,
+      "win10": true,
+      "win20": true,
+      "days10": 8,
+      "best": 24.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2018-05-24",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-05-24",
+      "stop": 7267.24,
+      "stop_dist": 4.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-06-10",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-06-10",
+      "stop": 6627.7,
+      "stop_dist": 2.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 1.5,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-06-26",
+     "conf": "2018-06-30",
+     "aggr": {
+      "entry": "2018-06-26",
+      "stop": 6025.68,
+      "stop_dist": 0.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 1.1,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-06-30",
+      "stop": 5774.72,
+      "stop_dist": 10.6,
+      "win10": true,
+      "win20": true,
+      "days10": 17,
+      "best": 31.6,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2018-08-04",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-08-04",
+      "stop": 6926.0,
+      "stop_dist": 1.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.3,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-08-20",
+     "conf": "2018-08-28",
+     "aggr": {
+      "entry": "2018-08-20",
+      "stop": 6223.9,
+      "stop_dist": 0.6,
+      "win10": true,
+      "win20": false,
+      "days10": 7,
+      "best": 17.6,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-08-28",
+      "stop": 6223.9,
+      "stop_dist": 13.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2018-09-17",
+     "conf": "2018-09-21",
+     "aggr": {
+      "entry": "2018-09-17",
+      "stop": 6200.0,
+      "stop_dist": 0.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 7.9,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-09-21",
+      "stop": 6100.0,
+      "stop_dist": 10.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2018-11-19",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-11-19",
+      "stop": 4694.44,
+      "stop_dist": 0.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-12-05",
+     "conf": "2018-12-18",
+     "aggr": {
+      "entry": "2018-12-05",
+      "stop": 3662.35,
+      "stop_dist": 0.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-12-18",
+      "stop": 3122.28,
+      "stop_dist": 17.5,
+      "win10": true,
+      "win20": true,
+      "days10": 2,
+      "best": 45.2,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2022-05-12",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-05-12",
+      "stop": 25401.05,
+      "stop_dist": 13.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 9.9,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-06-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-06-14",
+      "stop": 20816.35,
+      "stop_dist": 6.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.1,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-06-30",
+     "conf": "2022-07-07",
+     "aggr": {
+      "entry": "2022-06-30",
+      "stop": 18595.6,
+      "stop_dist": 7.1,
+      "win10": true,
+      "win20": true,
+      "days10": 18,
+      "best": 22.7,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2022-07-07",
+      "stop": 18595.6,
+      "stop_dist": 16.4,
+      "win10": true,
+      "win20": false,
+      "days10": 21,
+      "best": 13.0,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2022-09-07",
+     "conf": "2022-09-09",
+     "aggr": {
+      "entry": "2022-09-07",
+      "stop": 18540.0,
+      "stop_dist": 4.0,
+      "win10": true,
+      "win20": false,
+      "days10": 2,
+      "best": 16.2,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2022-09-09",
+      "stop": 18540.0,
+      "stop_dist": 15.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.8,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2026-02-06",
+     "conf": null,
+     "aggr": {
+      "entry": "2026-02-06",
+      "stop": 59930.0,
+      "stop_dist": 17.7,
+      "win10": true,
+      "win20": null,
+      "days10": 75,
+      "best": 16.5,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2026-06-05",
+     "conf": "2026-06-13",
+     "aggr": {
+      "entry": "2026-06-05",
+      "stop": 59100.0,
+      "stop_dist": 3.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 8.6,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-06-13",
+      "stop": 59100.0,
+      "stop_dist": 9.0,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.9,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2026-06-29",
+     "conf": "2026-07-14",
+     "aggr": {
+      "entry": "2026-06-29",
+      "stop": 58800.83,
+      "stop_dist": 2.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2026-07-14",
+      "stop": 57734.63,
+      "stop_dist": 12.5,
+      "win10": true,
+      "win20": true,
+      "days10": 37,
+      "best": 33.3,
+      "status": "time"
+     }
+    }
+   ]
+  },
+  "S4": {
+   "name": "Cycle bottom",
+   "side": 1,
+   "checks": [
+    [
+     "Regime",
+     "close 70%+ below the all-time high; 24+ months after the halving"
+    ],
+    [
+     "Stretch",
+     "close 20%+ below the weekly EMA50"
+    ],
+    [
+     "Location",
+     "lowest close of the last 60 days"
+    ]
+   ],
+   "all": {
+    "aggr": {
+     "n": 10,
+     "win10": 40,
+     "n10": 10,
+     "win20": 30,
+     "n20": 10,
+     "best_med": 2.4,
+     "stop_med": 1.6
+    },
+    "conf": {
+     "n": 3,
+     "win10": 67,
+     "n10": 3,
+     "win20": 67,
+     "n20": 3,
+     "best_med": 31.7,
+     "stop_med": 15.3
+    }
+   },
+   "h1": {
+    "aggr": {
+     "n": 6,
+     "win10": 0,
+     "n10": 6,
+     "win20": 0,
+     "n20": 6,
+     "best_med": 0.0,
+     "stop_med": 1.65
+    },
+    "conf": {
+     "n": 2,
+     "win10": 100,
+     "n10": 2,
+     "win20": 100,
+     "n20": 2,
+     "best_med": 38.45,
+     "stop_med": 14.9
+    }
+   },
+   "h2": {
+    "aggr": {
+     "n": 4,
+     "win10": 100,
+     "n10": 4,
+     "win20": 75,
+     "n20": 4,
+     "best_med": 42.75,
+     "stop_med": 1.5
+    },
+    "conf": {
+     "n": 1,
+     "win10": 0,
+     "n10": 1,
+     "win20": 0,
+     "n20": 1,
+     "best_med": 4.8,
+     "stop_med": 15.3
+    }
+   },
+   "baseline": {
+    "aggr": {
+     "stop": 1.6,
+     "win10": 33,
+     "win20": 26
+    },
+    "conf": {
+     "stop": 15.3,
+     "win10": 65,
+     "win20": 55
+    }
+   },
+   "signals": [
+    {
+     "loc": "2014-12-17",
+     "conf": null,
+     "aggr": {
+      "entry": "2014-12-17",
+      "stop": 315.23,
+      "stop_dist": 2.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-01-03",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-01-03",
+      "stop": 280.0,
+      "stop_dist": 0.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2015-04-13",
+     "conf": "2015-04-21",
+     "aggr": {
+      "entry": "2015-04-13",
+      "stop": 219.64,
+      "stop_dist": 1.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2015-04-21",
+      "stop": 210.0,
+      "stop_dist": 12.3,
+      "win10": true,
+      "win20": true,
+      "days10": 70,
+      "best": 31.7,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2015-08-18",
+     "conf": null,
+     "aggr": {
+      "entry": "2015-08-18",
+      "stop": 221.11,
+      "stop_dist": 1.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.8,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-11-14",
+     "conf": null,
+     "aggr": {
+      "entry": "2018-11-14",
+      "stop": 5324.0,
+      "stop_dist": 5.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2018-12-05",
+     "conf": "2018-12-18",
+     "aggr": {
+      "entry": "2018-12-05",
+      "stop": 3662.35,
+      "stop_dist": 0.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2018-12-18",
+      "stop": 3122.28,
+      "stop_dist": 17.5,
+      "win10": true,
+      "win20": true,
+      "days10": 2,
+      "best": 45.2,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2020-03-12",
+     "conf": null,
+     "aggr": {
+      "entry": "2020-03-12",
+      "stop": 4776.59,
+      "stop_dist": 1.4,
+      "win10": true,
+      "win20": true,
+      "days10": 1,
+      "best": 110.7,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-06-18",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-06-18",
+      "stop": 17592.78,
+      "stop_dist": 7.8,
+      "win10": true,
+      "win20": true,
+      "days10": 5,
+      "best": 29.0,
+      "status": "time"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2022-09-06",
+     "conf": "2022-09-09",
+     "aggr": {
+      "entry": "2022-09-06",
+      "stop": 18669.0,
+      "stop_dist": 0.6,
+      "win10": true,
+      "win20": false,
+      "days10": 3,
+      "best": 19.2,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2022-09-09",
+      "stop": 18540.0,
+      "stop_dist": 15.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.8,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2022-11-09",
+     "conf": null,
+     "aggr": {
+      "entry": "2022-11-09",
+      "stop": 15632.0,
+      "stop_dist": 1.6,
+      "win10": true,
+      "win20": true,
+      "days10": 1,
+      "best": 56.5,
+      "status": "time"
+     },
+     "conf_res": null
+    }
+   ]
+  },
+  "S5": {
+   "name": "Cycle top",
+   "side": -1,
+   "checks": [
+    [
+     "Regime",
+     "close within 10% of the all-time high; 12-24 months after the halving"
+    ],
+    [
+     "Stretch",
+     "close 90%+ above the weekly EMA200"
+    ],
+    [
+     "Location",
+     "highest close of the last 20 days"
+    ]
+   ],
+   "all": {
+    "aggr": {
+     "n": 15,
+     "win10": 13,
+     "n10": 15,
+     "win20": 7,
+     "n20": 15,
+     "best_med": 0.8,
+     "stop_med": 0.8
+    },
+    "conf": {
+     "n": 6,
+     "win10": 67,
+     "n10": 6,
+     "win20": 50,
+     "n20": 6,
+     "best_med": 23.8,
+     "stop_med": 13.55
+    }
+   },
+   "h1": {
+    "aggr": {
+     "n": 8,
+     "win10": 12,
+     "n10": 8,
+     "win20": 0,
+     "n20": 8,
+     "best_med": 0.15,
+     "stop_med": 2.2
+    },
+    "conf": {
+     "n": 2,
+     "win10": 100,
+     "n10": 2,
+     "win20": 50,
+     "n20": 2,
+     "best_med": 23.8,
+     "stop_med": 28.45
+    }
+   },
+   "h2": {
+    "aggr": {
+     "n": 7,
+     "win10": 14,
+     "n10": 7,
+     "win20": 14,
+     "n20": 7,
+     "best_med": 2.6,
+     "stop_med": 0.4
+    },
+    "conf": {
+     "n": 4,
+     "win10": 50,
+     "n10": 4,
+     "win20": 50,
+     "n20": 4,
+     "best_med": 23.0,
+     "stop_med": 9.350000000000001
+    }
+   },
+   "baseline": {
+    "aggr": {
+     "stop": 0.8,
+     "win10": 17,
+     "win20": 12
+    },
+    "conf": {
+     "stop": 13.55,
+     "win10": 46,
+     "win20": 33
+    }
+   },
+   "signals": [
+    {
+     "loc": "2013-11-28",
+     "conf": "2013-12-07",
+     "aggr": {
+      "entry": "2013-11-28",
+      "stop": 1050.18,
+      "stop_dist": 3.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2013-12-07",
+      "stop": 1163.0,
+      "stop_dist": 40.4,
+      "win10": true,
+      "win20": true,
+      "days10": 11,
+      "best": 36.7,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2017-07-20",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-07-20",
+      "stop": 2938.0,
+      "stop_dist": 2.1,
+      "win10": true,
+      "win20": false,
+      "days10": 5,
+      "best": 12.2,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2017-08-05",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-08-05",
+      "stop": 3339.66,
+      "stop_dist": 2.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 1.3,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2017-08-28",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-08-28",
+      "stop": 4399.72,
+      "stop_dist": 0.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2017-10-08",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-10-08",
+      "stop": 4612.0,
+      "stop_dist": 0.3,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2017-10-29",
+     "conf": "2017-11-10",
+     "aggr": {
+      "entry": "2017-10-29",
+      "stop": 6316.85,
+      "stop_dist": 2.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.3,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2017-11-10",
+      "stop": 7888.0,
+      "stop_dist": 16.5,
+      "win10": true,
+      "win20": false,
+      "days10": 2,
+      "best": 10.9,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2017-11-26",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-11-26",
+      "stop": 9366.6,
+      "stop_dist": 1.0,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2017-12-12",
+     "conf": null,
+     "aggr": {
+      "entry": "2017-12-12",
+      "stop": 17428.42,
+      "stop_dist": 4.5,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.4,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2021-10-11",
+     "conf": null,
+     "aggr": {
+      "entry": "2021-10-11",
+      "stop": 57855.79,
+      "stop_dist": 0.6,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.6,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2021-11-08",
+     "conf": "2021-11-16",
+     "aggr": {
+      "entry": "2021-11-08",
+      "stop": 67803.55,
+      "stop_dist": 0.4,
+      "win10": true,
+      "win20": true,
+      "days10": 8,
+      "best": 48.1,
+      "status": "time"
+     },
+     "conf_res": {
+      "entry": "2021-11-16",
+      "stop": 69000.0,
+      "stop_dist": 12.8,
+      "win10": true,
+      "win20": true,
+      "days10": 10,
+      "best": 41.7,
+      "status": "time"
+     }
+    },
+    {
+     "loc": "2025-05-02",
+     "conf": null,
+     "aggr": {
+      "entry": "2025-05-02",
+      "stop": 97938.0,
+      "stop_dist": 1.0,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 2.7,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2025-05-18",
+     "conf": "2025-05-29",
+     "aggr": {
+      "entry": "2025-05-18",
+      "stop": 106635.0,
+      "stop_dist": 0.1,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.8,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2025-05-29",
+      "stop": 112000.0,
+      "stop_dist": 5.7,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 4.3,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2025-07-02",
+     "conf": null,
+     "aggr": {
+      "entry": "2025-07-02",
+      "stop": 109802.0,
+      "stop_dist": 0.8,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.8,
+      "status": "stopped"
+     },
+     "conf_res": null
+    },
+    {
+     "loc": "2025-07-22",
+     "conf": "2025-08-01",
+     "aggr": {
+      "entry": "2025-07-22",
+      "stop": 120297.0,
+      "stop_dist": 0.2,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 6.2,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2025-08-01",
+      "stop": 120297.0,
+      "stop_dist": 5.9,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.6,
+      "status": "stopped"
+     }
+    },
+    {
+     "loc": "2025-10-02",
+     "conf": "2025-10-16",
+     "aggr": {
+      "entry": "2025-10-02",
+      "stop": 121106.0,
+      "stop_dist": 0.4,
+      "win10": false,
+      "win20": false,
+      "days10": null,
+      "best": 0.0,
+      "status": "stopped"
+     },
+     "conf_res": {
+      "entry": "2025-10-16",
+      "stop": 126272.0,
+      "stop_dist": 14.3,
+      "win10": true,
+      "win20": true,
+      "days10": 29,
+      "best": 42.0,
+      "status": "time"
+     }
+    }
+   ]
+  }
+ },
+ "trades": [
+  {
+   "mark": {
+    "id": "c6e1",
+    "start": "2019-02-09",
+    "end": "2019-07-03",
+    "entry": "2019-02-17",
+    "type": "breakout",
+    "why": ""
+   },
+   "setup": "S4",
+   "setup_name": "Cycle bottom",
+   "first_loc": null,
+   "conf": null,
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "close 70%+ below the all-time high; 24+ months after the halving",
+     "ok": true,
+     "days": [
+      "2019-01-20",
+      "2019-01-21",
+      "2019-01-22"
+     ]
+    },
+    {
+     "name": "Stretch",
+     "text": "close 20%+ below the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2019-01-20",
+      "2019-01-21",
+      "2019-01-22"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "lowest close of the last 60 days",
+     "ok": false,
+     "days": []
+    }
+   ],
+   "values": {
+    "halving_months": 31.0,
+    "below_ath": 81.1,
+    "close": 3622.62,
+    "w_e50": 5790.75,
+    "w_e200": 4133.52,
+    "vs_e50": -37.4,
+    "vs_e200": -12.4,
+    "from_hi60": -11.1,
+    "from_lo60": 13.9,
+    "vol_x": 0.71,
+    "phase": "30+ months after halving"
+   },
+   "rule_entry_aggr": null,
+   "rule_entry_conf": null
+  },
+  {
+   "mark": {
+    "id": "8blk",
+    "start": "2020-03-22",
+    "end": "2021-01-08",
+    "entry": "2020-03-29",
+    "type": "breakout",
+    "why": ""
+   },
+   "setup": "S4",
+   "setup_name": "Cycle bottom",
+   "first_loc": "2020-03-12",
+   "conf": null,
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "close 70%+ below the all-time high; 24+ months after the halving",
+     "ok": true,
+     "days": [
+      "2020-03-12",
+      "2020-03-13",
+      "2020-03-14"
+     ]
+    },
+    {
+     "name": "Stretch",
+     "text": "close 20%+ below the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2020-03-12",
+      "2020-03-13",
+      "2020-03-14"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "lowest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2020-03-09",
+      "2020-03-10",
+      "2020-03-12"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 44.1,
+    "below_ath": 74.8,
+    "close": 4841.67,
+    "w_e50": 8236.17,
+    "w_e200": 5883.6,
+    "vs_e50": -41.2,
+    "vs_e200": -17.7,
+    "from_hi60": -53.3,
+    "from_lo60": 0.0,
+    "vol_x": 9.74,
+    "phase": "30+ months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2020-03-12",
+    "close": 4841.67
+   },
+   "rule_entry_conf": null
+  },
+  {
+   "mark": {
+    "id": "157k",
+    "start": "2021-11-15",
+    "end": "2022-06-18",
+    "entry": "2021-11-29",
+    "type": "reversal",
+    "why": ""
+   },
+   "setup": "S5",
+   "setup_name": "Cycle top",
+   "first_loc": "2021-11-08",
+   "conf": "2021-11-16",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "close within 10% of the all-time high; 12-24 months after the halving",
+     "ok": true,
+     "days": [
+      "2021-10-26",
+      "2021-10-28",
+      "2021-10-29"
+     ]
+    },
+    {
+     "name": "Stretch",
+     "text": "close 90%+ above the weekly EMA200",
+     "ok": true,
+     "days": [
+      "2021-10-26",
+      "2021-10-27",
+      "2021-10-28"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "highest close of the last 20 days",
+     "ok": true,
+     "days": [
+      "2021-11-08"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 17.9,
+    "below_ath": 0.0,
+    "close": 67559.0,
+    "w_e50": 42138.19,
+    "w_e200": 22043.23,
+    "vs_e50": 60.3,
+    "vs_e200": 206.5,
+    "from_hi60": 0.0,
+    "from_lo60": 66.4,
+    "vol_x": 1.16,
+    "phase": "6-18 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2021-11-08",
+    "close": 67559.0
+   },
+   "rule_entry_conf": {
+    "date": "2021-11-16",
+    "close": 60142.31
+   }
+  },
+  {
+   "mark": {
+    "id": "s713",
+    "start": "2022-12-19",
+    "end": "2023-04-18",
+    "entry": "2022-12-30",
+    "type": "other",
+    "why": ""
+   },
+   "setup": "S4",
+   "setup_name": "Cycle bottom",
+   "first_loc": null,
+   "conf": null,
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "close 70%+ below the all-time high; 24+ months after the halving",
+     "ok": true,
+     "days": [
+      "2022-11-29",
+      "2022-11-30",
+      "2022-12-01"
+     ]
+    },
+    {
+     "name": "Stretch",
+     "text": "close 20%+ below the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2022-11-29",
+      "2022-11-30",
+      "2022-12-01"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "lowest close of the last 60 days",
+     "ok": false,
+     "days": []
+    }
+   ],
+   "values": {
+    "halving_months": 31.3,
+    "below_ath": 75.7,
+    "close": 16446.0,
+    "w_e50": 26412.32,
+    "w_e200": 25395.64,
+    "vs_e50": -37.7,
+    "vs_e200": -35.2,
+    "from_hi60": -22.8,
+    "from_lo60": 4.3,
+    "vol_x": 1.06,
+    "phase": "30+ months after halving"
+   },
+   "rule_entry_aggr": null,
+   "rule_entry_conf": null
+  },
+  {
+   "mark": {
+    "id": "s14t",
+    "start": "2023-06-15",
+    "end": "2023-06-23",
+    "entry": "2023-06-15",
+    "type": "breakout",
+    "why": "Micro breakout inside a macro uptrend"
+   },
+   "setup": "S1",
+   "setup_name": "Bull pullback",
+   "first_loc": "2023-06-05",
+   "conf": "2023-06-17",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200",
+     "ok": true,
+     "days": [
+      "2023-05-26",
+      "2023-05-27",
+      "2023-05-28"
+     ]
+    },
+    {
+     "name": "Pullback",
+     "text": "close 10%+ below the highest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2023-05-26",
+      "2023-05-27",
+      "2023-05-31"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2023-06-05",
+      "2023-06-07",
+      "2023-06-08"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 36.8,
+    "below_ath": 61.9,
+    "close": 25739.0,
+    "w_e50": 25879.93,
+    "w_e200": 25291.13,
+    "vs_e50": -0.5,
+    "vs_e200": 1.8,
+    "from_hi60": -15.6,
+    "from_lo60": 0.0,
+    "vol_x": 2.61,
+    "phase": "30+ months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2023-06-05",
+    "close": 25739.0
+   },
+   "rule_entry_conf": {
+    "date": "2023-06-17",
+    "close": 26507.0
+   }
+  },
+  {
+   "mark": {
+    "id": "awyf",
+    "start": "2023-09-13",
+    "end": "2024-03-13",
+    "entry": "2023-09-13",
+    "type": "breakout",
+    "why": ""
+   },
+   "setup": "S1",
+   "setup_name": "Bull pullback",
+   "first_loc": "2023-08-24",
+   "conf": "2023-08-29",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200",
+     "ok": true,
+     "days": [
+      "2023-08-24",
+      "2023-08-25",
+      "2023-08-26"
+     ]
+    },
+    {
+     "name": "Pullback",
+     "text": "close 10%+ below the highest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2023-08-24",
+      "2023-08-25",
+      "2023-08-26"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2023-08-24",
+      "2023-08-30",
+      "2023-09-07"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 39.4,
+    "below_ath": 61.3,
+    "close": 26168.0,
+    "w_e50": 26951.74,
+    "w_e200": 25665.43,
+    "vs_e50": -2.9,
+    "vs_e200": 2.0,
+    "from_hi60": -16.9,
+    "from_lo60": 0.5,
+    "vol_x": 1.13,
+    "phase": "30+ months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2023-08-24",
+    "close": 26168.0
+   },
+   "rule_entry_conf": {
+    "date": "2023-08-29",
+    "close": 27726.0
+   }
+  },
+  {
+   "mark": {
+    "id": "5ath",
+    "start": "2024-09-08",
+    "end": "2024-11-24",
+    "entry": "2024-09-09",
+    "type": "breakout",
+    "why": ""
+   },
+   "setup": "S1",
+   "setup_name": "Bull pullback",
+   "first_loc": "2024-09-06",
+   "conf": "2024-09-12",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200",
+     "ok": true,
+     "days": [
+      "2024-08-19",
+      "2024-08-20",
+      "2024-08-21"
+     ]
+    },
+    {
+     "name": "Pullback",
+     "text": "close 10%+ below the highest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2024-08-19",
+      "2024-08-20",
+      "2024-08-21"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2024-09-06",
+      "2024-09-07",
+      "2024-09-08"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 4.6,
+    "below_ath": 26.2,
+    "close": 53955.0,
+    "w_e50": 54060.62,
+    "w_e200": 36977.87,
+    "vs_e50": -0.2,
+    "vs_e200": 45.9,
+    "from_hi60": -21.0,
+    "from_lo60": 0.0,
+    "vol_x": 1.58,
+    "phase": "0-6 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2024-09-06",
+    "close": 53955.0
+   },
+   "rule_entry_conf": {
+    "date": "2024-09-12",
+    "close": 58139.0
+   }
+  },
+  {
+   "mark": {
+    "id": "pf7e",
+    "start": "2025-04-08",
+    "end": "2025-05-22",
+    "entry": "2025-04-10",
+    "type": "breakout",
+    "why": "Major breaks of levels of resistance. Sharp move and catching it at the end of a pull back."
+   },
+   "setup": "S1",
+   "setup_name": "Bull pullback",
+   "first_loc": "2025-04-06",
+   "conf": "2025-04-21",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200",
+     "ok": true,
+     "days": [
+      "2025-03-19",
+      "2025-03-20",
+      "2025-03-21"
+     ]
+    },
+    {
+     "name": "Pullback",
+     "text": "close 10%+ below the highest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2025-03-19",
+      "2025-03-20",
+      "2025-03-21"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2025-04-06",
+      "2025-04-07",
+      "2025-04-08"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 11.5,
+    "below_ath": 26.2,
+    "close": 78342.0,
+    "w_e50": 77569.33,
+    "w_e200": 49870.61,
+    "vs_e50": 1.0,
+    "vs_e200": 57.1,
+    "from_hi60": -20.3,
+    "from_lo60": 0.0,
+    "vol_x": 1.5,
+    "phase": "6-18 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2025-04-06",
+    "close": 78342.0
+   },
+   "rule_entry_conf": {
+    "date": "2025-04-21",
+    "close": 87505.0
+   }
+  },
+  {
+   "mark": {
+    "id": "vyo4",
+    "start": "2025-04-08",
+    "end": "2025-07-11",
+    "entry": "2025-04-08",
+    "type": "breakout",
+    "why": "Catching the end of the pull back and continuing with the trend"
+   },
+   "setup": "S1",
+   "setup_name": "Bull pullback",
+   "first_loc": "2025-04-06",
+   "conf": "2025-04-21",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bull phase of the halving clock; weekly EMA50 above EMA200; close above weekly EMA200",
+     "ok": true,
+     "days": [
+      "2025-03-19",
+      "2025-03-20",
+      "2025-03-21"
+     ]
+    },
+    {
+     "name": "Pullback",
+     "text": "close 10%+ below the highest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2025-03-19",
+      "2025-03-20",
+      "2025-03-21"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB and close within 3% of the weekly EMA50",
+     "ok": true,
+     "days": [
+      "2025-04-06",
+      "2025-04-07",
+      "2025-04-08"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 11.5,
+    "below_ath": 26.2,
+    "close": 78342.0,
+    "w_e50": 77569.33,
+    "w_e200": 49870.61,
+    "vs_e50": 1.0,
+    "vs_e200": 57.1,
+    "from_hi60": -20.3,
+    "from_lo60": 0.0,
+    "vol_x": 1.5,
+    "phase": "6-18 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2025-04-06",
+    "close": 78342.0
+   },
+   "rule_entry_conf": {
+    "date": "2025-04-21",
+    "close": 87505.0
+   }
+  },
+  {
+   "mark": {
+    "id": "dczj",
+    "start": "2025-10-06",
+    "end": "2025-11-20",
+    "entry": "2025-10-08",
+    "type": "reversal",
+    "why": "End of bull market and starting of bear market."
+   },
+   "setup": "S5",
+   "setup_name": "Cycle top",
+   "first_loc": "2025-10-02",
+   "conf": "2025-10-16",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "close within 10% of the all-time high; 12-24 months after the halving",
+     "ok": true,
+     "days": [
+      "2025-09-16",
+      "2025-09-17",
+      "2025-09-18"
+     ]
+    },
+    {
+     "name": "Stretch",
+     "text": "close 90%+ above the weekly EMA200",
+     "ok": true,
+     "days": [
+      "2025-10-02",
+      "2025-10-03",
+      "2025-10-04"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "highest close of the last 20 days",
+     "ok": true,
+     "days": [
+      "2025-09-16",
+      "2025-09-18",
+      "2025-10-01"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 17.4,
+    "below_ath": 2.2,
+    "close": 120612.0,
+    "w_e50": 97932.81,
+    "w_e200": 62803.8,
+    "vs_e50": 23.2,
+    "vs_e200": 92.0,
+    "from_hi60": -2.2,
+    "from_lo60": 11.4,
+    "vol_x": 1.35,
+    "phase": "6-18 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2025-10-02",
+    "close": 120612.0
+   },
+   "rule_entry_conf": {
+    "date": "2025-10-16",
+    "close": 108206.0
+   }
+  },
+  {
+   "mark": {
+    "id": "zhyf",
+    "start": "2026-01-14",
+    "end": "2026-02-05",
+    "entry": "2026-01-17",
+    "type": "breakout",
+    "why": "Trend continuation"
+   },
+   "setup": "S2",
+   "setup_name": "Bear rally into resistance",
+   "first_loc": "2026-01-13",
+   "conf": "2026-01-20",
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bear phase of the halving clock; close 20%+ below the all-time high",
+     "ok": true,
+     "days": [
+      "2025-12-25",
+      "2025-12-26",
+      "2025-12-27"
+     ]
+    },
+    {
+     "name": "Rally",
+     "text": "close 10%+ above the lowest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2026-01-05",
+      "2026-01-06",
+      "2026-01-13"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "high in a bearish weekly FVG/OB",
+     "ok": true,
+     "days": [
+      "2026-01-13",
+      "2026-01-14",
+      "2026-01-15"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 20.8,
+    "below_ath": 23.5,
+    "close": 95366.0,
+    "w_e50": 97658.43,
+    "w_e200": 67791.68,
+    "vs_e50": -2.3,
+    "vs_e200": 40.7,
+    "from_hi60": -0.2,
+    "from_lo60": 12.6,
+    "vol_x": 2.52,
+    "phase": "18-30 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2026-01-13",
+    "close": 95366.0
+   },
+   "rule_entry_conf": {
+    "date": "2026-01-20",
+    "close": 88316.0
+   }
+  },
+  {
+   "mark": {
+    "id": "5as2",
+    "start": "2026-06-30",
+    "end": "2026-08-21",
+    "entry": "2026-07-01",
+    "type": "pullback",
+    "why": "Trying to get a higher high inside the macro downtrend"
+   },
+   "setup": "S3",
+   "setup_name": "Bear-market bounce",
+   "first_loc": "2026-06-24",
+   "conf": null,
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bear phase of the halving clock; close 40%+ below the all-time high",
+     "ok": true,
+     "days": [
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+     ]
+    },
+    {
+     "name": "Drop",
+     "text": "close 15%+ below the highest close of the last 30 days",
+     "ok": true,
+     "days": [
+      "2026-06-10",
+      "2026-06-11",
+      "2026-06-12"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "low in a bullish weekly FVG/OB",
+     "ok": true,
+     "days": [
+      "2026-06-24",
+      "2026-06-25",
+      "2026-06-26"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 26.1,
+    "below_ath": 51.1,
+    "close": 60987.0,
+    "w_e50": 82385.22,
+    "w_e200": 68798.3,
+    "vs_e50": -26.0,
+    "vs_e200": -11.4,
+    "from_hi60": -25.8,
+    "from_lo60": 0.2,
+    "vol_x": 1.22,
+    "phase": "18-30 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2026-06-24",
+    "close": 60987.0
+   },
+   "rule_entry_conf": null
+  },
+  {
+   "mark": {
+    "id": "2bzj",
+    "start": "2026-10-05",
+    "end": "2026-11-15",
+    "entry": "2026-10-06",
+    "type": "other",
+    "why": "Pushing for a higher high"
+   },
+   "setup": "S2",
+   "setup_name": "Bear rally into resistance",
+   "first_loc": "2026-09-18",
+   "conf": null,
+   "checks": [
+    {
+     "name": "Regime",
+     "text": "bear phase of the halving clock; close 20%+ below the all-time high",
+     "ok": true,
+     "days": [
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17"
+     ]
+    },
+    {
+     "name": "Rally",
+     "text": "close 10%+ above the lowest close of the last 60 days",
+     "ok": true,
+     "days": [
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17"
+     ]
+    },
+    {
+     "name": "Location",
+     "text": "high in a bearish weekly FVG/OB",
+     "ok": true,
+     "days": [
+      "2026-09-18",
+      "2026-09-19",
+      "2026-09-20"
+     ]
+    }
+   ],
+   "values": {
+    "halving_months": 28.9,
+    "below_ath": 35.2,
+    "close": 80878.77,
+    "w_e50": 77366.68,
+    "w_e200": 68774.74,
+    "vs_e50": 4.5,
+    "vs_e200": 17.6,
+    "from_hi60": -0.5,
+    "from_lo60": 28.9,
+    "vol_x": 1.25,
+    "phase": "18-30 months after halving"
+   },
+   "rule_entry_aggr": {
+    "date": "2026-09-18",
+    "close": 80878.77
+   },
+   "rule_entry_conf": null
+  }
+ ],
+ "doc": "Step 9: the five setups found in the user's marked moves, as exact DRAFT rules, plus a first-look backtest.\n\nThese rules were written FROM the user's marks, so this backtest is in-sample (it has seen the answers). It shows how\noften each rule fired in all of history and what happened, so the rules can be refined. The real verdict comes later:\nrules fixed on 2011-18, scored on 2019-26.\n\nEvery condition uses only data known at the daily close (00:00 UTC). Weekly values = last CLOSED weekly candle.\nHalving clock = days since the last halving (Nov 28 2012, Jul 9 2016, May 11 2020, Apr 20 2024); it is known in\nadvance, but it rests on only 3-4 past cycles.\n\n  BULL PHASE  halving clock 0-548 days (0-18 months) or 913+ days (30+ months)\n  BEAR PHASE  halving clock 548-913 days (18-30 months)\n\n  S1 Bull pullback (long)\n     regime    bull phase; weekly EMA50 > weekly EMA200; close > weekly EMA200\n     pullback  close at least 10% below the highest close of the last 60 days\n     location  day's low reaches an active bullish weekly FVG/OB (2x filter, close not below it)\n               AND close within 3% of the weekly EMA50\n  S2 Bear rally into resistance (short)\n     regime    bear phase; close at least 20% below the all-time-high close\n     rally     close at least 10% above the lowest close of the last 60 days\n     location  day's high reaches an active bearish weekly FVG/OB (close not above it)\n  S3 Bear-market bounce (long, against the bigger trend)\n     regime    bear phase; close at least 40% below the all-time-high close\n     drop      close at least 15% below the highest close of the last 30 days\n     location  day's low reaches an active bullish weekly FVG/OB\n  S4 Cycle bottom (long)\n     regime    close at least 70% below the all-time-high close; halving clock 24+ months\n     stretch   close at least 20% below the weekly EMA50\n     location  close is the lowest close of the last 60 days\n  S5 Cycle top (short)\n     regime    close within 10% of the all-time-high close; halving clock 12-24 months\n     stretch   close at least 90% above the weekly EMA200\n     location  close is the highest close of the last 20 days\n\n  Episode   the first location day starts it; later location days in the next 15 days belong to it.\n  Entries   AGGRESSIVE = close of the first location day\n            CONFIRMED  = close of the first daily CHoCH in the setup's direction within 15 days after it\n  Stop      long: lowest low from the location day to the entry day; short: highest high (structure stop)\n  Outcome   from the entry close, daily closes, up to 120 days: does price reach +10% / +20% in the trade's\n            direction before a close beyond the stop? Also the best move before the stop or 120 days."
+}
