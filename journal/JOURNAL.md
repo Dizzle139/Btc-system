@@ -2,11 +2,11 @@
 
 Every alert, what was behind it, and what happened next. Turn = close moved 10% (or 20%) off the most extreme close since the alert, within 30 days. Research, not financial advice.
 
-Last daily close logged: 2026-11-26, 60,492. Setup items today: bottom side 1 of 4 (new 10-day low: False), top side 0 of 4 (new 10-day high: False).
+Last daily close logged: 2026-11-27, 59,872. Setup items today: bottom side 2 of 4 (new 10-day low: False), top side 0 of 4 (new 10-day high: False).
 
 | Date | Side | Alert | Close | Items | Warnings | Phase | +7d | +14d | +30d | 10% turn | 20% turn | Source |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-11-20 | Bottom | Update | 58,814 | sharp drop, extended drop, weekly zone | dollar up | 30+ months after halving | – | – | – | – | – | backfill |
+| 2026-11-20 | Bottom | Update | 58,814 | sharp drop, extended drop, weekly zone | dollar up | 30+ months after halving | +1.8% | – | – | – | – | backfill |
 | 2026-11-19 | Bottom | Update | 61,914 | sharp drop, extended drop | dollar up | 30+ months after halving | -2.3% | – | – | – | – | backfill |
 | 2026-11-18 | Bottom | Update | 62,976 | sharp drop, extended drop, weekly zone | dollar up | 30+ months after halving | -4.1% | – | – | – | – | backfill |
 | 2026-11-14 | Bottom | Update | 64,114 | sharp drop, extended drop, weekly zone | dollar up | 30+ months after halving | -6.3% | – | – | – | – | backfill |
