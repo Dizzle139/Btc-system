@@ -87,7 +87,7 @@ table.cy td.n,table.cy th.n{text-align:right;font-variant-numeric:tabular-nums}
 <p class="lede">BITSTAMP:BTCUSD, Aug 2011 to <span id="asof"></span>. Switch between 4H, daily and weekly; turn on zones, EMAs and structure under “Chart layers”. Press and hold on the chart to read any candle. Claude reads your saved marks.</p>
 <ol class="steps">
 <li>Find the move (drag sideways, pinch to zoom). Tap <b>Mark a move</b>: marking uses the daily chart.</li>
-<li>Tap where it <b>started</b>, where it <b>ended</b>, and where you would have <b>entered</b> (or skip).</li>
+<li>Tap where it <b>started</b>, where it <b>ended</b>, and where you would have <b>entered</b>. Then mark the <b>FVG / order block</b> you traded: tap its top and bottom, or pick it from the list (all optional).</li>
 <li>Pick the kind of move, write what you saw, save.</li>
 </ol>
 </div></header>
@@ -127,6 +127,7 @@ table.cy td.n,table.cy th.n{text-align:right;font-variant-numeric:tabular-nums}
 <button data-v="breakout" aria-pressed="false">Breakout</button>
 <button data-v="pullback" aria-pressed="false">Pullback in a trend</button>
 <button data-v="reversal" aria-pressed="false">Reversal (top or bottom)</button>
+<button data-v="fvg" aria-pressed="false">FVG / OB trade</button>
 <button data-v="other" aria-pressed="false">Other</button>
 </div>
 <label class="lab" for="why">What did you see? (levels, zones, candles, structure, anything)</label>
@@ -143,7 +144,7 @@ table.cy td.n,table.cy th.n{text-align:right;font-variant-numeric:tabular-nums}
 </div>
 
 <div class="key">
-<span><i style="background:var(--sig)"></i>Your marks (dot = your entry)</span>
+<span><i style="background:var(--sig)"></i>Your marks (dot = your entry; amber dashed box = the zone you traded)</span>
 <span><b class="box" style="border-color:var(--zb);background:color-mix(in srgb,var(--zb) 18%,transparent)"></b>Bullish FVG / order block</span>
 <span><b class="box" style="border-color:var(--zs);background:color-mix(in srgb,var(--zs) 18%,transparent)"></b>Bearish FVG / order block (thick border = weekly)</span>
 <span><i style="background:var(--e50)"></i>EMA50 <i style="background:var(--e200);margin-left:8px"></i>EMA200</span>
@@ -167,6 +168,7 @@ const cv=$('cv'),fig=$('fig'),ctx=cv.getContext('2d');
 const L={zones:true,wzones:true,dzones:false,tested:false,ema:true,wema:false,struct:true,vol:true,cyc:true,halv:false,ref:false};
 const DS={};let tf='d1',S=null,META=null,view=[0,0],marks=[],db=null,canWrite=true,selId=null,editing=null,mode=null,ptype=null;
 let pick={start:null,end:null,entry:null};   // daily indices
+let pz={top:null,bot:null};                     // the zone you traded (prices)
 let hair=null;
 const PAD={l:8,r:66,t:10,b:28};
 const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
@@ -174,7 +176,7 @@ const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color
 const fmt=x=>(x==null||isNaN(x))?'–':x>=100?Math.round(x).toLocaleString('en-US'):x>=10?x.toFixed(1):x.toFixed(2);
 const fmtV=v=>v>=1e6?(v/1e6).toFixed(1)+'M':v>=1e3?(v/1e3).toFixed(1)+'k':v.toFixed(0);
 const nice=d=>new Date(d.slice(0,10)+'T00:00:00Z').toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'});
-const TYPES={breakout:'Breakout',pullback:'Pullback in a trend',reversal:'Reversal',other:'Other'};
+const TYPES={breakout:'Breakout',pullback:'Pullback in a trend',reversal:'Reversal',fvg:'FVG / OB trade',other:'Other'};
 const TFN={h4:'4H',d1:'Daily',w1:'Weekly'};
 function bsearch(arr,key){let lo=0,hi=arr.length-1;while(lo<hi){const m=(lo+hi)>>1;if(arr[m][0]<key)lo=m+1;else hi=m}return lo}
 // a daily date -> index on the current timeframe
@@ -260,8 +262,10 @@ function draw(){
  if(dc){ctx.lineCap='round';
   for(const m of marks){const si=idxFor(m.start),ei=idxFor(m.end);if(ei<a||si>b)continue;const ys=Y(m.start_close),ye=Y(m.end_close);const on=selId===m.id||editing===m.id;
    ctx.globalAlpha=(selId&&!on)?.4:1;ctx.strokeStyle=col.sig;ctx.lineWidth=on?4.5:3;ctx.beginPath();ctx.moveTo(X(si),ys);ctx.lineTo(X(ei),ye);ctx.stroke();
+   if(m.zone_top!=null&&m.zone_bottom!=null){const zx0=X(idxFor(m.entry||m.start))-bw*3,zx1=X(ei);ctx.globalAlpha=(selId&&!on)?.15:.28;ctx.fillStyle=col.sig;ctx.fillRect(zx0,Y(m.zone_top),zx1-zx0,Y(m.zone_bottom)-Y(m.zone_top));ctx.globalAlpha=(selId&&!on)?.4:1;ctx.strokeStyle=col.sig;ctx.lineWidth=1.5;ctx.setLineDash([5,3]);ctx.strokeRect(zx0,Y(m.zone_top),zx1-zx0,Y(m.zone_bottom)-Y(m.zone_top));ctx.setLineDash([])}
    if(m.entry){ctx.fillStyle=col.sig;ctx.beginPath();ctx.arc(X(idxFor(m.entry)),Y(m.entry_close),5,0,7);ctx.fill()}
    ctx.font='600 12px Inter,sans-serif';ctx.textAlign='center';const upm=m.end_close>m.start_close;ctx.textBaseline=upm?'bottom':'top';ctx.fillStyle=col.sig;ctx.fillText(TYPES[m.type]||'',X(ei),upm?ye-7:ye+7);ctx.textAlign='left';ctx.globalAlpha=1}
+  if(pz.top!=null||pz.bot!=null){ctx.strokeStyle=col.sig;ctx.lineWidth=2;ctx.setLineDash([6,4]);for(const p of[pz.top,pz.bot]){if(p==null)continue;ctx.beginPath();ctx.moveTo(PAD.l,Y(p));ctx.lineTo(W-PAD.r,Y(p));ctx.stroke()}ctx.setLineDash([]);if(pz.top!=null&&pz.bot!=null){ctx.globalAlpha=.18;ctx.fillStyle=col.sig;ctx.fillRect(PAD.l,Y(pz.top),pw,Y(pz.bot)-Y(pz.top));ctx.globalAlpha=1}}
   for(const[k,lab]of[['start','Start'],['end','End'],['entry','Entry']]){const di=pick[k];if(di===null)continue;const i=idxFor(dc[di][0]),x=X(i),y=Y(dc[di][4]);
    ctx.strokeStyle=col.ink;ctx.setLineDash([4,4]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,PAD.t);ctx.lineTo(x,PAD.t+ph);ctx.stroke();ctx.setLineDash([]);
    ctx.fillStyle=col.sig;ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,7,0,7);ctx.fill();ctx.stroke();ctx.fillStyle=col.ink;ctx.font='600 12px Inter,sans-serif';ctx.textBaseline='bottom';ctx.fillText(lab,x+9,y-6)}}
@@ -303,7 +307,7 @@ fig.addEventListener('pointermove',e=>{const p=pos(e);if(!ptr.has(e.pointerId)){
  else{const[q,r]=[...ptr.values()],d=Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),cx=(q.x+r.x)/2,sp=(g.v0[1]-g.v0[0])*g.d0/d,f=(cx-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=g.c0+.5-f*sp;setView(na,na+sp,true)}});
 function end(e,cancel){clearTimeout(holdT);if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.delete(e.pointerId);
  if(g&&g.mode==='hair'){if(e.pointerType!=='mouse'){hair=null;later()}g=null;return}
- if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<380)tap(p.x);if(ptr.size)base();else g=null}
+ if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<380)tap(p.x,p.y);if(ptr.size)base();else g=null}
 fig.addEventListener('pointerup',e=>end(e,false));fig.addEventListener('pointercancel',e=>end(e,true));
 fig.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!ptr.size){hair=null;later()}});
 fig.addEventListener('contextmenu',e=>e.preventDefault());
@@ -322,42 +326,52 @@ async function setTf(k,keepDate){const centerDate=keepDate||(S?S.c[Math.max(0,Ma
  const ci=centerDate?idxFor(centerDate):S.c.length-1;setView(ci-sp/2,ci+sp/2)}
 for(const bt of $('tf').querySelectorAll('button'))bt.onclick=()=>setTf(bt.dataset.v);
 // marking flow (daily chart)
-const STEP={start:'Tap the candle where the move STARTED',end:'Now tap the candle where the move ENDED',entry:'Tap where you would have ENTERED (or press Skip)'};
+const STEP={start:'Tap the candle where the move STARTED',end:'Now tap the candle where the move ENDED',entry:'Tap where you would have ENTERED (or press Skip)',ztop:'Zone: tap the TOP of the FVG / OB you traded, or pick it below (or Skip)',zbot:'Now tap the BOTTOM of that zone'};
 function setMode(m){mode=m;fig.classList.toggle('marking',!!m);$('prompt').textContent=m?STEP[m]:'';renderPanel();draw()}
-function tap(x){if(!mode||tf!=='d1')return;const i=Math.max(0,Math.min(S.c.length-1,Math.round(idxAt(x))));pick[mode]=i;
- if(mode==='start')setMode('end');else if(mode==='end'){if(pick.end<pick.start)[pick.start,pick.end]=[pick.end,pick.start];setMode('entry')}else setMode(null)}
-$('mark').onclick=async()=>{if(tf!=='d1')await setTf('d1');editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=false;$('ptitle').textContent='New mark';setMode('start');if(window.innerWidth<1000)window.scrollTo({top:fig.getBoundingClientRect().top+window.scrollY-60,behavior:'smooth'})};
-$('redo').onclick=async()=>{if(tf!=='d1')await setTf('d1');pick={start:null,end:null,entry:null};setMode('start')};
-$('cancel').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};$('panel').hidden=true;setMode(null)};
+function priceAt(y){const lo=ctx.__lo,hi=ctx.__hi,ph=ctx.__ph;return Math.exp(hi-(y-PAD.t)/ph*(hi-lo))}
+function tap(x,y){if(!mode||tf!=='d1')return;
+ if(mode==='ztop'||mode==='zbot'){if(y<PAD.t||y>PAD.t+ctx.__ph)return;const p=+priceAt(y).toFixed(2);pz[mode==='ztop'?'top':'bot']=p;if(mode==='ztop'){setMode('zbot')}else{if(pz.bot>pz.top)[pz.top,pz.bot]=[pz.bot,pz.top];setMode(null)}return}
+ const i=Math.max(0,Math.min(S.c.length-1,Math.round(idxAt(x))));pick[mode]=i;
+ if(mode==='start')setMode('end');else if(mode==='end'){if(pick.end<pick.start)[pick.start,pick.end]=[pick.end,pick.start];setMode('entry')}else setMode('ztop')}
+$('mark').onclick=async()=>{if(tf!=='d1')await setTf('d1');editing=null;pick={start:null,end:null,entry:null};pz={top:null,bot:null};ptype=null;$('why').value='';$('panel').hidden=false;$('ptitle').textContent='New mark';setMode('start');if(window.innerWidth<1000)window.scrollTo({top:fig.getBoundingClientRect().top+window.scrollY-60,behavior:'smooth'})};
+$('redo').onclick=async()=>{if(tf!=='d1')await setTf('d1');pick={start:null,end:null,entry:null};pz={top:null,bot:null};setMode('start')};
+$('cancel').onclick=()=>{editing=null;pick={start:null,end:null,entry:null};pz={top:null,bot:null};$('panel').hidden=true;setMode(null)};
 for(const bt of $('types').querySelectorAll('button'))bt.onclick=()=>{ptype=bt.dataset.v;renderPanel()};
 function row(dl,k,v){const d=document.createElement('div');const dt=document.createElement('dt');dt.textContent=k;const dd=document.createElement('dd');dd.textContent=v;d.append(dt,dd);dl.append(d)}
+function zonesNear(){const d=DS.d1;if(!d)return[];const i=pick.entry??pick.start;if(i==null)return[];const px=d.c[i][4],out=[];
+ for(const[src,tag]of[[d.wz,'W'],[d.z,'D']])for(const[bull,kind,f0,k0,iv,bot,top]of src){if(k0>i||(iv>=0&&iv<=i))continue;const mid=(bot+top)/2;if(Math.abs(mid/px-1)>.12)continue;out.push({tag:`${tag} ${['FVG','OB','FVG+OB'][kind]}`,bot,top,dist:Math.abs(mid/px-1)})}
+ return out.sort((a,b)=>a.dist-b.dist).slice(0,4)}
 function renderPanel(){const dc=DS.d1?DS.d1.c:[];
  for(const x of $('types').querySelectorAll('button'))x.setAttribute('aria-pressed',x.dataset.v===ptype);
  const dl=$('picked');dl.innerHTML='';
  const show=(k,lab)=>{const i=pick[k];row(dl,lab,i===null?(mode===k?'tap the chart…':'—'):`${nice(dc[i][0])} · close ${fmt(dc[i][4])} (H ${fmt(dc[i][2])}, L ${fmt(dc[i][3])})`)};
  show('start','Start');show('end','End');show('entry','Your entry');
+ row(dl,'Zone you traded',pz.top!=null&&pz.bot!=null?`${fmt(pz.bot)} – ${fmt(pz.top)}`:(mode==='ztop'||mode==='zbot'?'tap the chart or pick below…':'— (optional)'));
  if(pick.start!==null&&pick.end!==null){const s=dc[pick.start][4],e=dc[pick.end][4];row(dl,'Move',`${((e/s-1)*100).toFixed(1)}% in ${pick.end-pick.start} days (daily closes)`)}
  const nz=$('nudge');nz.innerHTML='';
- if(mode==='entry'){const sk=document.createElement('button');sk.textContent='Skip entry';sk.onclick=()=>{pick.entry=null;setMode(null)};nz.append(sk)}
+ if(mode==='entry'){const sk=document.createElement('button');sk.textContent='Skip entry';sk.onclick=()=>{pick.entry=null;setMode('ztop')};nz.append(sk)}
+ if(mode==='ztop'||mode==='zbot'){const sk=document.createElement('button');sk.textContent='Skip zone';sk.onclick=()=>{pz={top:null,bot:null};setMode(null)};nz.append(sk);
+  for(const zz of zonesNear()){const b=document.createElement('button');b.textContent=`Use ${zz.tag} ${fmt(zz.bot)}–${fmt(zz.top)}`;b.onclick=()=>{pz={top:zz.top,bot:zz.bot};setMode(null)};nz.append(b)}}
+ if(pz.top!=null&&!mode){const b=document.createElement('button');b.textContent='Re-pick zone';b.onclick=()=>{pz={top:null,bot:null};setMode('ztop')};nz.append(b)}
  for(const[k,lab]of[['start','Start'],['end','End'],['entry','Entry']]){if(pick[k]===null)continue;
   for(const[d,t]of[[-1,'◀'],[1,'▶']]){const b=document.createElement('button');b.textContent=`${lab} ${t}`;b.setAttribute('aria-label',`Move ${lab.toLowerCase()} one day ${d<0?'earlier':'later'}`);b.onclick=()=>{pick[k]=Math.max(0,Math.min(dc.length-1,pick[k]+d));renderPanel();draw()};nz.append(b)}}
  $('save').disabled=!(pick.start!==null&&pick.end!==null&&ptype&&!mode)||!canWrite;
  $('pmsg').textContent=!canWrite?'Saving is not available in this view.':(mode?'':(!ptype&&pick.end!==null?'Pick the kind of move to save it.':''))}
 $('save').onclick=async()=>{const c=DS.d1.c,s=pick.start,e=pick.end,en=pick.entry;
- const body={start:c[s][0],end:c[e][0],entry:en===null?null:c[en][0],type:ptype,why:$('why').value.trim().slice(0,4000),start_close:c[s][4],end_close:c[e][4],entry_close:en===null?null:c[en][4],pct:+((c[e][4]/c[s][4]-1)*100).toFixed(1),days:e-s,updated:new Date().toISOString()};
+ const body={zone_top:pz.top,zone_bottom:pz.bot,start:c[s][0],end:c[e][0],entry:en===null?null:c[en][0],type:ptype,why:$('why').value.trim().slice(0,4000),start_close:c[s][4],end_close:c[e][4],entry_close:en===null?null:c[en][4],pct:+((c[e][4]/c[s][4]-1)*100).toFixed(1),days:e-s,updated:new Date().toISOString()};
  $('save').disabled=true;$('pmsg').textContent='Saving…';
  try{if(db){if(editing){await db.collection('marks').doc(editing).set(Object.assign({created:(marks.find(m=>m.id===editing)||{}).created||body.updated},body))}else{await db.collection('marks').add(Object.assign({created:body.updated},body))}}
   else{const id=editing||('local-'+Date.now());marks=marks.filter(m=>m.id!==id).concat([Object.assign({id,created:body.updated},body)]);renderList()}
-  editing=null;pick={start:null,end:null,entry:null};ptype=null;$('why').value='';$('panel').hidden=true;$('pmsg').textContent='';setMode(null)}
+  editing=null;pick={start:null,end:null,entry:null};pz={top:null,bot:null};ptype=null;$('why').value='';$('panel').hidden=true;$('pmsg').textContent='';setMode(null)}
  catch(err){$('pmsg').textContent=err&&err.code==='quota_exceeded'?'The store is full; delete some marks first.':'Could not save. Try again.';if(err&&err.code==='invalid_argument')canWrite=false;renderPanel()}};
 function showMark(m){selId=m.id;const si=idxFor(m.start),ei=idxFor(m.end),pad=Math.max(15,(ei-si)*.5);setView(si-pad,ei+pad);for(const k of document.querySelectorAll('#list .card'))k.setAttribute('aria-current',k.__id===m.id)}
 function renderList(){const Lst=$('list');Lst.innerHTML='';$('cnt').textContent=marks.length?`· ${marks.length}`:'';
  for(const m of [...marks].sort((x,y)=>x.start<y.start?1:-1)){const card=document.createElement('article');card.className='card';card.__id=m.id;card.setAttribute('aria-current',selId===m.id);
   const h=document.createElement('h3');const t=document.createElement('span');t.textContent=`${nice(m.start)} → ${nice(m.end)}`;const p=document.createElement('span');p.className=m.pct>=0?'up':'dn';p.textContent=`${m.pct>0?'+':''}${m.pct}%`;const tag=document.createElement('span');tag.className='tag';tag.textContent=TYPES[m.type]||m.type;h.append(t,p,tag);
-  const meta=document.createElement('p');meta.className='note';meta.textContent=`${fmt(m.start_close)} → ${fmt(m.end_close)} · ${m.days} days`+(m.entry?` · your entry ${nice(m.entry)} at ${fmt(m.entry_close)}`:'');
+  const meta=document.createElement('p');meta.className='note';meta.textContent=`${fmt(m.start_close)} → ${fmt(m.end_close)} · ${m.days} days`+(m.entry?` · your entry ${nice(m.entry)} at ${fmt(m.entry_close)}`:'')+(m.zone_top!=null?` · zone ${fmt(m.zone_bottom)}–${fmt(m.zone_top)}`:'');
   const why=document.createElement('p');why.textContent=m.why||'(no notes yet)';
   const r=document.createElement('div');r.className='row';
-  const ed=document.createElement('button');ed.textContent='Edit notes / points';ed.onclick=async(ev)=>{ev.stopPropagation();if(tf!=='d1')await setTf('d1');const dc=DS.d1.c;editing=m.id;pick={start:bsearch(dc,m.start),end:bsearch(dc,m.end),entry:m.entry?bsearch(dc,m.entry):null};ptype=m.type;$('why').value=m.why||'';$('ptitle').textContent='Edit mark';$('panel').hidden=false;setMode(null);showMark(m);$('panel').scrollIntoView({behavior:'smooth',block:'nearest'})};
+  const ed=document.createElement('button');ed.textContent='Edit notes / points';ed.onclick=async(ev)=>{ev.stopPropagation();if(tf!=='d1')await setTf('d1');const dc=DS.d1.c;editing=m.id;pick={start:bsearch(dc,m.start),end:bsearch(dc,m.end),entry:m.entry?bsearch(dc,m.entry):null};ptype=m.type;pz={top:m.zone_top??null,bot:m.zone_bottom??null};$('why').value=m.why||'';$('ptitle').textContent='Edit mark';$('panel').hidden=false;setMode(null);showMark(m);$('panel').scrollIntoView({behavior:'smooth',block:'nearest'})};
   const del=document.createElement('button');del.textContent='Delete';del.onclick=async(ev)=>{ev.stopPropagation();if(del.dataset.armed!=='1'){del.dataset.armed='1';del.textContent='Tap again to delete';setTimeout(()=>{del.dataset.armed='';del.textContent='Delete'},4000);return}
    try{if(db&&!String(m.id).startsWith('local-'))await db.collection('marks').doc(m.id).delete();else{marks=marks.filter(x=>x.id!==m.id);renderList()}}catch(_){del.textContent='Could not delete'}};
   r.append(ed,del);card.onclick=()=>showMark(m);card.append(h,meta,why,r);Lst.append(card)}
