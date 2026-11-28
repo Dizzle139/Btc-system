@@ -41,7 +41,7 @@ details.layers{border:1px solid var(--rule);border-radius:10px;padding:0 10px;ba
 details.layers summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:500}
 details.layers .grp{padding:4px 0 10px}
 .work{display:grid;gap:14px;margin-top:4px}
-.fig{position:relative;height:clamp(420px,64vh,700px);border:1px solid var(--rule);border-radius:12px;overflow:hidden;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;background:var(--bg)}
+.fig{position:relative;height:clamp(420px,64vh,700px);border:1px solid var(--rule);border-radius:12px;overflow:hidden;touch-action:none;overscroll-behavior:contain;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;background:var(--bg)}
 .fig.marking{outline:2px solid var(--sig);outline-offset:-2px}
 .fig canvas{position:absolute;inset:0;width:100%;height:100%}
 .prompt{position:absolute;left:12px;top:10px;right:76px;background:color-mix(in srgb,var(--sig) 92%,transparent);color:#111;font-weight:600;border-radius:8px;padding:8px 12px;display:none;pointer-events:none}
@@ -86,7 +86,7 @@ table.cy td.n,table.cy th.n{text-align:right;font-variant-numeric:tabular-nums}
 <h1>Mark the moves you want to catch</h1>
 <p class="lede">BITSTAMP:BTCUSD, Aug 2011 to <span id="asof"></span>. Switch between 4H, daily and weekly; turn on zones, EMAs and structure under “Chart layers”. Press and hold on the chart to read any candle. Claude reads your saved marks.</p>
 <ol class="steps">
-<li>Find the move (drag sideways, pinch to zoom). Tap <b>Mark a move</b>: marking uses the daily chart.</li>
+<li>Move around like TradingView: <b>drag</b> the chart (sideways, or clearly up/down to move price) · <b>pinch</b> sideways to zoom time, up-down to zoom price · <b>drag the price axis</b> (right edge) to stretch price · <b>drag the date axis</b> to zoom time · <b>hold</b> for the crosshair · tap <b>AUTO</b> (bottom-right) or double-tap the price axis to fit price again. Scroll the page outside the chart. Tap <b>Mark a move</b>: marking uses the daily chart.</li>
 <li>Tap where it <b>started</b>, where it <b>ended</b>, and where you would have <b>entered</b>. Then mark the <b>FVG / order block</b> you traded: tap its top and bottom, or pick it from the list (all optional).</li>
 <li>Pick the kind of move, write what you saw, save.</li>
 </ol>
@@ -96,7 +96,7 @@ table.cy td.n,table.cy th.n{text-align:right;font-variant-numeric:tabular-nums}
 <div class="bar">
 <button class="go" id="mark">Mark a move</button>
 <div class="grp"><div class="tabs" id="tf"><button data-v="h4" aria-pressed="false">4H</button><button data-v="d1" aria-pressed="true">Daily</button><button data-v="w1" aria-pressed="false">Weekly</button></div></div>
-<div class="grp"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="all">All</button><button id="last">Latest</button></div>
+<div class="grp"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="all">All</button><button id="last">Latest</button><button id="yauto">Auto price</button></div>
 </div>
 <details class="layers" open><summary>Chart layers</summary>
 <div class="grp" id="layers">
@@ -170,6 +170,8 @@ const DS={};let tf='d1',S=null,META=null,view=[0,0],marks=[],db=null,canWrite=tr
 let pick={start:null,end:null,entry:null};   // daily indices
 let pz={top:null,bot:null};                     // the zone you traded (prices)
 let hair=null;
+let yv=null;   // null = auto price scale; else [logLo, logHi] set by you
+let COL=null;
 const PAD={l:8,r:66,t:10,b:28};
 const probe=document.createElement('i');probe.style.display='none';document.body.appendChild(probe);
 const css=n=>{probe.style.color=`var(${n})`;return getComputedStyle(probe).color};
@@ -197,9 +199,9 @@ function draw(){
  const pw=W-PAD.l-PAD.r,full=H-PAD.t-PAD.b,volH=L.vol?Math.round(full*.18):0,ph=full-volH-(L.vol?6:0),bw=pw/(b-a+1);ctx.__bw=bw;ctx.__ph=ph;
  let lo=Infinity,hi=-Infinity;for(let i=i0;i<=i1;i++){lo=Math.min(lo,c[i][3]);hi=Math.max(hi,c[i][2])}
  if(!isFinite(lo)){lo=1;hi=2}
- lo=Math.log(lo);hi=Math.log(hi);const mg=(hi-lo)*.06||.05;lo-=mg;hi+=mg;ctx.__lo=lo;ctx.__hi=hi;
+ lo=Math.log(lo);hi=Math.log(hi);const mg=(hi-lo)*.06||.05;lo-=mg;hi+=mg;if(yv){lo=yv[0];hi=yv[1]}ctx.__lo=lo;ctx.__hi=hi;ctx.__W=W;ctx.__H=H;
  const X=i=>PAD.l+(i-a+.5)*bw,Y=p=>PAD.t+(hi-Math.log(p))/(hi-lo)*ph;
- const col={mute:css('--mute'),grid:css('--grid'),bull:css('--bull'),bear:css('--bear'),sig:css('--sig'),ink:css('--ink'),zb:css('--zb'),zs:css('--zs'),e50:css('--e50'),e200:css('--e200'),bg:css('--bg'),rule:css('--rule')};
+ const col=COL||(COL={mute:css('--mute'),grid:css('--grid'),bull:css('--bull'),bear:css('--bear'),sig:css('--sig'),ink:css('--ink'),zb:css('--zb'),zs:css('--zs'),e50:css('--e50'),e200:css('--e200'),bg:css('--bg'),rule:css('--rule')});
  ctx.font='13px Inter,sans-serif';ctx.textBaseline='middle';
  for(const p of ticks(Math.exp(lo),Math.exp(hi))){const y=Y(p);if(y<PAD.t||y>PAD.t+ph)continue;ctx.strokeStyle=col.grid;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(PAD.l,y);ctx.lineTo(W-PAD.r,y);ctx.stroke();ctx.fillStyle=col.mute;ctx.fillText(fmtK(p),W-PAD.r+6,y)}
  // time axis
@@ -277,6 +279,7 @@ function draw(){
   ctx.globalAlpha=1;ctx.strokeStyle=col.sig;ctx.lineWidth=1.2;ctx.beginPath();let st=false;for(let i=i0;i<=i1;i++){const v=S.va[i];if(v==null){st=false;continue}const x=X(i),y=vt+volH-v/vmax*volH;st?ctx.lineTo(x,y):ctx.moveTo(x,y);st=true}ctx.stroke();
   ctx.restore();ctx.strokeStyle=col.rule;ctx.strokeRect(PAD.l,vt,pw,volH);ctx.fillStyle=col.mute;ctx.font='11px Inter,sans-serif';ctx.textBaseline='top';ctx.fillText('Volume (amber = 20-candle average)',PAD.l+4,vt+3)}
  ctx.strokeStyle=col.rule;ctx.strokeRect(PAD.l,PAD.t,pw,ph);
+ ctx.fillStyle=yv?col.sig:col.mute;ctx.font='700 11px Inter,sans-serif';ctx.textBaseline='middle';ctx.textAlign='center';ctx.fillText(yv?'AUTO ↺':'AUTO',W-PAD.r/2,H-PAD.b/2);ctx.textAlign='left';
  // crosshair readout
  if(hair){const i=Math.max(0,Math.min(c.length-1,Math.round(a+(hair.x-PAD.l)/bw-.5)));const x=X(i);
   ctx.strokeStyle=col.ink;ctx.globalAlpha=.55;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,PAD.t);ctx.lineTo(x,H-PAD.b);ctx.stroke();
@@ -293,34 +296,74 @@ function ticks(lo,hi){const out=[];const r=hi/lo;if(r>4){for(let e=Math.floor(Ma
  out.length=0;const st=niceStep((hi-lo)/6);for(let v=Math.ceil(lo/st)*st;v<=hi;v+=st)out.push(v);return out}
 function niceStep(r){const p=10**Math.floor(Math.log10(r)),f=r/p;return(f<1.5?1:f<3?2:f<7?5:10)*p}
 function fmtK(p){return p>=10000?(p/1000).toFixed(p>=100000?0:1).replace(/\.0$/,'')+'k':p>=1?Math.round(p).toLocaleString('en-US'):p.toFixed(2)}
-// gestures: drag sideways, pinch, tap (picks a candle while marking), press-and-hold (crosshair)
-const ptr=new Map();let g=null,raf=0,holdT=null;
+// gestures (TradingView-style)
+//  chart: drag = move left/right and up/down · pinch = zoom time (pinch up-down = zoom price) · hold = crosshair · tap = pick while marking
+//  price axis (right): drag up/down = stretch/squash price · double-tap = auto
+//  time axis (bottom): drag left/right = zoom time · double-tap = latest view
+//  AUTO corner: tap = auto price scale
+const ptr=new Map();let g=null,raf=0,holdT=null,lastTap={t:0,x:0,y:0,r:''};
 const pos=e=>{const r=fig.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
 const idxAt=x=>view[0]+(x-PAD.l)/(ctx.__bw||1)-.5;
-function base(){const p=[...ptr.values()];if(p.length===1)g={mode:'pan',x0:p[0].x,y0:p[0].y,v0:[...view],t0:performance.now(),moved:g?g.moved:false};else if(p.length>=2){const[q,r]=p;g={mode:'pinch',d0:Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),c0:idxAt((q.x+r.x)/2),v0:[...view],moved:true}}else g=null}
+const yNow=()=>[ctx.__lo,ctx.__hi];
+const logAt=y=>ctx.__hi-(y-PAD.t)/ctx.__ph*(ctx.__hi-ctx.__lo);
+function region(p){const W=fig.clientWidth,H=fig.clientHeight;if(p.x>W-PAD.r&&p.y>H-PAD.b)return'corner';if(p.x>W-PAD.r)return'price';if(p.y>H-PAD.b)return'time';return'chart'}
+function setY(lo,hi){const sp=hi-lo;if(!(sp>0.002)||sp>12)return;yv=[lo,hi];later()}
+function base(){const p=[...ptr.values()];
+ if(p.length===1){g={mode:'pan',r:region(p[0]),x0:p[0].x,y0:p[0].y,v0:[...view],y0v:yNow(),t0:performance.now(),moved:false,ylock:!!yv}}
+ else if(p.length>=2){const[q,r]=p,dx=Math.abs(q.x-r.x),dy=Math.abs(q.y-r.y);
+  g={mode:'pinch',axis:dy>dx*1.2?'y':'x',dx0:Math.max(40,dx),dy0:Math.max(40,dy),cx0:(q.x+r.x)/2,cy0:(q.y+r.y)/2,c0:idxAt((q.x+r.x)/2),l0:logAt((q.y+r.y)/2),v0:[...view],y0v:yNow(),moved:true}}
+ else g=null}
+window.__st=()=>({view,yv,lo:ctx.__lo,hi:ctx.__hi});
 function later(){if(!raf)raf=requestAnimationFrame(()=>{raf=0;draw()})}
-fig.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;try{fig.setPointerCapture(e.pointerId)}catch(_){}ptr.set(e.pointerId,pos(e));base();
- if(ptr.size===1){g.moved=false;g.t0=performance.now();clearTimeout(holdT);if(e.pointerType!=='mouse'){const p=pos(e);holdT=setTimeout(()=>{if(g&&!g.moved&&ptr.size===1){g.mode='hair';hair=p;draw()}},380)}}else{clearTimeout(holdT)}});
-fig.addEventListener('pointermove',e=>{const p=pos(e);if(!ptr.has(e.pointerId)){if(e.pointerType==='mouse'){hair=p;later()}return}ptr.set(e.pointerId,p);if(!g)return;
+['gesturestart','gesturechange','gestureend'].forEach(t=>fig.addEventListener(t,e=>e.preventDefault(),{passive:false}));
+fig.addEventListener('touchstart',e=>{if(e.touches.length>1)e.preventDefault()},{passive:false});
+fig.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();try{fig.setPointerCapture(e.pointerId)}catch(_){}ptr.set(e.pointerId,pos(e));clearTimeout(holdT);base();
+ if(ptr.size===1&&g.r==='chart'&&e.pointerType!=='mouse'){const p=pos(e);holdT=setTimeout(()=>{if(g&&!g.moved&&ptr.size===1){g.mode='hair';hair=p;draw()}},420)}});
+fig.addEventListener('pointermove',e=>{const p=pos(e);
+ if(!ptr.has(e.pointerId)){if(e.pointerType==='mouse'){const r=region(p);fig.style.cursor=r==='price'?'ns-resize':r==='time'?'ew-resize':r==='corner'?'pointer':(mode?'crosshair':'grab');hair=r==='chart'?p:null;later()}return}
+ ptr.set(e.pointerId,p);if(!g)return;
  if(g.mode==='hair'){hair=p;later();return}
- if(g.mode==='pan'){const dx=p.x-g.x0,dy=p.y-g.y0;if(Math.hypot(dx,dy)>6){g.moved=true;clearTimeout(holdT)}const sh=dx/(ctx.__bw||1);setView(g.v0[0]-sh,g.v0[1]-sh,true)}
- else{const[q,r]=[...ptr.values()],d=Math.max(30,Math.hypot(q.x-r.x,q.y-r.y)),cx=(q.x+r.x)/2,sp=(g.v0[1]-g.v0[0])*g.d0/d,f=(cx-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=g.c0+.5-f*sp;setView(na,na+sp,true)}});
-function end(e,cancel){clearTimeout(holdT);if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.delete(e.pointerId);
+ if(g.mode==='pan'){const dx=p.x-g.x0,dy=p.y-g.y0;if(!g.moved&&Math.hypot(dx,dy)>7){g.moved=true;clearTimeout(holdT)}if(!g.moved)return;
+  const[l0,h0]=g.y0v,sp0=h0-l0;
+  if(g.r==='price'){const f=Math.exp(dy*.006),mid=(l0+h0)/2,sp=sp0*f;setY(mid-sp/2,mid+sp/2);return}
+  if(g.r==='time'){const f=Math.exp(-dx*.006),[a,b]=g.v0,sp=(b-a)*f,mid=(a+b)/2;setView(mid-sp/2,mid+sp/2,true);return}
+  if(g.r==='corner')return;
+  const sh=dx/(ctx.__bw||1);setView(g.v0[0]-sh,g.v0[1]-sh,true);
+  // vertical move: only once you clearly drag up/down, so sideways scrolling stays steady
+  if(!g.ylock&&Math.abs(dy)>24&&Math.abs(dy)>Math.abs(dx)*.6)g.ylock=true;
+  if(g.ylock){const k=dy/ctx.__ph*sp0;setY(l0+k,h0+k)}
+  return}
+ // pinch
+ const[q,r]=[...ptr.values()],cx=(q.x+r.x)/2,cy=(q.y+r.y)/2;
+ if(g.axis==='x'){const dx=Math.max(40,Math.abs(q.x-r.x)),sp=(g.v0[1]-g.v0[0])*g.dx0/dx,f=(cx-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=g.c0+.5-f*sp;setView(na,na+sp,true)}
+ else{const dy=Math.max(40,Math.abs(q.y-r.y)),[l0,h0]=g.y0v,sp=(h0-l0)*g.dy0/dy,fy=(cy-PAD.t)/ctx.__ph,nh=g.l0+fy*sp;setY(nh-sp,nh)}});
+function end(e,cancel){clearTimeout(holdT);if(!ptr.has(e.pointerId))return;const p=pos(e);ptr.delete(e.pointerId);try{fig.releasePointerCapture(e.pointerId)}catch(_){}
  if(g&&g.mode==='hair'){if(e.pointerType!=='mouse'){hair=null;later()}g=null;return}
- if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<380)tap(p.x,p.y);if(ptr.size)base();else g=null}
+ if(!cancel&&g&&g.mode==='pan'&&!g.moved&&ptr.size===0&&performance.now()-g.t0<400){
+  const now=performance.now(),dbl=now-lastTap.t<320&&lastTap.r===g.r&&Math.hypot(p.x-lastTap.x,p.y-lastTap.y)<30;lastTap={t:now,x:p.x,y:p.y,r:g.r};
+  if(g.r==='corner'){yv=null;draw()}
+  else if(g.r==='price'){if(dbl){yv=null;draw()}}
+  else if(g.r==='time'){if(dbl)$('last').onclick()}
+  else tap(p.x,p.y)}
+ if(ptr.size)base();else g=null}
 fig.addEventListener('pointerup',e=>end(e,false));fig.addEventListener('pointercancel',e=>end(e,true));
+fig.addEventListener('lostpointercapture',e=>{if(ptr.has(e.pointerId))end(e,true)});
 fig.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&!ptr.size){hair=null;later()}});
 fig.addEventListener('contextmenu',e=>e.preventDefault());
-fig.addEventListener('wheel',e=>{e.preventDefault();const p=pos(e);if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){const sh=e.deltaX/(ctx.__bw||1);setView(view[0]+sh,view[1]+sh,true);return}zoomAt(p.x,Math.exp(e.deltaY*.0025))},{passive:false});
+fig.addEventListener('wheel',e=>{e.preventDefault();const p=pos(e),r=region(p);
+ if(r==='price'||e.shiftKey&&r==='chart'){const[l0,h0]=yNow(),f=Math.exp(e.deltaY*.0025),mid=r==='price'?(l0+h0)/2:logAt(p.y),fy=r==='price'?.5:(p.y-PAD.t)/ctx.__ph,sp=(h0-l0)*f,nh=mid+fy*sp;setY(nh-sp,nh);return}
+ if(Math.abs(e.deltaX)>Math.abs(e.deltaY)){const sh=e.deltaX/(ctx.__bw||1);setView(view[0]+sh,view[1]+sh,true);return}
+ zoomAt(p.x,Math.exp(e.deltaY*.0025))},{passive:false});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',()=>{COL=null;draw()});
 function setView(a,b,lazy){const n=S.c.length,sp=Math.max(15,Math.min(n+20,b-a));if(a<-10)a=-10;if(a+sp>n+15)a=n+15-sp;view=[a,a+sp];lazy?later():draw()}
 function zoomAt(x,f){const i=idxAt(x),[a,b]=view,sp=(b-a)*f,fr=(x-PAD.l)/(fig.clientWidth-PAD.l-PAD.r),na=i+.5-fr*sp;setView(na,na+sp,true)}
 function zoom(f){const[a,b]=view,mid=(a+b)/2,sp=(b-a)*f;setView(mid-sp/2,mid+sp/2)}
-$('zin').onclick=()=>zoom(1/1.5);$('zout').onclick=()=>zoom(1.5);$('all').onclick=()=>setView(-5,S.c.length+10);
-$('last').onclick=()=>{const n=S.c.length,sp={h4:300,d1:240,w1:160}[tf];setView(n-sp,n+8)};
+$('zin').onclick=()=>zoom(1/1.5);$('zout').onclick=()=>zoom(1.5);$('all').onclick=()=>{yv=null;setView(-5,S.c.length+10)};$('yauto').onclick=()=>{yv=null;draw()};
+$('last').onclick=()=>{yv=null;const n=S.c.length,sp={h4:300,d1:240,w1:160}[tf];setView(n-sp,n+8)};
 for(const bt of $('layers').querySelectorAll('button'))bt.onclick=async()=>{const k=bt.dataset.k;L[k]=!L[k];bt.setAttribute('aria-pressed',L[k]);if(k==='wema'&&L[k])await getSet('w1');draw()};
 async function setTf(k,keepDate){const centerDate=keepDate||(S?S.c[Math.max(0,Math.min(S.c.length-1,Math.round((view[0]+view[1])/2)))][0].slice(0,10):null);
  const spanDays=S?(view[1]-view[0])*(tf==='w1'?7:tf==='h4'?1/6:1):240;
- $('tfnote').textContent='Loading '+TFN[k]+'…';S=await getSet(k);tf=k;$('tfnote').textContent=TFN[k];
+ $('tfnote').textContent='Loading '+TFN[k]+'…';S=await getSet(k);yv=null;tf=k;$('tfnote').textContent=TFN[k];
  for(const x of $('tf').querySelectorAll('button'))x.setAttribute('aria-pressed',x.dataset.v===k);
  const per=k==='w1'?7:k==='h4'?1/6:1;let sp=Math.max(40,Math.min(S.c.length,spanDays/per));if(k==='h4')sp=Math.min(sp,900);
  const ci=centerDate?idxFor(centerDate):S.c.length-1;setView(ci-sp/2,ci+sp/2)}
