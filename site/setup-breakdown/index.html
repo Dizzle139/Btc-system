@@ -100,6 +100,31 @@ details{margin-top:8px}details summary{cursor:pointer;min-height:44px;display:fl
 <div class="callout" id="read"></div>
 </div></section>
 
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 4</span>
+<h2>S1 timing: when to get in on a bull pullback</h2>
+<p>Six entry timings, each with two stop placements, on every S1 setup since 2011. The number is how often price reached +10% (and +20%) before a close beyond the stop, next to a random entry with the same stop width.</p>
+<div class="scroll"><table id="s1t"><thead><tr><th>Entry</th><th>Stop</th><th class="n">Fired</th><th class="n">Days after setup</th><th class="n">+10% before stop</th><th class="n">Random</th><th class="n">+20% before stop</th><th class="n">Random</th><th class="n">Median stop</th></tr></thead><tbody></tbody></table></div>
+<div class="callout" id="s1read"></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 5</span>
+<h2>Why the cycle bottoms were the bottom</h2>
+<p>You thought price hit an FVG, went through it, then bounced. The data agrees for most of the big lows: price <b>broke down through a bullish weekly FVG</b> (a weekly close below it, which looks like the zone failed), made the low under it, then <b>closed a week back above it</b>. The reclaim is the signal. The dashed green box is the zone; the lines mark the breakdown week, the low and the reclaim week.</p>
+<div id="bottoms"></div>
+<div class="scroll" style="margin-top:12px"><table id="swt"><thead><tr><th>Sweep and reclaim of a bullish weekly zone</th><th class="n">Times</th><th class="n">+10% before stop</th><th class="n">Random, same stop</th><th class="n">+20% before stop</th><th class="n">Random</th><th class="n">2011–18</th><th class="n">2019–26</th></tr></thead><tbody></tbody></table></div>
+<p class="note">Rule: a weekly close below the bottom of a bullish weekly FVG/OB, then within 4 weekly candles a weekly close back above that bottom. Entry at that weekly close; stop under the lowest low since the breakdown (median 15% away, because it is a weekly setup).</p>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+<span class="step">Step 6</span>
+<h2>What went wrong, and the fix</h2>
+<p>Every signal that failed was labelled: <b>stop too close</b> (stopped, then price made the move anyway within 30 days) or <b>wrong</b> (the move never came). One fix per setup, decided before re-running: put the stop beyond the weekly zone instead of beyond the setup day’s candle.</p>
+<div class="scroll"><table id="fixt"><thead><tr><th>Setup</th><th class="n">Version 1: +10% before stop</th><th class="n">Stop too close / wrong</th><th class="n">Version 2: +10% before stop</th><th class="n">Stop too close / wrong</th><th class="n">Random, v2 stop</th><th class="n">v2 by half (2011–18 · 2019–26)</th></tr></thead><tbody></tbody></table></div>
+<div id="examples"></div>
+<div class="callout" id="sumup"></div>
+</div></section>
 <footer class="band"><div class="wrap"><p class="note">BITSTAMP:BTCUSD daily closes, Aug 2011 to Nov 26, 2026. Zones use the research rules (displacement candle 2× the 20-candle average body). Research, not financial advice.</p></div></footer>
 
 <script>
@@ -120,56 +145,57 @@ const WHY={S1:'Bull pullback: in an uptrend, price pulls back into a weekly FVG/
 let D,Wk,S;
 function phaseAt(date){let h=null;for(const x of HALV)if(x<=date)h=x;if(!h)return null;const days=(new Date(date)-new Date(h))/864e5;return(days<548||days>=913)?'bull':'bear'}
 function weeklyAt(date,arr){let k=bs(Wk.c,date);if(k>=Wk.c.length||Wk.c[k][0]>date)k--;k--;return k>=0?arr[k]:null}
-function chart(box,t){
- const cv=document.createElement('canvas');box.append(cv);const ctx=cv.getContext('2d');
- const c=D.c,s=bs(c,t.mark.start),e=bs(c,t.mark.end),loc=t.first_loc?bs(c,t.first_loc):null,conf=t.conf?bs(c,t.conf):null;
- const lead=Math.max(45,Math.round((e-s)*.25)),a=Math.max(0,Math.min(s,loc??s)-lead),b=Math.min(c.length-1,e+Math.max(10,Math.round((e-s)*.1)));
+function drawWin(box,sp){
+ const cv=document.createElement('canvas');box.append(cv);const ctx=cv.getContext('2d');const c=D.c;
+ const a=Math.max(0,bs(c,sp.a)),b=Math.min(c.length-1,bs(c,sp.b));const I=d=>bs(c,d);
  const draw=()=>{const dpr=window.devicePixelRatio||1,W=box.clientWidth,H=box.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
   const P={l:6,r:58,t:8,b:22},pw=W-P.l-P.r,full=H-P.t-P.b,vh=Math.round(full*.17),ph=full-vh-6,bw=pw/(b-a+1);
   const we50=[],we200=[];for(let i=a;i<=b;i++){we50.push(weeklyAt(c[i][0],Wk.e50));we200.push(weeklyAt(c[i][0],Wk.e200))}
   let lo=Infinity,hi=-Infinity;for(let i=a;i<=b;i++){lo=Math.min(lo,c[i][3]);hi=Math.max(hi,c[i][2])}
-  for(const v of[...we50,...we200])if(v){if(v>lo*.85&&v<hi*1.15){lo=Math.min(lo,v);hi=Math.max(hi,v)}}
+  for(const v of[...we50,...we200])if(v&&v>lo*.85&&v<hi*1.15){lo=Math.min(lo,v);hi=Math.max(hi,v)}
+  for(const h of(sp.hl||[]))if(h.p>lo*.6&&h.p<hi*1.6){lo=Math.min(lo,h.p);hi=Math.max(hi,h.p)}
   lo=Math.log(lo);hi=Math.log(hi);const mg=(hi-lo)*.07;lo-=mg;hi+=mg;
   const X=i=>P.l+(i-a+.5)*bw,Y=p=>P.t+(hi-Math.log(p))/(hi-lo)*ph;
   const col={mute:css('--mute'),grid:css('--grid'),bull:css('--bull'),bear:css('--bear'),sig:css('--sig'),blue:css('--blue'),ink:css('--ink'),zb:css('--zb'),zs:css('--zs'),e50:css('--e50'),e200:css('--e200'),rule:css('--rule'),bg:css('--bg')};
-  // phase background
+  const cc_=n=>col[n]||n;
   for(let i=a;i<=b;i++){const ph_=phaseAt(c[i][0]);if(!ph_)continue;ctx.fillStyle=ph_==='bull'?col.bull:col.bear;ctx.globalAlpha=.06;ctx.fillRect(X(i)-bw/2,P.t,bw+.5,ph)}ctx.globalAlpha=1;
-  // grid + axis
-  ctx.font='12px Inter,sans-serif';ctx.textBaseline='middle';const r=Math.exp(hi-lo);
+  ctx.font='12px Inter,sans-serif';ctx.textBaseline='middle';
   const st=(()=>{const span=Math.exp(hi)-Math.exp(lo),raw=span/5,p=10**Math.floor(Math.log10(raw)),f=raw/p;return(f<1.5?1:f<3?2:f<7?5:10)*p})();
   for(let v=Math.ceil(Math.exp(lo)/st)*st;v<=Math.exp(hi);v+=st){const y=Y(v);ctx.strokeStyle=col.grid;ctx.beginPath();ctx.moveTo(P.l,y);ctx.lineTo(W-P.r,y);ctx.stroke();ctx.fillStyle=col.mute;ctx.fillText(v>=10000?(v/1000).toFixed(v>=100000?0:1).replace(/\.0$/,'')+'k':fmt(v),W-P.r+5,y)}
-  ctx.textAlign='center';ctx.textBaseline='top';let lx=-1e9;for(let i=a;i<=b;i++){const d=c[i][0];if(i>a&&d.slice(0,7)===c[i-1][0].slice(0,7))continue;const x=X(i);if(x-lx<70)continue;lx=x;ctx.fillStyle=col.mute;ctx.fillText(new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',year:'2-digit',timeZone:'UTC'}),x,H-P.b+5)}ctx.textAlign='left';
+  ctx.textAlign='center';ctx.textBaseline='top';let lx=-1e9;const span=b-a;for(let i=a;i<=b;i++){const d=c[i][0];if(i>a&&d.slice(0,7)===c[i-1][0].slice(0,7)&&!(span<75&&d.slice(8)==='15'))continue;const x=X(i);if(x-lx<64)continue;lx=x;ctx.fillStyle=col.mute;ctx.fillText(new Date(d+'T00:00:00Z').toLocaleDateString('en-US',span<75?{month:'short',day:'numeric',timeZone:'UTC'}:{month:'short',year:'2-digit',timeZone:'UTC'}),x,H-P.b+5)}ctx.textAlign='left';
   ctx.save();ctx.beginPath();ctx.rect(P.l,P.t,pw,ph);ctx.clip();
-  // weekly zones active in the window, on the trade's side and the opposite side
   ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='top';
-  for(const[bull,kind,f0,k0,iv,bot,top,ft]of D.wz){const endI=iv<0?c.length:iv;if(endI<a||f0>b||top<Math.exp(lo)||bot>Math.exp(hi))continue;
+  for(const[bull,kind,f0,k0,iv,bot,top]of D.wz){const endI=iv<0?c.length:iv;if(endI<a||f0>b||top<Math.exp(lo)||bot>Math.exp(hi))continue;
    const x0=Math.max(P.l,X(Math.max(f0-1,a))-bw/2),x1=Math.min(W-P.r,X(Math.min(endI,b))+bw/2);if(x1<=x0)continue;const cc=bull?col.zb:col.zs,y0=Y(top),y1=Y(bot);
-   ctx.globalAlpha=.14;ctx.fillStyle=cc;ctx.fillRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=.9;ctx.strokeStyle=cc;ctx.lineWidth=1.6;ctx.strokeRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=1;
+   const hot=sp.zone&&Math.abs(bot-sp.zone[0])/sp.zone[0]<.01;
+   ctx.globalAlpha=hot?.25:.13;ctx.fillStyle=cc;ctx.fillRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=.9;ctx.strokeStyle=cc;ctx.lineWidth=hot?2.6:1.5;ctx.strokeRect(x0,y0,x1-x0,Math.max(1,y1-y0));ctx.globalAlpha=1;
    if(y1-y0>12&&x1-x0>80){ctx.fillStyle=cc;ctx.fillText(`W ${['FVG','OB','FVG+OB'][kind]} ${fmt(bot)}–${fmt(top)}`,x0+4,y0+2)}}
-  // candles
+  if(sp.zone){const[bot,top]=sp.zone;ctx.strokeStyle=col.zb;ctx.lineWidth=2.4;ctx.setLineDash([2,3]);ctx.strokeRect(P.l,Y(top),pw,Y(bot)-Y(top));ctx.setLineDash([])}
   for(let i=a;i<=b;i++){const[,o,h,l,cl]=c[i],x=X(i),cc=cl>=o?col.bull:col.bear;ctx.strokeStyle=cc;ctx.fillStyle=cc;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,Y(h));ctx.lineTo(x,Y(l));ctx.stroke();const w=Math.max(1,bw*.65);ctx.fillRect(x-w/2,Y(Math.max(o,cl)),w,Math.max(1,Math.abs(Y(o)-Y(cl))))}
-  // weekly EMAs
   for(const[arr,cc]of[[we50,col.e50],[we200,col.e200]]){ctx.strokeStyle=cc;ctx.lineWidth=2;ctx.setLineDash([7,4]);ctx.beginPath();let on=false;arr.forEach((v,k)=>{if(v==null){on=false;return}const x=X(a+k),y=Y(v);on?ctx.lineTo(x,y):ctx.moveTo(x,y);on=true});ctx.stroke();ctx.setLineDash([])}
-  // structure
   ctx.font='600 10px Inter,sans-serif';ctx.textAlign='center';
   if(bw>=3.2){for(const[i,isH,px,lab]of D.sw){if(i<a||i>b||lab.length<2)continue;ctx.fillStyle=(lab==='HH'||lab==='HL')?col.bull:col.bear;ctx.textBaseline=isH?'bottom':'top';ctx.fillText(lab,X(i),isH?Y(c[i][2])-3:Y(c[i][3])+3)}}
   ctx.textAlign='left';
   for(const[i,kind,dir,lev]of D.ev){if(i<a||i>b)continue;let s0=i-1;for(const w of D.sw){if(w[0]<i&&w[2]===lev&&(w[1]===(dir>0?1:0)))s0=w[0]}const y=Y(lev),cc=dir>0?col.bull:col.bear;ctx.strokeStyle=cc;ctx.lineWidth=kind?1.6:1;ctx.setLineDash(kind?[]:[4,3]);ctx.beginPath();ctx.moveTo(X(Math.max(s0,a)),y);ctx.lineTo(X(i),y);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=cc;ctx.font=`${kind?700:600} 10px Inter,sans-serif`;ctx.textBaseline=dir>0?'bottom':'top';ctx.fillText(kind?'CHoCH':'BOS',X(Math.max(s0,a))+2,dir>0?y-2:y+2)}
-  // the user's trade
-  ctx.strokeStyle=col.sig;ctx.lineWidth=3.5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke();
-  const en=bs(c,t.mark.entry);ctx.fillStyle=col.sig;ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(en),Y(c[en][4]),6,0,7);ctx.fill();ctx.stroke();
-  // the rule
-  const long=S.rules[t.setup].side>0;
-  if(loc!=null){const x=X(loc),y=long?Y(c[loc][3])+14:Y(c[loc][2])-14;ctx.fillStyle=col.blue;ctx.beginPath();if(long){ctx.moveTo(x,y-9);ctx.lineTo(x-7,y+4);ctx.lineTo(x+7,y+4)}else{ctx.moveTo(x,y+9);ctx.lineTo(x-7,y-4);ctx.lineTo(x+7,y-4)}ctx.fill();
-   ctx.font='600 11px Inter,sans-serif';ctx.textBaseline=long?'top':'bottom';ctx.fillText('setup',x+9,long?y-2:y+2)}
-  if(conf!=null){ctx.fillStyle=col.blue;ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(X(conf),Y(c[conf][4]),6,0,7);ctx.fill();ctx.stroke();ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='bottom';ctx.fillText('confirmed',X(conf)+8,Y(c[conf][4])-6)}
+  for(const h of(sp.hl||[])){const x0=X(Math.max(a,I(h.from))),x1=X(Math.min(b,I(h.to))),y=Y(h.p);ctx.strokeStyle=cc_(h.c);ctx.lineWidth=2;ctx.setLineDash(h.dash?[6,4]:[]);ctx.beginPath();ctx.moveTo(x0,y);ctx.lineTo(x1,y);ctx.stroke();ctx.setLineDash([]);if(h.label){ctx.font='600 11px Inter,sans-serif';ctx.fillStyle=cc_(h.c);ctx.textBaseline=h.below?'top':'bottom';ctx.fillText(h.label,x0+3,h.below?y+3:y-3)}}
+  if(sp.line){const s=I(sp.line[0]),e=I(sp.line[1]);ctx.strokeStyle=col.sig;ctx.lineWidth=3.5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(X(s),Y(c[s][4]));ctx.lineTo(X(e),Y(c[e][4]));ctx.stroke()}
+  for(const m of(sp.marks||[])){const i=I(m.d),x=X(i);ctx.fillStyle=cc_(m.c);
+   if(m.k==='dot'){const y=Y(m.p??c[i][4]);ctx.strokeStyle=col.bg;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,6,0,7);ctx.fill();ctx.stroke();if(m.label){ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='bottom';ctx.fillText(m.label,x+8,y-6)}}
+   else if(m.k==='vline'){ctx.strokeStyle=cc_(m.c);ctx.lineWidth=1.5;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x,P.t);ctx.lineTo(x,P.t+ph);ctx.stroke();ctx.setLineDash([]);if(m.label){ctx.font='600 11px Inter,sans-serif';ctx.textBaseline='top';ctx.fillText(m.label,x+4,P.t+4+(m.row||0)*14)}}
+   else{const up=m.k==='up',y=up?Y(c[i][3])+14:Y(c[i][2])-14;ctx.beginPath();if(up){ctx.moveTo(x,y-9);ctx.lineTo(x-7,y+4);ctx.lineTo(x+7,y+4)}else{ctx.moveTo(x,y+9);ctx.lineTo(x-7,y-4);ctx.lineTo(x+7,y-4)}ctx.fill();if(m.label){ctx.font='600 11px Inter,sans-serif';ctx.textBaseline=up?'top':'bottom';ctx.fillText(m.label,x+9,up?y-2:y+2)}}}
   ctx.restore();
-  // volume
   const vt=P.t+ph+6;let vmax=0;for(let i=a;i<=b;i++)vmax=Math.max(vmax,c[i][5]);
-  for(let i=a;i<=b;i++){const h=c[i][5]/vmax*vh;ctx.globalAlpha=(i===loc||i===s)?.95:.45;ctx.fillStyle=c[i][4]>=c[i][1]?col.bull:col.bear;ctx.fillRect(X(i)-Math.max(1,bw*.65)/2,vt+vh-h,Math.max(1,bw*.65),h)}ctx.globalAlpha=1;
+  const hiV=new Set((sp.marks||[]).map(m=>I(m.d)));
+  for(let i=a;i<=b;i++){const h=c[i][5]/vmax*vh;ctx.globalAlpha=hiV.has(i)?.95:.45;ctx.fillStyle=c[i][4]>=c[i][1]?col.bull:col.bear;ctx.fillRect(X(i)-Math.max(1,bw*.65)/2,vt+vh-h,Math.max(1,bw*.65),h)}ctx.globalAlpha=1;
   ctx.strokeStyle=col.rule;ctx.strokeRect(P.l,vt,pw,vh);ctx.strokeRect(P.l,P.t,pw,ph);ctx.fillStyle=col.mute;ctx.font='11px Inter,sans-serif';ctx.textBaseline='top';ctx.fillText('Volume',P.l+4,vt+2)};
  new ResizeObserver(draw).observe(box);
 }
+function chart(box,t){const c=D.c,s=bs(c,t.mark.start),e=bs(c,t.mark.end),loc=t.first_loc?bs(c,t.first_loc):null;
+ const lead=Math.max(45,Math.round((e-s)*.25)),a=Math.max(0,Math.min(s,loc??s)-lead),b=Math.min(c.length-1,e+Math.max(10,Math.round((e-s)*.1)));
+ const long=S.rules[t.setup].side>0,marks=[{d:t.mark.entry,k:'dot',c:'sig'}];
+ if(t.first_loc)marks.push({d:t.first_loc,k:long?'up':'down',c:'blue',label:'setup'});
+ if(t.conf)marks.push({d:t.conf,k:'dot',c:'blue',label:'confirmed'});
+ drawWin(box,{a:c[a][0],b:c[b][0],line:[t.mark.start,t.mark.end],marks})}
 function rules(){const box=$('rules');
  for(const[k,r]of Object.entries(S.rules)){const card=el('article','rcard');const h=el('h3');h.append(el('span',null,`${k} · ${r.name}`),el('span','pill '+(r.side>0?'l':'s'),r.side>0?'long':'short'));
   const p=el('p','note',WHY[k]);const ol=el('ol','chk');for(const[n,txt]of r.checks){const li=el('li');li.append(el('b',null,n+': '),document.createTextNode(txt));ol.append(li)}
@@ -221,7 +247,41 @@ function backtest(){const tb=document.querySelector('#bt tbody');
   'S3 (bear-market bounce) did worse than random both ways. Bounces in a bear fail more often than they work.',
   'S4 (cycle bottom) as written missed two of your three bottoms (Feb 2019 and Dec 2022 never made a new 60-day low on the day the other conditions held). It needs a different trigger.',
   'All samples are small (3 to 28 signals), and the rules were made from your marks, so treat every number here as a lead, not a result.'].forEach(s=>ul.append(el('li',null,s)));rd.append(ul)}
-Promise.all(['d1.json','w1.json','setups.json'].map(f=>fetch(f).then(r=>r.json()))).then(([d,w,s])=>{D=d;Wk=w;S=s;rules();trades();backtest()}).catch(()=>{$('trades').textContent='The data did not load. Reload the page to try again.'});
+
+function s1table(){const tb=document.querySelector('#s1t tbody');
+ for(const r of X.s1){const tr=el('tr');[r.entry.replace(/^E\d /,''),r.stop.replace(/^[AB] /,''),`${r.fired} of ${r.of}`,r.after_days,`${r.win10}%`,`${r.base10}%`,`${r.win20}%`,`${r.base20}%`,`${r.stop_med}%`].forEach((x,i)=>{const td=el('td',i>1?'n':null,String(x));if(i===4)td.className+=' '+(r.win10>r.base10?'up':'dn');if(i===6)td.className+=' '+(r.win20>r.base20?'up':'dn');tr.append(td)});tb.append(tr)}
+ const best=X.s1.find(r=>r.entry.startsWith('E0')&&r.stop.startsWith('B'));const rd=$('s1read');rd.append(el('b',null,'Best timing: on the setup day, with the stop under the weekly zone.'));
+ rd.append(el('p',null,`Entering at the close of the setup day and putting the stop under the bottom of the weekly FVG/OB reached +10% first in ${best.win10}% of cases (random with the same ${best.stop_med}% stop: ${best.base10}%) and +20% first in ${best.win20}% (random ${best.base20}%). Waiting for the daily CHoCH did about as well per trade but fired on only 9 of 14 setups and entered a median 7.8% higher. The same timings with the stop under the setup day’s low did much worse: that stop sits inside normal noise. Small sample (14 setups, 13 of them since 2019).`))}
+function bottomsView(){const box=$('bottoms');
+ for(const b of BT){const art=el('article','trade');art.append(el('h3',null,b.title));const g=el('div','tgrid');const cb=el('div','cbox');g.append(cb);const r=el('div');r.append(el('p',null,b.text));g.append(r);art.append(g);box.append(art);
+  drawWin(cb,{a:b.a,b:b.b,zone:b.zone,marks:[{d:b.brk,k:'vline',c:'bear',label:'weekly close below the zone'},{d:b.low,k:'up',c:'sig',label:'low'},{d:b.reclaim,k:'vline',c:'bull',label:'weekly close back above',row:1}]})}
+ const tb=document.querySelector('#swt tbody');const by=k=>X.sweep.filter(x=>x.depth===k);
+ for(const k of['any depth','50%+ below ATH','70%+ below ATH']){const rows=by(k),a=rows.find(x=>x.half==='all'),h1=rows.find(x=>x.half==='2011-18'),h2=rows.find(x=>x.half==='2019-26');const tr=el('tr');
+  [k==='any depth'?'At any depth':k.replace('ATH','the all-time high'),a.n,`${a.win10}%`,`${a.base10}%`,`${a.win20}%`,`${a.base20}%`,`${h1.win10??'–'}% of ${h1.n}`,`${h2.win10??'–'}% of ${h2.n}`].forEach((x,i)=>{const td=el('td',i?'n':null,String(x));if(i===2)td.className+=' '+(a.win10>a.base10?'up':'dn');tr.append(td)});tb.append(tr)}}
+function fixesView(){const tb=document.querySelector('#fixt tbody');const names={S1:'S1 Bull pullback',S2:'S2 Bear rally into resistance',S3:'S3 Bear-market bounce',S4:'S4 Cycle bottom → sweep and reclaim',S5:'S5 Cycle top'};
+ for(const k of['S1','S2','S3','S4','S5']){const f=X.fix[k],v1=f.v1,v2=f.v2;const tr=el('tr');
+  let cells;if(k==='S5'){const c=X.s5.all.conf,b=X.s5.baseline.conf;cells=[names[k],`${v1.win}% (${v1.wins}/${v1.n})`,`${v1.too_close} / ${v1.wrong}`,`confirmed entry: ${c.win10}% (${Math.round(c.win10*c.n10/100)}/${c.n10})`,'–',`${b.win10}%`,`${X.s5.h1.conf.win10}% of ${X.s5.h1.conf.n10} · ${X.s5.h2.conf.win10}% of ${X.s5.h2.conf.n10}`]}
+  else if(k==='S4'){cells=[names[k],'missed 2 of your 3 bottoms','–',`${v2.win}% (${v2.wins}/${v2.n})`,`${v2.too_close} / ${v2.wrong}`,`${v2.base}%`,`${v2.h1} · ${v2.h2}`]}
+  else cells=[names[k],`${v1.win}% (${v1.wins}/${v1.n})`,`${v1.too_close} / ${v1.wrong}`,`${v2.win}% (${v2.wins}/${v2.n})`,`${v2.too_close} / ${v2.wrong}`,`${v2.base}%`,`${v2.h1} · ${v2.h2}`];
+  cells.forEach((x,i)=>{const td=el('td',i?'n':null,String(x));tr.append(td)});tb.append(tr)}
+ const box=$('examples');
+ for(const e of EX){const art=el('article','trade');const hd=el('div','thead');hd.append(el('h3',null,e.title),el('span','pill '+(e.side>0?'l':'s'),e.setup));art.append(hd);
+  const g=el('div','tgrid');const cb=el('div','cbox');g.append(cb);const r=el('div');const ul=el('ul','steps');
+  const l1=el('li');l1.append(el('div','t',null));l1.firstChild.append(el('span','mark no','✗'),el('span',null,'The error'));l1.append(el('div','v',e.why));
+  const l2=el('li');l2.append(el('div','t',null));const fixed=e.v2.result==='WIN';l2.firstChild.append(el('span','mark '+(fixed?'ok':'no'),fixed?'✓':'?'),el('span',null,fixed?'The fix':'Still to fix'));l2.append(el('div','v',e.fix));
+  const l3=el('li');const t=el('table');t.innerHTML='<thead><tr><th></th><th class="n">Stop</th><th class="n">Distance</th><th>Result</th></tr></thead>';const bd=el('tbody');
+  for(const[v,lab]of[[e.v1,'Version 1'],[e.v2,'Version 2']]){const tr=el('tr');[lab,fmt(v.stop),`${v.stop_dist}%`,v.result==='WIN'?`+10% reached${v.win20?' (and +20%)':''}`:v.result.toLowerCase()].forEach((x,i)=>{const td=el('td',(i===1||i===2)?'n':null,x);if(i===3)td.className=v.result==='WIN'?'up':'dn';tr.append(td)});bd.append(tr)}
+  t.append(bd);l3.append(t);ul.append(l1,l2,l3);r.append(ul);g.append(r);art.append(g);box.append(art);
+  const long=e.side>0;drawWin(cb,{a:e.a,b:e.b,marks:[{d:e.entry,k:long?'up':'down',c:'blue',label:'setup + entry'}],hl:[{from:e.entry,to:e.b,p:e.v1.stop,c:'bear',dash:true,label:'v1 stop',below:long},{from:e.entry,to:e.b,p:e.v2.stop,c:'blue',dash:true,label:'v2 stop',below:long}]})}
+ const su=$('sumup');su.append(el('b',null,'Where the setups stand now (first look, rules made from your marks)'));const ul=el('ul');
+ ['S1 bull pullback: enter on the setup day, stop under the weekly zone. 71% reached +10% first (random 58%), 69% reached +20% (random 47%). Remaining errors are pullbacks after the cycle had already topped (Nov 2019, Oct 2026).',
+  'S2 bear rally into resistance: the zone stop lifts the early entry from 25% to 62% (random 36%), but the confirmed entry (wait for the daily CHoCH down) is still the most reliable: 7 of 8.',
+  'S3 bear-market bounce: drop it as a trade. Worse than random with either stop.',
+  'S4 cycle bottom becomes “sweep and reclaim”: deep in a bear (50%+ below the high), a weekly close back above a bullish weekly zone it had broken. 15 of 18 reached +10% first (random 65%); weaker since 2019 (3 of 6). Nov 2022 reclaimed too slowly to count.',
+  'S5 cycle top: only with the confirmed entry (daily CHoCH down): 4 of 6. Selling the top day itself failed 13 of 15 times, because price kept making new highs for days.',
+  'All of this has seen the answers. Next: fix the rules and run the strict test (rules set on 2011–18, scored on 2019–26).'].forEach(t=>ul.append(el('li',null,t)));su.append(ul)}
+let X,EX,BT;
+Promise.all(['d1.json','w1.json','setups.json','extra.json','examples.json','bottoms.json'].map(f=>fetch(f).then(r=>r.json()))).then(([d,w,s,x,ex,bt])=>{D=d;Wk=w;S=s;X=x;EX=ex;BT=bt;rules();trades();backtest();s1table();bottomsView();fixesView()}).catch(()=>{$('trades').textContent='The data did not load. Reload the page to try again.'});
 }
 </script>
 </body>
